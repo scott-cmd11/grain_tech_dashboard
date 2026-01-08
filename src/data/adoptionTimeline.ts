@@ -137,7 +137,7 @@ export const adoptionEvents: AdoptionEvent[] = [
     region: "North America",
     category: "Pilot",
     relatedCompanyIds: ["SuperGeo"],
-    url: "https://sga.ai/products/grain/",
+    url: "https://www.proteinindustriescanada.ca/news/ai-powered-grain-quality-tool",
   },
   {
     id: "2024-cropify-launch",

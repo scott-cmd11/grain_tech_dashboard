@@ -24,6 +24,9 @@ export function TrendsPage() {
         <p className="text-gray-600 dark:text-gray-400">
           Comprehensive analysis of grain quality technology adoption, market evolution, and future opportunities
         </p>
+        <p className="text-xs text-gray-500 mt-2 italic border-l-2 border-gray-300 pl-2">
+          Indicative projections based on compiled reports; not financial advice.
+        </p>
       </div>
 
       {/* 1. Technology Adoption Trends */}
@@ -94,6 +97,9 @@ export function TrendsPage() {
             <span className="text-xs text-gray-600 dark:text-gray-400">Inline Industrial</span>
           </div>
         </div>
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-right">
+          <p className="text-xs text-gray-500 italic">Source: Internal Market Analysis & Industry Reports</p>
+        </div>
       </section>
 
       {/* 2. Regional Market Expansion */}
@@ -150,6 +156,9 @@ export function TrendsPage() {
             </div>
           ))}
         </div>
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-right">
+          <p className="text-xs text-gray-500 italic">Source: FAO & regional agricultural trade data</p>
+        </div>
       </section>
 
       {/* 3. Sensing Technology Evolution */}
@@ -191,6 +200,9 @@ export function TrendsPage() {
                 </div>
               </div>
             ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-right">
+          <p className="text-xs text-gray-500 italic">Source: Journal of Food Engineering & Tech Adoption Surveys</p>
         </div>
       </section>
 
@@ -256,6 +268,9 @@ export function TrendsPage() {
             <div className="text-2xl font-bold text-grain-gold mb-1">2.8x</div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Growth since 2020</div>
           </div>
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-right">
+          <p className="text-xs text-gray-500 italic">Source: Internal estimate based on MarketsAndMarkets & OECD data (2020–2027)</p>
         </div>
       </section>
 
@@ -335,6 +350,9 @@ export function TrendsPage() {
                 </div>
               </div>
             ))}
+        </div>
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700 text-right">
+          <p className="text-xs text-gray-500 italic">Source: Aggregated Industry Market Research (2024)</p>
         </div>
       </section>
 

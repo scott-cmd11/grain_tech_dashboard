@@ -73,8 +73,13 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
     return (
         <div className="space-y-6 animate-in fade-in duration-500">
             {/* View Toggle */}
-            <div className="flex justify-between items-center">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Grain Technology Landscape</h2>
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+                <div>
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Grain Technology Landscape</h2>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        Curated list of companies building digital grain grading tools. Not exhaustive; updated periodically.
+                    </p>
+                </div>
                 <ViewToggle activeView={landscapeView} onViewChange={setLandscapeView} />
             </div>
 
@@ -82,7 +87,7 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
             {landscapeView === 'map' && (
                 <div className="space-y-6">
                     <GrainLandscapeMap
-                        grainSolutions={grainSolutions}
+                        // grainSolutions prop omitted to use default registry data
                         filters={landscapeFilters}
                         onFiltersChange={setLandscapeFilters}
                         showFilters={true}
@@ -97,7 +102,6 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
             {landscapeView === 'table' && (
                 <div className="space-y-6">
                     <GrainComparisonMatrix
-                        grainSolutions={grainSolutions}
                         externalSearchTerm={searchTerm}
                     />
                 </div>

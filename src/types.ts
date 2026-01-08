@@ -169,6 +169,7 @@ export type TabId =
   | 'insights'
   | 'datasets'
   | 'research'
+  | 'deep-research'
   | 'regulations'
   | 'history'
   | 'trends'

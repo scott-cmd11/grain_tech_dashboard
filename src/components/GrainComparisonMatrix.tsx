@@ -1,8 +1,5 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import {
-  Download,
-  ExternalLink,
-  Table2,
   Search,
   X,
   Share2,
@@ -11,6 +8,9 @@ import {
   ChevronUp,
   ChevronDown,
   Play,
+  Download,
+  Table2,
+  ExternalLink as LucideExternalLink,
 } from "lucide-react";
 import type {
   GrainSolution,
@@ -18,16 +18,19 @@ import type {
   FormFactor,
   SensingTech,
   UseCase,
+  MaturityLevel,
 } from "../data/grainTechEntities";
+import { getDenormalizedSolutions } from "../utils/dataNormalization";
+import { getCompanyUrl, formatCompanyUrl } from "../utils/companyLookup";
+import { ExternalLink } from "./ExternalLink";
 import { filterGrainSolutions, getGrainFilterOptions } from "../utils/grainFilters";
 import { exportGrainSolutions } from "../utils/export";
 import type { ExportFormat } from "../types";
-import { formatCompanyUrl, getCompanyUrl } from "../utils/companyLookup";
 import { formatEnumLabel, formatEnumList } from "../utils/formatLabels";
 import { sensingColors } from "../constants/grainTechColors";
 
 interface GrainComparisonMatrixProps {
-  grainSolutions: GrainSolution[];
+  grainSolutions?: GrainSolution[]; // Make optional
   externalSearchTerm?: string;
 }
 
@@ -151,9 +154,14 @@ function getCellValue(solution: GrainSolution, column: ColumnKey): string | numb
 }
 
 export const GrainComparisonMatrix = function GrainComparisonMatrix({
-  grainSolutions,
+  grainSolutions: propSolutions,
   externalSearchTerm = "",
 }: GrainComparisonMatrixProps) {
+  const grainSolutions = useMemo(() => {
+    if (propSolutions && propSolutions.length > 0) return propSolutions;
+    return getDenormalizedSolutions();
+  }, [propSolutions]);
+
   const [regions, setRegions] = useState<Region[]>([]);
   const [sensing, setSensing] = useState<SensingTech[]>([]);
   const [formFactors, setFormFactors] = useState<FormFactor[]>([]);
@@ -738,17 +746,118 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
         </div>
       </div>
 
-      {/* Top scroll bar container */}
+
+      <div className="md:hidden space-y-4 mt-6">
+        {sortedSolutions.map((solution) => {
+          const companyUrl = solution.url ?? getCompanyUrl(solution.company) ?? undefined;
+          const isOffline = solution.linkStatus === "offline";
+          // Use explicit status or fallback to maturityLevel
+          const displayStatus = solution.status
+            ? (solution.status.charAt(0).toUpperCase() + solution.status.slice(1))
+            : solution.maturityLevel;
+
+          return (
+            <div key={solution.id} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-4 shadow-sm">
+              <div className="flex justify-between items-start mb-3">
+                <div className="flex-1">
+                  {isOffline || !companyUrl ? (
+                    <div className="min-h-[44px] flex flex-col justify-center">
+                      <span className="font-bold text-gray-900 dark:text-gray-100 text-lg flex items-center gap-2">
+                        {solution.company}
+                        {isOffline && <span className="text-xs font-normal text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">Website offline</span>}
+                      </span>
+                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{solution.productName}</div>
+                      {solution.ceo && (
+                        <div className="text-xs text-gray-500 dark:text-gray-400">CEO: {solution.ceo}</div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="min-h-[44px] flex flex-col justify-center">
+                      <a
+                        href={companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 flex items-center gap-1 text-lg w-full"
+                      >
+                        {solution.company}
+                        <LucideExternalLink className="w-3 h-3 text-gray-400" />
+                      </a>
+                      <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{solution.productName}</div>
+                      {solution.ceo && (
+                        <div className="text-xs text-gray-500 dark:text-gray-400">CEO: {solution.ceo}</div>
+                      )}
+                    </div>
+                  )}
+                </div>
+                <div className={`ml-2 px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${displayStatus === 'Commercial' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
+                  displayStatus === 'Pilot' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' :
+                    displayStatus === 'Discontinued' ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' :
+                      'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-400'
+                  }`}>
+                  {displayStatus}
+                </div>
+              </div>
+
+              <div className="space-y-3 text-sm">
+                <div>
+                  <span className="text-xs font-semibold text-gray-500 uppercase">Sensing Tech</span>
+                  <div className="flex flex-wrap gap-1 mt-1">
+                    {solution.sensingTech.map(tech => (
+                      <span key={tech} className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-xs border border-blue-100 dark:border-blue-800">
+                        {formatEnumLabel(tech)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
+                    <span className="text-xs font-semibold text-gray-500 uppercase">Regions</span>
+                    <p className="mt-0.5 text-gray-700 dark:text-gray-300">{formatShortList(solution.regions)}</p>
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-gray-500 uppercase">Form Factor</span>
+                    <p className="mt-0.5 text-gray-700 dark:text-gray-300">{formatShortList(solution.formFactors)}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-gray-100 dark:border-gray-700">
+                  <div className="text-center">
+                    <span className="text-[10px] text-gray-500 uppercase block">Accuracy</span>
+                    <span className={`font-semibold ${getPerformanceColor(solution.accuracyPercent, "accuracy")}`}>
+                      {solution.accuracyPercent ? `${solution.accuracyPercent}%` : "-"}
+                    </span>
+                  </div>
+                  <div className="text-center border-l border-gray-100 dark:border-gray-700">
+                    <span className="text-[10px] text-gray-500 uppercase block">Speed</span>
+                    <span className={`font-semibold ${getPerformanceColor(solution.throughputSamplesPerHour, "throughput")}`}>
+                      {solution.throughputSamplesPerHour ? solution.throughputSamplesPerHour : "-"}
+                    </span>
+                  </div>
+                  <div className="text-center border-l border-gray-100 dark:border-gray-700">
+                    <span className="text-[10px] text-gray-500 uppercase block">Duration</span>
+                    <span className={`font-semibold ${getPerformanceColor(solution.avgTestDurationSeconds, "duration")}`}>
+                      {solution.avgTestDurationSeconds ? `${solution.avgTestDurationSeconds}s` : "-"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Top scroll bar container (Desktop Only) */}
       <div
         ref={topScrollRef}
         onScroll={handleTopScroll}
-        className="table-top-scrollbar mt-6"
+        className="table-top-scrollbar mt-6 hidden md:block" // Hidden on mobile
       >
         <div style={{ width: "3000px" }} />
       </div>
 
       {/* Table container with synchronized scrolling */}
-      <div ref={tableContainerRef} onScroll={handleTableScroll} className="overflow-x-auto">
+      <div ref={tableContainerRef} onScroll={handleTableScroll} className="overflow-x-auto hidden md:block">
         <table className="min-w-[900px] w-full border-collapse">
           <thead className="sticky top-0 z-10 bg-white dark:bg-gray-800">
             <tr className="border-b border-gray-200 dark:border-gray-700">
@@ -795,7 +904,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
           </thead>
           <tbody>
             {sortedSolutions.map((solution) => {
-              const companyUrl = solution.url || getCompanyUrl(solution.company);
+              const companyUrl = solution.url ?? getCompanyUrl(solution.company) ?? undefined;
               const isSelected = selectedRows.has(solution.id);
               return (
                 <tr
@@ -824,21 +933,51 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
                         }`}
                     >
                       {column === "company" ? (
-                        companyUrl ? (
-                          <a
-                            href={formatCompanyUrl(companyUrl)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800"
-                          >
-                            {solution.company}
-                            <ExternalLink className="w-3 h-3" />
-                          </a>
-                        ) : (
-                          <span className="text-sm text-gray-700 dark:text-gray-200">
-                            {solution.company}
-                          </span>
-                        )
+                        (() => {
+                          const isOffline = solution.linkStatus === "offline";
+                          const url = companyUrl ? formatCompanyUrl(companyUrl) : undefined;
+
+                          if (isOffline) {
+                            return (
+                              <div className="flex flex-col">
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
+                                  {solution.company}
+                                </span>
+                                <span className="text-[10px] text-gray-500 italic">Website offline</span>
+                                {solution.ceo && (
+                                  <span className="text-[10px] text-gray-500 dark:text-gray-400">
+                                    CEO: {solution.ceo}
+                                  </span>
+                                )}
+                              </div>
+                            );
+                          }
+
+                          return (
+                            <div className="flex flex-col">
+                              {url ? (
+                                <a
+                                  href={url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800"
+                                >
+                                  {solution.company}
+                                  <LucideExternalLink className="w-3 h-3" />
+                                </a>
+                              ) : (
+                                <span className="text-sm text-gray-700 dark:text-gray-200">
+                                  {solution.company}
+                                </span>
+                              )}
+                              {solution.ceo && (
+                                <span className="text-[10px] text-gray-500 dark:text-gray-400">
+                                  CEO: {solution.ceo}
+                                </span>
+                              )}
+                            </div>
+                          );
+                        })()
                       ) : column === "formFactors" ? (
                         <div className="flex flex-wrap gap-1">
                           {solution.formFactors.map((factor) => (
@@ -885,6 +1024,21 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
                         ) : (
                           <span className="text-gray-400 dark:text-gray-500">—</span>
                         )
+                      ) : column === "maturity" ? (
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-semibold whitespace-nowrap ${(solution.status || solution.maturityLevel) === "Commercial" || solution.status === "commercial"
+                            ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                            : (solution.status || solution.maturityLevel) === "Pilot" || solution.status === "pilot"
+                              ? "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400"
+                              : solution.status === "discontinued"
+                                ? "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
+                                : "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-400"
+                            }`}
+                        >
+                          {solution.status
+                            ? (solution.status.charAt(0).toUpperCase() + solution.status.slice(1))
+                            : solution.maturityLevel}
+                        </span>
                       ) : (
                         <span className="text-sm text-gray-700 dark:text-gray-200">
                           {getCellValue(solution, column) || "—"}

@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react";
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { eventsSortedByDate } from "../data/registries/events";
+import { ExternalLink } from "./ExternalLink";
 import type { AdoptionEvent } from "../data/adoptionTimeline";
 import type {
   GrainSolution,
@@ -8,8 +10,8 @@ import type {
 import { formatEnumLabel } from "../utils/formatLabels";
 
 interface GrainAdoptionTimelineProps {
-  adoptionEvents: AdoptionEvent[];
-  grainSolutions: GrainSolution[];
+  adoptionEvents?: any[]; // Loose type for now as we transition schemas
+  grainSolutions?: GrainSolution[];
 }
 
 const categoryColors: Record<AdoptionEvent["category"], string> = {
@@ -40,9 +42,10 @@ function matchCompanies(event: AdoptionEvent, solutions: GrainSolution[]): Grain
 }
 
 export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
-  adoptionEvents,
+  adoptionEvents: propEvents,
   grainSolutions,
 }: GrainAdoptionTimelineProps) {
+  const adoptionEvents = propEvents || eventsSortedByDate;
   const [regions, setRegions] = useState<Region[]>([]);
   const [categories, setCategories] = useState<AdoptionEvent["category"][]>([]);
   const [activeEventId, setActiveEventId] = useState<string | null>(null);
@@ -155,18 +158,18 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
         </div>
       </div>
 
-      {/* Horizontal Scroll Area */}
+      {/* Scroll Area (Vertical on Mobile, Horizontal on Desktop) */}
       <div
-        className="flex overflow-x-auto pb-8 pt-4 gap-8 custom-scrollbar relative min-h-[400px]"
+        className="flex flex-col md:flex-row md:overflow-x-auto pb-8 pt-4 gap-8 custom-scrollbar relative min-h-[400px]"
       >
         {grouped.map((group) => (
           <div key={group.year} className="flex-shrink-0 flex flex-col gap-4 snap-start relative">
             {/* Year Marker */}
-            <div className="text-4xl font-black text-gray-200 dark:text-gray-700 select-none sticky left-0 leading-none">
+            <div className="text-4xl font-black text-gray-200 dark:text-gray-700 select-none md:sticky md:left-0 leading-none">
               {group.year}
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
               {group.events.map((event) => {
                 const isActive = activeEventId === event.id;
                 const relatedSolutions = isActive ? matchCompanies(event, grainSolutions) : [];
@@ -174,7 +177,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
                 return (
                   <div
                     key={event.id}
-                    className={`w-[320px] bg-white dark:bg-gray-800 rounded-xl border transition-all flex flex-col shadow-sm hover:shadow-md ${isActive
+                    className={`w-full md:w-[320px] bg-white dark:bg-gray-800 rounded-xl border transition-all flex flex-col shadow-sm hover:shadow-md ${isActive
                       ? "border-teal-500 ring-1 ring-teal-500 z-10 scale-[1.02]"
                       : "border-gray-200 dark:border-gray-700"
                       }`}
@@ -204,8 +207,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
 
                     {/* Footer / Source Link */}
                     {event.url && (
-                      <div className="px-5 py-3 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-700 rounded-b-xl flex items-center justify-between">
-                        <span className="text-[10px] text-gray-400 font-medium">Source Available</span>
+                      <div className="px-5 py-3 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-700 rounded-b-xl flex items-center justify-end">
                         <a
                           href={event.url}
                           target="_blank"

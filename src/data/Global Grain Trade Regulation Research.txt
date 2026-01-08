@@ -1,0 +1,222 @@
+﻿Global Regulatory Architectures in the Grain Trade: An Exhaustive Analysis of International Standards and National Enforcement Protocols
+The global trade in cereal grains, oilseeds, and pulses represents the most significant component of international agricultural commerce, serving as the fundamental guarantor of global food security. As the most traded crop category in the world, wheat alone commands a sophisticated regulatory environment that must balance the competing interests of sovereign food sovereignty, producer profitability, and consumer safety.1 In the marketing years of 2024/25 and 2025/26, the global grain economy has reached unprecedented levels of production and complexity, with total grains output forecast at a record 2,430 million metric tons.2 This massive movement of biological material across borders is governed by a multi-layered regulatory architecture that spans from the high-level legal frameworks of the World Trade Organization (WTO) to the granular, science-based grading standards of national agencies such as the United States’ Federal Grain Inspection Service (FGIS) and the Canadian Grain Commission (CGC).3
+The regulatory landscape is currently undergoing a structural transformation, driven by the digitalization of compliance portals, the emergence of new strategic procurement models in the Middle East, and the increasing use of phytosanitary standards as instruments of geopolitical policy. Understanding these systems requires a deep dive into the institutional mechanisms, legal mandates, and technical protocols that define how grain is bought, sold, and inspected on the world stage.
+The International Institutional Framework
+The regulation of grain trade begins at the supranational level, where intergovernmental organizations establish the baseline for fair competition and safety. Three primary entities define the international "rules of the road": the World Trade Organization, the International Grains Council, and the Codex Alimentarius Commission.
+The World Trade Organization and the Agreement on Agriculture
+The World Trade Organization (WTO), established in 1995 as the successor to the General Agreement on Tariffs and Trade (GATT), provides the overarching legal framework for global grain commerce.5 The WTO Agreement on Agriculture (AoA) is the centerpiece of this system, designed to reform agricultural trade by reducing market distortions and increasing transparency.6 The AoA operates through three "pillars": market access, domestic support, and export competition.7
+Under the market access pillar, WTO members are required to replace non-tariff barriers, such as discretionary quotas or import bans, with transparent tariffs through a process known as "tariffication".8 Developed countries committed to reducing these tariffs by an average of 36%, while developing nations agreed to a 24% reduction over longer implementation periods.8 The domestic support pillar categorizes subsidies into "boxes": the Green Box for non-distorting measures like research and infrastructure, the Blue Box for production-limiting programs, and the Amber Box for trade-distorting price supports, which are subject to strict limits and reduction commitments.7
+A critical evolution in this framework occurred at the 2015 Nairobi Ministerial Conference, where members agreed to the historic abolition of export subsidies. Developed countries were required to implement this immediately, while developing countries were granted until 2023, and least-developed countries (LDCs) until 2030.5 The WTO also provides a robust dispute settlement mechanism, which is frequently used by organizations like U.S. Wheat Associates to challenge foreign trade barriers that violate WTO commitments, such as excessive domestic subsidies that lower global prices and disadvantage international competitors.10
+The International Grains Council (IGC)
+While the WTO manages the legal rules of trade, the International Grains Council (IGC) serves as the primary intergovernmental forum for market transparency and cooperation.11 Headquartered in London, the IGC oversees the Grains Trade Convention (GTC) of 1995, an agreement intended to foster international cooperation and promote grain market stability.11 The IGC’s mission is to provide impartial analysis of supply and demand in the wheat, maize, rice, and oilseeds sectors.11
+The Council’s benchmark Grains and Oilseeds Index (GOI) tracks international prices and serves as a vital tool for price discovery.2 The IGC also administers the Food Assistance Convention (FAC), a separate legal instrument that coordinates the provision of grain as food aid to developing countries, ensuring that humanitarian needs are met without disrupting commercial markets.12 The IGC’s data and analysis are utilized by member governments and private organizations to navigate the complexities of a market where just five nations—Russia, Australia, Canada, the United States, and France—control over 63% of all wheat exports.1
+The Codex Alimentarius Commission
+Scientific safety standards for grain are the domain of the Codex Alimentarius Commission, a joint program of the Food and Agriculture Organization (FAO) and the World Health Organization (WHO).15 The Codex provides internationally recognized standards for cereals, pulses, and legumes, including the "Code of Practice for the Prevention of Mycotoxin Contamination in Cereals".16 These standards define maximum residue limits (MRLs) for pesticides and heavy metals, ensuring that the health of consumers is protected while promoting fair practices in the food trade.15 Under the WTO’s SPS Agreement, national regulations that align with Codex standards are generally shielded from trade challenges, making Codex the scientific foundation of global grain regulation.15
+Global Grain Market Statistics and Trends (2024-2026)
+To understand the regulatory urgency of different nations, one must examine the scale of contemporary grain flows. The marketing years 2024/25 and 2025/26 have seen record-breaking volumes in several categories, shifting the regulatory burden toward high-capacity inspection and weighing systems.
+Table 1: Global Wheat Production and Export Leaders (2024/2025)
+Country
+	Production (Million Metric Tons)
+	Global Share (%)
+	Export Volume (Million MT)
+	Global Export Share (%)
+	China
+	140.1
+	18%
+	-
+	-
+	European Union
+	122.12
+	15%
+	13.47
+	6.7%
+	India
+	113.29
+	14%
+	-
+	-
+	Russia
+	81.6
+	10%
+	46.0
+	16%
+	United States
+	53.65
+	7%
+	17.94
+	10.4%
+	Canada
+	34.96
+	4%
+	25.57
+	15%
+	Australia
+	34.11
+	4%
+	29.29
+	15.8%
+	Source: 1
+In the corn market, the United States achieved a banner year in 2024/25, with exports reaching 72.6 million metric tons, including a significant rise in shipments to non-traditional markets like Vietnam, which rose from a mere 5,000 tons to 1.1 million tons in a single year.19 Such shifts require rapid adjustments in phytosanitary protocols and export certification procedures to meet the entry requirements of diverse new trading partners.
+North American Regulatory Architectures
+The United States and Canada operate two of the world's most sophisticated grain regulatory systems, focusing on maintaining the quality "brand" of their exports in highly competitive global markets.
+United States: USDA Federal Grain Inspection Service (FGIS)
+In the United States, the Federal Grain Inspection Service (FGIS), part of the Agricultural Marketing Service (AMS) of the USDA, regulates the export of grains, oilseeds, and related commodities.20 FGIS was created by Congress in 1976 to manage a national grain inspection system and initiate a national weighing program.22 Under the U.S. Grain Standards Act (USGSA), official inspection and weighing of grain exported from the United States are mandatory, ensuring that international buyers receive exactly what they purchased.22
+The official system is a public-private partnership where FGIS supervises a network of federal, state, and private agencies authorized to provide inspection and weighing services.3 This system guarantees consistency through uniform procedures and equipment, such as the Boerner-type divider for obtaining representative samples.3 FGIS maintains official standards for 12 major grains, including barley, corn, flaxseed, oats, rye, sorghum, soybeans, sunflower seed, triticale, wheat, mixed grain, and rice.20
+
+
+FGIS Regulatory Division
+	Responsibility
+	Field Management
+	Supervises domestic and export inspection/weighing services.20
+	International Affairs
+	Reviews discrepancies reported by importing countries.20
+	Quality Assurance
+	Monitors operations to ensure conformity with federal policies.20
+	Technology and Science
+	Coordinates research and new equipment evaluation.20
+	The US system also includes the Animal and Plant Health Inspection Service (APHIS), which provides phytosanitary certification.21 Exporters must use the Phytosanitary Certificate Issuance and Tracking (PCIT) system to apply for the Federal Phytosanitary Certificate (PPQ Form 577), which attests that the products are free from pests and diseases.24 The official website for these services can be accessed at ams.usda.gov.
+Canada: The Canadian Grain Commission (CGC)
+The Canadian Grain Commission (CGC) is the federal regulator of grain handling in Canada, deriving its authority from the Canada Grain Act.4 The CGC establishes science-based standards of quality and maintains the "Official Grain Grading Guide," a comprehensive reference for grading all Canadian oilseeds, pulses, and grains.4 Canadian wheat is meticulously categorized into functional classes, such as Canada Western Red Spring (CWRS) and Canada Western Amber Durum (CWAD), each with specific requirements for protein content, test weight, and vitreousness.27
+A unique aspect of the Canadian system is the role of the Eastern and Western Grain Standards Committees, which recommend changes to grade specifications and tolerance levels for grading factors like Ergot, Sclerotinia, and frost damage.26 The CGC also operates a robust licensing system; all grain companies must be licensed and provide financial security to ensure that producers are compensated in the event of a licensee's failure.4 Producers further benefit from the "Final Quality Determination" service, which allows them to dispute the grade assigned to their grain at a primary elevator.4 The CGC's official portal is located at grainscanada.gc.ca.
+The European Union’s Trade and Custom Mechanisms
+The European Union handles grain regulation through the Common Agricultural Policy (CAP) and the Directorate-General for Agriculture and Rural Development (DG AGRI). The EU system is characterized by its use of Tariff Rate Quotas (TRQs) and rigorous import licensing.29
+Tariff Rate Quotas (TRQs) and Market Measures
+EU TRQs allow specific quantities of agricultural products to be imported at duty rates lower than the standard "erga omnes" tariffs.30 These quotas are managed through two main systems: the "First-come, first-served" system, managed by the Taxation and Customs Union (DG TAXUD), and the agricultural license system, managed by DG AGRI.30 Operators must register in the License Operator Registration and Identification (LORI) electronic system to participate in these quotas.30
+In June 2025, the EU’s trade relations with Ukraine underwent a significant shift. After three years of autonomous trade liberalization measures following the Russian invasion, the EU reverted to the TRQs defined in the EU-Ukraine Association Agreement.31 This transition reintroduced specific volume limits for 2025: 1,000,000 tons for wheat, 650,000 tons for maize, and 350,000 tons for barley.31 If these quotas are exceeded, standard duties apply—€12 per ton for wheat—followed by significantly higher out-of-quota tariffs of €95 per ton.31 This restoration of the tariff regime is seen as a move to stabilize the EU internal market while supporting Ukraine's long-term integration into European standards.33
+
+
+EU Regulatory Element
+	Primary Function
+	DG AGRI
+	Market monitoring, TRQ management, and CAP oversight.29
+	LORI System
+	Registration and identification of TRQ operators.30
+	Entry Price Mechanism
+	Discourages imports with extremely low prices to protect EU producers.29
+	Export Refunds
+	Granted only in cases of major market disturbance since 2014.34
+	The official EU portal for agri-food trade data and regulations is agriculture.ec.europa.eu.
+Black Sea Geopolitics: Russia and Ukraine
+The Black Sea region has become the epicenter of global grain trade volatility, with the regulatory services of Russia and Ukraine playing pivotal roles in global price stability.
+Russia: Rosselkhoznadzor and EAEU Compliance
+In Russia, the Federal Service for Veterinary and Phytosanitary Supervision, known as Rosselkhoznadzor, is the primary executive body responsible for grain export and import oversight.35 Rosselkhoznadzor enforces quarantine and plant protection rules, soil safety, and the handling of pesticides.35 The agency is known for its rigorous and sometimes controversial enforcement of phytosanitary standards. In 2024 and 2025, it imposed and then selectively lifted restrictions on wheat imports from regions of Kazakhstan, citing the need to ensure export batches were clean and free of pests.36
+Exporting to Russia requires extensive documentation, including certificates of origin to determine eligibility for tariff rate quotas and certificates of quality to ensure compliance with Russian state standards.37 Russia frequently requires bilateral veterinary certificates even for grain products, a requirement that some trading partners, including the United States, have challenged as unnecessary.37 All certificates must be provided in Russian, and errors often lead to the detention of cargo at the border.37 Information can be found at fsvps.gov.ru.
+Ukraine: SSUFSCP and Export Licensing
+The State Service of Ukraine on Food Safety and Consumer Protection (SSUFSCP) is the central authority for ensuring the safety and quality of Ukrainian grain.39 Established in 2014, the service verifies import and export certifications for cereals, fruits, vegetables, and animal products.40 In response to trade tensions with neighboring EU states, the Government of Ukraine (GOU) implemented Decree 1481 in late 2024, establishing a system of voluntary export licensing and quotas for 2025.41
+Under this decree, export licensing is compulsory for all shipments of wheat, corn, and sunflower seeds destined for Poland, Hungary, Slovakia, Bulgaria, and Romania.42 This mechanism allows the Ministry of Economy to regulate trade flows and prevent the triggering of EU-wide safeguard measures.41 Despite the wartime conditions, Ukraine has continued to modernize its regulatory framework, moving toward indefinite bilateral agreements with the EU that abolish many tariffs while maintaining strict, increased quotas for sensitive products like sugar and honey.33 The SSUFSCP can be contacted via dpss.gov.ua.
+Asian Import and Export Barriers: China and India
+As both massive producers and consumers, China and India use complex regulatory layers to balance domestic market stability with international trade obligations.
+China: GACC and the CIFER System
+The General Administration of Customs of China (GACC) regulates the import of all food products, including grains, under Decrees 248 and 249.44 Since January 2022, all overseas food manufacturers, processors, and storage facilities must be registered with GACC via the China Import Food Enterprise Registration (CIFER) single-window system.44 GACC registration is a mandatory mechanism to ensure that imported products meet China's national safety and quality standards.46
+The registration process is divided into two paths: "authority-recommended" for 18 high-risk categories (including edible grains, industrial grains, malt, and dried beans) and "self-registration" for other categories.44 For high-risk products, the exporter's local competent authority (such as the USDA in the US) must audit the facility and recommend it to the GACC.47 Once approved, a facility receives a unique China registration number that must be printed on the inner and outer packaging of all products.44 Registrations are valid for five years and must be renewed six months prior to expiry.44 The CIFER portal is accessed at cifer.singlewindow.cn.
+
+
+GACC Decree
+	Regulatory Focus
+	Decree 248
+	Registration of overseas manufacturers and cold-storage sites.44
+	Decree 249
+	Administrative measures on import and export food safety.45
+	India: Export Restrictions and APEDA
+India's grain trade is managed by the Directorate General of Foreign Trade (DGFT) and the Agricultural and Processed Food Products Export Development Authority (APEDA).48 India has a history of imposing export bans on rice and wheat to meet domestic consumption needs during periods of high inflation.50 In 2024, the government maintained restrictions on the export of sugar and non-basmati rice from the "Central Pool Stocks," which are procured for domestic welfare schemes.51
+Exporters in India must register as members of APEDA and follow specific protocols for "scheduled products".48 For exports to sensitive markets like the United States, APEDA and the Directorate of Plant Protection, Quarantine & Storage (DPPQS) enforce a strict "Khapra Beetle" protocol for rice, which involves registering milling units, vacuum-cleaning containers, and providing additional declarations on phytosanitary certificates.52 Import regulations in India are governed by the Plant Quarantine Order of 2003, which requires a valid import permit and mandates pest risk analysis (PRA) for all new agricultural commodities.53 Regulators can be found at apeda.gov.in and dgft.gov.in.
+South American Logistics and Biosecurity: Brazil and Argentina
+Brazil and Argentina are global powerhouses in the export of maize and soybeans, with Brazil also being a major producer and exporter of specialized commodities like coffee.55
+Brazil: MAPA and VIGIAGRO
+The Ministry of Agriculture, Livestock, and Food Supply (MAPA) is the central authority for Brazil’s agricultural industry.56 MAPA operates the International Agricultural Surveillance System (VIGIAGRO), which is responsible for the inspection and surveillance of animal and plant products at all points of entry and exit, including ports, airports, and border posts.55
+Companies wishing to export from Brazil must pass compliance inspections by MAPA and pass audits of their operational processes to obtain the necessary licenses.56 For high-value exports like coffee, MAPA requires classification according to technical standards that evaluate grain size, moisture, and sensory characteristics.55 Brazil also maintains strict import controls; during international events like COP30, all participants must declare animal- and plant-based products to prevent sanitary and environmental risks, with oversight provided by both MAPA and the Brazilian Health Regulatory Agency (Anvisa).57 MAPA's portal is at gov.br/agricultura.
+Oceanian Standards: Australia
+Australia’s grain regulatory system is renowned for its stringent biosecurity and quality assurance measures, overseen by the Department of Agriculture, Fisheries and Forestry (DAFF).
+DAFF and the Authorised Officer (AO) System
+Australia defines certain grains and legumes as "prescribed goods" under the Export Control Act 2020, including wheat, barley, canola, chickpeas, lentils, and oats.58 To export these goods, a company must be registered as an exporter and use an Export Registered Establishment (ERE) for product preparation.58 The system relies on Plant Export Authorised Officers (AOs)—officials who are trained and appointed by the government but may be employees of private companies—to conduct inspections at a regulated rate (2.5 liters per 33 tonnes of grain).59
+DAFF issues the Phytosanitary Certificate only after an AO confirms that the grain meets the specific quarantine requirements of the importing country.59 These requirements are tracked in the Manual of Importing Country Requirements (Micor) database.58 For bulk exports, Australia also requires a "Ship’s Holds Inspection Certificate" (Form EX175), which provides evidence that the vessel was found to be clean, dry, and free of infestation before loading.60 The official website for Australian export services is agriculture.gov.au.
+Middle Eastern Procurement Shifts: Egypt
+Egypt remains the world’s largest importer of wheat, and its procurement reforms are a bellwether for global grain trade. The General Authority for Supply Commodities (GASC), a civilian arm of the Ministry of Supply and Internal Trade, has traditionally been the sole purchaser of wheat for the country’s massive bread subsidy program.61
+From State Tenders to Commercial Direct Purchases
+Historically, GASC relied on transparent international tenders, a system praised for its clear rules but criticized for being slow and bureaucratic.62 In late 2024, the Egyptian government began a strategic overhaul by empowering a new agency, "Mostakbal Misr" (Future of Egypt), to hold tenders and sign direct, private contracts.62 This allows Egypt to act like a commercial trader, buying wheat at "market speed" to capitalize on dips in global prices.62
+Despite these changes, Egypt maintains strict quality maintenance protocols through its coastal silos in ports like Alexandria, Damietta, and Safaga, which have a total capacity of 355,000 tons.63 These coastal facilities are managed by the Egyptian Holding Company for Silos and Storage, which monitors grain quality and works to eliminate loss rates that can reach 15% in traditional open-air storage.63 Egypt’s procurement target for CY 2024 was 3.5 MMT from local farmers, supplemented by imports primarily from Russia (8.47 MMT in MY 2023/24) and Ukraine (2.14 MMT).64 GASC’s official portal can be found at gasc.gov.eg.
+Cross-Cutting Regulatory Issues: Phytosanitary and Logistics
+While national agencies manage the specifics of their domestic markets, several cross-cutting regulatory themes define the contemporary global grain trade.
+Phytosanitary Certificates and Pest Management
+The Phytosanitary Certificate is the most important document in the grain trade, serving as the official attestation by an NPPO that a shipment complies with the current regulations of the importing country.24 Under the International Plant Protection Convention (IPPC), these certificates must follow a model format and be issued only after careful inspection and treatment.54 Common pests of concern include the Khapra beetle (Trogoderma granarium), which has led to specialized fumigation requirements in countries like Bangladesh and the United States.21
+Maximum Residue Limits (MRLs) and Biotechnology
+The regulation of pesticide residues and genetically modified (GM) traits is a source of significant trade friction. The European Union follows a complex, rolling system of review for active ingredients and MRLs, which can lead to the loss of chemical inputs for farmers in exporting nations.21 Similarly, the importation of GM grains into markets like China requires an "Agricultural Genetically Modified Organisms Safety Certificate" and specific labeling as per GACC Decree 248.67 The USDA maintains a global MRL database to help exporters navigate these varying standards across 70 different countries.21
+Contractual Standardization: Gafta
+Beyond government regulation, the private sector relies on the Grain and Feed Trade Association (Gafta). Gafta is an international trade association that provides standardized contracts and arbitration services used in over 80% of world grain trade.68 Gafta contracts incorporate international regulatory requirements into commercial terms, providing a framework for dispute resolution when quality or logistical issues arise.68 Gafta’s annual reports and export tax updates are essential reading for global grain traders.68
+Synthesis and Strategic Outlook
+The global grain regulatory environment is characterized by a paradox of increasing liberalization and deepening administrative control. While the WTO and IGC work to reduce traditional tariffs, the rise of "technical barriers to trade" (TBT) and SPS measures has created a new landscape of "digital borders."
+Key Takeaways for Market Participants
+1. Digitalization of Compliance: Systems like China’s CIFER and the EU’s LORI represent a shift toward real-time, digital oversight of every facility in the global supply chain. Exporters must invest in digital compliance tracking to manage the five-year renewal cycles and complex data requirements of these portals.44
+2. Strategic Diversification: Major importers like Egypt are moving away from rigid state tenders toward flexible, direct purchasing models. This allows them to diversify origins—such as Egypt adding Turkey and Kazakhstan to its wheat list—increasing the competition among exporters.62
+3. Geopolitical Technical Standards: Phytosanitary rules are increasingly used as tools of statecraft. The recent tensions between Russia and Kazakhstan over grain cleanliness demonstrate how technical standards can be deployed to manage regional trade flows.36
+4. Rigorous Quality Assurance: The reputation of North American grain depends on the continued integrity of the FGIS and CGC. These agencies' science-based grading guides remain the global gold standard for quality assurance, providing a "common language" that facilitates trade even in volatile markets.3
+As global production continues to hit record highs, the burden on these regulatory infrastructures will only increase. For participants in the global grain market, mastery of these national and international frameworks is no longer merely a logistical necessity; it is a fundamental strategic requirement for survival in the 21st-century food economy.
+Works cited
+1. Top 10 Wheat-Producing Countries in 2024/25 and Their Global Impact - Straits Research, accessed January 1, 2026, https://straitsresearch.com/statistic/top-wheat-producing-countries
+2. International Grains Council (IGC), accessed January 1, 2026, https://www.igc.int/
+3. Official Grain Inspection & Weighing System - Agricultural Marketing Service - USDA, accessed January 1, 2026, https://www.ams.usda.gov/services/fgis/official-grain-inspection-weighing-system
+4. Canadian Grain Commission, accessed January 1, 2026, https://www.grainscanada.gc.ca/en/
+5. The WTO and EU agriculture, accessed January 1, 2026, https://agriculture.ec.europa.eu/international/agricultural-trade/wto-and-eu-agriculture_en
+6. WORLD TRADE ORGANIZATION 3.15 Agriculture - UNCTAD, accessed January 1, 2026, https://unctad.org/system/files/official-document/edmmisc232add32_en.pdf
+7. World Trade Organization Agreement on Agriculture Basics 2, accessed January 1, 2026, https://www.iatp.org/files/World_Trade_Organization_Agreement_on_Agricult.pdf
+8. World Trade Organization Agreement on Agriculture Basics - The Web site cannot be found, accessed January 1, 2026, https://www.files.ethz.ch/isn/115246/2003-08-18_WTO_Agreement.pdf
+9. WTO Agreements on Agriculture (AOA) | PDF - Slideshare, accessed January 1, 2026, https://www.slideshare.net/slideshow/wto-agreements-on-agriculture-aoa/233503240
+10. Trade Barriers - U.S. Wheat Associates, accessed January 1, 2026, https://uswheat.org/policy/trade-barriers/
+11. International Grains Council (IGC) - Ministero degli Affari Esteri e della Cooperazione Internazionale, accessed January 1, 2026, https://www.esteri.it/en/politica-estera-e-cooperazione-allo-sviluppo/politica_europea/politica-commerciale-internazionale/prodotti-di-base/consiglio-internazionale-per-i-cereali-igc/
+12. international grains agreement, 1995 - Congress.gov, accessed January 1, 2026, http://beta.congress.gov/105/crpt/erpt16/CRPT-105erpt16.pdf
+13. International Grains Council - Wikipedia, accessed January 1, 2026, https://en.wikipedia.org/wiki/International_Grains_Council
+14. Top Wheat Exporters 2025: Global Trade & Market Trends - Tradologie.com, accessed January 1, 2026, https://www.tradologie.com/blogs/boost-your-knowledge-biggest-wheat-exporters-in-2025/
+15. Codex Alimentarius - Cereals, Pulses, Legumes and Vegetable Proteins, accessed January 1, 2026, https://www.fao.org/4/a1392e/a1392e00.htm
+16. Codex alimentarius : cereals, pulses, legumes and vegetable proteins - Catalog, accessed January 1, 2026, https://search.library.wisc.edu/catalog/9910070210502121
+17. Codex Alimentarius - Cereals, Pulses, Legumes and Vegetable Proteins, accessed January 1, 2026, http://openknowledge.fao.org/items/ad0031b2-44dd-40ca-b16f-6f9d0562a183
+18. Codex alimentarius, accessed January 1, 2026, https://dn790000.ca.archive.org/0/items/bub_gb_Yj4EKS91wvgC/bub_gb_Yj4EKS91wvgC.pdf
+19. Grain: World Markets and Trade - USDA Foreign Agricultural Service, accessed January 1, 2026, https://apps.fas.usda.gov/psdonline/circulars/grain.pdf
+20. Federal Grain Inspection Service, accessed January 1, 2026, https://www.ams.usda.gov/about-ams/programs-offices/federal-grain-inspection-service
+21. Regulations & Requirements - USDA Foreign Agricultural Service, accessed January 1, 2026, https://www.fas.usda.gov/topics/regulations-and-requirements
+22. Grain Quality U.S. Grades and Standards, accessed January 1, 2026, https://grains.org/wp-content/uploads/2018/02/Chapter-4-Grain-Quality-and-U.S.pdf
+23. Oats: Grading - Canadian Grain Commission, accessed January 1, 2026, https://www.grainscanada.gc.ca/en/grain-quality/official-grain-grading-guide/07-oats/grading.html
+24. Phytosanitary Certification for Export Introduction - State of Michigan, accessed January 1, 2026, https://www.michigan.gov/mdard/-/media/Project/Websites/mdard/documents/pesticide-plant-pest/planthealth/how_to_apply_for_phytosanitary_inspection_and_certification.pdf
+25. Plant and Plant Product Export Certificates | Animal and Plant Health Inspection Service - usda aphis, accessed January 1, 2026, https://www.aphis.usda.gov/plant-exports/certification
+26. Official Grain Grading Guide - Canadian Grain Commission, accessed January 1, 2026, https://www.grainscanada.gc.ca/en/grain-quality/official-grain-grading-guide/
+27. Regulations Amending the Canada Grain Regulations: SOR/2023-159, accessed January 1, 2026, https://gazette.gc.ca/rp-pr/p2/2023/2023-07-19/html/sor-dors159-eng.html
+28. Grain grading - Canadian Grain Commission, accessed January 1, 2026, https://grainscanada.gc.ca/en/grain-quality/grain-grading/
+29. Trade and quotas - Agri-food data portal - European Union, accessed January 1, 2026, https://agridata.ec.europa.eu/extensions/DataPortal/trade.html
+30. Tariff rate quotas - Agriculture and rural development - European Union, accessed January 1, 2026, https://agriculture.ec.europa.eu/common-agricultural-policy/market-measures/trqs_en
+31. EU-Ukraine Tariff Quotas: New Rules of the Game for Agricultural Exports from June 6, 2025, accessed January 1, 2026, https://lcf.ua/en/thought-leadership/international-arbitration/eu-ukraine-tariff-quotas-new-rules-of-the-game-for-agricultural-exports-from-june-6-2025/
+32. Report Name:EU Updates Import Quotas for Ukrainian Products, accessed January 1, 2026, https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=EU%20Updates%20Import%20Quotas%20for%20Ukrainian%20Products_Kyiv_Ukraine_UP2025-0022
+33. Ukraine and the EU abolish tariffs and increase quotas on agricultural exports, accessed January 1, 2026, https://ukraine-eu.mfa.gov.ua/en/news/ukraine-and-eu-abolish-tariffs-and-increase-quotas-agricultural-exports
+34. Trade regime for processed agricultural products - Internal Market, Industry, Entrepreneurship and SMEs - European Union, accessed January 1, 2026, https://single-market-economy.ec.europa.eu/sectors/agri-food-industrial-ecosystem/trade-processed-agricultural-products/trade-arrangements_en
+35. Federal Service for Veterinary and Phytosanitary Supervision of the Russian Federation, accessed January 1, 2026, http://government.ru/en/department/62/
+36. Rosselkhoznadzor officially lifted restrictions on wheat supplies to Russia from several regions of Kazakhstan, accessed January 1, 2026, https://www.apk-inform.com/en/news/1551053
+37. Russian Federation Food and Agricultural Import Regulations and Standards - Certification FAIRS Export Certificate Report, accessed January 1, 2026, https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+-+Certification_Moscow_Russian+Federation_29.09.2009.pdf
+38. Russian Federation Food and Agricultural Import Regulations and Standards Report FAIRS Export Certificate Report - APEDA- Agri Exchange, accessed January 1, 2026, https://agriexchange.apeda.gov.in/ImportRegulations/FoodandAgriculturalImportRegulationsandStandardsReportMoscowRussianFederation12172018.pdf
+39. State Service of Ukraine on Food Safety and Consumer Protection, accessed January 1, 2026, https://dpss.gov.ua/en
+40. Food and Agricultural Import Regulations and Standards Export Certificate Report, accessed January 1, 2026, https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Food+and+Agricultural+Import+Regulations+and+Standards+Export+Certificate+Report_Kyiv_Ukraine_12-31-2019.pdf
+41. Ukraine Self-Imposes Export Restrictions on EU Trade - USDA Foreign Agricultural Service, accessed January 1, 2026, https://www.fas.usda.gov/data/ukraine-ukraine-self-imposes-export-restrictions-eu-trade
+42. Report Name:Ukraine Self-Imposes Export Restrictions on EU Trade - USDA Foreign Agricultural Service, accessed January 1, 2026, https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Ukraine+Self-Imposes+Export+Restrictions+on+EU+Trade_Kyiv_Ukraine_UP2024-0030.pdf
+43. News - Committee on Agrarian and Land Policy: The updated Trade Agreement between Ukraine and the European Union has entered into force, accessed January 1, 2026, https://www.rada.gov.ua/en/news/News/267658.html
+44. Effortless 12‑Step Power Guide: GACC Registration China (2025 Update), accessed January 1, 2026, https://fdichina.com/blog/gacc-registration-china-2025-complete-guide/
+45. China Food Import Regulations: A Complete Guide for F&B Brands - GourmetPro, accessed January 1, 2026, https://www.gourmetpro.co/blog/china-food-import-regulations-guide
+46. Understanding GACC Registration: A Comprehensive Guide for Exporters to China - Blog, accessed January 1, 2026, https://globalriskcommunity.com/profiles/blogs/understanding-gacc-registration-a-comprehensive-guide-for-exporte
+47. GACC registration - food registration for China - MPR China Certification GmbH, accessed January 1, 2026, https://www.china-certification.com/en/china-food-certifications/
+48. About APEDA, accessed January 1, 2026, https://apeda.gov.in/about-us
+49. Directorate General of Foreign Trade | Ministry of Commerce and Industry | Government of India, accessed January 1, 2026, https://www.dgft.gov.in/
+50. APEDA: Home, accessed January 1, 2026, https://apeda.gov.in/
+51. Import/Export | Official Website of Department of Food and Public Distribution, Ministry of Consumer Affairs, Food and Public Distribution, Government of India, accessed January 1, 2026, https://dfpd.gov.in/import-exports/en
+52. - - -r - APEDA, accessed January 1, 2026, https://apeda.gov.in/sites/default/files/export_procedures/ExportOfRiceToUSA.pdf
+53. Plant Quarantine Order 2003 - IBKP, accessed January 1, 2026, https://ibkp.dbtindia.gov.in/DBT_Content_Test/CMS/Guidelines/20181115121925276_PlantQuarantine_order_2003.pdf
+54. 9 The plant quarantine order in India - Identification of risks and management of invasive alien species using the IPPC framework, accessed January 1, 2026, https://www.fao.org/4/y5968e/y5968e0f.htm
+55. Brazilian coffee abroad: MAPA requirements for premium exports - Stone Okamont, accessed January 1, 2026, https://www.stoneokamont.com/brazilian-coffee-abroad-mapa-requirements-for-premium-exports-
+56. Step-by-Step Guide to Obtaining MAPA Licenses for an Agricultural Establishment in Brazil, accessed January 1, 2026, https://www.bergandco.co/post/step-by-step-guide-to-obtaining-mapa-licenses-for-an-agricultural-establishment-in-brazil
+57. Import of Agricultural Products - COP30, accessed January 1, 2026, https://cop30.br/en/cop30-services/import-of-agricultural-products
+58. Exporting plants and plant products: A step-by-step guide for Australian exporters - DAFF, accessed January 1, 2026, https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/plants-plant-products/exportersguide
+59. Member Update No. 24 of 2024 Meeting Import Country Quarantine Requirements, accessed January 1, 2026, https://graintrade.org.au/member-update/member-update-no-24-of-24_meeting-import-country-quarantine-requirements/
+60. Certificates, declarations and forms - DAFF, accessed January 1, 2026, https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/plants-plant-products/certificates-declarations-forms
+61. Homepage - General Authority For Supply Commodities, accessed January 1, 2026, https://www.gasc.gov.eg/en
+62. Tenders out, traders in: How Egypt is rewiring its wheat supply chain | Miller Magazine, accessed January 1, 2026, https://millermagazine.com/blog/tenders-out-traders-in-how-egypt-is-rewiring-its-wheat-supply-chain-6480
+63. partners - General Authority For Supply Commodities, accessed January 1, 2026, https://www.gasc.gov.eg/partners/en
+64. Report Name: Grain and Feed Update - USDA Foreign Agricultural Service, accessed January 1, 2026, https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Grain%20and%20Feed%20Update_Cairo_Egypt_EG2024-0023
+65. Phytosanitary Certificate for Export of Plant Products - Australian Government, accessed January 1, 2026, https://ablis.business.gov.au/service/ag/phytosanitary-certificate-for-export-of-plant-products/261
+66. Application for Issue of Phytosanitary Certificate for Export/Re-Export of Agriculture Commodity - NSWS, accessed January 1, 2026, https://www.nsws.gov.in/portal/approval-details/ministry-of-agriculture-and-farmers-welfare/department-of-agriculture-cooperation-and-farmers-welfare/application-for-issue-of-phytosanitary-certificate-for-export-re-export-of-agriculture-commodity
+67. Crops Grains Oilseeds and Rice - gacc registration, accessed January 1, 2026, https://www.foodgacc.com/china-customs-registration-gacc-aqsiq-list-ciqcode-cifer-singlewindow-crops-grains-oilseeds-rice
+68. GAFTA, accessed January 1, 2026, https://www.gafta.com/

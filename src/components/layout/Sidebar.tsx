@@ -1,4 +1,4 @@
-import { Filter, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { TabNav } from '../index';
 import { TabId } from '../../types';
 
@@ -28,7 +28,7 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen, onSidebarToggle }
                     onClick={onSidebarToggle}
                 />
                 <aside
-                    className={`absolute inset-y-0 left-0 w-80 bg-white dark:bg-gray-950 shadow-2xl transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                    className={`absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-white dark:bg-gray-950 shadow-2xl transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
                 >
                     <div className="p-6 space-y-6 h-full flex flex-col">
                         <div className="flex items-center justify-between mb-2">
@@ -50,15 +50,7 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen, onSidebarToggle }
                 </aside>
             </div>
 
-            {/* Hamburger Menu Button */}
-            <button
-                onClick={onSidebarToggle}
-                className={`lg:hidden fixed bottom-6 right-6 z-40 p-4 bg-teal-600 text-white rounded-full shadow-2xl hover:bg-teal-700 transition-all duration-300 hover:scale-110 active:scale-95 flex items-center gap-2 ${sidebarOpen ? 'scale-0' : 'scale-100'}`}
-                aria-label="Open navigation menu"
-            >
-                <Filter className="w-6 h-6" />
-                <span className="font-bold text-sm">Filters</span>
-            </button>
+
         </>
     );
 }

@@ -30,7 +30,8 @@ import {
   TrendsPage,
   NewsTab,
   GithubTab,
-  ResearchPapersTab
+  ResearchPapersTab,
+  DeepResearchTab
 } from './components/tabs';
 
 // Main Dashboard Component
@@ -99,7 +100,11 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors flex flex-col">
-      <Header searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      <Header
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}
+      />
 
       <div className="flex flex-1 overflow-hidden">
         <Sidebar
@@ -143,6 +148,7 @@ function Dashboard() {
               />
             )}
             {activeTab === 'research' && <ResearchTab />}
+            {activeTab === 'deep-research' && <DeepResearchTab />}
             {activeTab === 'regulations' && <RegulationsTab />}
             {activeTab === 'history' && <HistoryTab />}
             {activeTab === 'news' && <NewsTab />}
