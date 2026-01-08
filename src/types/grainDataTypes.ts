@@ -21,6 +21,7 @@ export type Region =
     | "Africa"
     | "Asia"
     | "Oceania"
+    | "Middle East"
     | "Global"
     | "Other"
     // Legacy regions to support existing data until fully migrated

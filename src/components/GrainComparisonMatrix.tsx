@@ -18,11 +18,9 @@ import type {
   FormFactor,
   SensingTech,
   UseCase,
-  MaturityLevel,
 } from "../data/grainTechEntities";
 import { getDenormalizedSolutions } from "../utils/dataNormalization";
 import { getCompanyUrl, formatCompanyUrl } from "../utils/companyLookup";
-import { ExternalLink } from "./ExternalLink";
 import { filterGrainSolutions, getGrainFilterOptions } from "../utils/grainFilters";
 import { exportGrainSolutions } from "../utils/export";
 import type { ExportFormat } from "../types";

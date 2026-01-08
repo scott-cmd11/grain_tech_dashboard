@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
-import { Calendar } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 import { eventsSortedByDate } from "../data/registries/events";
-import { ExternalLink } from "./ExternalLink";
 import type { AdoptionEvent } from "../data/adoptionTimeline";
 import type {
   GrainSolution,
@@ -172,7 +171,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
             <div className="flex flex-col md:flex-row gap-4">
               {group.events.map((event) => {
                 const isActive = activeEventId === event.id;
-                const relatedSolutions = isActive ? matchCompanies(event, grainSolutions) : [];
+                const relatedSolutions = isActive ? matchCompanies(event, grainSolutions ?? []) : [];
 
                 return (
                   <div

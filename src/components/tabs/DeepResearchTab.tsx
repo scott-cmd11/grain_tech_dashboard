@@ -1,6 +1,4 @@
-import React from 'react';
-import { FileText, Globe, Shield, Scale, Info, ExternalLink as ExternalLinkIcon } from 'lucide-react';
-import { ExternalLink } from '../ExternalLink';
+import { FileText, Globe, Shield, Info } from 'lucide-react';
 
 export function DeepResearchTab() {
     return (
