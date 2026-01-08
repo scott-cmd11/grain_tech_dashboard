@@ -49,7 +49,7 @@ const groupedTabs: TabGroup[] = [
   {
     title: 'Reference & Data',
     tabs: [
-      { id: 'deep-research', label: 'Deep Research', icon: <BookOpen className="w-4 h-4" /> },
+      { id: 'deep-research', label: 'Regulatory Intelligence', icon: <BookOpen className="w-4 h-4" /> },
       { id: 'research', label: 'AI Progress', icon: <BrainCircuit className="w-4 h-4" /> },
       { id: 'research-papers', label: 'Research Papers', icon: <BookOpen className="w-4 h-4" /> },
       { id: 'datasets', label: 'Datasets', icon: <Database className="w-4 h-4" /> },
