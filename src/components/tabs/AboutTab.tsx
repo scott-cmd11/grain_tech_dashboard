@@ -2,6 +2,7 @@ import { Building, Database, BrainCircuit, Scale, History } from 'lucide-react';
 import type { TabId } from '../../types';
 
 export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
+  // Test deployment trigger
   return (
     <div className="space-y-6 animate-in fade-in duration-500">
       {/* Intro */}
