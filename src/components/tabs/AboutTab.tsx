@@ -72,3 +72,4 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
     </div>
   );
 }
+// Deployment trigger with correct author
