@@ -61,8 +61,11 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
       {/* Tech stack */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
         <h3 className="text-heading-3 font-bold text-gray-900 dark:text-gray-100 mb-4">Built with</h3>
-        <p className="text-body-sm text-gray-600 dark:text-gray-400">
+        <p className="text-body-sm text-gray-600 dark:text-gray-400 mb-3">
           React, TypeScript, Tailwind CSS, Vite, Leaflet, and Recharts.
+        </p>
+        <p className="text-body-sm text-gray-600 dark:text-gray-400">
+          Built with help from Claude Code, Google Antigravity, and ChatGPT Codex.
         </p>
       </div>
     </div>
