@@ -8,65 +8,84 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Roboto',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'sans-serif',
-        ],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
+        // Premium neutral palette
+        zinc: {
+          925: '#101012',
+          975: '#050506',
+        },
+        // Accent colors
         grain: {
-          gold: '#D4A440',
-          'gold-light': '#E8C870',
-          'gold-dark': '#B8872A',
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
         },
         growth: {
-          green: '#4A7C35',
-          'green-light': '#6B9B52',
-          'green-dark': '#355A26',
-        },
-        soil: {
-          brown: '#6B4423',
-          'brown-light': '#8D6344',
-          'brown-dark': '#4A2E16',
-        },
-        sky: {
-          blue: '#5B8AA6',
-          'blue-light': '#7FA7BE',
-          'blue-dark': '#426B7E',
+          50: '#ECFDF5',
+          100: '#D1FAE5',
+          200: '#A7F3D0',
+          300: '#6EE7B7',
+          400: '#34D399',
+          500: '#10B981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065F46',
+          900: '#064E3B',
         },
       },
       fontSize: {
-        'body': ['16px', { lineHeight: '1.5' }],
-        'body-sm': ['14px', { lineHeight: '1.5' }],
-        'heading-1': ['32px', { lineHeight: '1.2' }],
-        'heading-2': ['24px', { lineHeight: '1.3' }],
-        'heading-3': ['20px', { lineHeight: '1.4' }],
-        'heading-4': ['18px', { lineHeight: '1.4' }],
+        '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
+      },
+      letterSpacing: {
+        'tighter': '-0.04em',
+        'display': '-0.025em',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+      },
+      boxShadow: {
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.08)',
+        'glass-lg': '0 16px 48px rgba(0, 0, 0, 0.12)',
+        'glow-sm': '0 0 15px rgba(16, 185, 129, 0.15)',
+        'glow': '0 0 30px rgba(16, 185, 129, 0.2)',
+        'glow-lg': '0 0 50px rgba(16, 185, 129, 0.25)',
+        'premium': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08)',
+        'premium-lg': '0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 20px 40px -10px rgba(0, 0, 0, 0.1)',
+      },
+      backdropBlur: {
+        'xl': '20px',
+        '2xl': '40px',
+        '3xl': '64px',
       },
       animation: {
-        'fade-in': 'fade-in 0.3s ease-out',
-        'zoom-in-95': 'zoom-in-95 0.2s ease-out',
-        'slide-in-from-bottom': 'slide-in-from-bottom-5 0.3s ease-out',
+        'fade-in': 'fade-in 0.3s ease-out forwards',
+        'fade-up': 'fade-up 0.4s ease-out forwards',
+        'scale-in': 'scale-in 0.3s ease-out forwards',
+        'slide-up': 'slide-in-from-bottom 0.4s ease-out forwards',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'shimmer': 'shimmer 1.5s infinite',
+        'gradient': 'gradient-shift 3s ease infinite',
       },
-      keyframes: {
-        'fade-in': {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
-        },
-        'zoom-in-95': {
-          from: { opacity: '0', transform: 'scale(0.95)' },
-          to: { opacity: '1', transform: 'scale(1)' },
-        },
-        'slide-in-from-bottom-5': {
-          from: { opacity: '0', transform: 'translateY(1.25rem)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
-        },
+      transitionTimingFunction: {
+        'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'out-quart': 'cubic-bezier(0.25, 1, 0.5, 1)',
+      },
+      transitionDuration: {
+        '400': '400ms',
       },
     },
   },
   plugins: [],
-}
+};

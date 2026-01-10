@@ -9,23 +9,7 @@ const RSS_FEEDS = [
   'https://www.google.ca/alerts/feeds/03030665084568507357/7719612955356284469',
 ];
 
-const WHITELISTED_HOSTS = new Set([
-  'www.fossanalytics.com',
-  'fossanalytics.com',
-  'www.cgrain.ai',
-  'cgrain.ai',
-  'www.videometer.com',
-  'videometer.com',
-  'www.qualysense.com',
-  'qualysense.com',
-  'www.grainsense.com',
-  'grainsense.com',
-  'www.zoomagri.com',
-  'zoomagri.com',
-  'www.global-wheat.com',
-  'global-wheat.com',
-  'github.com',
-]);
+// Removed restrictive whitelist - was filtering out most Google Alerts articles
 
 interface NewsItem {
   id: string;
@@ -52,14 +36,7 @@ function extractImageFromContent(content: string): string {
   return match ? match[1] : '';
 }
 
-function isWhitelisted(url: string): boolean {
-  try {
-    const host = new URL(url).hostname;
-    return WHITELISTED_HOSTS.has(host);
-  } catch {
-    return false;
-  }
-}
+
 
 function extractOgImage(html: string): string {
   const ogMatch = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i);
@@ -132,7 +109,7 @@ async function fetchFeed(url: string): Promise<NewsItem[]> {
       const sourceMatch = content.match(/^([^-]+)-/);
       const source = sourceMatch ? sourceMatch[1].trim() : 'Google Alerts';
 
-      if (title && url && isWhitelisted(url)) {
+      if (title && url) {
         items.push({
           id: `alert-${index++}`,
           title: title.substring(0, 200),
@@ -180,9 +157,7 @@ export default async function handler() {
         continue;
       }
 
-      if (!isWhitelisted(article.url)) {
-        continue;
-      }
+      // Attempt og image fetch for first 10 articles without images
 
       const ogImage = await fetchOgImage(article.url);
       if (ogImage) {
@@ -194,7 +169,7 @@ export default async function handler() {
     // Limit to 20 articles
     allArticles = allArticles.slice(0, 20);
 
-    return new Response(JSON.stringify({ articles: allArticles }), {
+    return new Response(JSON.stringify({ articles: allArticles, lastUpdated: new Date().toISOString() }), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',

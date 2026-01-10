@@ -1,6 +1,6 @@
 import { X } from 'lucide-react';
 import { TabNav } from '../index';
-import { TabId } from '../../types';
+import type { TabId } from '../../types';
 
 interface SidebarProps {
     activeTab: TabId;
@@ -12,45 +12,71 @@ interface SidebarProps {
 export function Sidebar({ activeTab, onTabChange, sidebarOpen, onSidebarToggle }: SidebarProps) {
     return (
         <>
-            {/* Desktop Sidebar */}
-            <aside className={`${sidebarOpen ? 'w-80' : 'w-0'} shrink-0 overflow-y-auto bg-gray-50 dark:bg-gray-900/50 border-r border-gray-200 dark:border-gray-700 transition-all duration-300 lg:flex flex-col hidden shadow-sm`}>
-                <div className="p-6 space-y-6">
+            {/* Desktop Sidebar - Premium Glass Style */}
+            <aside
+                className={`
+                    ${sidebarOpen ? 'w-72' : 'w-0'} 
+                    shrink-0 overflow-y-auto overflow-x-hidden
+                    bg-white/60 dark:bg-zinc-900/60 
+                    backdrop-blur-xl
+                    border-r border-gray-200/50 dark:border-white/5
+                    transition-all duration-300 ease-out-expo
+                    lg:flex flex-col hidden
+                `}
+            >
+                <div className="p-5 space-y-2">
                     <TabNav activeTab={activeTab} onTabChange={onTabChange} />
                 </div>
             </aside>
 
             {/* Mobile Sidebar Overlay */}
             <div
-                className={`lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`lg:hidden fixed inset-0 z-50 transition-all duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
+                {/* Backdrop */}
                 <div
-                    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                    className="absolute inset-0 bg-black/40 backdrop-blur-sm"
                     onClick={onSidebarToggle}
                 />
+
+                {/* Sidebar Panel */}
                 <aside
-                    className={`absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-white dark:bg-gray-950 shadow-2xl transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+                    className={`
+                        absolute inset-y-0 left-0 w-80 max-w-[85vw] 
+                        bg-white/95 dark:bg-zinc-900/95 
+                        backdrop-blur-2xl
+                        shadow-2xl shadow-black/20
+                        transition-transform duration-300 ease-out-expo
+                        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+                    `}
                 >
-                    <div className="p-6 space-y-6 h-full flex flex-col">
-                        <div className="flex items-center justify-between mb-2">
-                            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">Menu</h2>
-                            <button onClick={onSidebarToggle} className="p-2 -mr-2 text-gray-500 hover:text-gray-900 dark:hover:text-gray-100">
-                                <X className="w-6 h-6" />
+                    <div className="p-6 space-y-4 h-full flex flex-col">
+                        {/* Header */}
+                        <div className="flex items-center justify-between pb-4 border-b border-gray-200/50 dark:border-white/10">
+                            <h2 className="text-lg font-semibold text-gray-900 dark:text-white tracking-tight">
+                                Navigation
+                            </h2>
+                            <button
+                                onClick={onSidebarToggle}
+                                className="p-2 -mr-2 text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-xl transition-all duration-200"
+                            >
+                                <X className="w-5 h-5" />
                             </button>
                         </div>
-                        <div className="flex-1 overflow-y-auto pr-2">
+
+                        {/* Navigation */}
+                        <div className="flex-1 overflow-y-auto -mx-2 px-2">
                             <TabNav
                                 activeTab={activeTab}
                                 onTabChange={(tab) => {
                                     onTabChange(tab);
-                                    onSidebarToggle(); // Close on selection
+                                    onSidebarToggle();
                                 }}
                             />
                         </div>
                     </div>
                 </aside>
             </div>
-
-
         </>
     );
 }

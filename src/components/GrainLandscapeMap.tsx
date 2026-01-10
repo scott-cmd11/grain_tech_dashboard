@@ -14,6 +14,7 @@ import { filterGrainSolutions, getGrainFilterOptions } from "../utils/grainFilte
 import { formatCompanyUrl, getCompanyUrl } from "../utils/companyLookup";
 import { formatEnumLabel, formatEnumList } from "../utils/formatLabels";
 import { sensingColors } from "../constants/grainTechColors";
+import { useToast } from "../context/ToastContext";
 import "leaflet/dist/leaflet.css";
 
 // --- Types & Interfaces ---
@@ -74,6 +75,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
   defaultCompaniesOpen = true,
   externalSearchTerm = "",
 }: GrainLandscapeMapProps) {
+  const { showToast } = useToast();
   // 1. Data Loading
   const grainSolutions = propSolutions || getDenormalizedSolutions();
 
@@ -260,13 +262,13 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
     } else {
       // Fallback: Copy to clipboard
       navigator.clipboard.writeText(shareUrl);
-      alert("Filter URL copied to clipboard!");
+      showToast("Filter URL copied to clipboard!", "success");
     }
   };
 
   const exportToCSV = () => {
     if (filteredSolutions.length === 0) {
-      alert("No solutions to export");
+      showToast("No solutions to export", "warning");
       return;
     }
 

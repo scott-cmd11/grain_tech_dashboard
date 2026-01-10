@@ -52,6 +52,101 @@ export interface MarketProjection {
   citations?: string[];
 }
 
+// AI-Integrated Grain Sampling Technology
+export interface AIGrainGradingTech {
+  name: string;
+  company: string;
+  country: string;
+  description: string;
+  integrationPoint: 'On-Combine' | 'Grain Sampler' | 'Benchtop' | 'Mobile/Smartphone' | 'Inline';
+  technology: string[];
+  status: 'Research' | 'Pilot' | 'Commercial';
+  yearEstablished?: number;
+  source: { name: string; url: string };
+}
+
+// Verified AI Grain Grading Technologies (with sources)
+export const aiGrainGradingTechnologies: AIGrainGradingTech[] = [
+  {
+    name: 'On-Combine AI Grading System',
+    company: 'Ground Truth Agriculture',
+    country: 'Canada',
+    description: 'Combine-mounted AI system using machine vision and NIR for real-time grain grading during harvest. Reduces traditional grading time by up to 80%.',
+    integrationPoint: 'On-Combine',
+    technology: ['Machine Learning', 'NIR Spectroscopy', 'Machine Vision'],
+    status: 'Pilot',
+    yearEstablished: 2021,
+    source: { name: 'Protein Industries Canada', url: 'https://www.proteinindustriescanada.ca/' },
+  },
+  {
+    name: 'Cgrain Value Analyzer',
+    company: 'Cgrain',
+    country: 'Sweden',
+    description: 'Patented AI-driven grain inspection using high-resolution imaging and neural networks. Analyzes kernels for defects, impurities, and physical characteristics.',
+    integrationPoint: 'Benchtop',
+    technology: ['Deep Learning', 'High-Resolution Imaging', 'Neural Networks'],
+    status: 'Commercial',
+    yearEstablished: 2015,
+    source: { name: 'Cgrain', url: 'https://cgrain.ai/' },
+  },
+  {
+    name: 'Infratec™ Grain Analyzers',
+    company: 'FOSS',
+    country: 'Denmark',
+    description: 'Industry-standard NIR grain analyzers with global calibrations for moisture, protein, oil, and starch. FossConnect™ enabled for data management.',
+    integrationPoint: 'Inline',
+    technology: ['NIR Spectroscopy', 'Global Calibrations'],
+    status: 'Commercial',
+    yearEstablished: 2005,
+    source: { name: 'FOSS Analytics', url: 'https://www.fossanalytics.com/' },
+  },
+  {
+    name: 'Smartphone Soybean Grading',
+    company: 'Grain Discovery + Inarix + Sevita',
+    country: 'Canada',
+    description: 'AI-powered smartphone tool for soybean quality assessment. Generates grade in under 20 seconds from a photo.',
+    integrationPoint: 'Mobile/Smartphone',
+    technology: ['Computer Vision AI', 'Smartphone Camera'],
+    status: 'Pilot',
+    yearEstablished: 2024,
+    source: { name: 'Protein Industries Canada', url: 'https://www.proteinindustriescanada.ca/' },
+  },
+  {
+    name: 'GoMicro Grain Quality App',
+    company: 'GoMicro',
+    country: 'Australia/India',
+    description: 'Phone-based AI grain quality assessment using microscopy attachment. Deployed to farmer-producer organizations in India.',
+    integrationPoint: 'Mobile/Smartphone',
+    technology: ['AI/ML', 'Mobile Microscopy'],
+    status: 'Commercial',
+    yearEstablished: 2018,
+    source: { name: 'AgReads', url: 'https://agreads.com/' },
+  },
+  {
+    name: 'GrainODM Visual AI System',
+    company: 'EasyODM',
+    country: 'Lithuania',
+    description: 'AI-powered grain analyzer claiming 600x faster than manual inspection with 98-99.8% detection accuracy for foreign grains and defects.',
+    integrationPoint: 'Benchtop',
+    technology: ['Computer Vision AI', 'Industrial Cameras'],
+    status: 'Commercial',
+    yearEstablished: 2024,
+    source: { name: 'GrainODM', url: 'https://www.grainodm.com/' },
+  },
+  {
+    name: 'DA7350 In-line NIR Sensor',
+    company: 'PerkinElmer',
+    country: 'USA',
+    description: 'On-combine and inline NIR sensor for real-time protein and oil detection. Already deployed on commercial combines.',
+    integrationPoint: 'Inline',
+    technology: ['NIR Spectroscopy', 'Real-time Analysis'],
+    status: 'Commercial',
+    yearEstablished: 2020,
+    source: { name: 'PerkinElmer', url: 'https://www.perkinelmer.com/' },
+  },
+];
+
+
 // Technology Adoption Trends (2018-2025)
 export const adoptionTrends: AdoptionTrend[] = [
   { year: 2018, benchtop: 65, mobile: 5, inline: 15 },
@@ -128,13 +223,19 @@ export const companyMilestones: CompanyMilestone[] = [
   { company: 'Videometer', year: 2008, event: 'Multispectral seed analysis launched', type: 'Product Launch' },
   { company: 'Cgrain', year: 2015, event: 'Computer vision grain inspection established', type: 'Founding' },
   { company: 'GoMicro', year: 2018, event: 'Mobile grain quality assessment app launched', type: 'Product Launch' },
-  { company: 'Ground Truth Agriculture', year: 2021, event: 'Founded with AI grain grading focus', type: 'Founding' },
   { company: 'Inarix', year: 2019, event: 'Smartphone spectroscopy solution developed', type: 'Product Launch' },
+  { company: 'Ground Truth Agriculture', year: 2021, event: 'Founded in Regina, SK with AI grain grading focus', type: 'Founding' },
   { company: 'Cgrain', year: 2022, event: 'Series A funding secured', type: 'Funding' },
   { company: 'Ground Truth Agriculture', year: 2023, event: 'Seed funding secured', type: 'Funding' },
-  { company: 'Multiple Companies', year: 2023, event: 'Regulatory approval for AI-based grading', type: 'Partnership' },
-  { company: 'EasyODM', year: 2024, event: 'Expansion to multiple grain types', type: 'Product Launch' },
+  { company: 'Multiple Companies', year: 2023, event: 'Regulatory approval for AI-based grading in key jurisdictions', type: 'Partnership' },
+  { company: 'EasyODM', year: 2024, event: 'Expansion to multiple grain types with 98%+ accuracy claims', type: 'Product Launch' },
+  { company: 'Ground Truth Agriculture', year: 2024, event: 'C$4.5M partnership with Protein Industries Canada for on-combine AI grading', type: 'Funding' },
+  { company: 'Grain Discovery + Inarix', year: 2024, event: 'Smartphone-based soybean AI grading pilot launched in Canada', type: 'Partnership' },
+  { company: 'GoMicro + Grain Analyser', year: 2024, event: 'Phone-based AI deployed to farmer-producer organizations in India', type: 'Product Launch' },
+  { company: 'Cgrain', year: 2025, event: 'Major software update with enhanced deep learning models', type: 'Product Launch' },
+  { company: 'Ground Truth Agriculture', year: 2025, event: 'On-combine grading system commercial launch (expected)', type: 'Product Launch' },
 ];
+
 
 // Use Case Adoption Trends
 export const useCaseAdoption: UseCaseAdoption[] = [

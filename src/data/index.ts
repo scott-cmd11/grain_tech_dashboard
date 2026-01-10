@@ -634,26 +634,24 @@ export const regulatoryData: RegulatoryData = {
     {
       name: "Australia",
       agency: "Grain Trade Australia",
-      legislation: "Barley Variety Assessment",
-      keyChange: "GTA endorsed technology for assessment of specific barley varieties.",
-      driver: "Varietal purity for trade",
-      status: "Endorsement (2025)",
+      legislation: "AI Technology Endorsement for Barley",
+      keyChange: "GTA endorsed ZoomAgri's 'Zoom One' AI technology for barley variety assessment (Nov 2025). Full integration into trading standards expected 2026/2027 season.",
+      driver: "Varietal purity and objective assessment",
+      status: "Technology endorsed",
       icon: React.createElement(Sprout, { className: "w-6 h-6 text-emerald-700" }),
-      url: "https://www.graintrade.org.au/statements/barley-variety-master-list",
-      citations: ["https://www.graintrade.org.au/statements/barley-variety-master-list"]
+      url: "https://www.graintrade.org.au/",
+      citations: ["https://www.graintrade.org.au/"]
     },
     {
-      name: "Europe / UK",
+      name: "European Union",
       agency: "EU Commission",
-      legislation: "Ecodesign Regulation (ESPR)",
-      keyChange: "EU rules for digital product passports (future phases).",
-      driver: "Sustainability",
-      status: "Regulation in force",
+      legislation: "Common Quality Standards for Cereals",
+      keyChange: "EU Regulation 2016/1238 establishes intervention standards for cereals including minimum quality requirements for moisture, impurities, and grain condition.",
+      driver: "Market intervention standards",
+      status: "Active regulation",
       icon: React.createElement(BookOpen, { className: "w-6 h-6 text-indigo-600" }),
-      url: "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/ecodesign-sustainable-products-regulation_en",
-      citations: [
-        "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-labelling-rules-and-requirements/ecodesign-sustainable-products-regulation_en"
-      ]
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R1238",
+      citations: ["https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R1238"]
     }
   ]
 };

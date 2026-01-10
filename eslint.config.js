@@ -32,7 +32,10 @@ export default [
       ...reactHooks.configs.recommended.rules,
       ...tsPlugin.configs.recommended.rules,
       "no-undef": "off",
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/consistent-type-imports": ["warn", { "prefer": "type-imports" }],
+      "no-console": ["warn", { "allow": ["warn", "error"] }]
     }
   }
 ];

@@ -71,8 +71,8 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 mb-4">
           <div className="shrink-0">
-            <div className="w-16 h-16 rounded-lg bg-grain-gold/10 flex items-center justify-center">
-              <BookOpen className="w-8 h-8 text-grain-gold" />
+            <div className="w-16 h-16 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+              <BookOpen className="w-8 h-8 text-emerald-500" />
             </div>
           </div>
           <div>
@@ -163,9 +163,9 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
 
                   {/* Example - if available */}
                   {term.example && (
-                    <div className="bg-grain-gold/10 border-l-4 border-grain-gold px-4 py-3 rounded mb-4">
+                    <div className="bg-emerald-500/10 border-l-4 border-emerald-500 px-4 py-3 rounded mb-4">
                       <p className="text-body-sm text-gray-700 dark:text-gray-300">
-                        <span className="font-bold text-grain-gold">Example: </span>
+                        <span className="font-bold text-emerald-500">Example: </span>
                         {term.example}
                       </p>
                     </div>
@@ -182,8 +182,8 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
                           <button
                             key={related}
                             onClick={() => setSearchQuery(related)}
-                            className="text-xs bg-sky-blue/10 text-sky-blue hover:bg-sky-blue/20
-                                     dark:bg-sky-blue/20 dark:text-sky-blue-light dark:hover:bg-sky-blue/30
+                            className="text-xs bg-indigo-500/10 text-indigo-600 hover:bg-indigo-500/20
+                                     dark:bg-indigo-500/20 dark:text-indigo-400 dark:hover:bg-indigo-500/30
                                      px-6 py-2 rounded-full transition-colors font-medium"
                             title={`Search for "${related}"`}
                           >

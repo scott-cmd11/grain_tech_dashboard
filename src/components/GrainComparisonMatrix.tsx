@@ -26,6 +26,7 @@ import { exportGrainSolutions } from "../utils/export";
 import type { ExportFormat } from "../types";
 import { formatEnumLabel, formatEnumList } from "../utils/formatLabels";
 import { sensingColors } from "../constants/grainTechColors";
+import { useToast } from "../context/ToastContext";
 
 interface GrainComparisonMatrixProps {
   grainSolutions?: GrainSolution[]; // Make optional
@@ -155,6 +156,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
   grainSolutions: propSolutions,
   externalSearchTerm = "",
 }: GrainComparisonMatrixProps) {
+  const { showToast } = useToast();
   const grainSolutions = useMemo(() => {
     if (propSolutions && propSolutions.length > 0) return propSolutions;
     return getDenormalizedSolutions();
@@ -180,20 +182,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
   const [selectedRows, setSelectedRows] = useState<Set<string>>(new Set());
   const [filterSummaryOpen, setFilterSummaryOpen] = useState(true);
 
-  const topScrollRef = useRef<HTMLDivElement>(null);
   const tableContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleTableScroll = () => {
-    if (tableContainerRef.current && topScrollRef.current) {
-      topScrollRef.current.scrollLeft = tableContainerRef.current.scrollLeft;
-    }
-  };
-
-  const handleTopScroll = () => {
-    if (topScrollRef.current && tableContainerRef.current) {
-      tableContainerRef.current.scrollLeft = topScrollRef.current.scrollLeft;
-    }
-  };
 
   const options = useMemo(() => {
     return getGrainFilterOptions(grainSolutions);
@@ -308,7 +297,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
       }
     } else {
       navigator.clipboard.writeText(shareUrl);
-      alert("Filter URL copied to clipboard!");
+      showToast("Filter URL copied to clipboard!", "success");
     }
   };
 
@@ -380,8 +369,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
             <button
               onClick={() => {
                 const selected = getSelectedSolutions();
-                console.log("Comparing:", selected);
-                alert(`Ready to compare ${selected.length} solutions. (Modal integration coming soon)`);
+                showToast(`Ready to compare ${selected.length} solutions. Modal coming soon!`, "info");
               }}
               className="px-3 py-2 text-xs rounded-lg bg-teal-500 hover:bg-teal-600 text-white transition-colors inline-flex items-center gap-2"
             >
@@ -846,16 +834,12 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
       </div>
 
       {/* Top scroll bar container (Desktop Only) */}
+      {/* Table container with visible scrollbar */}
       <div
-        ref={topScrollRef}
-        onScroll={handleTopScroll}
-        className="table-top-scrollbar mt-6 hidden md:block" // Hidden on mobile
+        ref={tableContainerRef}
+        className="overflow-x-auto hidden md:block rounded-lg border border-gray-200 dark:border-gray-700"
+        style={{ scrollbarWidth: 'auto', scrollbarColor: '#10B981 #e5e7eb' }}
       >
-        <div style={{ width: "3000px" }} />
-      </div>
-
-      {/* Table container with synchronized scrolling */}
-      <div ref={tableContainerRef} onScroll={handleTableScroll} className="overflow-x-auto hidden md:block">
         <table className="min-w-[900px] w-full border-collapse">
           <thead className="sticky top-0 z-10 bg-white dark:bg-gray-800">
             <tr className="border-b border-gray-200 dark:border-gray-700">

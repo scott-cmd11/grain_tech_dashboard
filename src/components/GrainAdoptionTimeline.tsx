@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar, ExternalLink, BookOpen } from "lucide-react";
 import { eventsSortedByDate } from "../data/registries/events";
 import type { AdoptionEvent } from "../data/adoptionTimeline";
 import type {
@@ -69,7 +69,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
     });
   }, [adoptionEvents, regions, categories]);
 
-  // Sort Newest -> Oldest for horizontal timeline (Left -> Right)
+  // Sort Newest -> Oldest (descending) for vertical timeline
   const grouped = useMemo(() => {
     const byYear = new Map<number, AdoptionEvent[]>();
     filteredEvents.forEach((event) => {
@@ -78,7 +78,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
       byYear.set(event.year, list);
     });
     return Array.from(byYear.entries())
-      .sort((a, b) => b[0] - a[0]) // DESCENDING
+      .sort((a, b) => b[0] - a[0]) // DESCENDING - newest first
       .map(([year, events]) => ({
         year,
         events: events.sort((a, b) => (b.month ?? 0) - (a.month ?? 0)),
@@ -102,7 +102,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
                 Adoption Timeline
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Tracking the evolution of grading technology over time.
+                Tracking the evolution of digital grain grading technology
               </p>
             </div>
           </div>
@@ -157,90 +157,132 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
         </div>
       </div>
 
-      {/* Scroll Area (Vertical on Mobile, Horizontal on Desktop) */}
-      <div
-        className="flex flex-col md:flex-row md:overflow-x-auto pb-8 pt-4 gap-8 custom-scrollbar relative min-h-[400px]"
-      >
-        {grouped.map((group) => (
-          <div key={group.year} className="flex-shrink-0 flex flex-col gap-4 snap-start relative">
-            {/* Year Marker */}
-            <div className="text-4xl font-black text-gray-200 dark:text-gray-700 select-none md:sticky md:left-0 leading-none">
-              {group.year}
-            </div>
+      {/* Vertical Timeline */}
+      <div className="relative">
+        {/* Vertical line */}
+        <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-400 via-teal-400 to-emerald-400 dark:from-indigo-600 dark:via-teal-600 dark:to-emerald-600" />
 
-            <div className="flex flex-col md:flex-row gap-4">
-              {group.events.map((event) => {
-                const isActive = activeEventId === event.id;
-                const relatedSolutions = isActive ? matchCompanies(event, grainSolutions ?? []) : [];
+        <div className="space-y-8">
+          {grouped.map((group) => (
+            <div key={group.year} className="relative">
+              {/* Year Marker */}
+              <div className="flex items-center gap-4 mb-4">
+                <div className="relative z-10 w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-teal-500 flex items-center justify-center shadow-lg">
+                  <span className="text-xs font-bold text-white">{group.year}</span>
+                </div>
+                <h4 className="text-2xl font-black text-gray-200 dark:text-gray-700 select-none">
+                  {group.year}
+                </h4>
+              </div>
 
-                return (
-                  <div
-                    key={event.id}
-                    className={`w-full md:w-[320px] bg-white dark:bg-gray-800 rounded-xl border transition-all flex flex-col shadow-sm hover:shadow-md ${isActive
-                      ? "border-teal-500 ring-1 ring-teal-500 z-10 scale-[1.02]"
-                      : "border-gray-200 dark:border-gray-700"
-                      }`}
-                  >
-                    {/* Card Content */}
+              {/* Events for this year */}
+              <div className="ml-14 space-y-4">
+                {group.events.map((event) => {
+                  const isActive = activeEventId === event.id;
+                  const relatedSolutions = isActive ? matchCompanies(event, grainSolutions ?? []) : [];
+                  const hasCitations = event.citations && event.citations.length > 0;
+
+                  return (
                     <div
-                      className="p-5 flex-1 cursor-pointer"
-                      onClick={() => setActiveEventId(isActive ? null : event.id)}
+                      key={event.id}
+                      className={`bg-white dark:bg-gray-800 rounded-xl border transition-all flex flex-col shadow-sm hover:shadow-md ${isActive
+                        ? "border-teal-500 ring-1 ring-teal-500 scale-[1.01]"
+                        : "border-gray-200 dark:border-gray-700"
+                        }`}
                     >
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className={`w-2 h-2 rounded-full ${categoryColors[event.category]}`} />
-                        <span className="text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">
-                          {formatEnumLabel(event.category)}
-                        </span>
-                        <span className="ml-auto text-[10px] font-mono text-gray-400 bg-gray-50 dark:bg-gray-700 px-2 py-0.5 rounded">
-                          {event.region}
-                        </span>
-                      </div>
-
-                      <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight">
-                        {event.title}
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-4">
-                        {event.description}
-                      </p>
-                    </div>
-
-                    {/* Footer / Source Link */}
-                    {event.url && (
-                      <div className="px-5 py-3 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-700 rounded-b-xl flex items-center justify-end">
-                        <a
-                          href={event.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Verify Source <ExternalLink className="w-3 h-3" />
-                        </a>
-                      </div>
-                    )}
-
-                    {/* Inline Expansion for Solutions */}
-                    {isActive && relatedSolutions.length > 0 && (
-                      <div className="px-5 py-4 border-t border-gray-100 dark:border-gray-700 bg-teal-50/50 dark:bg-gray-800/80 animate-in slide-in-from-top-2 duration-200">
-                        <p className="text-xs font-bold text-teal-800 dark:text-teal-400 mb-2">Related Technology:</p>
-                        <div className="space-y-2">
-                          {relatedSolutions.map(sol => (
-                            <div key={sol.id} className="text-xs bg-white dark:bg-gray-700 p-2 rounded border border-gray-200 dark:border-gray-600 shadow-sm">
-                              <div className="font-semibold">{sol.company}</div>
-                              <div className="text-gray-500">{sol.productName}</div>
-                            </div>
-                          ))}
+                      {/* Card Content */}
+                      <div
+                        className="p-5 flex-1 cursor-pointer"
+                        onClick={() => setActiveEventId(isActive ? null : event.id)}
+                      >
+                        <div className="flex items-center gap-2 mb-3 flex-wrap">
+                          <span className={`w-2 h-2 rounded-full ${categoryColors[event.category]}`} />
+                          <span className="text-[10px] font-bold uppercase text-gray-500 dark:text-gray-400">
+                            {formatEnumLabel(event.category)}
+                          </span>
+                          {event.month && (
+                            <span className="text-[10px] font-mono text-gray-400 bg-gray-50 dark:bg-gray-700 px-2 py-0.5 rounded">
+                              {new Date(2000, event.month - 1).toLocaleString('default', { month: 'short' })}
+                            </span>
+                          )}
+                          <span className="ml-auto text-[10px] font-mono text-gray-400 bg-gray-50 dark:bg-gray-700 px-2 py-0.5 rounded">
+                            {event.region}
+                          </span>
                         </div>
+
+                        <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight">
+                          {event.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                          {event.description}
+                        </p>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
+
+                      {/* Footer / Source Links */}
+                      {(event.url || hasCitations) && (
+                        <div className="px-5 py-3 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-700 rounded-b-xl flex items-center justify-between gap-4">
+                          {event.url && (
+                            <a
+                              href={event.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              View Source <ExternalLink className="w-3 h-3" />
+                            </a>
+                          )}
+                          {hasCitations && (
+                            <span className="flex items-center gap-1 text-[10px] text-gray-400">
+                              <BookOpen className="w-3 h-3" />
+                              {event.citations!.length + 1} sources
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Inline Expansion for Solutions */}
+                      {isActive && relatedSolutions.length > 0 && (
+                        <div className="px-5 py-4 border-t border-gray-100 dark:border-gray-700 bg-teal-50/50 dark:bg-gray-800/80 animate-in slide-in-from-top-2 duration-200">
+                          <p className="text-xs font-bold text-teal-800 dark:text-teal-400 mb-2">Related Technology:</p>
+                          <div className="space-y-2">
+                            {relatedSolutions.map(sol => (
+                              <div key={sol.id} className="text-xs bg-white dark:bg-gray-700 p-2 rounded border border-gray-200 dark:border-gray-600 shadow-sm">
+                                <div className="font-semibold">{sol.company}</div>
+                                <div className="text-gray-500">{sol.productName}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Inline Expansion for Citations */}
+                      {isActive && hasCitations && (
+                        <div className="px-5 py-4 border-t border-gray-100 dark:border-gray-700 bg-blue-50/50 dark:bg-gray-800/80 animate-in slide-in-from-top-2 duration-200">
+                          <p className="text-xs font-bold text-blue-800 dark:text-blue-400 mb-2">Additional Sources:</p>
+                          <div className="space-y-1">
+                            {event.citations!.map((url, idx) => (
+                              <a
+                                key={idx}
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block text-xs text-blue-600 hover:underline truncate"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                {new URL(url).hostname}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))}
-        {/* Right padding for scroll snapping */}
-        <div className="w-8 shrink-0" />
+          ))}
+        </div>
       </div>
     </div>
   );
