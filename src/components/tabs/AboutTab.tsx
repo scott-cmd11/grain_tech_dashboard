@@ -36,6 +36,20 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
             </button>
           ))}
         </div>
+        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-2xl p-4 flex items-start gap-3">
+          <span className="text-xl">⚠️</span>
+          <div>
+            <h3 className="text-sm font-bold text-amber-800 dark:text-amber-200 uppercase tracking-wide mb-1">
+              AI-Generated Content Notice
+            </h3>
+            <p className="text-sm text-amber-700 dark:text-amber-300">
+              This website and its content were generated with the assistance of Artificial Intelligence.
+              While we strive for accuracy, there may be errors, hallucinations, or outdated information.
+              Please verify important technical details independently.
+            </p>
+          </div>
+        </div>
+
       </div>
 
       {/* Tech stack */}

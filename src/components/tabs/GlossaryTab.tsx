@@ -63,7 +63,7 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
   }
 
   return (
-    <div ref={containerRef} className="space-y-8 animate-in fade-in duration-500">
+    <div ref={containerRef} className="space-y-8">
       {/* Header & Search */}
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 relative overflow-hidden">
         <div className="relative z-10">
@@ -81,7 +81,7 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
             </div>
           </div>
 
-          <div className="relative max-w-2xl">
+          <div className="relative max-w-xl">
             <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
               <Search className="w-5 h-5" />
             </div>
@@ -106,77 +106,46 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
         </div>
       </div>
 
-      {/* Quick Jump Index - Only show if no search filter */}
-      {!searchQuery && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
-          <div className="flex items-center gap-2 mb-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
-            <Hash className="w-3 h-3" />
-            <span>Quick Index</span>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {Object.keys(groupedTerms).sort().map((letter) => (
-              <a
-                key={letter}
-                href={`#section-${letter}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById(`section-${letter}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className="w-8 h-8 flex items-center justify-center text-sm font-semibold rounded-lg
-                            bg-gray-50 text-gray-600 hover:bg-blue-50 hover:text-blue-600 hover:scale-110
-                            dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-blue-900/30 dark:hover:text-blue-400
-                            transition-all cursor-pointer"
-              >
-                {letter}
-              </a>
-            ))}
-          </div>
+      {/* Quick Jump Index */}
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 sticky top-24 z-20">
+        <div className="flex items-center gap-2 mb-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
+          <Hash className="w-3 h-3" />
+          <span>Quick Index</span>
         </div>
-      )}
+        <div className="flex flex-wrap gap-2">
+          {Object.keys(groupedTerms).sort().map((letter) => (
+            <button
+              key={letter}
+              onClick={() => {
+                document.getElementById(`section-${letter}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+              className="w-8 h-8 flex items-center justify-center text-sm font-semibold rounded-lg
+                          bg-gray-50 text-gray-600 hover:bg-emerald-50 hover:text-emerald-600
+                          dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-emerald-900/30 dark:hover:text-emerald-400
+                          transition-all cursor-pointer"
+            >
+              {letter}
+            </button>
+          ))}
+        </div>
+      </div>
 
-      {/* Terms List */}
-      <div className="space-y-8">
+      {/* Terms List (Accordion Style) */}
+      <div className="space-y-12 pb-24">
         {Object.entries(groupedTerms)
           .sort(([a], [b]) => a.localeCompare(b))
           .map(([letter, terms]) => (
-            <div key={letter} id={`section-${letter}`} className="scroll-mt-24">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 text-white font-bold text-lg shadow-sm">
+            <div key={letter} id={`section-${letter}`} className="scroll-mt-48">
+              <div className="flex items-center gap-4 mb-6">
+                <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-900 dark:bg-gray-700 text-white font-bold text-xl shadow-sm border-b-4 border-gray-700 dark:border-gray-900">
                   {letter}
                 </span>
-                <div className="h-px flex-1 bg-gray-100 dark:bg-gray-700"></div>
+                <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 gap-4">
                 {terms.map((term) => (
-                  <div
-                    key={term.term}
-                    id={`term-${term.term}`}
-                    className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 
-                             border border-gray-100 dark:border-gray-700
-                             hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:-translate-y-1
-                             transition-all duration-300 ease-out"
-                  >
-                    <div className="space-y-3">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {term.term}
-                      </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {term.definition}
-                      </p>
-
-                      {term.example && (
-                        <div className="pt-3 mt-3 border-t border-gray-50 dark:border-gray-700/50">
-                          <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide block mb-1">
-                            Example
-                          </span>
-                          <p className="text-xs text-gray-500 dark:text-gray-400 italic">
-                            "{term.example}"
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                  <GlossaryItem key={term.term} term={term} />
                 ))}
               </div>
             </div>
@@ -192,10 +161,73 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
           </p>
           <button
             onClick={() => setSearchQuery('')}
-            className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-700 hover:underline"
+            className="mt-4 text-sm font-medium text-emerald-600 hover:text-emerald-700 hover:underline"
           >
             Clear search filter
           </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Sub-component for individual item to handle open state
+import { ChevronDown, ChevronRight } from 'lucide-react';
+import { GlossaryTerm } from '../../data/glossary';
+
+function GlossaryItem({ term }: { term: GlossaryTerm }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className={`
+      group bg-white dark:bg-gray-800 rounded-xl border transition-all duration-200
+      ${isOpen
+        ? 'border-emerald-500 ring-1 ring-emerald-500 shadow-md'
+        : 'border-gray-100 dark:border-gray-700 hover:border-emerald-200 dark:hover:border-emerald-800 hover:shadow-sm'
+      }
+    `}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-5 text-left focus:outline-none"
+      >
+        <div className="flex items-center gap-4">
+          <div className={`
+            p-2 rounded-lg transition-colors
+            ${isOpen ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-50 text-gray-400 group-hover:text-emerald-600 group-hover:bg-emerald-50'}
+          `}>
+            {isOpen ? <ChevronDown className="w-5 h-5" /> : <ChevronRight className="w-5 h-5" />}
+          </div>
+          <h3 className={`text-lg font-bold transition-colors ${isOpen ? 'text-emerald-900 dark:text-emerald-400' : 'text-gray-900 dark:text-gray-100'}`}>
+            {term.term}
+          </h3>
+        </div>
+        {term.relatedTerms && term.relatedTerms.length > 0 && (
+          <div className="hidden sm:flex items-center gap-2">
+            {term.relatedTerms.slice(0, 2).map((t, i) => (
+              <span key={i} className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+      </button>
+
+      {isOpen && (
+        <div className="px-5 pb-5 pl-[4.5rem] animate-in slide-in-from-top-2 duration-200">
+          <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+            {term.definition}
+          </p>
+
+          {term.example && (
+            <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-100 dark:border-gray-700/50">
+              <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1 block">
+                Example
+              </span>
+              <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+                "{term.example}"
+              </p>
+            </div>
+          )}
         </div>
       )}
     </div>
