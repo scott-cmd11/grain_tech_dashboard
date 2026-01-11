@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
-import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
+import { APIProvider, Map, Marker, InfoWindow } from "@vis.gl/react-google-maps";
 import { Globe, ExternalLink, ChevronDown, ChevronUp, Building2, Search, X, Download, Share2, Filter as FilterIcon } from "lucide-react";
 import type {
   GrainSolution,
@@ -15,7 +15,6 @@ import { formatCompanyUrl, getCompanyUrl } from "../utils/companyLookup";
 import { formatEnumLabel, formatEnumList } from "../utils/formatLabels";
 import { sensingColors } from "../constants/grainTechColors";
 import { useToast } from "../context/ToastContext";
-import "leaflet/dist/leaflet.css";
 
 // --- Types & Interfaces ---
 
@@ -63,7 +62,11 @@ function getDeploymentScore(solution: GrainSolution): number {
   return maturityScores[solution.maturityLevel] ?? 2;
 }
 
+const CIRCLE_PATH = "M 0, 0 m -1, 0 a 1,1 0 1,0 2,0 a 1,1 0 1,0 -2,0";
+
 import { getDenormalizedSolutions } from "../utils/dataNormalization";
+
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 export const GrainLandscapeMap = function GrainLandscapeMap({
   grainSolutions: propSolutions,
@@ -107,6 +110,9 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
   });
   const [localCompaniesOpen, setLocalCompaniesOpen] = useState(defaultCompaniesOpen);
   const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
+
+  // Google Maps State
+  const [selectedSolutionId, setSelectedSolutionId] = useState<string | null>(null);
 
   // 3. Helper Functions
   const toggleFilterSection = (section: keyof typeof expandedFilterSections) => {
@@ -331,128 +337,104 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
 
   const totalPagesWithLocations = Math.ceil(visibleWithLocations.length / ITEMS_PER_PAGE);
 
+  // Identify selected solution for InfoWindow
+  const selectedSolution = useMemo(() =>
+    visibleWithLocations.find(s => s.id === selectedSolutionId),
+    [visibleWithLocations, selectedSolutionId]);
+
   return (
     <div className="space-y-6">
       {/* MAP HERO SECTION */}
       <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-[360px] sm:h-[420px] bg-gray-100 flex items-center justify-center relative z-0">
-        <MapContainer
-          center={[15, 0]}
-          zoom={2.2}
-          minZoom={1.5}
-          maxZoom={6}
-          scrollWheelZoom={false}
-          style={{ height: "100%", width: "100%" }}
-          className="z-0"
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+        <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
+          <Map
+            defaultCenter={{ lat: 15, lng: 0 }}
+            defaultZoom={2}
+            gestureHandling={'greedy'}
+            disableDefaultUI={false}
+            style={{ width: '100%', height: '100%' }}
+          // Reuse Map ID if available, otherwise it works in legacy/raster mode without Advanced Markers
+          // mapId="GRAIN_LANDSCAPE_MAP" 
+          >
+            {visibleWithLocations.map((solution) => {
+              if (typeof solution.primaryLat !== 'number' || typeof solution.primaryLng !== 'number') return null;
 
-          {visibleWithLocations.map((solution) => {
-            // SAFEGUARD: Ensure we don't try to render markers with invalid coords
-            if (typeof solution.primaryLat !== 'number' || typeof solution.primaryLng !== 'number') {
-              return null;
-            }
+              const mainTech = solution.sensingTech?.[0] ?? "RGB";
+              const color = sensingColors[mainTech] || "#22c55e";
+              // Symbol scale (radius)
+              const scale = 5 + (getDeploymentScore(solution) * 1.5); // ranges ~6.5 to ~11
 
-            const mainTech = solution.sensingTech?.[0] ?? "RGB";
-            const color = sensingColors[mainTech] || "#22c55e"; // Fallback color
-            const radius = 4 + getDeploymentScore(solution) * 2;
-            const companyUrl = solution.url || getCompanyUrl(solution.company);
+              return (
+                <Marker
+                  key={solution.id}
+                  position={{ lat: solution.primaryLat, lng: solution.primaryLng }}
+                  onClick={() => setSelectedSolutionId(solution.id)}
+                  icon={{
+                    path: CIRCLE_PATH,
+                    fillColor: color,
+                    fillOpacity: 0.9,
+                    strokeColor: '#ffffff',
+                    strokeWeight: 1.5,
+                    scale: scale,
+                  }}
+                />
+              );
+            })}
 
-            // Safe status label access
-            const statusLabel = solution.status
-              ? (solution.status.charAt(0).toUpperCase() + solution.status.slice(1))
-              : '';
-
-            return (
-              <CircleMarker
-                key={solution.id}
-                center={[solution.primaryLat, solution.primaryLng]}
-                radius={radius}
-                pathOptions={{
-                  fillColor: color,
-                  color: "#ffffff",
-                  weight: 1.5,
-                  opacity: 1,
-                  fillOpacity: 0.85,
-                }}
+            {selectedSolution && (
+              <InfoWindow
+                position={{ lat: selectedSolution.primaryLat!, lng: selectedSolution.primaryLng! }}
+                onCloseClick={() => setSelectedSolutionId(null)}
               >
-                <Popup>
-                  <div className="text-sm min-w-[180px]">
-                    <div className="flex justify-between items-start gap-2">
-                      {/* Company Name */}
-                      <div className="font-semibold text-gray-900">{solution.company || 'Unknown Company'}</div>
+                <div className="text-sm min-w-[200px] max-w-[280px] p-1 font-sans">
+                  <div className="flex justify-between items-start gap-2 mb-2">
+                    <div className="font-bold text-gray-900 text-base">{selectedSolution.company}</div>
+                    {selectedSolution.status && (
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium uppercase ${selectedSolution.status === 'commercial' ? 'bg-green-100 text-green-800' :
+                        selectedSolution.status === 'pilot' ? 'bg-blue-100 text-blue-800' :
+                          'bg-gray-100 text-gray-800'
+                        }`}>
+                        {selectedSolution.status}
+                      </span>
+                    )}
+                  </div>
 
-                      {/* Status Check */}
-                      {statusLabel && (
-                        <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${solution.status === 'commercial' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                          solution.status === 'pilot' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' :
-                            solution.status === 'discontinued' ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' :
-                              'bg-gray-100 text-gray-800'
-                          }`}>
-                          {statusLabel}
-                        </span>
-                      )}
-                    </div>
+                  <div className="text-xs text-gray-500 font-medium mb-2">{selectedSolution.productName}</div>
 
-                    <div className="text-xs text-gray-500 mb-2">{solution.productName || 'Unknown Product'}</div>
+                  <div className="space-y-1 mb-3">
                     <div className="text-xs text-gray-700">
-                      Regions: {formatEnumList(solution.regions || [])}
+                      <span className="font-semibold text-gray-500">Regions:</span> {formatEnumList(selectedSolution.regions || [])}
                     </div>
                     <div className="text-xs text-gray-700">
-                      Tech: {formatEnumList(solution.sensingTech || [])}
+                      <span className="font-semibold text-gray-500">Tech:</span> {formatEnumList(selectedSolution.sensingTech || [])}
                     </div>
-                    {solution.maturityLevel && (
+                    {selectedSolution.maturityLevel && (
                       <div className="text-xs text-gray-700">
-                        Maturity: {solution.maturityLevel}
-                      </div>
-                    )}
-
-                    {/* Link handling */}
-                    {solution.linkStatus === "offline" ? (
-                      <div className="mt-2 flex items-center gap-1 text-xs text-gray-400 italic">
-                        <span className="w-2 h-2 rounded-full bg-gray-400"></span>
-                        Website offline
-                      </div>
-                    ) : companyUrl && (
-                      <a
-                        href={formatCompanyUrl(companyUrl)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800"
-                      >
-                        Website
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
-                    )}
-
-                    {/* Citations Safeguard */}
-                    {Array.isArray(solution.citations) && solution.citations.length > 0 && (
-                      <div className="mt-3 pt-2 border-t border-gray-200">
-                        <div className="text-[10px] text-gray-500 font-semibold mb-1">Recent References:</div>
-                        <div className="flex flex-col gap-1">
-                          {solution.citations.slice(0, 2).map((cite, i) => (
-                            <a
-                              key={i}
-                              href={cite}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[10px] text-blue-600 hover:underline break-all max-w-full block"
-                              title={cite}
-                            >
-                              • Source {i + 1}
-                            </a>
-                          ))}
-                        </div>
+                        <span className="font-semibold text-gray-500">Maturity:</span> {selectedSolution.maturityLevel}
                       </div>
                     )}
                   </div>
-                </Popup>
-              </CircleMarker>
-            );
-          })}
-        </MapContainer>
+
+                  {/* Links */}
+                  {selectedSolution.linkStatus === "offline" ? (
+                    <div className="flex items-center gap-1 text-xs text-gray-400 italic">
+                      Website offline
+                    </div>
+                  ) : (selectedSolution.url || getCompanyUrl(selectedSolution.company)) && (
+                    <a
+                      href={formatCompanyUrl((selectedSolution.url || getCompanyUrl(selectedSolution.company)) as string)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-semibold"
+                    >
+                      Visit Website <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+                </div>
+              </InfoWindow>
+            )}
+          </Map>
+        </APIProvider>
       </div>
 
       {/* MAP LEGEND */}
