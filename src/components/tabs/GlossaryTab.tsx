@@ -151,6 +151,7 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
                 {terms.map((term) => (
                   <div
                     key={term.term}
+                    id={`term-${term.term}`}
                     className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 
                              border border-gray-100 dark:border-gray-700
                              hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:-translate-y-1
