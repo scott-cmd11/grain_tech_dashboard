@@ -31,6 +31,7 @@ import {
   GithubTab,
   ResearchPapersTab,
 } from './components/tabs';
+import { ChatWidget } from './components/Chat/ChatWidget';
 
 // Main Dashboard Component
 function Dashboard() {
@@ -143,6 +144,9 @@ function Dashboard() {
           </div>
         </main>
       </div>
+
+      <ChatWidget />
+      <ToastContainer />
     </div>
   );
 }
