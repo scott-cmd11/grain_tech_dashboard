@@ -30,7 +30,6 @@ import {
   NewsTab,
   GithubTab,
   ResearchPapersTab,
-  DeepResearchTab
 } from './components/tabs';
 
 // Main Dashboard Component
@@ -135,7 +134,7 @@ function Dashboard() {
               />
             )}
             {activeTab === 'research' && <ResearchTab />}
-            {activeTab === 'deep-research' && <DeepResearchTab />}
+
             {activeTab === 'regulations' && <RegulationsTab />}
             {activeTab === 'history' && <HistoryTab />}
             {activeTab === 'news' && <NewsTab />}

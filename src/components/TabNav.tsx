@@ -45,16 +45,16 @@ const groupedTabs: TabGroup[] = [
       { id: 'history', label: 'History', icon: <History className="w-4 h-4" /> },
       { id: 'regulations', label: 'Regulations', icon: <Scale className="w-4 h-4" /> },
       { id: 'scenarios', label: 'Scenarios', icon: <Wand2 className="w-4 h-4" /> },
+      { id: 'research', label: 'AI Progress', icon: <BrainCircuit className="w-4 h-4" /> },
     ],
   },
   {
     title: 'Reference & Data',
     tabs: [
-      { id: 'research', label: 'AI Progress', icon: <BrainCircuit className="w-4 h-4" /> },
+
       { id: 'datasets', label: 'Datasets', icon: <Database className="w-4 h-4" /> },
       { id: 'github-repos', label: 'Github Repos', icon: <Github className="w-4 h-4" /> },
 
-      { id: 'deep-research', label: 'Regulatory Intelligence', icon: <BookOpen className="w-4 h-4" /> },
       { id: 'research-papers', label: 'Research Papers', icon: <BookOpen className="w-4 h-4" /> },
     ],
   },

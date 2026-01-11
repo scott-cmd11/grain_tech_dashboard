@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Gavel, ExternalLink, BookOpen } from 'lucide-react';
+import { Gavel, ExternalLink, BookOpen, FileText, ArrowLeft } from 'lucide-react';
 import { regulatoryData } from '../../data';
 import { Skeleton, SkeletonGrid } from '../Skeleton';
+import { DeepResearchTab } from './DeepResearchTab';
 
 export function RegulationsTab() {
     const [isLoading, setIsLoading] = useState(true);
+    const [showDeepDive, setShowDeepDive] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 900);
@@ -28,23 +30,52 @@ export function RegulationsTab() {
             </div>
         );
     }
+
+    if (showDeepDive) {
+        return (
+            <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                <button
+                    onClick={() => setShowDeepDive(false)}
+                    className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Back to Summary
+                </button>
+                <DeepResearchTab />
+            </div>
+        );
+    }
+
     return (
         <div className="space-y-8 animate-in fade-in duration-500">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6">
-                <div className="flex items-center gap-3 mb-4">
-                    <Gavel className="w-8 h-8 text-blue-700 dark:text-blue-400" />
-                    <div>
-                        <h2 className="text-2xl font-bold section-title text-gray-900 dark:text-gray-100">
-                            How rules are changing
-                        </h2>
-                        <p className="text-gray-600 dark:text-gray-400 section-lead">
-                            How governments are updating rules for AI and digital grading.
-                        </p>
+            {/* Hero Card */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 relative overflow-hidden">
+                <div className="relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                        <div className="flex items-start gap-4 max-w-2xl">
+                            <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                                <Gavel className="w-8 h-8 text-blue-700 dark:text-blue-400" />
+                            </div>
+                            <div>
+                                <h2 className="text-2xl font-bold section-title text-gray-900 dark:text-gray-100 mb-2">
+                                    Global Regulatory Landscape
+                                </h2>
+                                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                                    Governments are shifting from visual inspections to automated, science-based grading.
+                                    See how Canada, the US, and global markets are adapting their laws for the digital age.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button
+                            onClick={() => setShowDeepDive(true)}
+                            className="shrink-0 flex items-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-sm hover:shadow transition-all group font-medium"
+                        >
+                            <FileText className="w-5 h-5" />
+                            <span>Read Deep Research Report</span>
+                        </button>
                     </div>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Rules are moving from visual checks to automated, science-based checks. Canada and the US are updating laws, while South America uses faster decrees to allow digital inspection.
-                </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
