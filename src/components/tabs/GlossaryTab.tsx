@@ -20,10 +20,7 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
     }
   }, [searchTerm]);
 
-  const handleTermClick = (term: string) => {
-    setSearchQuery(term);
-    containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+
 
   // Filter terms
   const filteredTerms = useMemo(() => {
