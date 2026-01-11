@@ -438,7 +438,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                               href={cite}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-[10px] text-blue-600 hover:underline truncate max-w-full block"
+                              className="text-[10px] text-blue-600 hover:underline break-all max-w-full block"
                               title={cite}
                             >
                               • Source {i + 1}

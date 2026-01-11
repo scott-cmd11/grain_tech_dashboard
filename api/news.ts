@@ -138,6 +138,20 @@ export default async function handler() {
     // Combine all articles
     let allArticles = feedResults.flat();
 
+    // RELEVANCE FILTER: Only keep articles with specific keywords
+    // This reduces noise from general Google Alerts
+    const RELEVANCE_KEYWORDS = [
+      'grain', 'wheat', 'corn', 'soy', 'canola', 'barley', 'oats', 'lentils', 'peas',
+      'grading', 'inspection', 'quality', 'assessment', 'protein', 'moisture',
+      'AI', 'artificial intelligence', 'automation', 'machine learning', 'robotics', 'tech',
+      'USDA', 'CGC', 'Canadian Grain Commission', 'Cargill', 'Viterra', 'G3', 'Richardson'
+    ];
+
+    allArticles = allArticles.filter(article => {
+      const text = (article.title + ' ' + article.summary).toLowerCase();
+      return RELEVANCE_KEYWORDS.some(keyword => text.includes(keyword.toLowerCase()));
+    });
+
     // Remove duplicates by URL
     const seen = new Set<string>();
     allArticles = allArticles.filter((article) => {

@@ -31,7 +31,7 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen, onSidebarToggle }
 
             {/* Mobile Sidebar Overlay */}
             <div
-                className={`lg:hidden fixed inset-0 z-50 transition-all duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`lg:hidden fixed inset-0 z-[60] transition-all duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
                 {/* Backdrop */}
                 <div

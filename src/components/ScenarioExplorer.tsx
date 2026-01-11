@@ -224,6 +224,7 @@ export const ScenarioExplorer = function ScenarioExplorer() {
                 <li>Higher adoption in one area (e.g., regulatory) can unlock value in other areas (e.g., elevator)</li>
                 <li>Regional market size, crop types, and regulatory environment significantly affect outcomes</li>
                 <li>This is an illustrative model based on industry trends and pilot data—actual results will vary by implementation</li>
+                <li><strong>Research Basis:</strong> Aligns with USDA 2025-2026 AI Strategy and Canadian Grain Commission (CGC) Modernization initiatives focusing on "hybrid oversight" and objective consistency.</li>
               </ul>
             </div>
           </div>
@@ -440,10 +441,10 @@ export const ScenarioExplorer = function ScenarioExplorer() {
                 </span>
               </div>
               <div className="h-8 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-lg overflow-hidden"
-                   style={{
-                     width: `${(item.valueUSD / valueProgression[3].valueUSD) * 100}%`,
-                     minWidth: item.scale === 100 ? '100%' : 'auto'
-                   }}>
+                style={{
+                  width: `${(item.valueUSD / valueProgression[3].valueUSD) * 100}%`,
+                  minWidth: item.scale === 100 ? '100%' : 'auto'
+                }}>
                 <div className="h-full flex items-center justify-end pr-3">
                   {item.scale === 100 && (
                     <span className="text-xs font-bold text-white">

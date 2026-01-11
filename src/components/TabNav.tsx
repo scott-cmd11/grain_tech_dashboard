@@ -26,6 +26,7 @@ const groupedTabs: TabGroup[] = [
     title: 'Overview',
     tabs: [
       { id: 'about', label: 'About', icon: <BookOpen className="w-4 h-4" /> },
+      { id: 'glossary', label: 'Glossary', icon: <HelpCircle className="w-4 h-4" /> },
     ],
   },
   {
@@ -52,7 +53,7 @@ const groupedTabs: TabGroup[] = [
       { id: 'research', label: 'AI Progress', icon: <BrainCircuit className="w-4 h-4" /> },
       { id: 'datasets', label: 'Datasets', icon: <Database className="w-4 h-4" /> },
       { id: 'github-repos', label: 'Github Repos', icon: <Github className="w-4 h-4" /> },
-      { id: 'glossary', label: 'Glossary', icon: <HelpCircle className="w-4 h-4" /> },
+
       { id: 'deep-research', label: 'Regulatory Intelligence', icon: <BookOpen className="w-4 h-4" /> },
       { id: 'research-papers', label: 'Research Papers', icon: <BookOpen className="w-4 h-4" /> },
     ],
@@ -122,7 +123,7 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
                   tabIndex={isActive ? 0 : -1}
                   className={`
                     group flex items-center gap-3 
-                    px-3 py-2 rounded-lg
+                    px-3 py-3 rounded-lg
                     font-medium text-sm
                     transition-all duration-200 ease-out
                     whitespace-nowrap

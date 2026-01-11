@@ -54,10 +54,10 @@ export function Header({ onSearchChange, searchTerm, onSidebarToggle }: HeaderPr
                   A vibecoding project exploring how grain quality checks are going digital
                 </p>
                 <div className="flex flex-wrap gap-3 sm:gap-4 mt-4">
-                  <span className="inline-flex items-center px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold text-white/90">
+                  <span className="hidden sm:inline-flex items-center px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold text-white/90">
                     {solutionsCount} Solutions
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold text-white/90">
+                  <span className="hidden sm:inline-flex items-center px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold text-white/90">
                     {datasetsData.length} Datasets
                   </span>
                   <span className="inline-flex items-center px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-xs font-semibold text-white/90">

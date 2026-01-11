@@ -267,7 +267,7 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
                                 href={url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block text-xs text-blue-600 hover:underline truncate"
+                                className="block text-xs text-blue-600 hover:underline break-all"
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 {new URL(url).hostname}

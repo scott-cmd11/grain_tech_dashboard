@@ -18,8 +18,8 @@ export interface ScenarioOutputs {
 
 const baselineAccuracyPct = 88;
 const aiAccuracyPct = 95;
-const baselineTimeSeconds = 180;
-const aiTimeSeconds = 60;
+const baselineTimeSeconds = 900; // 15 minutes (dockage + visual + moisture)
+const aiTimeSeconds = 45; // Modern AI + NIRS rapid test
 
 const regionValuePerPctPerTon: Record<Region, number> = {
   "North America": 2.4,
@@ -40,7 +40,7 @@ const regionModeledTons: Record<Region, number> = {
   "China": 30_000_000,
   "Latin America": 16_000_000,
   "Middle East": 7_000_000,
-  "Global": 100_000_000,
+  "Global": 250_000_000, // Adjusted addressable premium market
 };
 
 // Illustrative assumptions:
