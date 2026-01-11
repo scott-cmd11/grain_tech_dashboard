@@ -95,14 +95,14 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
       aria-label="Main navigation"
     >
       <div
-        className="flex gap-1 overflow-x-auto no-scrollbar lg:flex-col lg:overflow-visible px-1"
+        className="flex flex-col gap-1 overflow-visible px-1"
         role="tablist"
         aria-label="Dashboard sections"
       >
-        {groupedTabs.map((group, groupIndex) => (
-          <div key={group.title} className="flex lg:flex-col shrink-0 gap-1 lg:gap-1 lg:mb-5 last:mb-0">
+        {groupedTabs.map((group) => (
+          <div key={group.title} className="flex flex-col shrink-0 gap-1 mb-5 last:mb-0">
             {/* Section Title */}
-            <h3 className="hidden lg:block px-3 py-2 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+            <h3 className="px-3 py-2 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
               {group.title}
             </h3>
 
@@ -127,7 +127,7 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
                     transition-all duration-200 ease-out
                     whitespace-nowrap
                     focus:outline-none focus:ring-2 focus:ring-emerald-500/50
-                    lg:justify-start lg:w-full
+                    justify-start w-full
                     ${isActive
                       ? 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
                       : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white'
@@ -145,10 +145,7 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
               );
             })}
 
-            {/* Mobile separator */}
-            {groupIndex < groupedTabs.length - 1 && (
-              <div className="w-px h-6 bg-gray-200/50 dark:bg-white/10 mx-2 self-center lg:hidden" />
-            )}
+
           </div>
         ))}
       </div>
