@@ -36,27 +36,20 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
             </button>
           ))}
         </div>
-        <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-2xl p-4 flex items-start gap-3">
-          <span className="text-xl">⚠️</span>
-          <div>
-            <h3 className="text-sm font-bold text-amber-800 dark:text-amber-200 uppercase tracking-wide mb-1">
-              AI-Generated Content Notice
-            </h3>
-            <p className="text-sm text-amber-700 dark:text-amber-300">
-              This website and its content were generated with the assistance of Artificial Intelligence.
-              While we strive for accuracy, there may be errors, hallucinations, or outdated information.
-              Please verify important technical details independently.
-            </p>
-          </div>
-        </div>
-
       </div>
 
       {/* Tech stack */}
       <div className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl rounded-2xl shadow-lg shadow-gray-200/50 dark:shadow-black/20 border border-white/50 dark:border-white/5 p-6">
         <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">Built with</h3>
         <p className="text-gray-600 dark:text-gray-400 text-sm">
-          React, TypeScript, Tailwind CSS, Vite, Leaflet, and Recharts. Built with help from Claude Code, Google Antigravity, and ChatGPT Codex.
+          React, TypeScript, Tailwind CSS, Vite, Google Maps, and Recharts. Built with help from Claude Code, Google Antigravity, and ChatGPT Codex.
+        </p>
+      </div>
+
+      {/* Subtle AI Notice */}
+      <div className="text-center px-4 py-2">
+        <p className="text-xs text-gray-400 dark:text-gray-500 italic">
+          Disclaimer: This website and its content were generated with the assistance of AI. Information may contain errors or hallucinations.
         </p>
       </div>
     </div>

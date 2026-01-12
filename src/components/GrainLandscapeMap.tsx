@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
-import { APIProvider, Map, Marker, InfoWindow } from "@vis.gl/react-google-maps";
+import { APIProvider, Map as GoogleMap, Marker, InfoWindow } from "@vis.gl/react-google-maps";
 import { Globe, ExternalLink, ChevronDown, ChevronUp, Building2, Search, X, Download, Share2, Filter as FilterIcon } from "lucide-react";
 import type {
   GrainSolution,
@@ -223,9 +223,36 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
     return [...filteredSolutions].sort((a, b) => a.company.localeCompare(b.company));
   }, [filteredSolutions]);
 
-  const visibleWithLocations = sortedSolutions.filter(
-    (solution) => typeof solution.primaryLat === "number" && typeof solution.primaryLng === "number"
-  );
+  const visibleWithLocations = useMemo(() => {
+    const withLocs = sortedSolutions.filter(
+      (solution) => typeof solution.primaryLat === "number" && typeof solution.primaryLng === "number"
+    );
+
+    // Apply jitter to duplicate coordinates
+    const coordMap = new Map<string, number>();
+
+    return withLocs.map(solution => {
+      const lat = solution.primaryLat!;
+      const lng = solution.primaryLng!;
+      const key = `${lat},${lng}`;
+
+      const count = coordMap.get(key) || 0;
+      coordMap.set(key, count + 1);
+
+      if (count > 0) {
+        // Jitter mechanism: radial offset spiral
+        const angle = count * 2; // radians
+        const radius = 0.0002 * count; // approx 20m per step
+        return {
+          ...solution,
+          primaryLat: lat + (radius * Math.cos(angle)),
+          primaryLng: lng + (radius * Math.sin(angle))
+        };
+      }
+
+      return solution;
+    });
+  }, [sortedSolutions]);
 
   const resetFilters = () => {
     updateFilters({
@@ -346,8 +373,13 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
     <div className="space-y-6">
       {/* MAP HERO SECTION */}
       <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-[360px] sm:h-[420px] bg-gray-100 flex items-center justify-center relative z-0">
+        {!GOOGLE_MAPS_API_KEY && (
+          <div className="absolute inset-x-0 top-0 z-50 bg-amber-500/90 text-white text-xs py-1 px-4 text-center font-bold">
+            Google Maps API Key missing. Map may not load correctly.
+          </div>
+        )}
         <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
-          <Map
+          <GoogleMap
             defaultCenter={{ lat: 15, lng: 0 }}
             defaultZoom={2}
             gestureHandling={'greedy'}
@@ -433,7 +465,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                 </div>
               </InfoWindow>
             )}
-          </Map>
+          </GoogleMap>
         </APIProvider>
       </div>
 
