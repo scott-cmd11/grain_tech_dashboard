@@ -19,7 +19,7 @@ export const sendMessageToGemini = async (
         // Local Development Fallback: Use direct API if in DEV mode and key exists
         if (import.meta.env.DEV && API_KEY) {
             const genAI = new GoogleGenerativeAI(API_KEY);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-001" });
 
             const chat = model.startChat({
                 history: [

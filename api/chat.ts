@@ -23,7 +23,7 @@ export default async function handler(req: Request) {
         const { history, message, context } = await req.json();
 
         const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-001' });
 
         // Construct history with injected context
         const chatHistory = [
