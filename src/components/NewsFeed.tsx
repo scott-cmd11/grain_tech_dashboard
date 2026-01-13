@@ -34,7 +34,10 @@ export const NewsFeed = memo(function NewsFeed() {
       try {
         // rawIntel matches the shape but we need to map it if strict typing is an issue
         // but mapped correctly in raw_intel.json
-        setNews(rawIntel.articles as NewsItem[]);
+        const sortedArticles = (rawIntel.articles as NewsItem[]).sort((a, b) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+        setNews(sortedArticles);
         setLastUpdated(rawIntel.generated_at);
         setLoading(false);
       } catch (err) {
