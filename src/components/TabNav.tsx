@@ -33,7 +33,7 @@ const groupedTabs: TabGroup[] = [
     title: 'Market Intelligence',
     tabs: [
       { id: 'ai-landscape', label: 'Landscape', icon: <Globe className="w-4 h-4" /> },
-      { id: 'news', label: 'News & Alerts', icon: <Newspaper className="w-4 h-4" /> },
+      { id: 'news', label: 'News', icon: <Newspaper className="w-4 h-4" /> },
       { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> },
       { id: 'trends', label: 'Trends', icon: <TrendingUp className="w-4 h-4" /> },
     ],

@@ -224,7 +224,11 @@ export const NewsFeed = memo(function NewsFeed() {
                     </div>
 
                     <div className="flex items-baseline justify-between mb-1">
-                      <span className="text-xs text-gray-400">{new Date(item.date).toLocaleDateString()}</span>
+                      <span className="text-xs text-gray-400">{new Date(item.date).toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                      })}</span>
                     </div>
 
                     <h4 className="text-base font-bold text-gray-900 dark:text-gray-100 leading-tight group-hover:text-indigo-600 transition-colors">
