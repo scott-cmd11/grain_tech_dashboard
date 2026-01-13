@@ -51,7 +51,7 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedLanguages, setSelectedLanguages] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'stars' | 'forks' | 'recent'>('stars');
+  const [sortBy, setSortBy] = useState<'stars' | 'forks' | 'recent'>('recent');
   const [minStars, setMinStars] = useState<number>(0);
   const [selectedLicenses, setSelectedLicenses] = useState<Set<string>>(new Set());
 
@@ -373,11 +373,10 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                   <button
                     key={cat.name}
                     onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
-                    className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${
-                      selectedCategory === cat.name
+                    className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedCategory === cat.name
                         ? 'bg-teal-600 text-white border-teal-600'
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-teal-600 dark:hover:border-teal-500'
-                    }`}
+                      }`}
                   >
                     {cat.name} ({cat.count})
                   </button>
@@ -394,11 +393,10 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                     <button
                       key={lang}
                       onClick={() => toggleLanguage(lang)}
-                      className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${
-                        selectedLanguages.has(lang)
+                      className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedLanguages.has(lang)
                           ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-700'
                           : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-blue-400'
-                      }`}
+                        }`}
                     >
                       {lang}
                     </button>
@@ -416,11 +414,10 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                     <button
                       key={license}
                       onClick={() => toggleLicense(license)}
-                      className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${
-                        selectedLicenses.has(license)
+                      className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedLicenses.has(license)
                           ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-300 dark:border-green-700'
                           : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-green-400'
-                      }`}
+                        }`}
                     >
                       {license}
                     </button>
