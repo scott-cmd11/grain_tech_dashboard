@@ -6,7 +6,7 @@ import {
   Newspaper,
   Search
 } from 'lucide-react';
-
+import rawIntel from '../data/raw_intel.json';
 
 interface NewsItem {
   id: string;
@@ -20,70 +20,6 @@ interface NewsItem {
   score?: number;
 }
 
-// Fallback sample news data (displays when API is unavailable, e.g., local dev)
-const FALLBACK_NEWS: NewsItem[] = [
-  {
-    id: 'fallback-1',
-    title: 'Grain inspectors could use more technology, lawmakers told',
-    source: 'Agri-Pulse',
-    date: new Date().toISOString(),
-    summary: 'Witnesses at a House Agriculture subcommittee hearing emphasized that grain inspectors need access to new technology to improve efficiency and accuracy.',
-    url: 'https://www.agri-pulse.com/articles/23117-grain-inspectors-could-use-more-technology-lawmakers-told',
-    category: 'Regulation',
-    score: 0.95
-  },
-  {
-    id: 'fallback-2',
-    title: 'ZoomAgri lands $6m from GrainCorp and others',
-    source: 'AgFunderNews',
-    date: new Date(Date.now() - 86400000).toISOString(), // Yesterday
-    summary: 'ZoomAgri lands $6m from GrainCorp and others to expand AI-powered grain inspection system across Australian grain handling facilities.',
-    url: 'https://agfundernews.com/zoomagri-lands-6m-from-graincorp-and-others-to-expand-ai-powered-grain-inspection-system',
-    category: 'Industry',
-    score: 0.92
-  },
-  {
-    id: 'fallback-3',
-    title: 'Ground Truth Agriculture Advancing Grain Grading',
-    source: 'SaskTrade',
-    date: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
-    summary: 'Ground Truth Agriculture uses a combination of machine vision and near-infrared spectroscopy (NIRS) to analyze grain quality with unprecedented precision.',
-    url: 'https://investsk.ca/2025/05/13/ground-truth-agriculture-advancing-grain-grading-with-cutting-edge-agtech/',
-    category: 'Innovation',
-    score: 0.89
-  }
-];
-
-// Fetch from our API endpoint, with fallback for local development
-async function fetchFromAPI(): Promise<{ articles: NewsItem[], lastUpdated: string }> {
-  try {
-    const response = await fetch('/api/news', {
-      signal: AbortSignal.timeout(5000) // 5 second timeout (faster now)
-    });
-
-    if (!response.ok) {
-      throw new Error('API request failed');
-    }
-
-    const data = await response.json();
-    // The new API structure returns the object directly
-    if (data.articles && data.articles.length > 0) {
-      return {
-        articles: data.articles,
-        lastUpdated: data.generated_at || new Date().toISOString()
-      };
-    }
-    throw new Error('No articles in response');
-  } catch (error) {
-    console.warn('API unavailable, using fallback data:', error);
-    // Return fallback data for local development
-    return {
-      articles: FALLBACK_NEWS,
-      lastUpdated: new Date().toISOString()
-    };
-  }
-}
-
 export const NewsFeed = memo(function NewsFeed() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -93,28 +29,22 @@ export const NewsFeed = memo(function NewsFeed() {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    async function loadNews() {
-      setLoading(true);
-      setError(null);
-
+    // Simulate async load slightly for UI smoothness, but load directly from JSON
+    const timer = setTimeout(() => {
       try {
-        const { articles, lastUpdated: timestamp } = await fetchFromAPI();
-
-        if (articles.length > 0) {
-          setNews(articles);
-          setLastUpdated(timestamp);
-        } else {
-          setError('No articles found. Please try again later.');
-        }
+        // rawIntel matches the shape but we need to map it if strict typing is an issue
+        // but mapped correctly in raw_intel.json
+        setNews(rawIntel.articles as NewsItem[]);
+        setLastUpdated(rawIntel.generated_at);
+        setLoading(false);
       } catch (err) {
         console.error('Failed to load news', err);
-        setError('Failed to fetch latest updates');
-      } finally {
+        setError('Failed to load news data');
         setLoading(false);
       }
-    }
+    }, 300);
 
-    loadNews();
+    return () => clearTimeout(timer);
   }, []);
 
   // Client-side search filtering
@@ -129,6 +59,7 @@ export const NewsFeed = memo(function NewsFeed() {
   }, [news, searchQuery]);
 
   const displayedNews = showAll ? filteredNews : filteredNews.slice(0, 9);
+
 
   return (
     <div className="space-y-6">
