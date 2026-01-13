@@ -92,7 +92,7 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
 
   return (
     <nav
-      className="lg:sticky lg:top-24 z-30 max-h-[calc(100vh-8rem)] overflow-y-auto no-scrollbar"
+      className="w-full"
       aria-label="Main navigation"
     >
       <div
