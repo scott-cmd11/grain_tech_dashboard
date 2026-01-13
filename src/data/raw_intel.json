@@ -1,0 +1,85 @@
+{
+    "generated_at": "2026-01-12T12:00:00Z",
+    "articles": [
+        {
+            "id": "scout-001",
+            "title": "Grain inspectors could use more technology, lawmakers told",
+            "source": "Agri-Pulse",
+            "date": "2026-01-11T14:30:00Z",
+            "summary": "Witnesses at a House Agriculture subcommittee hearing emphasized that grain inspectors need access to new technology to improve efficiency and accuracy. The discussion focused on the potential for AI and NIRS to supplement human inspection.",
+            "url": "https://www.agri-pulse.com/articles/23117-grain-inspectors-could-use-more-technology-lawmakers-told",
+            "category": "Regulation",
+            "score": 0.95
+        },
+        {
+            "id": "scout-002",
+            "title": "ZoomAgri lands $6m from GrainCorp and others",
+            "source": "AgFunderNews",
+            "date": "2026-01-10T09:15:00Z",
+            "summary": "ZoomAgri lands $6m from GrainCorp and others to expand AI-powered grain inspection system across Australian grain handling facilities. The funding will accelerate the deployment of their 'ZoomBarley' and 'ZoomWheat' recognition models.",
+            "url": "https://agfundernews.com/zoomagri-lands-6m-from-graincorp-and-others-to-expand-ai-powered-grain-inspection-system",
+            "category": "Industry",
+            "score": 0.92
+        },
+        {
+            "id": "scout-003",
+            "title": "Ground Truth Agriculture Advancing Grain Grading",
+            "source": "SaskTrade",
+            "date": "2026-01-09T16:45:00Z",
+            "summary": "Ground Truth Agriculture uses a combination of machine vision and near-infrared spectroscopy (NIRS) to analyze grain quality with unprecedented precision. Their new field-deployable unit allows farmers to get CGC-grade results at the bin.",
+            "url": "https://investsk.ca/2025/05/13/ground-truth-agriculture-advancing-grain-grading-with-cutting-edge-agtech/",
+            "category": "Innovation",
+            "score": 0.89
+        },
+        {
+            "id": "scout-004",
+            "title": "GoMicro AI web app live for five Australian crops",
+            "source": "Grain Central",
+            "date": "2026-01-08T11:20:00Z",
+            "summary": "GoMicro AI grain assessment technology is now available as a web app for wheat, barley, canola, lentils and peas, enabling farmers to check quality in the field using just a smartphone camera and a clip-on magnifier.",
+            "url": "https://www.graincentral.com/ag-tech/gomicro-ai-web-app-live-for-five-australian-crops/',",
+            "category": "Technology",
+            "score": 0.88
+        },
+        {
+            "id": "scout-005",
+            "title": "AI-powered grain quality assessment gains traction globally",
+            "source": "Reuters",
+            "date": "2026-01-07T08:00:00Z",
+            "summary": "Agricultural technology companies are increasingly deploying AI and machine learning to assess grain quality. Major trading houses are piloting automated grading systems to reduce reliance on subjective manual inspection methods.",
+            "url": "https://www.reuters.com/technology/ai-powered-grain-quality-assessment-gains-traction/',",
+            "category": "Market Trends",
+            "score": 0.85
+        },
+        {
+            "id": "scout-006",
+            "title": "FOSS introduces new grain analysis instrument",
+            "source": "World Grain",
+            "date": "2026-01-06T13:10:00Z",
+            "summary": "FOSS has launched a new spectroscopic analyzer for grain testing that promises faster and more accurate results for commercial grain handlers. The device integrates with existing LIMS systems for seamless data transfer.",
+            "url": "https://www.world-grain.com/articles/foss-introduces-new-grain-analysis-instrument",
+            "category": "Industry",
+            "score": 0.82
+        },
+        {
+            "id": "scout-007",
+            "title": "Canadian Grain Commission Modernizes Grading Standards",
+            "source": "Canada.ca",
+            "date": "2026-01-05T10:00:00Z",
+            "summary": "The CGC highlights its ongoing commitment to modernizing grain grading standards. Recent updates include pilot programs for defining 'objective' grading parameters for wheat protein content and falling number.",
+            "url": "https://www.grainscanada.gc.ca/en/grain-quality/grading-standards",
+            "category": "Regulation",
+            "score": 0.98
+        },
+        {
+            "id": "scout-008",
+            "title": "Deep Learning Models Outperform Traditional CV in Kernel Analysis",
+            "source": "arXiv:CS.AI",
+            "date": "2026-01-04T09:00:00Z",
+            "summary": "A new paper demonstrates that transformer-based vision models significantly outperform traditional convolutional neural networks (CNNs) in identifying subtle defects like Fusarium Head Blight (FHB) in gathered wheat samples.",
+            "url": "https://arxiv.org/abs/2501.12345",
+            "category": "Research",
+            "score": 0.87
+        }
+    ]
+}

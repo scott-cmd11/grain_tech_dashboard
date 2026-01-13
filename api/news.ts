@@ -1,198 +1,23 @@
+import rawIntel from '../src/data/raw_intel.json';
+
 export const config = {
   runtime: 'edge',
 };
 
-const RSS_FEEDS = [
-  'https://www.google.ca/alerts/feeds/03030665084568507357/5452083690063778198',
-  'https://www.google.ca/alerts/feeds/03030665084568507357/6657544371106105633',
-  'https://www.google.ca/alerts/feeds/03030665084568507357/17711904352499016105',
-  'https://www.google.ca/alerts/feeds/03030665084568507357/7719612955356284469',
-];
-
-// Removed restrictive whitelist - was filtering out most Google Alerts articles
-
-interface NewsItem {
-  id: string;
-  title: string;
-  source: string;
-  date: string;
-  summary: string;
-  url: string;
-  imageUrl?: string;
-}
-
-function decodeHtmlEntities(text: string): string {
-  return text
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/<[^>]*>/g, ''); // Strip HTML tags
-}
-
-function extractImageFromContent(content: string): string {
-  const match = content.match(/<img[^>]+src="([^"]+)"/i);
-  return match ? match[1] : '';
-}
-
-
-
-function extractOgImage(html: string): string {
-  const ogMatch = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["'][^>]*>/i);
-  if (ogMatch) return ogMatch[1];
-  const ogAltMatch = html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["'][^>]*>/i);
-  if (ogAltMatch) return ogAltMatch[1];
-  const twitterMatch = html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["'][^>]*>/i);
-  if (twitterMatch) return twitterMatch[1];
-  const twitterAltMatch = html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["'][^>]*>/i);
-  return twitterAltMatch ? twitterAltMatch[1] : '';
-}
-
-async function fetchOgImage(url: string): Promise<string> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 1500);
-
-  try {
-    const response = await fetch(url, {
-      signal: controller.signal,
-      headers: { 'User-Agent': 'Mozilla/5.0' },
-    });
-
-    if (!response.ok) {
-      return '';
-    }
-
-    const html = await response.text();
-    return extractOgImage(html);
-  } catch {
-    return '';
-  } finally {
-    clearTimeout(timeout);
-  }
-}
-
-async function fetchFeed(url: string): Promise<NewsItem[]> {
-  try {
-    const response = await fetch(url);
-    const xml = await response.text();
-
-    const items: NewsItem[] = [];
-
-    // Parse entries from Atom feed
-    const entryRegex = /<entry>([\s\S]*?)<\/entry>/g;
-    let match;
-    let index = 0;
-
-    while ((match = entryRegex.exec(xml)) !== null) {
-      const entry = match[1];
-
-      // Extract title
-      const titleMatch = entry.match(/<title[^>]*>([\s\S]*?)<\/title>/);
-      const title = titleMatch ? decodeHtmlEntities(titleMatch[1]) : '';
-
-      // Extract link
-      const linkMatch = entry.match(/<link[^>]*href="([^"]+)"/);
-      const url = linkMatch ? linkMatch[1] : '';
-
-      // Extract content/summary
-      const contentMatch = entry.match(/<content[^>]*>([\s\S]*?)<\/content>/);
-      const contentRaw = contentMatch ? contentMatch[1] : '';
-      const content = contentRaw ? decodeHtmlEntities(contentRaw) : '';
-      const imageUrl = contentRaw ? extractImageFromContent(contentRaw) : '';
-
-      // Extract published date
-      const publishedMatch = entry.match(/<published>([\s\S]*?)<\/published>/);
-      const published = publishedMatch ? publishedMatch[1] : new Date().toISOString();
-
-      // Extract source from content or use Google Alerts
-      const sourceMatch = content.match(/^([^-]+)-/);
-      const source = sourceMatch ? sourceMatch[1].trim() : 'Google Alerts';
-
-      if (title && url) {
-        items.push({
-          id: `alert-${index++}`,
-          title: title.substring(0, 200),
-          source,
-          date: published,
-          summary: content.substring(0, 300) + (content.length > 300 ? '...' : ''),
-          url,
-          imageUrl: imageUrl || undefined,
-        });
-      }
-    }
-
-    return items;
-  } catch (error) {
-    console.error('Error fetching feed:', url, error);
-    return [];
-  }
-}
-
 export default async function handler() {
   try {
-    // Fetch all feeds in parallel
-    const feedPromises = RSS_FEEDS.map(fetchFeed);
-    const feedResults = await Promise.all(feedPromises);
-
-    // Combine all articles
-    let allArticles = feedResults.flat();
-
-    // RELEVANCE FILTER: Only keep articles with specific keywords
-    // This reduces noise from general Google Alerts
-    const RELEVANCE_KEYWORDS = [
-      'grain', 'wheat', 'corn', 'soy', 'canola', 'barley', 'oats', 'lentils', 'peas',
-      'grading', 'inspection', 'quality', 'assessment', 'protein', 'moisture',
-      'AI', 'artificial intelligence', 'automation', 'machine learning', 'robotics', 'tech',
-      'USDA', 'CGC', 'Canadian Grain Commission', 'Cargill', 'Viterra', 'G3', 'Richardson'
-    ];
-
-    allArticles = allArticles.filter(article => {
-      const text = (article.title + ' ' + article.summary).toLowerCase();
-      return RELEVANCE_KEYWORDS.some(keyword => text.includes(keyword.toLowerCase()));
-    });
-
-    // Remove duplicates by URL
-    const seen = new Set<string>();
-    allArticles = allArticles.filter((article) => {
-      if (seen.has(article.url)) return false;
-      seen.add(article.url);
-      return true;
-    });
-
-    // Sort by date (newest first)
-    allArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-    const maxOgLookups = 10;
-    let ogLookups = 0;
-
-    for (const article of allArticles) {
-      if (article.imageUrl || ogLookups >= maxOgLookups) {
-        continue;
-      }
-
-      // Attempt og image fetch for first 10 articles without images
-
-      const ogImage = await fetchOgImage(article.url);
-      if (ogImage) {
-        article.imageUrl = ogImage;
-      }
-      ogLookups += 1;
-    }
-
-    // Limit to 20 articles
-    allArticles = allArticles.slice(0, 20);
-
-    return new Response(JSON.stringify({ articles: allArticles, lastUpdated: new Date().toISOString() }), {
+    // Return the data directly from the JSON file
+    return new Response(JSON.stringify(rawIntel), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 's-maxage=1800', // Cache for 30 minutes
+        // Cache for 1 hour since this is static "Scout" data
+        'Cache-Control': 's-maxage=3600',
       },
     });
   } catch (error) {
     return new Response(
-      JSON.stringify({ error: 'Failed to fetch news', articles: [] }),
+      JSON.stringify({ error: 'Failed to load news data', articles: [] }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }

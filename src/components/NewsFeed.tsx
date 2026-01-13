@@ -17,6 +17,7 @@ interface NewsItem {
   url: string;
   imageUrl?: string;
   category?: string;
+  score?: number;
 }
 
 // Fallback sample news data (displays when API is unavailable, e.g., local dev)
@@ -29,6 +30,7 @@ const FALLBACK_NEWS: NewsItem[] = [
     summary: 'Witnesses at a House Agriculture subcommittee hearing emphasized that grain inspectors need access to new technology to improve efficiency and accuracy.',
     url: 'https://www.agri-pulse.com/articles/23117-grain-inspectors-could-use-more-technology-lawmakers-told',
     category: 'Regulation',
+    score: 0.95
   },
   {
     id: 'fallback-2',
@@ -38,6 +40,7 @@ const FALLBACK_NEWS: NewsItem[] = [
     summary: 'ZoomAgri lands $6m from GrainCorp and others to expand AI-powered grain inspection system across Australian grain handling facilities.',
     url: 'https://agfundernews.com/zoomagri-lands-6m-from-graincorp-and-others-to-expand-ai-powered-grain-inspection-system',
     category: 'Industry',
+    score: 0.92
   },
   {
     id: 'fallback-3',
@@ -47,41 +50,15 @@ const FALLBACK_NEWS: NewsItem[] = [
     summary: 'Ground Truth Agriculture uses a combination of machine vision and near-infrared spectroscopy (NIRS) to analyze grain quality with unprecedented precision.',
     url: 'https://investsk.ca/2025/05/13/ground-truth-agriculture-advancing-grain-grading-with-cutting-edge-agtech/',
     category: 'Innovation',
-  },
-  {
-    id: 'fallback-4',
-    title: 'GoMicro AI web app live for five Australian crops',
-    source: 'Grain Central',
-    date: new Date(Date.now() - 259200000).toISOString(), // 3 days ago
-    summary: 'GoMicro AI grain assessment technology is now available as a web app for wheat, barley, canola, lentils and peas, enabling farmers to check quality in the field.',
-    url: 'https://www.graincentral.com/ag-tech/gomicro-ai-web-app-live-for-five-australian-crops/',
-    category: 'Technology',
-  },
-  {
-    id: 'fallback-5',
-    title: 'AI-powered grain quality assessment gains traction globally',
-    source: 'Reuters',
-    date: new Date(Date.now() - 345600000).toISOString(), // 4 days ago
-    summary: 'Agricultural technology companies are increasingly deploying AI and machine learning to assess grain quality, reducing reliance on manual inspection methods.',
-    url: 'https://www.reuters.com/technology/ai-powered-grain-quality-assessment-gains-traction/',
-    category: 'Technology',
-  },
-  {
-    id: 'fallback-6',
-    title: 'FOSS introduces new grain analysis instrument',
-    source: 'World Grain',
-    date: new Date(Date.now() - 432000000).toISOString(), // 5 days ago
-    summary: 'FOSS has launched a new spectroscopic analyzer for grain testing that promises faster and more accurate results for commercial grain handlers.',
-    url: 'https://www.world-grain.com/articles/foss-introduces-new-grain-analysis-instrument',
-    category: 'Industry',
-  },
+    score: 0.89
+  }
 ];
 
 // Fetch from our API endpoint, with fallback for local development
 async function fetchFromAPI(): Promise<{ articles: NewsItem[], lastUpdated: string }> {
   try {
     const response = await fetch('/api/news', {
-      signal: AbortSignal.timeout(10000) // 10 second timeout
+      signal: AbortSignal.timeout(5000) // 5 second timeout (faster now)
     });
 
     if (!response.ok) {
@@ -89,10 +66,11 @@ async function fetchFromAPI(): Promise<{ articles: NewsItem[], lastUpdated: stri
     }
 
     const data = await response.json();
+    // The new API structure returns the object directly
     if (data.articles && data.articles.length > 0) {
       return {
         articles: data.articles,
-        lastUpdated: data.lastUpdated || new Date().toISOString()
+        lastUpdated: data.generated_at || new Date().toISOString()
       };
     }
     throw new Error('No articles in response');
@@ -190,7 +168,7 @@ export const NewsFeed = memo(function NewsFeed() {
             </h3>
           </div>
           <span className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1">
-            Powered by Google Alerts
+            Powered by Scout Agent
           </span>
         </div>
 
@@ -228,16 +206,27 @@ export const NewsFeed = memo(function NewsFeed() {
             {displayedNews.map((item) => (
               <article
                 key={item.id}
-                className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800/70 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md h-full"
+                className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800/70 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md h-full relative"
               >
                 <div className="p-5 flex flex-col h-full bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50">
                   <div className="mb-3">
                     <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-2">
-                      <span className="font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-0.5 rounded-full">
-                        {item.source}
-                      </span>
-                      <span>{new Date(item.date).toLocaleDateString()}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-2 py-0.5 rounded-full">
+                          {item.source}
+                        </span>
+                        {item.category && (
+                          <span className="font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 px-2 py-0.5 rounded-full border border-emerald-100 dark:border-emerald-800">
+                            {item.category}
+                          </span>
+                        )}
+                      </div>
                     </div>
+
+                    <div className="flex items-baseline justify-between mb-1">
+                      <span className="text-xs text-gray-400">{new Date(item.date).toLocaleDateString()}</span>
+                    </div>
+
                     <h4 className="text-base font-bold text-gray-900 dark:text-gray-100 leading-tight group-hover:text-indigo-600 transition-colors">
                       <a href={item.url} target="_blank" rel="noopener noreferrer">
                         {item.title}
