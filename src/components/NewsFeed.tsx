@@ -6,7 +6,7 @@ import {
   Newspaper,
   Search
 } from 'lucide-react';
-import rawIntel from '../data/raw_intel.json';
+import curatedNews from '../data/curatedNews.json';
 
 interface NewsItem {
   id: string;
@@ -32,13 +32,12 @@ export const NewsFeed = memo(function NewsFeed() {
     // Simulate async load slightly for UI smoothness, but load directly from JSON
     const timer = setTimeout(() => {
       try {
-        // rawIntel matches the shape but we need to map it if strict typing is an issue
-        // but mapped correctly in raw_intel.json
-        const sortedArticles = (rawIntel.articles as NewsItem[]).sort((a, b) =>
+        // Load curated news data - already has correct field names
+        const sortedArticles = (curatedNews as NewsItem[]).sort((a, b) =>
           new Date(b.date).getTime() - new Date(a.date).getTime()
         );
         setNews(sortedArticles);
-        setLastUpdated(rawIntel.generated_at);
+        setLastUpdated(new Date().toISOString());
         setLoading(false);
       } catch (err) {
         console.error('Failed to load news', err);
@@ -49,6 +48,7 @@ export const NewsFeed = memo(function NewsFeed() {
 
     return () => clearTimeout(timer);
   }, []);
+
 
   // Client-side search filtering
   const filteredNews = useMemo(() => {
