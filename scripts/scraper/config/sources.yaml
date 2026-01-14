@@ -1,0 +1,347 @@
+# AI Newsletter Bot - Source Configuration
+# =========================================
+# Customize your newsletter sources and preferences here
+
+# Scraper Configuration (New)
+scraper:
+  enabled: true
+  csv_source_path: "data/google_alerts_all_utf8.csv" # UPDATED: pointing to new local data path
+  max_search_results: 5  # Per query
+  scrape_full_content: true # Visit URLs to get full summary
+
+# Newsletter Settings
+newsletter:
+  name: "AI This Week"
+  tagline: "Key AI Developments You Should Know"
+  # Run by Thursday to send on Friday
+  target_day: "Thursday"
+  send_day: "Friday"
+  max_articles: 8  # Number of key developments to include
+
+# Google Alerts RSS Feeds
+# -----------------------
+# Your AI-focused Google Alerts
+# Google Alerts RSS Feeds (Shelved - using CSV Scraper instead)
+# -----------------------
+# google_alerts:
+  # Core AI Topics
+  - name: "Artificial general intelligence"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/6619274340374812968"
+    priority: high
+    category: "capabilities"
+    
+  - name: "artificial superintelligence"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/5237285988387868375"
+    priority: high
+    category: "capabilities"
+    
+  # Canadian Focus
+  - name: "Artificial intelligence canada"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/8343122122122789666"
+    priority: high
+    category: "governance"
+    
+  # Governance & Ethics
+  - name: "Artificial Intelligence Governance"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/2278791836030122678"
+    priority: high
+    category: "governance"
+    
+  - name: "Artificial intelligence ethics"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/2891758781116511337"
+    priority: high
+    category: "governance"
+    
+  - name: "Artificial intelligence regulation"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/7622957089141856354"
+    priority: high
+    category: "governance"
+    
+  - name: "Artificial intelligence privacy"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/16866512384761599386"
+    priority: medium
+    category: "governance"
+    
+  - name: "Artificial intelligence security"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/15942459126004772098"
+    priority: medium
+    category: "governance"
+    
+  - name: "Artificial intelligence public sector"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/5306089899663451631"
+    priority: medium
+    category: "governance"
+    
+  # Business & Workforce
+  - name: "Artificial Intelligence Job Replacement"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/11653796448320099668"
+    priority: high
+    category: "business"
+    
+  # Agriculture & Industry (Your domain expertise)
+  - name: "artificial intelligence and agriculture"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/15755737833312608799"
+    priority: medium
+    category: "business"
+    
+  - name: "Artificial intelligence and crops"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/3281559451078185126"
+    priority: medium
+    category: "business"
+    
+  - name: "artificial intelligence and environment"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/14729553839422577938"
+    priority: medium
+    category: "business"
+    
+  - name: "Artificial Intelligence and grain"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/5761797510369087166"
+    priority: medium
+    category: "business"
+    
+  - name: "Artificial intelligence and oilseeds"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/12957642636281638741"
+    priority: low
+    category: "business"
+    
+  - name: "Artificial intelligence and the grain industry"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/9368672943932362999"
+    priority: medium
+    category: "business"
+    
+  - name: "artificial intelligence and wheat"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/12957642636281637464"
+    priority: low
+    category: "business"
+    
+# Additional RSS Feeds (optional industry sources)
+# ------------------------------------------------
+rss_feeds:
+  # Canadian AI Research
+  - name: "Vector Institute"
+    url: "https://vectorinstitute.ai/feed/"
+    priority: high
+    category: "research"
+    
+  - name: "CIFAR AI"
+    url: "https://cifar.ca/feed/"
+    priority: high
+    category: "research"
+    
+  # Major AI Labs
+  - name: "OpenAI Blog"
+    url: "https://openai.com/blog/rss.xml"
+    priority: medium
+    category: "industry"
+    
+  - name: "Google AI Blog"
+    url: "https://blog.google/technology/ai/rss/"
+    priority: medium
+    category: "industry"
+    
+  - name: "Anthropic"
+    url: "https://www.anthropic.com/rss.xml"
+    priority: medium
+    category: "industry"
+
+# Topic Categories for Classification
+# ------------------------------------
+topics:
+  governance:
+    keywords:
+      - regulation
+      - policy
+      - ethics
+      - legislation
+      - government
+      - privacy
+      - safety
+      - responsible AI
+      - Bill C-27
+      - AIDA
+      - public sector
+    priority_boost: 1.5
+    
+  capabilities:
+    keywords:
+      - breakthrough
+      - benchmark
+      - performance
+      - GPT
+      - Claude
+      - Gemini
+      - model release
+      - state-of-the-art
+      - AGI
+      - superintelligence
+    priority_boost: 1.3
+    
+  business:
+    keywords:
+      - enterprise
+      - adoption
+      - investment
+      - startup
+      - funding
+      - partnership
+      - deployment
+      - job replacement
+      - workforce
+      - agriculture
+      - grain
+    priority_boost: 1.0
+    
+  education:
+    keywords:
+      - training
+      - course
+      - university
+      - research
+      - academic
+      - learning
+    priority_boost: 1.0
+    
+  tools:
+    keywords:
+      - tool
+      - app
+      - platform
+      - launch
+      - release
+      - product
+    priority_boost: 1.2
+
+# Canadian Content Boost
+# ----------------------
+# Articles mentioning these get higher priority
+canadian_keywords:
+  - Canada
+  - Canadian
+  - Toronto
+  - Montreal
+  - Vancouver
+  - Ottawa
+  - Alberta
+  - Ontario
+  - Quebec
+  - British Columbia
+  - federal
+  - CIFAR
+  - Vector Institute
+  - Mila
+  - Amii
+
+canadian_boost: 2.0  # Multiplier for Canadian content
+
+# Filters
+# -------
+# Skip articles matching these patterns
+exclude_patterns:
+  - sponsored
+  - advertisement
+  - "[PR]"
+  - press release
+
+# Article age limit (days from today)
+max_age_days: 7
+
+# Gemini API Settings
+# -------------------
+gemini:
+  model: "models/gemini-2.0-flash"
+  summary_style: "detailed"  # analytical, brief, detailed
+  include_commentary: true
+  max_summary_length: 75  # words - targeting 3-4 concise sentences
+
+# Style Personalization
+# ---------------------
+# Your unique voice and writing preferences
+style:
+  voice: "Professional technology analyst with expertise in AI governance"
+  tone: "Analytical and insightful, avoiding hype and marketing speak"
+  audience: "Canadian AI professionals, executives, and policymakers"
+  focus_areas:
+    - AI governance and regulation
+    - Canadian AI developments
+    - Practical business implications
+    - Emerging capabilities and their impact
+  writing_guidelines:
+    - "Focus on WHY developments matter, not just WHAT happened"
+    - "Include Canadian context and relevance when applicable"
+    - "Highlight implications for policy and business decisions"
+    - "Use data and specific examples when available"
+    - "Maintain objectivity while providing informed analysis"
+
+# Theme of the Week
+# -----------------
+# AI will synthesize a common thread across selected articles
+theme_of_week:
+  enabled: true
+  length: 150  # words
+  style: "An editorial insight that connects the week's major themes"
+
+# Newsletter Section Configuration
+# ---------------------------------
+# Controls how articles are organized into sections for Scott's format
+sections:
+  headlines:
+    target_count: 8  # 8-10 range, use 8 as minimum
+    governance_ratio: 0.6  # 60% governance/policy, 40% capabilities/research
+    required_canadian_gov: 1  # Must have at least 1 Canadian government story
+    required_governance: 1  # Must have at least 1 governance/regulation story
+
+  bright_spots:
+    target_count: 2  # 2-3 range, use 2 as minimum
+    keywords:
+      - breakthrough
+      - cure
+      - innovation
+      - success
+      - achievement
+      - milestone
+      - wins
+      - discovery
+      - medical advance
+      - health benefit
+      - positive development
+
+  tools:
+    target_count: 1
+    max_age_days: 3  # Prefer recent tool releases
+
+  deep_dives:
+    target_count: 4  # 4-5 range, use 4 as minimum
+    source_keywords:
+      - arxiv
+      - research
+      - journal
+      - paper
+      - study
+      - white paper
+      - report
+      - findings
+
+  grain_quality:
+    enabled: true  # Auto-include if agriculture articles found
+    keywords:
+      - agriculture
+      - farming
+      - grain
+      - crop
+      - harvest
+      - agricultural
+      - farm
+      - wheat
+      - corn
+      - rice
+      - quality control
+      - soil
+      - farmer
+
+# Sentiment Balance Target
+# -------------------------
+# Newsletter aims for balanced sentiment distribution
+sentiment:
+  target_concerns: 0.40  # Risks, problems, concerns (40%)
+  target_opportunities: 0.35  # Breakthroughs, solutions, innovations (35%)
+  target_neutral: 0.25  # Factual reporting without clear sentiment (25%)

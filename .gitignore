@@ -29,3 +29,7 @@ npm-debug.log*
 .eslintcache
 .vercel
 .env*.local
+
+# Python Venv
+venv/
+scripts/scraper/venv/
