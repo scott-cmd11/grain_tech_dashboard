@@ -62,6 +62,7 @@ const CORS_HEADERS = {
     'Access-Control-Allow-Origin': process.env.ALLOWED_ORIGIN || 'https://graintech-dashboard.vercel.app',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
+    'Content-Security-Policy': "default-src 'none'",
 };
 
 export default async function handler(req: Request) {
