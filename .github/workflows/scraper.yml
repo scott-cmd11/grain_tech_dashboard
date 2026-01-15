@@ -1,0 +1,59 @@
+name: Nightly Grain News Scraper
+
+on:
+  schedule:
+    # Run at 2 AM UTC daily (8 PM CST / 9 PM CDT)
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scripts/scraper/requirements.txt
+          
+      - name: Install dependencies
+        working-directory: scripts/scraper
+        run: |
+          pip install -r requirements.txt
+          
+      - name: Run Scout Agent
+        working-directory: scripts/scraper
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -m src.agents.scout
+          
+      - name: Copy output to frontend data
+        run: |
+          # Scout outputs to src/data/raw_intel.json
+          # We need to transform it to curatedNews.json format
+          python scripts/scraper/src/transform_to_curated.py
+          
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code src/data/curatedNews.json || echo "changes=true" >> $GITHUB_OUTPUT
+          
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/curatedNews.json
+          git commit -m "chore: update curated news [automated]"
+          git push

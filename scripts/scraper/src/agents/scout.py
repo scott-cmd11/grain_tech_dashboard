@@ -29,17 +29,41 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # ============================================================================
-# SOURCE_MAP: The Whitelist of High-Fidelity Sources
+# SOURCE_MAP: Grain Industry Sources
 # ============================================================================
 # Each category maps to a list of sources with their URL and type (rss/scrape).
 
 SOURCE_MAP = {
-    'vertical_grain': [
+    'grain_industry': [
+        {
+            'name': 'GrainsWest Magazine',
+            'url': 'https://grainswest.com/feed/',
+            'type': 'rss'
+        },
+        {
+            'name': 'Grain Central',
+            'url': 'https://www.graincentral.com/feed/',
+            'type': 'rss'
+        },
         {
             'name': 'University of Saskatchewan - Agriculture',
             'url': 'https://usask.technologypublisher.com/rssDataFeed.aspx?category=agriculture+and+bioresources',
             'type': 'rss'
         },
+    ],
+    'technology': [
+        {
+            'name': 'Ag Funder News',
+            'url': 'https://agfundernews.com/feed',
+            'type': 'rss'
+        },
+        {
+            'name': 'Future Farming',
+            'url': 'https://www.futurefarming.com/feed/',
+            'type': 'rss'
+        },
+    ],
+    'company': [
         {
             'name': 'Protein Industries Canada',
             'url': 'https://www.proteinindustriescanada.ca/news-releases',
@@ -51,35 +75,8 @@ SOURCE_MAP = {
             'type': 'scrape'
         },
     ],
-    'deep_dive': [
-        {
-            'name': 'arXiv CS.AI',
-            'url': 'http://arxiv.org/rss/cs.AI',
-            'type': 'rss'
-        },
-    ],
-    'headline': [
-        {
-            'name': 'Government of Canada - Innovation',
-            'url': 'https://www.canada.ca/content/canadasite/api/nsc/rss/science-innovation.xml',
-            'type': 'rss'
-        },
-        {
-            'name': 'OECD AI Policy',
-            'url': 'https://oecd.ai/en/feed',
-            'type': 'rss'
-        },
-    ],
-    'tools': [
-        {
-            'name': 'Google DeepMind Blog',
-            'url': 'https://deepmind.google/discover/blog/rss.xml',
-            'type': 'rss'
-        },
-    ],
-    'bright_spot': [
-        # Bright spots are often found within other feeds; this is a placeholder.
-        # The Editor will filter for positive sentiment from all sources.
+    'regulatory': [
+        # Government and regulatory sources
     ],
 }
 

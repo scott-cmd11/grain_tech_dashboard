@@ -1,347 +1,176 @@
-# AI Newsletter Bot - Source Configuration
-# =========================================
-# Customize your newsletter sources and preferences here
+# GrainTech Dashboard - Source Configuration
+# ==========================================
+# Grain industry-focused sources for automated news collection
 
-# Scraper Configuration (New)
+# Scraper Configuration
 scraper:
   enabled: true
-  csv_source_path: "data/google_alerts_all_utf8.csv" # UPDATED: pointing to new local data path
-  max_search_results: 5  # Per query
-  scrape_full_content: true # Visit URLs to get full summary
+  csv_source_path: null  # Disabled - using RSS feeds instead
+  max_search_results: 5
+  scrape_full_content: true
 
-# Newsletter Settings
-newsletter:
-  name: "AI This Week"
-  tagline: "Key AI Developments You Should Know"
-  # Run by Thursday to send on Friday
-  target_day: "Thursday"
-  send_day: "Friday"
-  max_articles: 8  # Number of key developments to include
+# AI Curation Settings
+curation:
+  enabled: true
+  min_relevance_score: 60  # 0-100, articles below this are filtered out
+  max_articles: 15  # Maximum articles to include in output
 
-# Google Alerts RSS Feeds
-# -----------------------
-# Your AI-focused Google Alerts
-# Google Alerts RSS Feeds (Shelved - using CSV Scraper instead)
-# -----------------------
-# google_alerts:
-  # Core AI Topics
-  - name: "Artificial general intelligence"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/6619274340374812968"
+# ============================================================================
+# PRIMARY RSS FEEDS - Grain Industry Sources
+# ============================================================================
+rss_feeds:
+  # Canadian Grain Industry
+  - name: "Canadian Grain Commission"
+    url: "https://www.grainscanada.gc.ca/en/rss/news/feed.xml"
     priority: high
-    category: "capabilities"
+    category: "regulatory"
     
-  - name: "artificial superintelligence"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/5237285988387868375"
+  - name: "Protein Industries Canada"
+    url: "https://www.proteinindustriescanada.ca/feed"
     priority: high
-    category: "capabilities"
+    category: "industry"
     
-  # Canadian Focus
-  - name: "Artificial intelligence canada"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/8343122122122789666"
+  - name: "GrainsWest Magazine"
+    url: "https://grainswest.com/feed/"
     priority: high
-    category: "governance"
+    category: "industry"
     
-  # Governance & Ethics
-  - name: "Artificial Intelligence Governance"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/2278791836030122678"
-    priority: high
-    category: "governance"
-    
-  - name: "Artificial intelligence ethics"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/2891758781116511337"
-    priority: high
-    category: "governance"
-    
-  - name: "Artificial intelligence regulation"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/7622957089141856354"
-    priority: high
-    category: "governance"
-    
-  - name: "Artificial intelligence privacy"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/16866512384761599386"
+  - name: "Farm Forum Reporter"
+    url: "https://www.farmforumreporter.com/feed"
     priority: medium
-    category: "governance"
-    
-  - name: "Artificial intelligence security"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/15942459126004772098"
-    priority: medium
-    category: "governance"
-    
-  - name: "Artificial intelligence public sector"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/5306089899663451631"
-    priority: medium
-    category: "governance"
-    
-  # Business & Workforce
-  - name: "Artificial Intelligence Job Replacement"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/11653796448320099668"
+    category: "industry"
+
+  # Australian Grain Industry
+  - name: "Grain Central"
+    url: "https://www.graincentral.com/feed/"
     priority: high
-    category: "business"
+    category: "industry"
     
-  # Agriculture & Industry (Your domain expertise)
-  - name: "artificial intelligence and agriculture"
+  - name: "Grain Trade Australia"
+    url: "https://www.graintrade.org.au/feed"
+    priority: medium
+    category: "regulatory"
+
+  # US Grain Industry
+  - name: "World Grain"
+    url: "https://www.world-grain.com/rss/topic/1143-wheat"
+    priority: medium
+    category: "industry"
+    
+  - name: "Successful Farming - Grain"
+    url: "https://www.agriculture.com/crops/corn/.rss"
+    priority: medium
+    category: "industry"
+
+  # Technology & Innovation
+  - name: "Ag Funder News"
+    url: "https://agfundernews.com/feed"
+    priority: medium
+    category: "technology"
+    
+  - name: "Future Farming"
+    url: "https://www.futurefarming.com/feed/"
+    priority: medium
+    category: "technology"
+
+# ============================================================================
+# GOOGLE ALERTS RSS - Grain/AI specific topics
+# ============================================================================
+google_alerts:
+  - name: "AI grain grading"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/5761797510369087166"
+    priority: high
+    category: "technology"
+    
+  - name: "AI agriculture"
     url: "https://www.google.com/alerts/feeds/03030665084568507357/15755737833312608799"
     priority: medium
-    category: "business"
+    category: "technology"
     
-  - name: "Artificial intelligence and crops"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/3281559451078185126"
-    priority: medium
-    category: "business"
-    
-  - name: "artificial intelligence and environment"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/14729553839422577938"
-    priority: medium
-    category: "business"
-    
-  - name: "Artificial Intelligence and grain"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/5761797510369087166"
-    priority: medium
-    category: "business"
-    
-  - name: "Artificial intelligence and oilseeds"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/12957642636281638741"
-    priority: low
-    category: "business"
-    
-  - name: "Artificial intelligence and the grain industry"
-    url: "https://www.google.com/alerts/feeds/03030665084568507357/9368672943932362999"
-    priority: medium
-    category: "business"
-    
-  - name: "artificial intelligence and wheat"
+  - name: "AI wheat quality"
     url: "https://www.google.com/alerts/feeds/03030665084568507357/12957642636281637464"
-    priority: low
-    category: "business"
+    priority: medium
+    category: "technology"
     
-# Additional RSS Feeds (optional industry sources)
-# ------------------------------------------------
-rss_feeds:
-  # Canadian AI Research
-  - name: "Vector Institute"
-    url: "https://vectorinstitute.ai/feed/"
+  - name: "Machine vision grain"
+    url: "https://www.google.com/alerts/feeds/03030665084568507357/9368672943932362999"
     priority: high
-    category: "research"
-    
-  - name: "CIFAR AI"
-    url: "https://cifar.ca/feed/"
+    category: "technology"
+
+# ============================================================================
+# COMPANY SOURCES - Direct from grain tech companies
+# ============================================================================
+company_feeds:
+  - name: "FOSS Analytics"
+    url: "https://www.fossanalytics.com/en/news/rss"
     priority: high
-    category: "research"
+    category: "company"
     
-  # Major AI Labs
-  - name: "OpenAI Blog"
-    url: "https://openai.com/blog/rss.xml"
-    priority: medium
-    category: "industry"
+  - name: "Cgrain"
+    url: "https://www.cgrain.ai/feed/"
+    priority: high
+    category: "company"
     
-  - name: "Google AI Blog"
-    url: "https://blog.google/technology/ai/rss/"
-    priority: medium
-    category: "industry"
-    
-  - name: "Anthropic"
-    url: "https://www.anthropic.com/rss.xml"
-    priority: medium
-    category: "industry"
+  - name: "GrainSense"
+    url: "https://grainsense.com/blogs/news.atom"
+    priority: high
+    category: "company"
 
-# Topic Categories for Classification
-# ------------------------------------
-topics:
-  governance:
-    keywords:
-      - regulation
-      - policy
-      - ethics
-      - legislation
-      - government
-      - privacy
-      - safety
-      - responsible AI
-      - Bill C-27
-      - AIDA
-      - public sector
-    priority_boost: 1.5
+# ============================================================================
+# RELEVANCE KEYWORDS - For AI curation scoring
+# ============================================================================
+relevance_keywords:
+  high_value:  # +20 points each
+    - grain grading
+    - grain quality
+    - grain inspection
+    - wheat testing
+    - barley testing
+    - NIR analysis
+    - machine vision grain
+    - kernel analysis
+    - grain sorting
+    - cereal inspection
     
-  capabilities:
-    keywords:
-      - breakthrough
-      - benchmark
-      - performance
-      - GPT
-      - Claude
-      - Gemini
-      - model release
-      - state-of-the-art
-      - AGI
-      - superintelligence
-    priority_boost: 1.3
+  medium_value:  # +10 points each
+    - grain industry
+    - grain technology
+    - agriculture AI
+    - crop quality
+    - seed analysis
+    - protein content
+    - moisture testing
+    - grain storage
+    - grain handling
+    - CGC
+    - Canadian Grain Commission
     
-  business:
-    keywords:
-      - enterprise
-      - adoption
-      - investment
-      - startup
-      - funding
-      - partnership
-      - deployment
-      - job replacement
-      - workforce
-      - agriculture
-      - grain
-    priority_boost: 1.0
-    
-  education:
-    keywords:
-      - training
-      - course
-      - university
-      - research
-      - academic
-      - learning
-    priority_boost: 1.0
-    
-  tools:
-    keywords:
-      - tool
-      - app
-      - platform
-      - launch
-      - release
-      - product
-    priority_boost: 1.2
+  low_value:  # +5 points each
+    - wheat
+    - barley
+    - oats
+    - canola
+    - pulse crops
+    - oilseeds
+    - harvest
+    - farming technology
 
-# Canadian Content Boost
-# ----------------------
-# Articles mentioning these get higher priority
-canadian_keywords:
-  - Canada
-  - Canadian
-  - Toronto
-  - Montreal
-  - Vancouver
-  - Ottawa
-  - Alberta
-  - Ontario
-  - Quebec
-  - British Columbia
-  - federal
-  - CIFAR
-  - Vector Institute
-  - Mila
-  - Amii
-
-canadian_boost: 2.0  # Multiplier for Canadian content
-
-# Filters
-# -------
-# Skip articles matching these patterns
+# ============================================================================
+# EXCLUSION PATTERNS - Filter out irrelevant content
+# ============================================================================
 exclude_patterns:
   - sponsored
   - advertisement
   - "[PR]"
   - press release
+  - stock price
+  - commodity futures
+  - weather forecast
 
-# Article age limit (days from today)
-max_age_days: 7
+# Article age limit (days)
+max_age_days: 14
 
-# Gemini API Settings
-# -------------------
+# Gemini API Settings for AI Curation
 gemini:
-  model: "models/gemini-2.0-flash"
-  summary_style: "detailed"  # analytical, brief, detailed
-  include_commentary: true
-  max_summary_length: 75  # words - targeting 3-4 concise sentences
-
-# Style Personalization
-# ---------------------
-# Your unique voice and writing preferences
-style:
-  voice: "Professional technology analyst with expertise in AI governance"
-  tone: "Analytical and insightful, avoiding hype and marketing speak"
-  audience: "Canadian AI professionals, executives, and policymakers"
-  focus_areas:
-    - AI governance and regulation
-    - Canadian AI developments
-    - Practical business implications
-    - Emerging capabilities and their impact
-  writing_guidelines:
-    - "Focus on WHY developments matter, not just WHAT happened"
-    - "Include Canadian context and relevance when applicable"
-    - "Highlight implications for policy and business decisions"
-    - "Use data and specific examples when available"
-    - "Maintain objectivity while providing informed analysis"
-
-# Theme of the Week
-# -----------------
-# AI will synthesize a common thread across selected articles
-theme_of_week:
-  enabled: true
-  length: 150  # words
-  style: "An editorial insight that connects the week's major themes"
-
-# Newsletter Section Configuration
-# ---------------------------------
-# Controls how articles are organized into sections for Scott's format
-sections:
-  headlines:
-    target_count: 8  # 8-10 range, use 8 as minimum
-    governance_ratio: 0.6  # 60% governance/policy, 40% capabilities/research
-    required_canadian_gov: 1  # Must have at least 1 Canadian government story
-    required_governance: 1  # Must have at least 1 governance/regulation story
-
-  bright_spots:
-    target_count: 2  # 2-3 range, use 2 as minimum
-    keywords:
-      - breakthrough
-      - cure
-      - innovation
-      - success
-      - achievement
-      - milestone
-      - wins
-      - discovery
-      - medical advance
-      - health benefit
-      - positive development
-
-  tools:
-    target_count: 1
-    max_age_days: 3  # Prefer recent tool releases
-
-  deep_dives:
-    target_count: 4  # 4-5 range, use 4 as minimum
-    source_keywords:
-      - arxiv
-      - research
-      - journal
-      - paper
-      - study
-      - white paper
-      - report
-      - findings
-
-  grain_quality:
-    enabled: true  # Auto-include if agriculture articles found
-    keywords:
-      - agriculture
-      - farming
-      - grain
-      - crop
-      - harvest
-      - agricultural
-      - farm
-      - wheat
-      - corn
-      - rice
-      - quality control
-      - soil
-      - farmer
-
-# Sentiment Balance Target
-# -------------------------
-# Newsletter aims for balanced sentiment distribution
-sentiment:
-  target_concerns: 0.40  # Risks, problems, concerns (40%)
-  target_opportunities: 0.35  # Breakthroughs, solutions, innovations (35%)
-  target_neutral: 0.25  # Factual reporting without clear sentiment (25%)
+  model: "gemini-2.0-flash"
+  summary_max_words: 60
