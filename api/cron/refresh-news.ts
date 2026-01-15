@@ -73,9 +73,13 @@ export default async function handler(
     req: VercelRequest,
     res: VercelResponse
 ) {
-    // Verify cron secret (optional security)
+    // Verify cron secret (REQUIRED)
     const authHeader = req.headers.authorization;
-    if (process.env.CRON_SECRET && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+    if (!process.env.CRON_SECRET) {
+        console.error('CRON_SECRET environment variable is not configured');
+        return res.status(500).json({ error: 'Server configuration error' });
+    }
+    if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
         return res.status(401).json({ error: 'Unauthorized' });
     }
 

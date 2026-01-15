@@ -59,7 +59,7 @@ function validateInput(history: unknown, message: unknown): { valid: boolean; er
 // SECURITY: CORS Headers
 // =============================================================================
 const CORS_HEADERS = {
-    'Access-Control-Allow-Origin': process.env.ALLOWED_ORIGIN || '*',
+    'Access-Control-Allow-Origin': process.env.ALLOWED_ORIGIN || 'https://graintech-dashboard.vercel.app',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
 };
