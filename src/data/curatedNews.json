@@ -1,98 +1,182 @@
 [
   {
     "id": "1",
-    "title": "FOSS: EyeFoss grain testing",
-    "source": "FOSS",
-    "date": "2024-12-20",
-    "summary": "FOSS offers image-based grain testing through its EyeFoss system.",
-    "url": "https://www.fossanalytics.com/en/products/eyefoss",
-    "category": "company",
-    "citations": [
-      "https://www.fossanalytics.com/en/products/eyefoss"
-    ]
+    "title": "ICEMAN A BIG BOOSTER OF ARENA ACTIVITIES",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "Until his 2025 retirement from official duties after 13 years, Fawcett area farmer Gordon McCann oversaw shinny games and hockey practices and maintained the ice at the Fawcett Community Hall and Aren",
+    "url": "https://grainswest.com/2026/01/iceman-a-big-booster-of-arena-activities/",
+    "category": "grain_industry"
   },
   {
     "id": "2",
-    "title": "Cgrain Value for grain grading",
-    "source": "Cgrain",
-    "date": "2024-12-18",
-    "summary": "Cgrain Value uses imaging and AI to grade grain samples.",
-    "url": "https://www.cgrain.ai/products/",
-    "category": "company",
-    "citations": [
-      "https://www.cgrain.ai/products/"
-    ]
+    "title": "FOREVER IN ROTATION",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "On Tim van der Hoek’s irrigated acres near Vauxhall, potatoes, seed canola and sugar beets are central to the bottom line, but CWRS and durum also play a key role. In fact, cereals reliably hold his h",
+    "url": "https://grainswest.com/2026/01/forever-in-rotation/",
+    "category": "grain_industry"
   },
   {
     "id": "3",
-    "title": "Videometer multispectral analysis",
-    "source": "Videometer",
-    "date": "2024-12-15",
-    "summary": "Videometer provides multispectral imaging for seed and grain analysis.",
-    "url": "https://videometer.com/",
-    "category": "company",
-    "citations": [
-      "https://videometer.com/"
-    ]
+    "title": "QUALITY IS JOB ONE",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "Established in 1948, the Brewing and Malting Barley Research Institute (BMBRI) has endured and largely maintained its initial mandate to improve Canadian malting barley top to bottom. This is achieved",
+    "url": "https://grainswest.com/2026/01/quality-is-job-one/",
+    "category": "grain_industry"
   },
   {
     "id": "4",
-    "title": "QualySense QSorter",
-    "source": "QualySense",
-    "date": "2024-12-12",
-    "summary": "QualySense QSorter performs single-kernel analysis and sorting.",
-    "url": "https://www.qualysense.com/",
-    "category": "company",
-    "citations": [
-      "https://www.qualysense.com/"
-    ]
+    "title": "A GOLDEN MARKET INDICATOR",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "The relative value of gold to other commodities, including wheat, is at an all-time high. For example, one ounce of gold was worth almost 72 barrels of oil at the end of November 2025, up from 7.4 bar",
+    "url": "https://grainswest.com/2026/01/a-golden-market-indicator/",
+    "category": "grain_industry"
   },
   {
     "id": "5",
-    "title": "GrainSense handheld analyzer",
-    "source": "GrainSense",
-    "date": "2024-12-10",
-    "summary": "GrainSense offers handheld NIR analyzers for field testing.",
-    "url": "https://grainsense.com/",
-    "category": "company",
-    "citations": [
-      "https://grainsense.com/"
-    ]
+    "title": "EXPORT SALES DATA NEEDED",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "Canada’s grain sector runs on global demand. Farmers seed, harvest, store and market their crops into a world shaped by forces beyond the farm. Markets move quickly, buyers adjust accordingly and pric",
+    "url": "https://grainswest.com/2026/01/export-sales-data-needed/",
+    "category": "grain_industry"
   },
   {
     "id": "6",
-    "title": "ZoomAgri AI inspection",
-    "source": "ZoomAgri",
-    "date": "2024-12-08",
-    "summary": "ZoomAgri provides AI inspection for grain and seed samples.",
-    "url": "https://zoomagri.com/en/home/",
-    "category": "company",
-    "citations": [
-      "https://zoomagri.com/en/home/"
-    ]
+    "title": "DURUM MARKET A WORK IN PROGRESS",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "Noodles have been a treasured food staple in China for nearly 4,000 years, but recent demand for high-quality pasta has grown. According to the World Instant Noodles Association, China was the world’s",
+    "url": "https://grainswest.com/2026/01/durum-market-a-work-in-progress/",
+    "category": "grain_industry"
   },
   {
     "id": "7",
-    "title": "Global Wheat Head Detection dataset",
-    "source": "Global Wheat Challenge",
-    "date": "2024-12-05",
-    "summary": "GWHD provides annotated images for wheat head detection.",
-    "url": "http://www.global-wheat.com/",
-    "category": "dataset",
-    "citations": [
-      "http://www.global-wheat.com/"
-    ]
+    "title": "SEE THE FIELD IN A NEW WAY",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "On the Olds College Smart Farm, data is rolling in from an ongoing research project that utilizes the Raven Augmenta Field Analyzer. This camera vision machine learning technology senses crop conditio",
+    "url": "https://grainswest.com/2026/01/see-the-field-in-a-new-way/",
+    "category": "grain_industry"
   },
   {
     "id": "8",
-    "title": "GrainSet dataset",
-    "source": "Research",
-    "date": "2024-12-02",
-    "summary": "GrainSet is a public dataset for grain image analysis.",
-    "url": "https://github.com/hellodfan/GrainSet",
-    "category": "dataset",
-    "citations": [
-      "https://github.com/hellodfan/GrainSet"
-    ]
+    "title": "BARLEY BOUNCES BACK",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "In contrast with the previous year, farmers across Western Canada produced an exceptional crop of malting barley in 2025. Strong yields, consistent quality and competitive pricing signals have drawn i",
+    "url": "https://grainswest.com/2026/01/barley-bounces-back/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "9",
+    "title": "THE CURVEBALL APPROACH",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "The cost and complication of herbicide resistance is reshaping the way Prairie farmers manage their acres. It’s a frustrating problem that demands adaptation, typically in the form of integrated weed ",
+    "url": "https://grainswest.com/2026/01/the-curveball-approach/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "10",
+    "title": "FUNDAMENTAL FARM SKILLS",
+    "source": "GrainsWest Magazine",
+    "date": "2026-01-07",
+    "summary": "Developed and delivered in collaboration with Farm Credit Canada and RBC, the Ontario Agricultural College (OAC) at the University of Guelph offers Foundations in Agricultural Management. The free onl",
+    "url": "https://grainswest.com/2026/01/fundamental-farm-skills/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "11",
+    "title": "Strong yields mark start of Downs sorghum harvest",
+    "source": "Grain Central",
+    "date": "2026-01-14",
+    "summary": "The sorghum harvest has started in pockets of the Darling Downs, with some districts recording standout yields of 6-7t/ha.",
+    "url": "https://www.graincentral.com/news/strong-yields-mark-start-of-downs-sorghum-harvest/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "12",
+    "title": "Pulse Update: Chickpeas kick, fabas, lentils flat",
+    "source": "Grain Central",
+    "date": "2026-01-14",
+    "summary": "Prices for chickpeas are rallying, while faba bean and lentil markets are trading sideways now that Australia’s 2025-26 winter pulse harvest is over.",
+    "url": "https://www.graincentral.com/news/pulse-update-chickpeas-kick-fabas-lentils-flat/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "13",
+    "title": "Mainland Australia’s winter-crop harvest nears end",
+    "source": "Grain Central",
+    "date": "2026-01-13",
+    "summary": "Harvest on mainland Australia is rapidly winding down, with latest receival reports from major bulk handlers indicating a tail-off in deliveries.",
+    "url": "https://www.graincentral.com/news/harvest-nears-end-across-mainland-australia/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "14",
+    "title": "Australian chickpea, lentil exports surge in Nov",
+    "source": "Grain Central",
+    "date": "2026-01-13",
+    "summary": "Australia exported 388,832 tonnes of chickpeas and 270,151t of lentils in November 2025, according to the latest data from the ABS.",
+    "url": "https://www.graincentral.com/markets/australian-chickpea-lentil-exports-surge-in-nov/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "15",
+    "title": "Russian wheat export pace rebounds into year’s end",
+    "source": "Grain Central",
+    "date": "2026-01-13",
+    "summary": "A late-2025 run boosts the prospect of Russia's exporting 53-55Mt of grain to challenge the 53Mt shipped in 2024-25.",
+    "url": "https://www.graincentral.com/markets/russian-wheat-export-pace-rebounds-into-years-end/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "16",
+    "title": "Weekly rainfall update 13 January 2026 + outlook",
+    "source": "Grain Central",
+    "date": "2026-01-14",
+    "summary": "Rain in coming days is forecast for tropical and far eastern Australia following TC Koji, which delivered some heavy falls and flooding in recent days.",
+    "url": "https://www.graincentral.com/weather/weekly-rainfall-update-13-january-2026-outlook/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "17",
+    "title": "Daily Market Wire 14 January 2026",
+    "source": "Grain Central",
+    "date": "2026-01-13",
+    "summary": "Talk of easing Canada China trade tension breathes life into canola, likely strengthens GM, as ag market lacks spark.",
+    "url": "https://www.graincentral.com/markets/daily-market-wire-14-january-2026/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "18",
+    "title": "GTA joins govt’s Trade Diversification Network",
+    "source": "Grain Central",
+    "date": "2026-01-14",
+    "summary": "GTA has been accepted as a member of the Trade Diversification Network, strengthening its role in supporting the Australian grain industry as a leading exporter.",
+    "url": "https://www.graincentral.com/news/gta-joins-govts-trade-diversification-network/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "19",
+    "title": "GrainCorp, Zen-Noh sell Canadian JV to P&H",
+    "source": "Grain Central",
+    "date": "2026-01-12",
+    "summary": "GrainCorp and Zen-Noh are selling their GrainsConnect investments in Canada to local major Parrish & Heimbecker.",
+    "url": "https://www.graincentral.com/news/graincorp-zen-noh-sell-canadian-jv-to-ph/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "20",
+    "title": "Bellata growers take NSW dryland wheat honours",
+    "source": "Grain Central",
+    "date": "2026-01-12",
+    "summary": "A 9.2t/ha crop of Sundancer wheat has come out on top from a record 375 entries in the AgShows NSW 2025 Dryland Field Wheat Competition.",
+    "url": "https://www.graincentral.com/news/bellata-growers-take-nsw-dryland-wheat-honours/",
+    "category": "grain_industry"
   }
 ]
