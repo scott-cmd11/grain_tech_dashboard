@@ -1,4 +1,4 @@
-import { Sun, Moon, Printer, Search, Menu, Wheat, Sparkles } from 'lucide-react';
+import { Sun, Moon, Printer, Menu, Wheat, Sparkles } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { useUrlState } from '../../hooks/useUrlState';
 import { ShareButton } from '../ShareButton';
@@ -7,8 +7,6 @@ import { datasetsData } from '../../data';
 import { useEffect, useState, useMemo } from 'react';
 
 interface HeaderProps {
-  onSearchChange?: (term: string) => void;
-  searchTerm?: string;
   onSidebarToggle?: () => void;
 }
 
@@ -62,7 +60,7 @@ function FloatingParticle({ delay, size, x, duration }: { delay: number; size: n
   );
 }
 
-export function Header({ onSearchChange, searchTerm, onSidebarToggle }: HeaderProps) {
+export function Header({ onSidebarToggle }: HeaderProps) {
   const { toggleTheme, isDark } = useTheme();
   const { getShareableUrl } = useUrlState();
   const solutionsCount = getDenormalizedSolutions().length;
@@ -311,27 +309,6 @@ export function Header({ onSearchChange, searchTerm, onSidebarToggle }: HeaderPr
             </div>
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch lg:items-center gap-3 w-full lg:w-auto">
-              {/* Enhanced Search */}
-              <div className="relative flex-1 sm:min-w-[280px] group">
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-white/70 transition-colors">
-                  <Search className="w-4 h-4" />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Search solutions, companies..."
-                  value={searchTerm}
-                  onChange={(e) => onSearchChange?.(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 text-sm rounded-xl text-white placeholder-white/40 focus:outline-none transition-all duration-300"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
-                    backdropFilter: 'blur(10px)',
-                    boxShadow: '0 4px 15px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.1)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                  }}
-                  aria-label="Search"
-                />
-              </div>
-
               <div className="flex items-center gap-2">
                 {/* Share Button */}
                 <ShareButton url={getShareableUrl({})} title="GrainTech Intelligence Dashboard" />
