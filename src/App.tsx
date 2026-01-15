@@ -141,6 +141,12 @@ function Dashboard() {
             {activeTab === 'news' && <NewsTab />}
             {activeTab === 'github-repos' && <GithubTab />}
             {activeTab === 'research-papers' && <ResearchPapersTab />}
+            {/* AI Disclaimer */}
+            <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700/50">
+              <p className="text-center text-xs text-gray-500 dark:text-gray-400 italic">
+                Disclaimer: This website and its content were generated with the assistance of AI. Information may contain errors.
+              </p>
+            </div>
           </div>
         </main>
       </div>

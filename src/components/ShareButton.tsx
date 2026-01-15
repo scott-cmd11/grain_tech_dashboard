@@ -64,11 +64,17 @@ export const ShareButton = memo(function ShareButton({ url, title = 'GrainTech D
     <div className="relative">
       <button
         onClick={() => 'share' in navigator ? handleNativeShare() : setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors w-full sm:w-auto"
+        className="flex items-center gap-2 px-4 py-3 text-sm font-medium rounded-xl text-white hover:scale-105 transition-all duration-300"
+        style={{
+          background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+          backdropFilter: 'blur(10px)',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.1)',
+          border: '1px solid rgba(255,255,255,0.15)',
+        }}
         title="Share"
       >
         <Share2 className="w-4 h-4" />
-        Share
+        <span className="hidden sm:inline">Share</span>
       </button>
 
       {isOpen && !('share' in navigator) && (

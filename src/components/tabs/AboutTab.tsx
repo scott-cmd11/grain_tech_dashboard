@@ -45,13 +45,6 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
           React, TypeScript, Tailwind CSS, Vite, Google Maps, and Recharts. Built with help from Claude Code, Google Antigravity, and ChatGPT Codex.
         </p>
       </div>
-
-      {/* Subtle AI Notice */}
-      <div className="text-center px-4 py-2">
-        <p className="text-xs text-gray-400 dark:text-gray-500 italic">
-          Disclaimer: This website and its content were generated with the assistance of AI. Information may contain errors or hallucinations.
-        </p>
-      </div>
     </div>
   );
 }
