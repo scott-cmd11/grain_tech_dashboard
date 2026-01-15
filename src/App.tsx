@@ -88,8 +88,6 @@ function Dashboard() {
   return (
     <div className="min-h-screen app-shell transition-colors duration-300 flex flex-col">
       <Header
-        searchTerm={searchTerm}
-        onSearchChange={setSearchTerm}
         onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}
       />
 
