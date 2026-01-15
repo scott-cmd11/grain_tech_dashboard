@@ -47,7 +47,7 @@ function Dashboard() {
     }
     return (urlState.tab as TabId) || 'about';
   });
-  const [searchTerm, setSearchTerm] = useState(urlState.search || '');
+  const [searchTerm, _setSearchTerm] = useState(urlState.search || '');
   const [sidebarOpen, setSidebarOpen] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
   const [companiesOpen, setCompaniesOpen] = useState(() => urlState.companiesOpen !== false);
   const [expandedDataset, setExpandedDataset] = useState<number | null>(null);
