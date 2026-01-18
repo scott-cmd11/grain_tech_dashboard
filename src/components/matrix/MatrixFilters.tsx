@@ -1,6 +1,7 @@
 import type { Region, SensingTech, FormFactor, UseCase } from "../../data/grainTechEntities";
 import { formatEnumLabel } from "../../utils/formatLabels";
 import { sensingColors } from "../../constants/grainTechColors";
+import { FilterDropdown } from "./FilterDropdown";
 
 interface MatrixFiltersProps {
     // Filter state
@@ -21,8 +22,7 @@ interface MatrixFiltersProps {
     onClear: () => void;
 }
 
-const chipBase =
-    "px-3 py-1 text-xs rounded-full border transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500";
+
 
 export function MatrixFilters({
     regions,
@@ -47,102 +47,35 @@ export function MatrixFilters({
 
     return (
         <div className="space-y-4">
-            <div className="grid gap-4 lg:grid-cols-4">
-                {/* Regions */}
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-                        Regions
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                        {availableRegions.map((region) => {
-                            const selected = regions.includes(region);
-                            return (
-                                <button
-                                    key={region}
-                                    onClick={() => onRegionToggle(region)}
-                                    className={`${chipBase} ${selected
-                                            ? "bg-emerald-500 border-emerald-500 text-white"
-                                            : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                                        }`}
-                                >
-                                    {formatEnumLabel(region)}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Sensing Tech */}
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-                        Sensing Tech
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                        {availableSensing.map((tech) => {
-                            const selected = sensing.includes(tech);
-                            return (
-                                <button
-                                    key={tech}
-                                    onClick={() => onSensingToggle(tech)}
-                                    className={`${chipBase} ${selected
-                                            ? "bg-blue-500 border-blue-500 text-white"
-                                            : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                                        }`}
-                                >
-                                    {formatEnumLabel(tech)}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Form Factors */}
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-                        Form Factors
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                        {availableFormFactors.map((factor) => {
-                            const selected = formFactors.includes(factor);
-                            return (
-                                <button
-                                    key={factor}
-                                    onClick={() => onFormFactorToggle(factor)}
-                                    className={`${chipBase} ${selected
-                                            ? "bg-indigo-500 border-indigo-500 text-white"
-                                            : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                                        }`}
-                                >
-                                    {formatEnumLabel(factor)}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {/* Use Cases */}
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-                        Use Cases
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                        {availableUseCases.map((useCase) => {
-                            const selected = useCases.includes(useCase);
-                            return (
-                                <button
-                                    key={useCase}
-                                    onClick={() => onUseCaseToggle(useCase)}
-                                    className={`${chipBase} ${selected
-                                            ? "bg-teal-500 border-teal-500 text-white"
-                                            : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                                        }`}
-                                >
-                                    {formatEnumLabel(useCase)}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
+            <div className="flex flex-wrap items-center gap-3">
+                <FilterDropdown
+                    label="Regions"
+                    options={availableRegions}
+                    selected={regions}
+                    onToggle={onRegionToggle}
+                    colorClass="emerald"
+                />
+                <FilterDropdown
+                    label="Sensing Tech"
+                    options={availableSensing}
+                    selected={sensing}
+                    onToggle={onSensingToggle}
+                    colorClass="blue"
+                />
+                <FilterDropdown
+                    label="Form Factors"
+                    options={availableFormFactors}
+                    selected={formFactors}
+                    onToggle={onFormFactorToggle}
+                    colorClass="indigo"
+                />
+                <FilterDropdown
+                    label="Use Cases"
+                    options={availableUseCases}
+                    selected={useCases}
+                    onToggle={onUseCaseToggle}
+                    colorClass="teal"
+                />
             </div>
 
             {/* Active Filters Summary */}
