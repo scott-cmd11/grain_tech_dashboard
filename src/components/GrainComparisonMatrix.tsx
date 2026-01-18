@@ -27,6 +27,7 @@ import type { ExportFormat } from "../types";
 import { formatEnumLabel, formatEnumList } from "../utils/formatLabels";
 import { sensingColors } from "../constants/grainTechColors";
 import { useToast } from "../context/ToastContext";
+import { MatrixFilters } from "./matrix/MatrixFilters";
 
 interface GrainComparisonMatrixProps {
   grainSolutions?: GrainSolution[]; // Make optional
@@ -237,12 +238,7 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
       ? [pinnedColumn, ...baseColumns.filter((column) => column !== pinnedColumn)]
       : baseColumns;
 
-  const activeFilters = [
-    ...regions.map((value) => ({ category: "Region", value })),
-    ...sensing.map((value) => ({ category: "Sensing", value })),
-    ...formFactors.map((value) => ({ category: "FormFactor", value })),
-    ...useCases.map((value) => ({ category: "UseCase", value })),
-  ];
+
 
   const toggleSort = (column: ColumnKey) => {
     if (sortKey === column) {
@@ -527,133 +523,21 @@ export const GrainComparisonMatrix = function GrainComparisonMatrix({
         </div>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-4">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-            Regions
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {options.regions.map((region) => {
-              const selected = regions.includes(region);
-              return (
-                <button
-                  key={region}
-                  onClick={() => setRegions((prev) => toggleFilter(prev, region))}
-                  className={`${chipBase} ${selected
-                    ? "bg-emerald-500 border-emerald-500 text-white"
-                    : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                    }`}
-                >
-                  {formatEnumLabel(region)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-            Sensing Tech
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {options.sensing.map((tech) => {
-              const selected = sensing.includes(tech);
-              return (
-                <button
-                  key={tech}
-                  onClick={() => setSensing((prev) => toggleFilter(prev, tech))}
-                  className={`${chipBase} ${selected
-                    ? "bg-blue-500 border-blue-500 text-white"
-                    : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                    }`}
-                >
-                  {formatEnumLabel(tech)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-            Form Factors
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {options.formFactors.map((factor) => {
-              const selected = formFactors.includes(factor);
-              return (
-                <button
-                  key={factor}
-                  onClick={() => setFormFactors((prev) => toggleFilter(prev, factor))}
-                  className={`${chipBase} ${selected
-                    ? "bg-indigo-500 border-indigo-500 text-white"
-                    : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                    }`}
-                >
-                  {formatEnumLabel(factor)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">
-            Use Cases
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {options.useCases.map((useCase) => {
-              const selected = useCases.includes(useCase);
-              return (
-                <button
-                  key={useCase}
-                  onClick={() => setUseCases((prev) => toggleFilter(prev, useCase))}
-                  className={`${chipBase} ${selected
-                    ? "bg-teal-500 border-teal-500 text-white"
-                    : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
-                    }`}
-                >
-                  {formatEnumLabel(useCase)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-4 flex flex-wrap items-center gap-2">
-        {activeFilters.map((filter) => (
-          <button
-            key={`${filter.category}-${filter.value}`}
-            onClick={() => {
-              if (filter.category === "Region") {
-                setRegions((prev) => prev.filter((item) => item !== filter.value));
-                return;
-              }
-              if (filter.category === "Sensing") {
-                setSensing((prev) => prev.filter((item) => item !== filter.value));
-                return;
-              }
-              if (filter.category === "FormFactor") {
-                setFormFactors((prev) => prev.filter((item) => item !== filter.value));
-                return;
-              }
-              setUseCases((prev) => prev.filter((item) => item !== filter.value));
-            }}
-            className="px-3 py-1 text-xs rounded-full border border-teal-200 dark:border-teal-700 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-teal-100 dark:hover:bg-teal-900/50"
-          >
-            {filter.category}: {filter.value}
-          </button>
-        ))}
-        {activeFilters.length > 0 && (
-          <button
-            onClick={clearFilters}
-            className="text-xs text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300"
-          >
-            Clear all
-          </button>
-        )}
-      </div>
+      <MatrixFilters
+        regions={regions}
+        sensing={sensing}
+        formFactors={formFactors}
+        useCases={useCases}
+        availableRegions={options.regions}
+        availableSensing={options.sensing}
+        availableFormFactors={options.formFactors}
+        availableUseCases={options.useCases}
+        onRegionToggle={(region) => setRegions((prev) => toggleFilter(prev, region))}
+        onSensingToggle={(tech) => setSensing((prev) => toggleFilter(prev, tech))}
+        onFormFactorToggle={(factor) => setFormFactors((prev) => toggleFilter(prev, factor))}
+        onUseCaseToggle={(useCase) => setUseCases((prev) => toggleFilter(prev, useCase))}
+        onClear={clearFilters}
+      />
 
       <div className="mt-6">
         <div className="bg-gray-50 dark:bg-gray-900/40 rounded-xl p-4 border border-gray-100 dark:border-gray-700 space-y-4">

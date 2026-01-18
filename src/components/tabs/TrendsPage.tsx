@@ -214,7 +214,7 @@ export function TrendsPage() {
             >
               <div className="flex justify-between items-start mb-3">
                 <h4 className="font-semibold text-gray-900 dark:text-gray-100">{region.region}</h4>
-                <span className="text-xs font-bold px-2 py-1 rounded bg-growth-green/10 text-growth-green">
+                <span className="text-xs font-bold px-2 py-1 rounded bg-emerald-500/10 text-emerald-500">
                   +{region.growth}% YoY
                 </span>
               </div>
@@ -282,7 +282,7 @@ export function TrendsPage() {
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                   <div
                     className={`rounded-full h-3 transition-all ${tech.maturity === 'Mature'
-                      ? 'bg-growth-green'
+                      ? 'bg-emerald-500'
                       : tech.maturity === 'Commercial'
                         ? 'bg-cyan-500'
                         : tech.maturity === 'Pilot'
@@ -351,7 +351,7 @@ export function TrendsPage() {
 
         <div className="mt-6 grid md:grid-cols-3 gap-4">
           <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="text-2xl font-bold text-growth-green mb-1">15-16%</div>
+            <div className="text-2xl font-bold text-emerald-500 mb-1">15-16%</div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Annual Growth Rate</div>
           </div>
           <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
@@ -371,7 +371,7 @@ export function TrendsPage() {
       {/* 5. Company Growth Timeline */}
       <section id="company-timeline" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <Users className="w-5 h-5 text-growth-green" />
+          <Users className="w-5 h-5 text-emerald-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">Company Growth Timeline</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -429,13 +429,13 @@ export function TrendsPage() {
               <div key={useCase.useCase}>
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100">{useCase.useCase}</h4>
-                  <span className="text-xs text-growth-green font-bold">+{useCase.growth}%</span>
+                  <span className="text-xs text-emerald-500 font-bold">+{useCase.growth}%</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="flex-1">
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-growth-green rounded-full h-2"
+                        className="bg-emerald-500 rounded-full h-2"
                         style={{ width: `${useCase.adoption}%` }}
                       />
                     </div>
@@ -524,7 +524,7 @@ export function TrendsPage() {
       {/* 8. AI-Integrated Grain Sampling */}
       <section id="ai-grain-sampling" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <Cpu className="w-5 h-5 text-growth-green" />
+          <Cpu className="w-5 h-5 text-emerald-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">AI-Integrated Grain Sampling</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -596,7 +596,7 @@ export function TrendsPage() {
 
         <div className="mt-6 p-4 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-lg border border-emerald-500/20">
           <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-growth-green" />
+            <TrendingUp className="w-4 h-4 text-emerald-500" />
             Key Trend: Harvest-Time Grading
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -623,7 +623,7 @@ export function TrendsPage() {
           <ul className="space-y-3">
             {futureOutlook.nextThreeYears.map((prediction, idx) => (
               <li key={idx} className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-growth-green flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{prediction}</span>
               </li>
             ))}
