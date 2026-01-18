@@ -9,6 +9,9 @@ const API_KEY = process.env.GEMINI_API_KEY;
 // =============================================================================
 // SECURITY: Rate Limiting
 // =============================================================================
+// NOTICE: This in-memory map is reset on every Vercel cold boot. 
+// For production scale, migrate to Vercel KV (Redis) to share state across lambdas.
+// See: https://vercel.com/docs/storage/vercel-kv
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT = 20; // requests per window
 const RATE_WINDOW = 60 * 1000; // 1 minute in milliseconds
@@ -72,7 +75,7 @@ export default async function handler(req: Request) {
     }
 
     // Rate limiting
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
+    const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
     if (isRateLimited(ip)) {
         return new Response(JSON.stringify({ error: 'Too many requests. Please wait a moment.' }), {
             status: 429,
@@ -93,7 +96,7 @@ export default async function handler(req: Request) {
     }
 
     try {
-        const { history, message, context } = await req.json();
+        const { history, message } = await req.json();
 
         // Input validation
         const validation = validateInput(history, message);
@@ -107,11 +110,16 @@ export default async function handler(req: Request) {
         const genAI = new GoogleGenerativeAI(API_KEY);
         const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
 
+        // Hardcoded System Context (Prevent Prompt Injection)
+        const SYSTEM_CONTEXT = `You are an expert AI assistant for GrainTech, an advanced dashboard for monitoring grain quality, trade regulations, and agricultural technology. 
+        Your role is to answer questions based on the provided context about grain grading, AI analysis, and market intelligence. 
+        You should be helpful, professional, and concise.`;
+
         // Construct history with injected context
         const chatHistory = [
             {
                 role: 'user',
-                parts: [{ text: context || '' }],
+                parts: [{ text: SYSTEM_CONTEXT }],
             },
             {
                 role: 'model',

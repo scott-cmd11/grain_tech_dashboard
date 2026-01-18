@@ -25,32 +25,34 @@ const GRAIN_FEEDS = [
     { name: 'Future Farming', url: 'https://www.futurefarming.com/feed/', category: 'technology' },
 ];
 
-// Simple RSS parser (for basic feeds)
+import { XMLParser } from 'fast-xml-parser';
+
+// ... (interfaces remain same)
+
+// XML Parser Configuration
+const parser = new XMLParser({
+    ignoreAttributes: false,
+    attributeNamePrefix: "@_"
+});
+
 function parseRSSItems(xml: string): RSSItem[] {
-    const items: RSSItem[] = [];
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-    let match;
+    try {
+        const jsonObj = parser.parse(xml);
+        const channel = jsonObj?.rss?.channel || jsonObj?.feed;
+        if (!channel) return [];
 
-    while ((match = itemRegex.exec(xml)) !== null) {
-        const itemXml = match[1];
+        const items = Array.isArray(channel.item) ? channel.item : (channel.item ? [channel.item] : []);
 
-        const title = itemXml.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>|<title>(.*?)<\/title>/)?.[1] ||
-            itemXml.match(/<title>(.*?)<\/title>/)?.[1] || '';
-        const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || '';
-        const description = itemXml.match(/<description><!\[CDATA\[(.*?)\]\]><\/description>|<description>(.*?)<\/description>/)?.[1] || '';
-        const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || '';
-
-        if (title && link) {
-            items.push({
-                title: title.replace(/<!\[CDATA\[|\]\]>/g, '').trim(),
-                link: link.trim(),
-                description: description.replace(/<!\[CDATA\[|\]\]>/g, '').replace(/<[^>]*>/g, '').trim().slice(0, 200),
-                pubDate: pubDate.trim(),
-            });
-        }
+        return items.map((item: any) => ({
+            title: item.title || '',
+            link: item.link || '',
+            description: (item.description || item.summary || '').slice(0, 200),
+            pubDate: item.pubDate || item.published || '',
+        })).filter((i: RSSItem) => i.title && i.link);
+    } catch (e) {
+        console.error("XML Parsing Error", e);
+        return [];
     }
-
-    return items;
 }
 
 async function fetchFeed(feedUrl: string): Promise<RSSItem[]> {
