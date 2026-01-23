@@ -78,13 +78,13 @@ export function TrendsPage() {
 
       {/* Page Header */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-          Market Trends and Outlook
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
+          Market Trends & <span className="text-gold-accent">Outlook</span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-gray-600 dark:text-gray-400 text-base max-w-2xl">
           Comprehensive analysis of grain quality technology adoption, market evolution, and future opportunities
         </p>
-        <p className="text-xs text-gray-500 mt-2 italic border-l-2 border-gray-300 pl-2">
+        <p className="text-xs text-gray-500 mt-3 italic border-l-2 border-amber-400 pl-3">
           Indicative projections based on compiled reports; not financial advice.
         </p>
       </div>

@@ -17,7 +17,18 @@ export default {
           925: '#101012',
           975: '#050506',
         },
-        // Accent colors
+        // Heritage accent - warm gold for premium highlights
+        'grain-heritage': {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+        },
+        // Legacy grain colors (keeping for compatibility)
         grain: {
           50: '#FFFBEB',
           100: '#FEF3C7',
@@ -42,6 +53,9 @@ export default {
           800: '#065F46',
           900: '#064E3B',
         },
+        // Premium section colors
+        'growth-deep': '#064E3B',
+        'growth-surface': '#ECFDF5',
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '0.875rem' }],
@@ -51,6 +65,7 @@ export default {
         'display': '-0.025em',
       },
       borderRadius: {
+        '3xl': '1.5rem',
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
@@ -62,6 +77,11 @@ export default {
         'glow-lg': '0 0 50px rgba(16, 185, 129, 0.25)',
         'premium': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08)',
         'premium-lg': '0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 20px 40px -10px rgba(0, 0, 0, 0.1)',
+        // Editorial-grade shadows for premium depth
+        'editorial': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+        'editorial-lg': '0 35px 60px -15px rgba(0, 0, 0, 0.2)',
+        'lift': '0 10px 40px -10px rgba(16, 185, 129, 0.3)',
+        'lift-gold': '0 10px 40px -10px rgba(245, 158, 11, 0.25)',
       },
       backdropBlur: {
         'xl': '20px',

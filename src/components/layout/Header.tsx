@@ -203,7 +203,7 @@ export function Header({ onSidebarToggle }: HeaderProps) {
       {/* Glass overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-black/20" />
 
-      <div className="relative z-10 py-10 sm:py-14 px-4 sm:px-6">
+      <div className="relative z-10 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             <div className="flex-1 w-full flex items-start gap-4">
@@ -217,10 +217,10 @@ export function Header({ onSidebarToggle }: HeaderProps) {
               </button>
 
               <div className="flex-1">
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-5">
                   {/* Animated glowing icon container */}
                   <div
-                    className="relative p-3 rounded-2xl"
+                    className="relative p-4 rounded-2xl"
                     style={{
                       background: 'linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%)',
                       backdropFilter: 'blur(10px)',
@@ -236,31 +236,31 @@ export function Header({ onSidebarToggle }: HeaderProps) {
                       }}
                     />
                     <Wheat
-                      className="w-9 h-9 text-white relative z-10"
+                      className="w-10 h-10 text-white relative z-10"
                       aria-hidden="true"
                       style={{ animation: 'iconPulse 3s ease-in-out infinite' }}
                     />
                   </div>
                   <div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-3">
                       <h1
-                        className="text-3xl sm:text-4xl font-bold tracking-tight text-white"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white"
                         style={{
                           textShadow: '0 2px 20px rgba(0,0,0,0.2), 0 0 40px rgba(255,255,255,0.1)',
                         }}
                       >
-                        GrainTech Intelligence
+                        GrainTech
                       </h1>
-                      <Sparkles className="w-6 h-6 text-amber-300 animate-pulse hidden sm:block" />
+                      <Sparkles className="w-7 h-7 text-amber-400 animate-pulse hidden sm:block" />
                     </div>
-                    <p className="text-white/70 text-xs font-medium tracking-widest uppercase mt-1">
-                      AI-Powered Market Analysis
+                    <p className="text-amber-400/90 text-sm font-semibold tracking-widest uppercase mt-1">
+                      Intelligence Platform
                     </p>
                   </div>
                 </div>
 
                 <p
-                  className="text-white/80 text-sm sm:text-base max-w-xl font-medium leading-relaxed"
+                  className="text-white/90 text-base sm:text-lg max-w-xl font-medium leading-relaxed"
                   style={{ textShadow: '0 1px 10px rgba(0,0,0,0.1)' }}
                 >
                   Exploring how grain quality checks are going digital with cutting-edge AI & automation

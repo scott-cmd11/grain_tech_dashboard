@@ -1,243 +1,203 @@
 {
-  "generated_at": "2026-01-14T18:37:44.681112",
-  "total_items": 59,
+  "generated_at": "2026-01-22T18:00:40.554650",
+  "total_items": 49,
   "category_counts": {
-    "grain_industry": 20,
-    "technology": 9,
+    "grain_industry": 10,
+    "technology": 14,
     "company": 1,
     "regulatory": 0,
-    "rss_feeds": 29
+    "rss_feeds": 24
   },
   "articles": [
     {
-      "title": "ICEMAN A BIG BOOSTER OF ARENA ACTIVITIES",
-      "link": "https://grainswest.com/2026/01/iceman-a-big-booster-of-arena-activities/",
-      "summary": "Until his 2025 retirement from official duties after 13 years, Fawcett area farmer Gordon McCann oversaw shinny games and hockey practices and maintained the ice at the Fawcett Community Hall and Arena. Its schedule now includes men’s and children’s leagues, and its two curling sheets are central to the community’s annual cabaret and bonspiel to be held this year in late January. Nicknamed Iceman McCann by young skaters, he continues to take on occasional volunteer arena activities and will fiel",
-      "published": "2026-01-07T22:12:04+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "FOREVER IN ROTATION",
-      "link": "https://grainswest.com/2026/01/forever-in-rotation/",
-      "summary": "On Tim van der Hoek’s irrigated acres near Vauxhall, potatoes, seed canola and sugar beets are central to the bottom line, but CWRS and durum also play a key role. In fact, cereals reliably hold his high-value rotation together. Of his more than 3,000 acres, much is rented, all is irrigated. Potatoes and sugar beets are grown once every five years while cereals or corn fill out the balance. The cereal years can be the thinnest on the balance sheet, but they are essential to the good health of hi",
-      "published": "2026-01-07T22:11:41+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "QUALITY IS JOB ONE",
-      "link": "https://grainswest.com/2026/01/quality-is-job-one/",
-      "summary": "Established in 1948, the Brewing and Malting Barley Research Institute (BMBRI) has endured and largely maintained its initial mandate to improve Canadian malting barley top to bottom. This is achieved as the organization secures research grants, conducts quality evaluation of malting barley and disseminates information on the crop.",
-      "published": "2026-01-07T22:10:52+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "A GOLDEN MARKET INDICATOR",
-      "link": "https://grainswest.com/2026/01/a-golden-market-indicator/",
-      "summary": "The relative value of gold to other commodities, including wheat, is at an all-time high. For example, one ounce of gold was worth almost 72 barrels of oil at the end of November 2025, up from 7.4 barrels in the same month of 2020. Over the same period, an ounce of gold went from being worth about 100 bushels of wheat to 750. What does this inverse relationship indicate?",
-      "published": "2026-01-07T22:10:02+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "EXPORT SALES DATA NEEDED",
-      "link": "https://grainswest.com/2026/01/export-sales-data-needed/",
-      "summary": "Canada’s grain sector runs on global demand. Farmers seed, harvest, store and market their crops into a world shaped by forces beyond the farm. Markets move quickly, buyers adjust accordingly and price signals shift with little warning. Despite this, Canada continues to operate without one of the essential tool of timely export sales reporting.",
-      "published": "2026-01-07T22:09:07+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "DURUM MARKET A WORK IN PROGRESS",
-      "link": "https://grainswest.com/2026/01/durum-market-a-work-in-progress/",
-      "summary": "Noodles have been a treasured food staple in China for nearly 4,000 years, but recent demand for high-quality pasta has grown. According to the World Instant Noodles Association, China was the world’s largest instant noodle consumer at 43.8 billion servings in 2024. Over the last decade, however, a shift has taken place as pasta has been adopted alongside traditional noodles and gained market share. Trade experts agree this shift has the potential to hugely impact CWAD exports.",
-      "published": "2026-01-07T22:08:00+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "SEE THE FIELD IN A NEW WAY",
-      "link": "https://grainswest.com/2026/01/see-the-field-in-a-new-way/",
-      "summary": "On the Olds College Smart Farm, data is rolling in from an ongoing research project that utilizes the Raven Augmenta Field Analyzer. This camera vision machine learning technology senses crop conditions using digital imagery to adjust input application during field operations. Unlike current methods that rely on pre-determined maps, the camera uses an algorithm to make instantaneous decisions about the rate of inputs to apply on crops.",
-      "published": "2026-01-07T22:05:26+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "BARLEY BOUNCES BACK",
-      "link": "https://grainswest.com/2026/01/barley-bounces-back/",
-      "summary": "In contrast with the previous year, farmers across Western Canada produced an exceptional crop of malting barley in 2025. Strong yields, consistent quality and competitive pricing signals have drawn interest from major brewers and maltsters across multiple markets. The crop gives Canada a solid supply position as customers prepare their 2026 malting and brewing schedules.",
-      "published": "2026-01-07T22:04:56+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "THE CURVEBALL APPROACH",
-      "link": "https://grainswest.com/2026/01/the-curveball-approach/",
-      "summary": "The cost and complication of herbicide resistance is reshaping the way Prairie farmers manage their acres. It’s a frustrating problem that demands adaptation, typically in the form of integrated weed management (IWM), a customized, field-by-field strategy. One size does not fit all as farmers and agronomists tackle herbicide resistance with a multi-strategy approach.",
-      "published": "2026-01-07T22:00:45+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "FUNDAMENTAL FARM SKILLS",
-      "link": "https://grainswest.com/2026/01/fundamental-farm-skills/",
-      "summary": "Developed and delivered in collaboration with Farm Credit Canada and RBC, the Ontario Agricultural College (OAC) at the University of Guelph offers Foundations in Agricultural Management. The free online course is aimed at Canadian farmers, their families and ag industry professionals who wish to improve their business acumen, financial literacy and management skills. The non-credit, video seminar course is comprised of eight modules that take an average of 15 to 20 minutes each to work through.",
-      "published": "2026-01-07T22:00:10+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "grain_industry"
-    },
-    {
-      "title": "Strong yields mark start of Downs sorghum harvest",
-      "link": "https://www.graincentral.com/news/strong-yields-mark-start-of-downs-sorghum-harvest/",
-      "summary": "The sorghum harvest has started in pockets of the Darling Downs, with some districts recording standout yields of 6-7t/ha.",
-      "published": "2026-01-14T03:56:27+00:00",
+      "title": "Politics to weigh more heavily on ag markets: CBA",
+      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
+      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
+      "published": "2026-01-22T06:19:33+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Pulse Update: Chickpeas kick, fabas, lentils flat",
-      "link": "https://www.graincentral.com/news/pulse-update-chickpeas-kick-fabas-lentils-flat/",
-      "summary": "Prices for chickpeas are rallying, while faba bean and lentil markets are trading sideways now that Australia’s 2025-26 winter pulse harvest is over.",
-      "published": "2026-01-14T03:24:24+00:00",
+      "title": "Cargill submits plans for 1.1Mt WA crush plant",
+      "link": "https://www.graincentral.com/news/cargill-progresses-plans-for-1-1mt-wa-crush-plant/",
+      "summary": "Public consultation has opened on Cargill’s Project Crux, which plans to crush 1.1Mt of WA canola per annum next to CBH’s Kwinana Grain Terminal.",
+      "published": "2026-01-22T05:58:53+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Mainland Australia’s winter-crop harvest nears end",
-      "link": "https://www.graincentral.com/news/harvest-nears-end-across-mainland-australia/",
-      "summary": "Harvest on mainland Australia is rapidly winding down, with latest receival reports from major bulk handlers indicating a tail-off in deliveries.",
-      "published": "2026-01-13T02:40:38+00:00",
+      "title": "People on the Move in the grain industry",
+      "link": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-32/",
+      "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
+      "published": "2026-01-22T06:42:54+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Australian chickpea, lentil exports surge in Nov",
-      "link": "https://www.graincentral.com/markets/australian-chickpea-lentil-exports-surge-in-nov/",
-      "summary": "Australia exported 388,832 tonnes of chickpeas and 270,151t of lentils in November 2025, according to the latest data from the ABS.",
-      "published": "2026-01-13T00:04:58+00:00",
+      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
+      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
+      "published": "2026-01-22T02:42:35+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Russian wheat export pace rebounds into year’s end",
-      "link": "https://www.graincentral.com/markets/russian-wheat-export-pace-rebounds-into-years-end/",
-      "summary": "A late-2025 run boosts the prospect of Russia's exporting 53-55Mt of grain to challenge the 53Mt shipped in 2024-25.",
-      "published": "2026-01-13T03:18:10+00:00",
+      "title": "South Coast systems help WA handle record harvest",
+      "link": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
+      "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
+      "published": "2026-01-22T00:14:32+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Weekly rainfall update 13 January 2026 + outlook",
-      "link": "https://www.graincentral.com/weather/weekly-rainfall-update-13-january-2026-outlook/",
-      "summary": "Rain in coming days is forecast for tropical and far eastern Australia following TC Koji, which delivered some heavy falls and flooding in recent days.",
-      "published": "2026-01-14T03:33:07+00:00",
+      "title": "Daily Market Wire 22 January 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-22-january-2026/",
+      "summary": "Corn and beans strength supported wheat which slipped later in the session. WA softens, eastern wheat steadies.",
+      "published": "2026-01-21T23:46:34+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Daily Market Wire 14 January 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-14-january-2026/",
-      "summary": "Talk of easing Canada China trade tension breathes life into canola, likely strengthens GM, as ag market lacks spark.",
-      "published": "2026-01-13T23:45:50+00:00",
+      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
+      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
+      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
+      "published": "2026-01-21T00:43:34+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "GTA joins govt’s Trade Diversification Network",
-      "link": "https://www.graincentral.com/news/gta-joins-govts-trade-diversification-network/",
-      "summary": "GTA has been accepted as a member of the Trade Diversification Network, strengthening its role in supporting the Australian grain industry as a leading exporter.",
-      "published": "2026-01-14T00:40:15+00:00",
+      "title": "WA panel approves Perth oat mill despite initial objections",
+      "link": "https://www.graincentral.com/news/wa-panel-approves-perth-oat-mill-despite-initial-objections/",
+      "summary": "Swan Milling P&amp;E's plans to build an oat mill in Perth are inching forward to support the interests of a diverse group of shareholders.",
+      "published": "2026-01-21T04:52:44+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "GrainCorp, Zen-Noh sell Canadian JV to P&H",
-      "link": "https://www.graincentral.com/news/graincorp-zen-noh-sell-canadian-jv-to-ph/",
-      "summary": "GrainCorp and Zen-Noh are selling their GrainsConnect investments in Canada to local major Parrish & Heimbecker.",
-      "published": "2026-01-12T05:05:25+00:00",
+      "title": "Uncontained WA fire reaches into farmland",
+      "link": "https://www.graincentral.com/news/uncontained-wa-fire-reaches-into-farmland/",
+      "summary": "Two fires west of Esperance have burnt more than 80,000ha of mostly bushland, although some farmland has been affected, and one farm dwelling has been lost.",
+      "published": "2026-01-20T06:40:09+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Bellata growers take NSW dryland wheat honours",
-      "link": "https://www.graincentral.com/news/bellata-growers-take-nsw-dryland-wheat-honours/",
-      "summary": "A 9.2t/ha crop of Sundancer wheat has come out on top from a record 375 entries in the AgShows NSW 2025 Dryland Field Wheat Competition.",
-      "published": "2026-01-12T02:52:20+00:00",
+      "title": "Aus exports 912,990t barley, 29,910t sorghum in Nov",
+      "link": "https://www.graincentral.com/markets/aus-exports-912990t-barley-29910t-sorghum-in-nov/",
+      "summary": "Australia exported 912,990t of barley and 29,910t of sorghum in Nov, according to the latest ABS data.",
+      "published": "2026-01-21T05:03:17+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "ClimateAi targets key ag pain point with new GDD tool, embeds AI into workflows",
-      "link": "https://agfundernews.com/climateai-targets-key-ag-pain-point-with-new-gdd-tool-embeds-ai-into-workflows",
-      "summary": "<p>“Over the past year it has been clear how important it is to be able to roll out AI tools very quickly to our customers,\" says ClimateAi COO Will Kletter.</p>\n<p>The post <a href=\"https://agfundernews.com/climateai-targets-key-ag-pain-point-with-new-gdd-tool-embeds-ai-into-workflows\">ClimateAi targets key ag pain point with new GDD tool, embeds AI into workflows</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-14T16:48:45+00:00",
+      "title": "Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: ‘Chemical free winegrowing is the holy grail’",
+      "link": "https://agfundernews.com/saga-robotics-bets-big-on-us-vineyards-with-new-gm-fresh-capital-for-uv-c-bots-chemical-free-winegrowing-is-the-holy-grail",
+      "summary": "<p>During the 2025 California wine grape season, Saga Robotics increased treated acreage tenfold and expects to nearly triple it again in 2026.</p>\n<p>The post <a href=\"https://agfundernews.com/saga-robotics-bets-big-on-us-vineyards-with-new-gm-fresh-capital-for-uv-c-bots-chemical-free-winegrowing-is-the-holy-grail\">Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: &#8216;Chemical free winegrowing is the holy grail&#8217;</a> appeared first on <a href=\"https://agf",
+      "published": "2026-01-22T18:29:37+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "New human clinical study puts botanicals into the GLP-1 spotlight",
-      "link": "https://agfundernews.com/new-human-clinical-study-puts-botanicals-into-the-glp-1-spotlight",
-      "summary": "<p>The research has generated significant interest from firms in food &#038; supplements as consumers seek natural alternatives to GLP-1 drugs.</p>\n<p>The post <a href=\"https://agfundernews.com/new-human-clinical-study-puts-botanicals-into-the-glp-1-spotlight\">New human clinical study puts botanicals into the GLP-1 spotlight</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-13T16:42:39+00:00",
+      "title": "Brazilian ag giant SLC Agricola scales use of unmanned crop sprayers with Pyka",
+      "link": "https://agfundernews.com/brazilian-ag-giant-slc-agricola-scales-use-of-unmanned-crop-sprayers-with-pyka",
+      "summary": "<p>‘The ability to spray at night is probably the single largest value proposition,’ says Pyka CEO Michael Norcia.</p>\n<p>The post <a href=\"https://agfundernews.com/brazilian-ag-giant-slc-agricola-scales-use-of-unmanned-crop-sprayers-with-pyka\">Brazilian ag giant SLC Agricola scales use of unmanned crop sprayers with Pyka</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-22T15:00:50+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Scaling out, not up: foodtech leaders rethink growth at Tufts event as capital dries up",
-      "link": "https://agfundernews.com/scaling-out-not-up-foodtech-leaders-rethink-growth-at-tufts-event-as-capital-dries-up",
-      "summary": "<p>Lasso CEO Mike Messersmith: \"When you start an email [to an investor] with, ‘Hey, I'm Mike from a plant-based meat company in Boston,’ it's like, ‘delete.’\"</p>\n<p>The post <a href=\"https://agfundernews.com/scaling-out-not-up-foodtech-leaders-rethink-growth-at-tufts-event-as-capital-dries-up\">Scaling out, not up: foodtech leaders rethink growth at Tufts event as capital dries up</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-12T16:49:44+00:00",
+      "title": "Why more food and beverage giants are flocking to Missouri",
+      "link": "https://agfundernews.com/why-more-food-and-beverage-giants-are-flocking-to-missouri",
+      "summary": "<p>A central location, diverse commodities, and a business-friendly environment draw more corporates to the Show-Me State.</p>\n<p>The post <a href=\"https://agfundernews.com/why-more-food-and-beverage-giants-are-flocking-to-missouri\">Why more food and beverage giants are flocking to Missouri</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T23:40:59+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AgriFood Signals: Corteva & BP partner on biofuels, Grit Road launches second fund for midwest agtech",
-      "link": "https://agfundernews.com/agrifood-signals-corteva-bp-partner-on-biofuels-grit-road-launches-second-fund-for-midwest-agtech",
-      "summary": "<p>Plus: The Protein Brewery raises funds for mycoprotein powder.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-corteva-bp-partner-on-biofuels-grit-road-launches-second-fund-for-midwest-agtech\">AgriFood Signals: Corteva &#038; BP partner on biofuels, Grit Road launches second fund for midwest agtech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-08T20:27:43+00:00",
+      "title": "‘If planetary boundaries are the guardrails, soil is the road itself’: in conversation with Holganix",
+      "link": "https://agfundernews.com/if-planetary-boundaries-are-the-guardrails-soil-is-the-road-itself-in-conversation-with-holganix",
+      "summary": "<p>Chief strategy officer Tim Weaver explains the critical role soil plays not just in crop production but across boardrooms and balance sheets.</p>\n<p>The post <a href=\"https://agfundernews.com/if-planetary-boundaries-are-the-guardrails-soil-is-the-road-itself-in-conversation-with-holganix\">&#8216;If planetary boundaries are the guardrails, soil is the road itself&#8217;: in conversation with Holganix</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T16:53:19+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "African agrifood VC ‘does not need to follow the Silicon Valley growth trajectory’",
-      "link": "https://agfundernews.com/african-agrifood-vc-does-not-need-to-follow-the-silicon-valley-growth-trajectory",
-      "summary": "<p>Sector-specific funds are changing the conversation around VC investment into Africa's agrifood landscape, says CRAF's managing partner.</p>\n<p>The post <a href=\"https://agfundernews.com/african-agrifood-vc-does-not-need-to-follow-the-silicon-valley-growth-trajectory\">African agrifood VC &#8216;does not need to follow the Silicon Valley growth trajectory&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-08T15:25:00+00:00",
+      "title": "Beyond stevia: 2nd Nature mines ag side streams for next-gen sweeteners with AI",
+      "link": "https://agfundernews.com/beyond-stevia-2nd-nature-mines-ag-side-streams-for-next-gen-sweeteners-with-ai",
+      "summary": "<p>2nd Nature will launch its first products for commercial sampling this quarter: non-caloric natural sweeteners and umami flavor enhancers.</p>\n<p>The post <a href=\"https://agfundernews.com/beyond-stevia-2nd-nature-mines-ag-side-streams-for-next-gen-sweeteners-with-ai\">Beyond stevia: 2nd Nature mines ag side streams for next-gen sweeteners with AI</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T13:00:04+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "New US dietary guidelines elevate meat and full-fat dairy, ignite protein debate: ‘Most Americans already eat plenty’",
-      "link": "https://agfundernews.com/new-us-dietary-guidelines-elevate-meat-and-full-fat-dairy-ignite-protein-debate-most-americans-already-eat-plenty",
-      "summary": "<p>Americans are now advised to eat 1.2-1.6g protein per kg of bodyweight per day vs the current RDA of 0.8g in the 2025-30 dietary guidelines.</p>\n<p>The post <a href=\"https://agfundernews.com/new-us-dietary-guidelines-elevate-meat-and-full-fat-dairy-ignite-protein-debate-most-americans-already-eat-plenty\">New US dietary guidelines elevate meat and full-fat dairy, ignite protein debate: &#8216;Most Americans already eat plenty&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFu",
-      "published": "2026-01-07T21:25:05+00:00",
+      "title": "Planetary health 101: what it is, why it matters for the future of the global economy",
+      "link": "https://agfundernews.com/planetary-health-101-what-it-is-why-it-matters-for-the-future-of-the-global-economy",
+      "summary": "<p>Climate-driven health risks could cost the global economy $1.5 trillion in lost productivity by 2050, according to WEF.</p>\n<p>The post <a href=\"https://agfundernews.com/planetary-health-101-what-it-is-why-it-matters-for-the-future-of-the-global-economy\">Planetary health 101: what it is, why it matters for the future of the global economy</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-20T19:58:01+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Kubota shows autonomous M5 Narrow tractor and ‘Transformer’ robot concept at CES 2026",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/kubota-shows-autonomous-m5-narrow-tractor-and-transformer-robot-concept-at-ces-2026/",
-      "summary": "Kubota used CES 2026 in Las Vegas (US) to preview two agriculture-focused innovations: a factory-integrated autonomous version of its M5 Narrow specialty tractor, and a concept “Transformer” platform robot (KVPR) designed to morph into different machine formats via interchangeable attachments.",
-      "published": "2026-01-12T15:00:00+00:00",
+      "title": "Made in America: FCC decision sparks scramble to localize ag spray drone production",
+      "link": "https://agfundernews.com/made-in-america-fcc-decision-sparks-scramble-to-localize-ag-spray-drone-production",
+      "summary": "<p>What happens when a market built on foreign tech is told it must go domestic—almost overnight?</p>\n<p>The post <a href=\"https://agfundernews.com/made-in-america-fcc-decision-sparks-scramble-to-localize-ag-spray-drone-production\">Made in America: FCC decision sparks scramble to localize ag spray drone production</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-20T17:39:00+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "The most impactful AI in farming ‘will not feel revolutionary,’ says Phospholutions boss. It will feel ‘dependable’",
+      "link": "https://agfundernews.com/the-most-impactful-ai-in-farming-will-not-feel-revolutionary-says-phospholutions-boss-it-will-feel-dependable",
+      "summary": "<p>Phospholutions CEO and founder Hunter Swisher talks to AFN ahead of his soil health session this week at Davos.</p>\n<p>The post <a href=\"https://agfundernews.com/the-most-impactful-ai-in-farming-will-not-feel-revolutionary-says-phospholutions-boss-it-will-feel-dependable\">The most impactful AI in farming &#8216;will not feel revolutionary,&#8217; says Phospholutions boss. It will feel &#8216;dependable&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-19T21:13:12+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "Can structural color replace titanium dioxide in food? Mirra bets on the butterfly effect",
+      "link": "https://agfundernews.com/can-structural-color-replace-titanium-dioxide-in-food-mirra-bets-on-the-butterfly-effect",
+      "summary": "<p>The whitening agent has been banned in food products sold in the EU since August 2022, and many US firms are under pressure to remove it.</p>\n<p>The post <a href=\"https://agfundernews.com/can-structural-color-replace-titanium-dioxide-in-food-mirra-bets-on-the-butterfly-effect\">Can structural color replace titanium dioxide in food? Mirra bets on the butterfly effect</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-19T17:05:22+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "Guest article: Agriculture’s great repricing goes beyond the downcycle",
+      "link": "https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle",
+      "summary": "<p>The next cycle belongs to leaders who can deliver through near-term volatility while still investing through long-cycle uncertainty.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle\">Guest article: Agriculture’s great repricing goes beyond the downcycle</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-16T19:00:36+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgriFood Signals: SAP & Syngenta partner, BASF buys biocontrol startup, Microsoft’s record deal with Indigo",
+      "link": "https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo",
+      "summary": "<p>Plus: Rockefeller Foundation launches Food Is Medicine fund.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo\">AgriFood Signals: SAP &#038; Syngenta partner, BASF buys biocontrol startup, Microsoft&#8217;s record deal with Indigo</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-15T21:22:16+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgBot prepares onion land with spader–power harrow combination",
+      "link": "https://www.futurefarming.com/smart-farming/agbot-prepares-onion-land-with-spader-power-harrow-combination/",
+      "summary": "‘If it were not so cold, I would sit and watch it all day. It is going brilliantly.’ Dutch Arable farmer Marijn Vermuë is enthusiastic about how effortlessly the AgBot from AgXeed, fitted with a spading machine and power harrow, prepares the sugar beet land for onions for the 2026 season. At the end of [&#8230;]",
+      "published": "2026-01-22T08:04:43+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Crop conditions prove crucial for tomato harvest robots in greenhouse trials",
-      "link": "https://www.futurefarming.com/crop-solutions/crop-conditions-prove-crucial-for-tomato-harvest-robots-in-greenhouse-trials/",
-      "summary": "Harvest robots are proving capable of cutting truss tomatoes, although crop characteristics and growing conditions are strongly decisive for how successfully and how quickly they perform. During the NPPL-R Horticulture annual event in Bunnik, two tomato harvesting robots were presented and tested in cocktail tomato crops. Both systems have their own unique approach and points [&#8230;]",
-      "published": "2026-01-12T12:00:54+00:00",
+      "title": "Strawberry picking robot Dogtooth ready for practical use",
+      "link": "https://www.futurefarming.com/crop-solutions/strawberry-picking-robot-dogtooth-ready-for-practical-use/",
+      "summary": "The English company Dogtooth presented its picking robot for harvesting strawberries during Strawberry Day on 7 January. The model presented is designed for harvesting on pipe rail systems. From 2027 onwards, models on wheels and tracks will follow. The version shown during the Dutch Strawberry Day was positioned on a pipe rail system with an [&#8230;]",
+      "published": "2026-01-20T10:30:14+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Monarch Tractors restarts with shift from own tractor to autonomy software",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/new-post/",
-      "summary": "US manufacturer Monarch Tractor is making a restart after a major restructuring. Operating under the name Zimeno Inc., the company is largely discontinuing the production, sales and service of its own electric tractors and will instead focus on software, autonomy and AI solutions for other machinery manufacturers.",
-      "published": "2026-01-08T10:00:00+00:00",
+      "title": "These 8 laser weeders are already up for sale: an overview and buying tips",
+      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/these-8-laser-weeders-are-already-up-for-sale-an-overview-and-buying-tips/",
+      "summary": "2 years ago, you could only turn to 1 supplier for a laser weeder. Today, there are at least 8. Most suppliers can deliver next year, while the others are keen to hear if Dutch growers are interested. Future Farming explored the market, gathered tips and lists the systems in a clear overview.",
+      "published": "2026-01-20T10:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
@@ -245,239 +205,199 @@
       "title": "Need automated, accurate grain grading in minutes?",
       "link": "https://groundtruth.ag#benchtopmvnirs",
       "summary": "",
-      "published": "2026-01-14T18:37:36.209123",
+      "published": "2026-01-22T18:00:32.487167",
       "source": "Ground Truth Ag",
       "category": "vertical_grain"
     },
     {
-      "title": "ICEMAN A BIG BOOSTER OF ARENA ACTIVITIES",
-      "link": "https://grainswest.com/2026/01/iceman-a-big-booster-of-arena-activities/",
-      "summary": "Until his 2025 retirement from official duties after 13 years, Fawcett area farmer Gordon McCann oversaw shinny games and hockey practices and maintained the ice at the Fawcett Community Hall and Arena. Its schedule now includes men’s and children’s leagues, and its two curling sheets are central to the community’s annual cabaret and bonspiel to be held this year in late January. Nicknamed Iceman McCann by young skaters, he continues to take on occasional volunteer arena activities and will fiel",
-      "published": "2026-01-07T22:12:04+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "FOREVER IN ROTATION",
-      "link": "https://grainswest.com/2026/01/forever-in-rotation/",
-      "summary": "On Tim van der Hoek’s irrigated acres near Vauxhall, potatoes, seed canola and sugar beets are central to the bottom line, but CWRS and durum also play a key role. In fact, cereals reliably hold his high-value rotation together. Of his more than 3,000 acres, much is rented, all is irrigated. Potatoes and sugar beets are grown once every five years while cereals or corn fill out the balance. The cereal years can be the thinnest on the balance sheet, but they are essential to the good health of hi",
-      "published": "2026-01-07T22:11:41+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "QUALITY IS JOB ONE",
-      "link": "https://grainswest.com/2026/01/quality-is-job-one/",
-      "summary": "Established in 1948, the Brewing and Malting Barley Research Institute (BMBRI) has endured and largely maintained its initial mandate to improve Canadian malting barley top to bottom. This is achieved as the organization secures research grants, conducts quality evaluation of malting barley and disseminates information on the crop.",
-      "published": "2026-01-07T22:10:52+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "A GOLDEN MARKET INDICATOR",
-      "link": "https://grainswest.com/2026/01/a-golden-market-indicator/",
-      "summary": "The relative value of gold to other commodities, including wheat, is at an all-time high. For example, one ounce of gold was worth almost 72 barrels of oil at the end of November 2025, up from 7.4 barrels in the same month of 2020. Over the same period, an ounce of gold went from being worth about 100 bushels of wheat to 750. What does this inverse relationship indicate?",
-      "published": "2026-01-07T22:10:02+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "EXPORT SALES DATA NEEDED",
-      "link": "https://grainswest.com/2026/01/export-sales-data-needed/",
-      "summary": "Canada’s grain sector runs on global demand. Farmers seed, harvest, store and market their crops into a world shaped by forces beyond the farm. Markets move quickly, buyers adjust accordingly and price signals shift with little warning. Despite this, Canada continues to operate without one of the essential tool of timely export sales reporting.",
-      "published": "2026-01-07T22:09:07+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "DURUM MARKET A WORK IN PROGRESS",
-      "link": "https://grainswest.com/2026/01/durum-market-a-work-in-progress/",
-      "summary": "Noodles have been a treasured food staple in China for nearly 4,000 years, but recent demand for high-quality pasta has grown. According to the World Instant Noodles Association, China was the world’s largest instant noodle consumer at 43.8 billion servings in 2024. Over the last decade, however, a shift has taken place as pasta has been adopted alongside traditional noodles and gained market share. Trade experts agree this shift has the potential to hugely impact CWAD exports.",
-      "published": "2026-01-07T22:08:00+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "SEE THE FIELD IN A NEW WAY",
-      "link": "https://grainswest.com/2026/01/see-the-field-in-a-new-way/",
-      "summary": "On the Olds College Smart Farm, data is rolling in from an ongoing research project that utilizes the Raven Augmenta Field Analyzer. This camera vision machine learning technology senses crop conditions using digital imagery to adjust input application during field operations. Unlike current methods that rely on pre-determined maps, the camera uses an algorithm to make instantaneous decisions about the rate of inputs to apply on crops.",
-      "published": "2026-01-07T22:05:26+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "BARLEY BOUNCES BACK",
-      "link": "https://grainswest.com/2026/01/barley-bounces-back/",
-      "summary": "In contrast with the previous year, farmers across Western Canada produced an exceptional crop of malting barley in 2025. Strong yields, consistent quality and competitive pricing signals have drawn interest from major brewers and maltsters across multiple markets. The crop gives Canada a solid supply position as customers prepare their 2026 malting and brewing schedules.",
-      "published": "2026-01-07T22:04:56+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "THE CURVEBALL APPROACH",
-      "link": "https://grainswest.com/2026/01/the-curveball-approach/",
-      "summary": "The cost and complication of herbicide resistance is reshaping the way Prairie farmers manage their acres. It’s a frustrating problem that demands adaptation, typically in the form of integrated weed management (IWM), a customized, field-by-field strategy. One size does not fit all as farmers and agronomists tackle herbicide resistance with a multi-strategy approach.",
-      "published": "2026-01-07T22:00:45+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "FUNDAMENTAL FARM SKILLS",
-      "link": "https://grainswest.com/2026/01/fundamental-farm-skills/",
-      "summary": "Developed and delivered in collaboration with Farm Credit Canada and RBC, the Ontario Agricultural College (OAC) at the University of Guelph offers Foundations in Agricultural Management. The free online course is aimed at Canadian farmers, their families and ag industry professionals who wish to improve their business acumen, financial literacy and management skills. The non-credit, video seminar course is comprised of eight modules that take an average of 15 to 20 minutes each to work through.",
-      "published": "2026-01-07T22:00:10+00:00",
-      "source": "GrainsWest Magazine",
-      "category": "industry"
-    },
-    {
-      "title": "Strong yields mark start of Downs sorghum harvest",
-      "link": "https://www.graincentral.com/news/strong-yields-mark-start-of-downs-sorghum-harvest/",
-      "summary": "The sorghum harvest has started in pockets of the Darling Downs, with some districts recording standout yields of 6-7t/ha.",
-      "published": "2026-01-14T03:56:27+00:00",
+      "title": "Politics to weigh more heavily on ag markets: CBA",
+      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
+      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
+      "published": "2026-01-22T06:19:33+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Pulse Update: Chickpeas kick, fabas, lentils flat",
-      "link": "https://www.graincentral.com/news/pulse-update-chickpeas-kick-fabas-lentils-flat/",
-      "summary": "Prices for chickpeas are rallying, while faba bean and lentil markets are trading sideways now that Australia’s 2025-26 winter pulse harvest is over.",
-      "published": "2026-01-14T03:24:24+00:00",
+      "title": "Cargill submits plans for 1.1Mt WA crush plant",
+      "link": "https://www.graincentral.com/news/cargill-progresses-plans-for-1-1mt-wa-crush-plant/",
+      "summary": "Public consultation has opened on Cargill’s Project Crux, which plans to crush 1.1Mt of WA canola per annum next to CBH’s Kwinana Grain Terminal.",
+      "published": "2026-01-22T05:58:53+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Mainland Australia’s winter-crop harvest nears end",
-      "link": "https://www.graincentral.com/news/harvest-nears-end-across-mainland-australia/",
-      "summary": "Harvest on mainland Australia is rapidly winding down, with latest receival reports from major bulk handlers indicating a tail-off in deliveries.",
-      "published": "2026-01-13T02:40:38+00:00",
+      "title": "People on the Move in the grain industry",
+      "link": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-32/",
+      "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
+      "published": "2026-01-22T06:42:54+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Australian chickpea, lentil exports surge in Nov",
-      "link": "https://www.graincentral.com/markets/australian-chickpea-lentil-exports-surge-in-nov/",
-      "summary": "Australia exported 388,832 tonnes of chickpeas and 270,151t of lentils in November 2025, according to the latest data from the ABS.",
-      "published": "2026-01-13T00:04:58+00:00",
+      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
+      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
+      "published": "2026-01-22T02:42:35+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Russian wheat export pace rebounds into year’s end",
-      "link": "https://www.graincentral.com/markets/russian-wheat-export-pace-rebounds-into-years-end/",
-      "summary": "A late-2025 run boosts the prospect of Russia's exporting 53-55Mt of grain to challenge the 53Mt shipped in 2024-25.",
-      "published": "2026-01-13T03:18:10+00:00",
+      "title": "South Coast systems help WA handle record harvest",
+      "link": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
+      "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
+      "published": "2026-01-22T00:14:32+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Weekly rainfall update 13 January 2026 + outlook",
-      "link": "https://www.graincentral.com/weather/weekly-rainfall-update-13-january-2026-outlook/",
-      "summary": "Rain in coming days is forecast for tropical and far eastern Australia following TC Koji, which delivered some heavy falls and flooding in recent days.",
-      "published": "2026-01-14T03:33:07+00:00",
+      "title": "Daily Market Wire 22 January 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-22-january-2026/",
+      "summary": "Corn and beans strength supported wheat which slipped later in the session. WA softens, eastern wheat steadies.",
+      "published": "2026-01-21T23:46:34+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Daily Market Wire 14 January 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-14-january-2026/",
-      "summary": "Talk of easing Canada China trade tension breathes life into canola, likely strengthens GM, as ag market lacks spark.",
-      "published": "2026-01-13T23:45:50+00:00",
+      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
+      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
+      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
+      "published": "2026-01-21T00:43:34+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "GTA joins govt’s Trade Diversification Network",
-      "link": "https://www.graincentral.com/news/gta-joins-govts-trade-diversification-network/",
-      "summary": "GTA has been accepted as a member of the Trade Diversification Network, strengthening its role in supporting the Australian grain industry as a leading exporter.",
-      "published": "2026-01-14T00:40:15+00:00",
+      "title": "WA panel approves Perth oat mill despite initial objections",
+      "link": "https://www.graincentral.com/news/wa-panel-approves-perth-oat-mill-despite-initial-objections/",
+      "summary": "Swan Milling P&amp;E's plans to build an oat mill in Perth are inching forward to support the interests of a diverse group of shareholders.",
+      "published": "2026-01-21T04:52:44+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "GrainCorp, Zen-Noh sell Canadian JV to P&H",
-      "link": "https://www.graincentral.com/news/graincorp-zen-noh-sell-canadian-jv-to-ph/",
-      "summary": "GrainCorp and Zen-Noh are selling their GrainsConnect investments in Canada to local major Parrish & Heimbecker.",
-      "published": "2026-01-12T05:05:25+00:00",
+      "title": "Uncontained WA fire reaches into farmland",
+      "link": "https://www.graincentral.com/news/uncontained-wa-fire-reaches-into-farmland/",
+      "summary": "Two fires west of Esperance have burnt more than 80,000ha of mostly bushland, although some farmland has been affected, and one farm dwelling has been lost.",
+      "published": "2026-01-20T06:40:09+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Bellata growers take NSW dryland wheat honours",
-      "link": "https://www.graincentral.com/news/bellata-growers-take-nsw-dryland-wheat-honours/",
-      "summary": "A 9.2t/ha crop of Sundancer wheat has come out on top from a record 375 entries in the AgShows NSW 2025 Dryland Field Wheat Competition.",
-      "published": "2026-01-12T02:52:20+00:00",
+      "title": "Aus exports 912,990t barley, 29,910t sorghum in Nov",
+      "link": "https://www.graincentral.com/markets/aus-exports-912990t-barley-29910t-sorghum-in-nov/",
+      "summary": "Australia exported 912,990t of barley and 29,910t of sorghum in Nov, according to the latest ABS data.",
+      "published": "2026-01-21T05:03:17+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "ClimateAi targets key ag pain point with new GDD tool, embeds AI into workflows",
-      "link": "https://agfundernews.com/climateai-targets-key-ag-pain-point-with-new-gdd-tool-embeds-ai-into-workflows",
-      "summary": "<p>“Over the past year it has been clear how important it is to be able to roll out AI tools very quickly to our customers,\" says ClimateAi COO Will Kletter.</p>\n<p>The post <a href=\"https://agfundernews.com/climateai-targets-key-ag-pain-point-with-new-gdd-tool-embeds-ai-into-workflows\">ClimateAi targets key ag pain point with new GDD tool, embeds AI into workflows</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-14T16:48:45+00:00",
+      "title": "Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: ‘Chemical free winegrowing is the holy grail’",
+      "link": "https://agfundernews.com/saga-robotics-bets-big-on-us-vineyards-with-new-gm-fresh-capital-for-uv-c-bots-chemical-free-winegrowing-is-the-holy-grail",
+      "summary": "<p>During the 2025 California wine grape season, Saga Robotics increased treated acreage tenfold and expects to nearly triple it again in 2026.</p>\n<p>The post <a href=\"https://agfundernews.com/saga-robotics-bets-big-on-us-vineyards-with-new-gm-fresh-capital-for-uv-c-bots-chemical-free-winegrowing-is-the-holy-grail\">Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: &#8216;Chemical free winegrowing is the holy grail&#8217;</a> appeared first on <a href=\"https://agf",
+      "published": "2026-01-22T18:29:37+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "New human clinical study puts botanicals into the GLP-1 spotlight",
-      "link": "https://agfundernews.com/new-human-clinical-study-puts-botanicals-into-the-glp-1-spotlight",
-      "summary": "<p>The research has generated significant interest from firms in food &#038; supplements as consumers seek natural alternatives to GLP-1 drugs.</p>\n<p>The post <a href=\"https://agfundernews.com/new-human-clinical-study-puts-botanicals-into-the-glp-1-spotlight\">New human clinical study puts botanicals into the GLP-1 spotlight</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-13T16:42:39+00:00",
+      "title": "Brazilian ag giant SLC Agricola scales use of unmanned crop sprayers with Pyka",
+      "link": "https://agfundernews.com/brazilian-ag-giant-slc-agricola-scales-use-of-unmanned-crop-sprayers-with-pyka",
+      "summary": "<p>‘The ability to spray at night is probably the single largest value proposition,’ says Pyka CEO Michael Norcia.</p>\n<p>The post <a href=\"https://agfundernews.com/brazilian-ag-giant-slc-agricola-scales-use-of-unmanned-crop-sprayers-with-pyka\">Brazilian ag giant SLC Agricola scales use of unmanned crop sprayers with Pyka</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-22T15:00:50+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Scaling out, not up: foodtech leaders rethink growth at Tufts event as capital dries up",
-      "link": "https://agfundernews.com/scaling-out-not-up-foodtech-leaders-rethink-growth-at-tufts-event-as-capital-dries-up",
-      "summary": "<p>Lasso CEO Mike Messersmith: \"When you start an email [to an investor] with, ‘Hey, I'm Mike from a plant-based meat company in Boston,’ it's like, ‘delete.’\"</p>\n<p>The post <a href=\"https://agfundernews.com/scaling-out-not-up-foodtech-leaders-rethink-growth-at-tufts-event-as-capital-dries-up\">Scaling out, not up: foodtech leaders rethink growth at Tufts event as capital dries up</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-12T16:49:44+00:00",
+      "title": "Why more food and beverage giants are flocking to Missouri",
+      "link": "https://agfundernews.com/why-more-food-and-beverage-giants-are-flocking-to-missouri",
+      "summary": "<p>A central location, diverse commodities, and a business-friendly environment draw more corporates to the Show-Me State.</p>\n<p>The post <a href=\"https://agfundernews.com/why-more-food-and-beverage-giants-are-flocking-to-missouri\">Why more food and beverage giants are flocking to Missouri</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T23:40:59+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AgriFood Signals: Corteva & BP partner on biofuels, Grit Road launches second fund for midwest agtech",
-      "link": "https://agfundernews.com/agrifood-signals-corteva-bp-partner-on-biofuels-grit-road-launches-second-fund-for-midwest-agtech",
-      "summary": "<p>Plus: The Protein Brewery raises funds for mycoprotein powder.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-corteva-bp-partner-on-biofuels-grit-road-launches-second-fund-for-midwest-agtech\">AgriFood Signals: Corteva &#038; BP partner on biofuels, Grit Road launches second fund for midwest agtech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-08T20:27:43+00:00",
+      "title": "‘If planetary boundaries are the guardrails, soil is the road itself’: in conversation with Holganix",
+      "link": "https://agfundernews.com/if-planetary-boundaries-are-the-guardrails-soil-is-the-road-itself-in-conversation-with-holganix",
+      "summary": "<p>Chief strategy officer Tim Weaver explains the critical role soil plays not just in crop production but across boardrooms and balance sheets.</p>\n<p>The post <a href=\"https://agfundernews.com/if-planetary-boundaries-are-the-guardrails-soil-is-the-road-itself-in-conversation-with-holganix\">&#8216;If planetary boundaries are the guardrails, soil is the road itself&#8217;: in conversation with Holganix</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T16:53:19+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "African agrifood VC ‘does not need to follow the Silicon Valley growth trajectory’",
-      "link": "https://agfundernews.com/african-agrifood-vc-does-not-need-to-follow-the-silicon-valley-growth-trajectory",
-      "summary": "<p>Sector-specific funds are changing the conversation around VC investment into Africa's agrifood landscape, says CRAF's managing partner.</p>\n<p>The post <a href=\"https://agfundernews.com/african-agrifood-vc-does-not-need-to-follow-the-silicon-valley-growth-trajectory\">African agrifood VC &#8216;does not need to follow the Silicon Valley growth trajectory&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-08T15:25:00+00:00",
+      "title": "Beyond stevia: 2nd Nature mines ag side streams for next-gen sweeteners with AI",
+      "link": "https://agfundernews.com/beyond-stevia-2nd-nature-mines-ag-side-streams-for-next-gen-sweeteners-with-ai",
+      "summary": "<p>2nd Nature will launch its first products for commercial sampling this quarter: non-caloric natural sweeteners and umami flavor enhancers.</p>\n<p>The post <a href=\"https://agfundernews.com/beyond-stevia-2nd-nature-mines-ag-side-streams-for-next-gen-sweeteners-with-ai\">Beyond stevia: 2nd Nature mines ag side streams for next-gen sweeteners with AI</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-21T13:00:04+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "New US dietary guidelines elevate meat and full-fat dairy, ignite protein debate: ‘Most Americans already eat plenty’",
-      "link": "https://agfundernews.com/new-us-dietary-guidelines-elevate-meat-and-full-fat-dairy-ignite-protein-debate-most-americans-already-eat-plenty",
-      "summary": "<p>Americans are now advised to eat 1.2-1.6g protein per kg of bodyweight per day vs the current RDA of 0.8g in the 2025-30 dietary guidelines.</p>\n<p>The post <a href=\"https://agfundernews.com/new-us-dietary-guidelines-elevate-meat-and-full-fat-dairy-ignite-protein-debate-most-americans-already-eat-plenty\">New US dietary guidelines elevate meat and full-fat dairy, ignite protein debate: &#8216;Most Americans already eat plenty&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFu",
-      "published": "2026-01-07T21:25:05+00:00",
+      "title": "Planetary health 101: what it is, why it matters for the future of the global economy",
+      "link": "https://agfundernews.com/planetary-health-101-what-it-is-why-it-matters-for-the-future-of-the-global-economy",
+      "summary": "<p>Climate-driven health risks could cost the global economy $1.5 trillion in lost productivity by 2050, according to WEF.</p>\n<p>The post <a href=\"https://agfundernews.com/planetary-health-101-what-it-is-why-it-matters-for-the-future-of-the-global-economy\">Planetary health 101: what it is, why it matters for the future of the global economy</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-20T19:58:01+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Kubota shows autonomous M5 Narrow tractor and ‘Transformer’ robot concept at CES 2026",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/kubota-shows-autonomous-m5-narrow-tractor-and-transformer-robot-concept-at-ces-2026/",
-      "summary": "Kubota used CES 2026 in Las Vegas (US) to preview two agriculture-focused innovations: a factory-integrated autonomous version of its M5 Narrow specialty tractor, and a concept “Transformer” platform robot (KVPR) designed to morph into different machine formats via interchangeable attachments.",
-      "published": "2026-01-12T15:00:00+00:00",
+      "title": "Made in America: FCC decision sparks scramble to localize ag spray drone production",
+      "link": "https://agfundernews.com/made-in-america-fcc-decision-sparks-scramble-to-localize-ag-spray-drone-production",
+      "summary": "<p>What happens when a market built on foreign tech is told it must go domestic—almost overnight?</p>\n<p>The post <a href=\"https://agfundernews.com/made-in-america-fcc-decision-sparks-scramble-to-localize-ag-spray-drone-production\">Made in America: FCC decision sparks scramble to localize ag spray drone production</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-20T17:39:00+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "The most impactful AI in farming ‘will not feel revolutionary,’ says Phospholutions boss. It will feel ‘dependable’",
+      "link": "https://agfundernews.com/the-most-impactful-ai-in-farming-will-not-feel-revolutionary-says-phospholutions-boss-it-will-feel-dependable",
+      "summary": "<p>Phospholutions CEO and founder Hunter Swisher talks to AFN ahead of his soil health session this week at Davos.</p>\n<p>The post <a href=\"https://agfundernews.com/the-most-impactful-ai-in-farming-will-not-feel-revolutionary-says-phospholutions-boss-it-will-feel-dependable\">The most impactful AI in farming &#8216;will not feel revolutionary,&#8217; says Phospholutions boss. It will feel &#8216;dependable&#8217;</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-19T21:13:12+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "Can structural color replace titanium dioxide in food? Mirra bets on the butterfly effect",
+      "link": "https://agfundernews.com/can-structural-color-replace-titanium-dioxide-in-food-mirra-bets-on-the-butterfly-effect",
+      "summary": "<p>The whitening agent has been banned in food products sold in the EU since August 2022, and many US firms are under pressure to remove it.</p>\n<p>The post <a href=\"https://agfundernews.com/can-structural-color-replace-titanium-dioxide-in-food-mirra-bets-on-the-butterfly-effect\">Can structural color replace titanium dioxide in food? Mirra bets on the butterfly effect</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-19T17:05:22+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "Guest article: Agriculture’s great repricing goes beyond the downcycle",
+      "link": "https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle",
+      "summary": "<p>The next cycle belongs to leaders who can deliver through near-term volatility while still investing through long-cycle uncertainty.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle\">Guest article: Agriculture’s great repricing goes beyond the downcycle</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-16T19:00:36+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgriFood Signals: SAP & Syngenta partner, BASF buys biocontrol startup, Microsoft’s record deal with Indigo",
+      "link": "https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo",
+      "summary": "<p>Plus: Rockefeller Foundation launches Food Is Medicine fund.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo\">AgriFood Signals: SAP &#038; Syngenta partner, BASF buys biocontrol startup, Microsoft&#8217;s record deal with Indigo</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-15T21:22:16+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgBot prepares onion land with spader–power harrow combination",
+      "link": "https://www.futurefarming.com/smart-farming/agbot-prepares-onion-land-with-spader-power-harrow-combination/",
+      "summary": "‘If it were not so cold, I would sit and watch it all day. It is going brilliantly.’ Dutch Arable farmer Marijn Vermuë is enthusiastic about how effortlessly the AgBot from AgXeed, fitted with a spading machine and power harrow, prepares the sugar beet land for onions for the 2026 season. At the end of [&#8230;]",
+      "published": "2026-01-22T08:04:43+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Crop conditions prove crucial for tomato harvest robots in greenhouse trials",
-      "link": "https://www.futurefarming.com/crop-solutions/crop-conditions-prove-crucial-for-tomato-harvest-robots-in-greenhouse-trials/",
-      "summary": "Harvest robots are proving capable of cutting truss tomatoes, although crop characteristics and growing conditions are strongly decisive for how successfully and how quickly they perform. During the NPPL-R Horticulture annual event in Bunnik, two tomato harvesting robots were presented and tested in cocktail tomato crops. Both systems have their own unique approach and points [&#8230;]",
-      "published": "2026-01-12T12:00:54+00:00",
+      "title": "Strawberry picking robot Dogtooth ready for practical use",
+      "link": "https://www.futurefarming.com/crop-solutions/strawberry-picking-robot-dogtooth-ready-for-practical-use/",
+      "summary": "The English company Dogtooth presented its picking robot for harvesting strawberries during Strawberry Day on 7 January. The model presented is designed for harvesting on pipe rail systems. From 2027 onwards, models on wheels and tracks will follow. The version shown during the Dutch Strawberry Day was positioned on a pipe rail system with an [&#8230;]",
+      "published": "2026-01-20T10:30:14+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Monarch Tractors restarts with shift from own tractor to autonomy software",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/new-post/",
-      "summary": "US manufacturer Monarch Tractor is making a restart after a major restructuring. Operating under the name Zimeno Inc., the company is largely discontinuing the production, sales and service of its own electric tractors and will instead focus on software, autonomy and AI solutions for other machinery manufacturers.",
-      "published": "2026-01-08T10:00:00+00:00",
+      "title": "These 8 laser weeders are already up for sale: an overview and buying tips",
+      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/these-8-laser-weeders-are-already-up-for-sale-an-overview-and-buying-tips/",
+      "summary": "2 years ago, you could only turn to 1 supplier for a laser weeder. Today, there are at least 8. Most suppliers can deliver next year, while the others are keen to hear if Dutch growers are interested. Future Farming explored the market, gathered tips and lists the systems in a clear overview.",
+      "published": "2026-01-20T10:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     }

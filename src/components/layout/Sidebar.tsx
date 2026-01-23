@@ -12,14 +12,16 @@ interface SidebarProps {
 export function Sidebar({ activeTab, onTabChange, sidebarOpen, onSidebarToggle }: SidebarProps) {
     return (
         <>
-            {/* Desktop Sidebar - Premium Glass Style */}
+            {/* Desktop Sidebar - Premium Editorial Glass Style */}
             <aside
                 className={`
                     ${sidebarOpen ? 'w-72' : 'w-0'} 
                     shrink-0 overflow-y-auto overflow-x-hidden
-                    bg-white/60 dark:bg-zinc-900/60 
-                    backdrop-blur-xl
-                    border-r border-gray-200/50 dark:border-white/5
+                    bg-white/70 dark:bg-zinc-900/70 
+                    backdrop-blur-2xl
+                    border-r border-gray-200/60 dark:border-white/5
+                    shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)]
+                    dark:shadow-[4px_0_24px_-12px_rgba(0,0,0,0.3)]
                     transition-all duration-300 ease-out-expo
                     lg:flex flex-col hidden
                 `}

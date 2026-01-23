@@ -123,20 +123,26 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
                   tabIndex={isActive ? 0 : -1}
                   className={`
                     group flex items-center gap-3 
-                    px-3 py-3 rounded-lg
+                    px-3 py-3 rounded-xl
                     font-medium text-sm
-                    transition-all duration-200 ease-out
+                    transition-all duration-300 ease-out
                     whitespace-nowrap
                     focus:outline-none focus:ring-2 focus:ring-emerald-500/50
                     justify-start w-full
+                    relative
                     ${isActive
-                      ? 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
-                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white'
+                      ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 shadow-sm'
+                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white hover:translate-x-0.5'
                     }
                   `}
                 >
+                  {/* Gold accent indicator for active state */}
+                  {isActive && (
+                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-amber-500 rounded-r-full" />
+                  )}
+
                   {/* Icon */}
-                  <span className={`transition-transform duration-200 ${isActive ? 'text-emerald-600 dark:text-emerald-400' : ''}`}>
+                  <span className={`transition-all duration-300 ${isActive ? 'text-emerald-600 dark:text-emerald-400 scale-110' : 'group-hover:scale-105'}`}>
                     {tab.icon}
                   </span>
 

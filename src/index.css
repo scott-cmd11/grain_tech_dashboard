@@ -109,6 +109,20 @@
     @apply -translate-y-0.5;
   }
 
+  /* Editorial card styles - PuckReady-inspired premium depth */
+  .card-editorial {
+    @apply bg-white dark:bg-zinc-900;
+    @apply rounded-3xl;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    @apply border border-gray-100 dark:border-white/5;
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .card-editorial:hover {
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.2);
+    @apply -translate-y-1;
+  }
+
   /* Button styles */
   .btn-premium {
     @apply transition-all duration-200 ease-out;
@@ -117,6 +131,20 @@
 
   .btn-glow {
     box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  /* Gold accent button */
+  .btn-gold {
+    @apply text-white font-semibold;
+    @apply rounded-xl px-6 py-3;
+    @apply transition-all duration-300 ease-out;
+    background-color: #F59E0B;
+    box-shadow: 0 10px 40px -10px rgba(245, 158, 11, 0.25);
+  }
+
+  .btn-gold:hover {
+    background-color: #D97706;
+    transform: scale(1.02);
   }
 
   /* Hide scrollbar */
@@ -137,7 +165,47 @@
   .text-gradient-premium {
     @apply bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent;
   }
+
+  /* Gold accent text - for editorial highlights */
+  .text-gold-accent {
+    color: #F59E0B;
+  }
+
+  .dark .text-gold-accent {
+    color: #FBBF24;
+  }
+
+  /* Massive editorial typography */
+  .text-editorial-hero {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl;
+    @apply font-bold tracking-tighter leading-none;
+  }
+
+  .text-editorial-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+    @apply font-bold tracking-tight leading-tight;
+  }
+
+  .text-editorial-subtitle {
+    @apply text-xl sm:text-2xl;
+    @apply font-medium text-gray-600 dark:text-gray-400;
+  }
+
+  /* Deep section background - for alternating contrast */
+  .section-deep {
+    background-color: #064E3B;
+    color: white;
+  }
+
+  .section-surface {
+    background-color: #ECFDF5;
+  }
+
+  .dark .section-surface {
+    @apply bg-zinc-900;
+  }
 }
+
 
 /* ========================================
    ANIMATIONS

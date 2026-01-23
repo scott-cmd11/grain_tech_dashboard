@@ -18,14 +18,14 @@ function ViewToggle({
     onViewChange: (view: 'map' | 'table' | 'stack') => void;
 }) {
     return (
-        <div className="flex items-center gap-2 border border-gray-200 dark:border-gray-600 rounded-lg p-1">
+        <div className="flex items-center gap-1 bg-gray-100 dark:bg-zinc-800 rounded-xl p-1.5">
             {(['map', 'table', 'stack'] as const).map((view) => (
                 <button
                     key={view}
                     onClick={() => onViewChange(view)}
-                    className={`px-3 py-1 text-xs font-medium rounded transition-colors ${activeView === view
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${activeView === view
+                        ? 'bg-white dark:bg-zinc-700 text-emerald-600 dark:text-emerald-400 shadow-md'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
                         }`}
                 >
                     {view === 'map' ? 'Map' : view === 'table' ? 'Table' : 'Tech Stack'}
@@ -71,12 +71,14 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
     }
 
     return (
-        <div className="space-y-6 animate-in fade-in duration-500">
+        <div className="space-y-8 animate-in fade-in duration-500">
             {/* View Toggle */}
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6">
                 <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Grain Technology Landscape</h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Technology <span className="text-gold-accent">Landscape</span>
+                    </h2>
+                    <p className="text-base text-gray-600 dark:text-gray-400 mt-2 max-w-xl">
                         Curated list of companies building digital grain grading tools. Not exhaustive; updated periodically.
                     </p>
                 </div>

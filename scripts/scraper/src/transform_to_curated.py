@@ -9,10 +9,12 @@ from pathlib import Path
 from datetime import datetime
 
 def transform():
-    # Paths
-    script_dir = Path(__file__).resolve().parent.parent.parent
-    raw_intel_path = script_dir.parent.parent / 'src' / 'data' / 'raw_intel.json'
-    curated_path = script_dir.parent.parent / 'src' / 'data' / 'curatedNews.json'
+    # Paths - script is at scripts/scraper/src/transform_to_curated.py
+    # Project root is at ../../.. from this file
+    script_dir = Path(__file__).resolve().parent  # src/
+    project_root = script_dir.parent.parent.parent  # graintech-dashboard/
+    raw_intel_path = project_root / 'src' / 'data' / 'raw_intel.json'
+    curated_path = project_root / 'src' / 'data' / 'curatedNews.json'
     
     print(f"Reading from: {raw_intel_path}")
     print(f"Writing to: {curated_path}")
