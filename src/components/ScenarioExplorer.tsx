@@ -235,7 +235,7 @@ export const ScenarioExplorer = function ScenarioExplorer() {
           <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
             ⚡ Quick Presets
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
             <button
               onClick={() => applyPreset('conservative')}
               className="px-3 py-1.5 text-xs rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-teal-200 dark:hover:bg-teal-900/50 transition-colors border border-teal-200 dark:border-teal-700 font-medium"
@@ -330,7 +330,7 @@ export const ScenarioExplorer = function ScenarioExplorer() {
           </div>
 
           {/* METRIC CARDS WITH COLOR CODING */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             <div className={`rounded-xl border p-4 bg-gradient-to-br transition-all duration-300 ${getValueColor(outputs.incrementalValueUSD, maxValue * 1_000_000, 'value')}`}>
               <p className="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide font-medium">
                 Incremental Value

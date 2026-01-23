@@ -146,7 +146,7 @@ export function AnalyticsTab({ searchTerm = "" }: AnalyticsTabProps) {
     return (
         <div className="space-y-8 animate-fade-up">
             {/* Stats Cards */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-5 text-white shadow-lg shadow-emerald-500/20 relative overflow-hidden">
                     <div className="absolute top-0 right-0 p-3 opacity-20">
                         <Cpu className="w-16 h-16" />

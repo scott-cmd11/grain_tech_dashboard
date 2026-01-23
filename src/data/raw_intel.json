@@ -1,22 +1,14 @@
 {
-  "generated_at": "2026-01-22T18:00:40.554650",
-  "total_items": 49,
+  "generated_at": "2026-01-23T06:01:44.499587",
+  "total_items": 51,
   "category_counts": {
     "grain_industry": 10,
-    "technology": 14,
+    "technology": 15,
     "company": 1,
     "regulatory": 0,
-    "rss_feeds": 24
+    "rss_feeds": 25
   },
   "articles": [
-    {
-      "title": "Politics to weigh more heavily on ag markets: CBA",
-      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
-      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
-      "published": "2026-01-22T06:19:33+00:00",
-      "source": "Grain Central",
-      "category": "grain_industry"
-    },
     {
       "title": "Cargill submits plans for 1.1Mt WA crush plant",
       "link": "https://www.graincentral.com/news/cargill-progresses-plans-for-1-1mt-wa-crush-plant/",
@@ -34,14 +26,6 @@
       "category": "grain_industry"
     },
     {
-      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
-      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
-      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
-      "published": "2026-01-22T02:42:35+00:00",
-      "source": "Grain Central",
-      "category": "grain_industry"
-    },
-    {
       "title": "South Coast systems help WA handle record harvest",
       "link": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
       "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
@@ -50,18 +34,42 @@
       "category": "grain_industry"
     },
     {
-      "title": "Daily Market Wire 22 January 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-22-january-2026/",
-      "summary": "Corn and beans strength supported wheat which slipped later in the session. WA softens, eastern wheat steadies.",
-      "published": "2026-01-21T23:46:34+00:00",
+      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
+      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
+      "published": "2026-01-22T02:42:35+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
-      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
-      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
-      "published": "2026-01-21T00:43:34+00:00",
+      "title": "Politics to weigh more heavily on ag markets: CBA",
+      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
+      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
+      "published": "2026-01-22T06:19:33+00:00",
+      "source": "Grain Central",
+      "category": "grain_industry"
+    },
+    {
+      "title": "Reefinator adds arable area to McCoy country",
+      "link": "https://www.graincentral.com/machinery/reefinator-adds-arable-area-to-mccoys-central-vic-country/",
+      "summary": "The McCoy family in Vic's Wehla district has used an H4 Reefinator to turn challenging grazing country into arable land to make their mixed farm more productive.",
+      "published": "2026-01-23T01:28:24+00:00",
+      "source": "Grain Central",
+      "category": "grain_industry"
+    },
+    {
+      "title": "CSIRO delivers insights into costly fungal pathogen",
+      "link": "https://www.graincentral.com/research/csiro-delivers-insights-into-costly-fungal-pathogen/",
+      "summary": "CSIRO has unlocked the most detailed genetic blueprint yet of a major soil-borne crop pathogen,  an advance that paves the way for better crop-disease management in Australian agriculture.",
+      "published": "2026-01-23T01:46:02+00:00",
+      "source": "Grain Central",
+      "category": "grain_industry"
+    },
+    {
+      "title": "Daily Market Wire 23 January 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-23-january-2026/",
+      "summary": "Short covering breathes life into wheat. Weather and technicals bounces soy complex.",
+      "published": "2026-01-23T00:14:39+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
@@ -74,20 +82,28 @@
       "category": "grain_industry"
     },
     {
-      "title": "Uncontained WA fire reaches into farmland",
-      "link": "https://www.graincentral.com/news/uncontained-wa-fire-reaches-into-farmland/",
-      "summary": "Two fires west of Esperance have burnt more than 80,000ha of mostly bushland, although some farmland has been affected, and one farm dwelling has been lost.",
-      "published": "2026-01-20T06:40:09+00:00",
+      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
+      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
+      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
+      "published": "2026-01-21T00:43:34+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Aus exports 912,990t barley, 29,910t sorghum in Nov",
-      "link": "https://www.graincentral.com/markets/aus-exports-912990t-barley-29910t-sorghum-in-nov/",
-      "summary": "Australia exported 912,990t of barley and 29,910t of sorghum in Nov, according to the latest ABS data.",
-      "published": "2026-01-21T05:03:17+00:00",
-      "source": "Grain Central",
-      "category": "grain_industry"
+      "title": "Exclusive: UPSIDE Foods looks beyond cultivated meat to life sciences with cell culture media spin-off Lucius Labs",
+      "link": "https://agfundernews.com/exclusive-upside-foods-looks-beyond-cultivated-meat-to-life-sciences-with-cell-culture-media-spin-off-lucius-labs",
+      "summary": "<p>Cell culture media products from Lucius Labs will target human and animal health bioprocessing applications from tissue engineering and stem cell therapy to vaccine production.</p>\n<p>The post <a href=\"https://agfundernews.com/exclusive-upside-foods-looks-beyond-cultivated-meat-to-life-sciences-with-cell-culture-media-spin-off-lucius-labs\">Exclusive: UPSIDE Foods looks beyond cultivated meat to life sciences with cell culture media spin-off Lucius Labs</a> appeared first on <a href=\"https://a",
+      "published": "2026-01-23T00:02:06+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgriFood Signals: Yield Energy launches farm-based grid platform, new $500m farmland fund",
+      "link": "https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund",
+      "summary": "<p>Plus: Gates Foundation funds AI pilot for coffee farmers. </p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund\">AgriFood Signals: Yield Energy launches farm-based grid platform, new $500m farmland fund</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-22T21:20:12+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
     },
     {
       "title": "Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: ‘Chemical free winegrowing is the holy grail’",
@@ -166,14 +182,6 @@
       "link": "https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle",
       "summary": "<p>The next cycle belongs to leaders who can deliver through near-term volatility while still investing through long-cycle uncertainty.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle\">Guest article: Agriculture’s great repricing goes beyond the downcycle</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
       "published": "2026-01-16T19:00:36+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "AgriFood Signals: SAP & Syngenta partner, BASF buys biocontrol startup, Microsoft’s record deal with Indigo",
-      "link": "https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo",
-      "summary": "<p>Plus: Rockefeller Foundation launches Food Is Medicine fund.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo\">AgriFood Signals: SAP &#038; Syngenta partner, BASF buys biocontrol startup, Microsoft&#8217;s record deal with Indigo</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-15T21:22:16+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
@@ -205,17 +213,9 @@
       "title": "Need automated, accurate grain grading in minutes?",
       "link": "https://groundtruth.ag#benchtopmvnirs",
       "summary": "",
-      "published": "2026-01-22T18:00:32.487167",
+      "published": "2026-01-23T06:01:21.202604",
       "source": "Ground Truth Ag",
       "category": "vertical_grain"
-    },
-    {
-      "title": "Politics to weigh more heavily on ag markets: CBA",
-      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
-      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
-      "published": "2026-01-22T06:19:33+00:00",
-      "source": "Grain Central",
-      "category": "industry"
     },
     {
       "title": "Cargill submits plans for 1.1Mt WA crush plant",
@@ -234,14 +234,6 @@
       "category": "industry"
     },
     {
-      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
-      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
-      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
-      "published": "2026-01-22T02:42:35+00:00",
-      "source": "Grain Central",
-      "category": "industry"
-    },
-    {
       "title": "South Coast systems help WA handle record harvest",
       "link": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
       "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
@@ -250,18 +242,42 @@
       "category": "industry"
     },
     {
-      "title": "Daily Market Wire 22 January 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-22-january-2026/",
-      "summary": "Corn and beans strength supported wheat which slipped later in the session. WA softens, eastern wheat steadies.",
-      "published": "2026-01-21T23:46:34+00:00",
+      "title": "Feedgrain Focus: Prices rally on dry, slow grower selling",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-prices-rally-on-dry-slow-grower-selling/",
+      "summary": "Supplementary livestock feeding and a lack of grower selling has put some heat into eastern Australian feedgrain markets this week.",
+      "published": "2026-01-22T02:42:35+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
-      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
-      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
-      "published": "2026-01-21T00:43:34+00:00",
+      "title": "Politics to weigh more heavily on ag markets: CBA",
+      "link": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
+      "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
+      "published": "2026-01-22T06:19:33+00:00",
+      "source": "Grain Central",
+      "category": "industry"
+    },
+    {
+      "title": "Reefinator adds arable area to McCoy country",
+      "link": "https://www.graincentral.com/machinery/reefinator-adds-arable-area-to-mccoys-central-vic-country/",
+      "summary": "The McCoy family in Vic's Wehla district has used an H4 Reefinator to turn challenging grazing country into arable land to make their mixed farm more productive.",
+      "published": "2026-01-23T01:28:24+00:00",
+      "source": "Grain Central",
+      "category": "industry"
+    },
+    {
+      "title": "CSIRO delivers insights into costly fungal pathogen",
+      "link": "https://www.graincentral.com/research/csiro-delivers-insights-into-costly-fungal-pathogen/",
+      "summary": "CSIRO has unlocked the most detailed genetic blueprint yet of a major soil-borne crop pathogen,  an advance that paves the way for better crop-disease management in Australian agriculture.",
+      "published": "2026-01-23T01:46:02+00:00",
+      "source": "Grain Central",
+      "category": "industry"
+    },
+    {
+      "title": "Daily Market Wire 23 January 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-23-january-2026/",
+      "summary": "Short covering breathes life into wheat. Weather and technicals bounces soy complex.",
+      "published": "2026-01-23T00:14:39+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
@@ -274,20 +290,28 @@
       "category": "industry"
     },
     {
-      "title": "Uncontained WA fire reaches into farmland",
-      "link": "https://www.graincentral.com/news/uncontained-wa-fire-reaches-into-farmland/",
-      "summary": "Two fires west of Esperance have burnt more than 80,000ha of mostly bushland, although some farmland has been affected, and one farm dwelling has been lost.",
-      "published": "2026-01-20T06:40:09+00:00",
+      "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
+      "link": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
+      "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
+      "published": "2026-01-21T00:43:34+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Aus exports 912,990t barley, 29,910t sorghum in Nov",
-      "link": "https://www.graincentral.com/markets/aus-exports-912990t-barley-29910t-sorghum-in-nov/",
-      "summary": "Australia exported 912,990t of barley and 29,910t of sorghum in Nov, according to the latest ABS data.",
-      "published": "2026-01-21T05:03:17+00:00",
-      "source": "Grain Central",
-      "category": "industry"
+      "title": "Exclusive: UPSIDE Foods looks beyond cultivated meat to life sciences with cell culture media spin-off Lucius Labs",
+      "link": "https://agfundernews.com/exclusive-upside-foods-looks-beyond-cultivated-meat-to-life-sciences-with-cell-culture-media-spin-off-lucius-labs",
+      "summary": "<p>Cell culture media products from Lucius Labs will target human and animal health bioprocessing applications from tissue engineering and stem cell therapy to vaccine production.</p>\n<p>The post <a href=\"https://agfundernews.com/exclusive-upside-foods-looks-beyond-cultivated-meat-to-life-sciences-with-cell-culture-media-spin-off-lucius-labs\">Exclusive: UPSIDE Foods looks beyond cultivated meat to life sciences with cell culture media spin-off Lucius Labs</a> appeared first on <a href=\"https://a",
+      "published": "2026-01-23T00:02:06+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
+    },
+    {
+      "title": "AgriFood Signals: Yield Energy launches farm-based grid platform, new $500m farmland fund",
+      "link": "https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund",
+      "summary": "<p>Plus: Gates Foundation funds AI pilot for coffee farmers. </p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund\">AgriFood Signals: Yield Energy launches farm-based grid platform, new $500m farmland fund</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-01-22T21:20:12+00:00",
+      "source": "Ag Funder News",
+      "category": "technology"
     },
     {
       "title": "Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: ‘Chemical free winegrowing is the holy grail’",
@@ -366,14 +390,6 @@
       "link": "https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle",
       "summary": "<p>The next cycle belongs to leaders who can deliver through near-term volatility while still investing through long-cycle uncertainty.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle\">Guest article: Agriculture’s great repricing goes beyond the downcycle</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
       "published": "2026-01-16T19:00:36+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "AgriFood Signals: SAP & Syngenta partner, BASF buys biocontrol startup, Microsoft’s record deal with Indigo",
-      "link": "https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo",
-      "summary": "<p>Plus: Rockefeller Foundation launches Food Is Medicine fund.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-sap-syngenta-partner-basf-buys-biocontrol-startup-microsofts-record-deal-with-indigo\">AgriFood Signals: SAP &#038; Syngenta partner, BASF buys biocontrol startup, Microsoft&#8217;s record deal with Indigo</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-01-15T21:22:16+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },

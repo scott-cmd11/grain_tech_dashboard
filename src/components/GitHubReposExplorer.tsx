@@ -334,13 +334,13 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
             </div>
 
             {/* Sort Options */}
-            <div className="mb-6 flex flex-wrap gap-3">
+            <div className="mb-6 flex flex-col sm:flex-row gap-3">
               <div className="flex items-center gap-2">
-                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Sort by:</label>
+                <label className="text-xs font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Sort by:</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'stars' | 'forks' | 'recent')}
-                  className="px-3 py-1.5 text-xs rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="px-3 py-1.5 text-xs rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500 w-full sm:w-auto"
                 >
                   <option value="stars">Most Stars</option>
                   <option value="forks">Most Forks</option>
@@ -349,11 +349,11 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
               </div>
 
               <div className="flex items-center gap-2">
-                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Min Stars:</label>
+                <label className="text-xs font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Min Stars:</label>
                 <select
                   value={minStars}
                   onChange={(e) => setMinStars(Number(e.target.value))}
-                  className="px-3 py-1.5 text-xs rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="px-3 py-1.5 text-xs rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500 w-full sm:w-auto"
                 >
                   <option value={0}>Any</option>
                   <option value={10}>10+</option>
@@ -374,8 +374,8 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                     key={cat.name}
                     onClick={() => setSelectedCategory(selectedCategory === cat.name ? null : cat.name)}
                     className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedCategory === cat.name
-                        ? 'bg-teal-600 text-white border-teal-600'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-teal-600 dark:hover:border-teal-500'
+                      ? 'bg-teal-600 text-white border-teal-600'
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-teal-600 dark:hover:border-teal-500'
                       }`}
                   >
                     {cat.name} ({cat.count})
@@ -394,8 +394,8 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                       key={lang}
                       onClick={() => toggleLanguage(lang)}
                       className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedLanguages.has(lang)
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-700'
-                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-blue-400'
+                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-blue-300 dark:border-blue-700'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-blue-400'
                         }`}
                     >
                       {lang}
@@ -415,8 +415,8 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
                       key={license}
                       onClick={() => toggleLicense(license)}
                       className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors border ${selectedLicenses.has(license)
-                          ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-300 dark:border-green-700'
-                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-green-400'
+                        ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-300 dark:border-green-700'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600 hover:border-green-400'
                         }`}
                     >
                       {license}

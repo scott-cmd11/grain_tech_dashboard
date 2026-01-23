@@ -86,7 +86,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen app-shell transition-colors duration-300 flex flex-col">
+    <div className="min-h-screen app-shell transition-colors duration-300 flex flex-col overflow-x-hidden">
       <Header
         onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}
       />

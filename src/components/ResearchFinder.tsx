@@ -67,7 +67,7 @@ export const ResearchFinder = function ResearchFinder() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="grid sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <button
                         onClick={() => handleSearch('google')}
                         className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"

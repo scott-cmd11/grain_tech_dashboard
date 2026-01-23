@@ -112,14 +112,14 @@ export function GlossaryTab({ searchTerm = "" }: { searchTerm?: string }) {
           <Hash className="w-3 h-3" />
           <span>Quick Index</span>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex overflow-x-auto pb-2 gap-2 no-scrollbar">
           {Object.keys(groupedTerms).sort().map((letter) => (
             <button
               key={letter}
               onClick={() => {
                 document.getElementById(`section-${letter}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
-              className="w-8 h-8 flex items-center justify-center text-sm font-semibold rounded-lg
+              className="w-8 h-8 flex-shrink-0 flex items-center justify-center text-sm font-semibold rounded-lg
                           bg-gray-50 text-gray-600 hover:bg-emerald-50 hover:text-emerald-600
                           dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-emerald-900/30 dark:hover:text-emerald-400
                           transition-all cursor-pointer"

@@ -102,7 +102,7 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
 
             {/* Table View */}
             {landscapeView === 'table' && (
-                <div className="space-y-6">
+                <div className="space-y-6 overflow-x-auto pb-2">
                     <GrainComparisonMatrix
                         externalSearchTerm={searchTerm}
                     />

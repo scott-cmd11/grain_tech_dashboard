@@ -114,9 +114,9 @@ export function TrendsPage() {
                 e.preventDefault();
                 document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors border border-emerald-200 dark:border-emerald-800/50"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors border border-emerald-200 dark:border-emerald-800/50 whitespace-nowrap"
             >
-              <Icon className="w-3 h-3" />
+              <Icon className="w-3 h-3 flex-shrink-0" />
               {label}
             </a>
           ))}
@@ -134,7 +134,7 @@ export function TrendsPage() {
         </p>
 
         {/* Adoption Chart */}
-        <div className="overflow-x-auto mb-6">
+        <div className="overflow-x-auto pb-4 mb-2">
           <div className="flex gap-4 pb-4" style={{ minWidth: '600px' }}>
             {adoptionTrends.map((trend) => (
               <div key={trend.year} className="flex-1 text-center">
@@ -310,7 +310,7 @@ export function TrendsPage() {
           Estimated grain technology market size (in millions USD) with 15%+ compound annual growth
         </p>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto pb-4">
           <div className="flex gap-3 pb-4" style={{ minWidth: '600px' }}>
             {marketProjections.map((proj) => (
               <div key={proj.year} className="flex-1 text-center">
