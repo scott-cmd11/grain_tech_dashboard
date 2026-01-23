@@ -1,15 +1,6 @@
 [
   {
     "id": "1",
-    "title": "Politics to weigh more heavily on ag markets: CBA",
-    "source": "Grain Central",
-    "date": "2026-01-22",
-    "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
-    "url": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "2",
     "title": "Cargill submits plans for 1.1Mt WA crush plant",
     "source": "Grain Central",
     "date": "2026-01-22",
@@ -18,12 +9,21 @@
     "category": "grain_industry"
   },
   {
-    "id": "3",
+    "id": "2",
     "title": "People on the Move in the grain industry",
     "source": "Grain Central",
     "date": "2026-01-22",
     "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
     "url": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-32/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "3",
+    "title": "South Coast systems help WA handle record harvest",
+    "source": "Grain Central",
+    "date": "2026-01-22",
+    "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
+    "url": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
     "category": "grain_industry"
   },
   {
@@ -37,33 +37,42 @@
   },
   {
     "id": "5",
-    "title": "South Coast systems help WA handle record harvest",
+    "title": "Politics to weigh more heavily on ag markets: CBA",
     "source": "Grain Central",
     "date": "2026-01-22",
-    "summary": "Two vast WA cropping operations have cleared the high-moisture hurdle by developing their own grain-handling systems that supercharge their ability to outturn to CBH.",
-    "url": "https://www.graincentral.com/news/south-coast-systems-help-wa-handle-record-harvest/",
+    "summary": "Geopolitics, trade policy and government intervention are set to play a defining role in agricultural markets in the year ahead, according to CBA's 2026 Agri Commodities Outlook.",
+    "url": "https://www.graincentral.com/markets/politics-to-weigh-more-heavily-on-ag-markets-cba/",
     "category": "grain_industry"
   },
   {
     "id": "6",
-    "title": "Daily Market Wire 22 January 2026",
+    "title": "Reefinator adds arable area to McCoy country",
     "source": "Grain Central",
-    "date": "2026-01-21",
-    "summary": "Corn and beans strength supported wheat which slipped later in the session. WA softens, eastern wheat steadies.",
-    "url": "https://www.graincentral.com/markets/daily-market-wire-22-january-2026/",
+    "date": "2026-01-23",
+    "summary": "The McCoy family in Vic's Wehla district has used an H4 Reefinator to turn challenging grazing country into arable land to make their mixed farm more productive.",
+    "url": "https://www.graincentral.com/machinery/reefinator-adds-arable-area-to-mccoys-central-vic-country/",
     "category": "grain_industry"
   },
   {
     "id": "7",
-    "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
+    "title": "CSIRO delivers insights into costly fungal pathogen",
     "source": "Grain Central",
-    "date": "2026-01-21",
-    "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
-    "url": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
+    "date": "2026-01-23",
+    "summary": "CSIRO has unlocked the most detailed genetic blueprint yet of a major soil-borne crop pathogen,  an advance that paves the way for better crop-disease management in Australian agriculture.",
+    "url": "https://www.graincentral.com/research/csiro-delivers-insights-into-costly-fungal-pathogen/",
     "category": "grain_industry"
   },
   {
     "id": "8",
+    "title": "Daily Market Wire 23 January 2026",
+    "source": "Grain Central",
+    "date": "2026-01-23",
+    "summary": "Short covering breathes life into wheat. Weather and technicals bounces soy complex.",
+    "url": "https://www.graincentral.com/markets/daily-market-wire-23-january-2026/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "9",
     "title": "WA panel approves Perth oat mill despite initial objections",
     "source": "Grain Central",
     "date": "2026-01-21",
@@ -72,25 +81,34 @@
     "category": "grain_industry"
   },
   {
-    "id": "9",
-    "title": "Uncontained WA fire reaches into farmland",
-    "source": "Grain Central",
-    "date": "2026-01-20",
-    "summary": "Two fires west of Esperance have burnt more than 80,000ha of mostly bushland, although some farmland has been affected, and one farm dwelling has been lost.",
-    "url": "https://www.graincentral.com/news/uncontained-wa-fire-reaches-into-farmland/",
-    "category": "grain_industry"
-  },
-  {
     "id": "10",
-    "title": "Aus exports 912,990t barley, 29,910t sorghum in Nov",
+    "title": "Cropping gains 933,000ha at pastures’ expense: DAS",
     "source": "Grain Central",
     "date": "2026-01-21",
-    "summary": "Australia exported 912,990t of barley and 29,910t of sorghum in Nov, according to the latest ABS data.",
-    "url": "https://www.graincentral.com/markets/aus-exports-912990t-barley-29910t-sorghum-in-nov/",
+    "summary": "Mixed-farming, high-rainfall, and irrigation areas have accounted for much of the 900,000ha shift from pastures to cropping seen by DAS in the past two years.",
+    "url": "https://www.graincentral.com/news/cropping-gains-900000ha-at-pastures-expense-das/",
     "category": "grain_industry"
   },
   {
     "id": "11",
+    "title": "Exclusive: UPSIDE Foods looks beyond cultivated meat to life sciences with cell culture media spin-off Lucius Labs",
+    "source": "Ag Funder News",
+    "date": "2026-01-23",
+    "summary": "<p>Cell culture media products from Lucius Labs will target human and animal health bioprocessing applications from tissue engineering and stem cell therapy to vaccine production.</p>\n<p>The post <a h",
+    "url": "https://agfundernews.com/exclusive-upside-foods-looks-beyond-cultivated-meat-to-life-sciences-with-cell-culture-media-spin-off-lucius-labs",
+    "category": "technology"
+  },
+  {
+    "id": "12",
+    "title": "AgriFood Signals: Yield Energy launches farm-based grid platform, new $500m farmland fund",
+    "source": "Ag Funder News",
+    "date": "2026-01-22",
+    "summary": "<p>Plus: Gates Foundation funds AI pilot for coffee farmers. </p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund\">",
+    "url": "https://agfundernews.com/agrifood-signals-yield-energy-launches-farm-based-grid-platform-new-500m-farmland-fund",
+    "category": "technology"
+  },
+  {
+    "id": "13",
     "title": "Saga Robotics bets big on US vineyards with new GM, fresh capital for UV-C ‘bots: ‘Chemical free winegrowing is the holy grail’",
     "source": "Ag Funder News",
     "date": "2026-01-22",
@@ -99,7 +117,7 @@
     "category": "technology"
   },
   {
-    "id": "12",
+    "id": "14",
     "title": "Brazilian ag giant SLC Agricola scales use of unmanned crop sprayers with Pyka",
     "source": "Ag Funder News",
     "date": "2026-01-22",
@@ -108,7 +126,7 @@
     "category": "technology"
   },
   {
-    "id": "13",
+    "id": "15",
     "title": "Why more food and beverage giants are flocking to Missouri",
     "source": "Ag Funder News",
     "date": "2026-01-21",
@@ -117,7 +135,7 @@
     "category": "technology"
   },
   {
-    "id": "14",
+    "id": "16",
     "title": "‘If planetary boundaries are the guardrails, soil is the road itself’: in conversation with Holganix",
     "source": "Ag Funder News",
     "date": "2026-01-21",
@@ -126,7 +144,7 @@
     "category": "technology"
   },
   {
-    "id": "15",
+    "id": "17",
     "title": "Beyond stevia: 2nd Nature mines ag side streams for next-gen sweeteners with AI",
     "source": "Ag Funder News",
     "date": "2026-01-21",
@@ -135,7 +153,7 @@
     "category": "technology"
   },
   {
-    "id": "16",
+    "id": "18",
     "title": "Planetary health 101: what it is, why it matters for the future of the global economy",
     "source": "Ag Funder News",
     "date": "2026-01-20",
@@ -144,7 +162,7 @@
     "category": "technology"
   },
   {
-    "id": "17",
+    "id": "19",
     "title": "Made in America: FCC decision sparks scramble to localize ag spray drone production",
     "source": "Ag Funder News",
     "date": "2026-01-20",
@@ -153,30 +171,12 @@
     "category": "technology"
   },
   {
-    "id": "18",
+    "id": "20",
     "title": "The most impactful AI in farming ‘will not feel revolutionary,’ says Phospholutions boss. It will feel ‘dependable’",
     "source": "Ag Funder News",
     "date": "2026-01-19",
     "summary": "<p>Phospholutions CEO and founder Hunter Swisher talks to AFN ahead of his soil health session this week at Davos.</p>\n<p>The post <a href=\"https://agfundernews.com/the-most-impactful-ai-in-farming-wi",
     "url": "https://agfundernews.com/the-most-impactful-ai-in-farming-will-not-feel-revolutionary-says-phospholutions-boss-it-will-feel-dependable",
-    "category": "technology"
-  },
-  {
-    "id": "19",
-    "title": "Can structural color replace titanium dioxide in food? Mirra bets on the butterfly effect",
-    "source": "Ag Funder News",
-    "date": "2026-01-19",
-    "summary": "<p>The whitening agent has been banned in food products sold in the EU since August 2022, and many US firms are under pressure to remove it.</p>\n<p>The post <a href=\"https://agfundernews.com/can-struc",
-    "url": "https://agfundernews.com/can-structural-color-replace-titanium-dioxide-in-food-mirra-bets-on-the-butterfly-effect",
-    "category": "technology"
-  },
-  {
-    "id": "20",
-    "title": "Guest article: Agriculture’s great repricing goes beyond the downcycle",
-    "source": "Ag Funder News",
-    "date": "2026-01-16",
-    "summary": "<p>The next cycle belongs to leaders who can deliver through near-term volatility while still investing through long-cycle uncertainty.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-",
-    "url": "https://agfundernews.com/guest-article-agricultures-great-repricing-beyond-the-downcycle",
     "category": "technology"
   }
 ]
