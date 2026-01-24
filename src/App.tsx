@@ -9,6 +9,7 @@ import { ToastProvider } from './context/ToastContext';
 
 // Hooks
 import { useUrlState } from './hooks/useUrlState';
+import { usePreferences } from './hooks/usePreferences';
 
 // Components
 import { ToastContainer } from './components/Toast';
@@ -32,13 +33,19 @@ import {
   ResearchPapersTab,
 } from './components/tabs';
 import { ChatWidget } from './components/Chat/ChatWidget';
+import { CommandPalette } from './components/CommandPalette';
+import { ShortcutsModal } from './components/ShortcutsModal';
 
 // Main Dashboard Component
 function Dashboard() {
   const { getStateFromUrl, setUrlState } = useUrlState();
+  const { setLastVisitedTab } = usePreferences();
 
   // Initialize state from URL
   const urlState = getStateFromUrl();
+
+  // State for shortcuts modal
+  const [shortcutsOpen, setShortcutsOpen] = useState(false);
 
   // Global State
   const [activeTab, setActiveTab] = useState<TabId>(() => {
@@ -51,6 +58,27 @@ function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
   const [companiesOpen, setCompaniesOpen] = useState(() => urlState.companiesOpen !== false);
   const [expandedDataset, setExpandedDataset] = useState<number | null>(null);
+
+  // Track tab changes in preferences
+  useEffect(() => {
+    setLastVisitedTab(activeTab);
+  }, [activeTab, setLastVisitedTab]);
+
+  // Keyboard shortcut: ? to show shortcuts modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore if typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+      if (e.key === '?') {
+        e.preventDefault();
+        setShortcutsOpen(prev => !prev);
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // Update URL when state changes
   useEffect(() => {
@@ -150,6 +178,8 @@ function Dashboard() {
       </div>
 
       <ChatWidget />
+      <CommandPalette onTabChange={setActiveTab} currentTab={activeTab} />
+      <ShortcutsModal isOpen={shortcutsOpen} onClose={() => setShortcutsOpen(false)} />
       <ToastContainer />
     </div>
   );

@@ -341,6 +341,10 @@
   animation: gradient-shift 3s ease infinite;
 }
 
+.animate-scale-up {
+  animation: scale-in 0.2s ease-out forwards;
+}
+
 /* Staggered animations */
 .stagger-1 {
   animation-delay: 50ms;

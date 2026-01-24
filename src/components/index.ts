@@ -21,3 +21,4 @@ export { TechnologyRadar } from './TechnologyRadar';
 export { NewsFeed } from './NewsFeed';
 export { ShareButton } from './ShareButton';
 export { GitHubReposExplorer } from './GitHubReposExplorer';
+export { CommandPalette } from './CommandPalette';

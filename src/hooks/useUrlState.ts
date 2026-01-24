@@ -12,6 +12,11 @@ interface UrlState {
   page?: number;
   company?: number;
   collection?: string;
+  // Scenario Explorer parameters
+  region?: string;
+  onFarm?: number;
+  elevator?: number;
+  regulatory?: number;
 }
 
 export function useUrlState() {
@@ -52,6 +57,19 @@ export function useUrlState() {
     const collection = params.get('collection');
     if (collection) state.collection = collection;
 
+    // Scenario parameters
+    const region = params.get('region');
+    if (region) state.region = region;
+
+    const onFarm = params.get('onFarm');
+    if (onFarm) state.onFarm = parseInt(onFarm, 10);
+
+    const elevator = params.get('elevator');
+    if (elevator) state.elevator = parseInt(elevator, 10);
+
+    const regulatory = params.get('regulatory');
+    if (regulatory) state.regulatory = parseInt(regulatory, 10);
+
     return state;
   }, []);
 
@@ -69,6 +87,11 @@ export function useUrlState() {
     if (state.page && state.page > 1) params.set('page', state.page.toString());
     if (state.company) params.set('company', state.company.toString());
     if (state.collection) params.set('collection', state.collection);
+    // Scenario parameters
+    if (state.region && state.region !== 'Global') params.set('region', state.region);
+    if (state.onFarm !== undefined && state.onFarm > 0) params.set('onFarm', state.onFarm.toString());
+    if (state.elevator !== undefined && state.elevator > 0) params.set('elevator', state.elevator.toString());
+    if (state.regulatory !== undefined && state.regulatory > 0) params.set('regulatory', state.regulatory.toString());
 
     const queryString = params.toString();
     const newUrl = queryString
@@ -90,6 +113,11 @@ export function useUrlState() {
     if (state.country && state.country !== 'All') params.set('country', state.country);
     if (state.sort && state.sort !== 'name') params.set('sort', state.sort);
     if (state.company) params.set('company', state.company.toString());
+    // Scenario parameters
+    if (state.region && state.region !== 'Global') params.set('region', state.region);
+    if (state.onFarm !== undefined && state.onFarm > 0) params.set('onFarm', state.onFarm.toString());
+    if (state.elevator !== undefined && state.elevator > 0) params.set('elevator', state.elevator.toString());
+    if (state.regulatory !== undefined && state.regulatory > 0) params.set('regulatory', state.regulatory.toString());
 
     const queryString = params.toString();
     return queryString

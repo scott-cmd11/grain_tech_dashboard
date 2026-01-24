@@ -1,5 +1,5 @@
-import { useMemo, useState, useEffect } from "react";
-import { SlidersHorizontal, TrendingUp, RotateCcw, TrendingDown, Check, AlertCircle, ArrowRight } from "lucide-react";
+import { useMemo, useState, useEffect, useCallback } from "react";
+import { SlidersHorizontal, TrendingUp, RotateCcw, TrendingDown, Check, AlertCircle, ArrowRight, Share2 } from "lucide-react";
 import type { Region } from "../data/grainTechEntities";
 import { calculateScenario } from "../utils/scenarioModel";
 
@@ -13,6 +13,14 @@ const regions: Region[] = [
   "Middle East",
   "Global",
 ];
+
+interface ScenarioExplorerProps {
+  initialRegion?: string;
+  initialOnFarm?: number;
+  initialElevator?: number;
+  initialRegulatory?: number;
+  onStateChange?: (state: { region: string; onFarm: number; elevator: number; regulatory: number }) => void;
+}
 
 function formatCurrency(value: number): string {
   if (value >= 1_000_000_000) {
@@ -95,16 +103,70 @@ function getConfidenceLevel(score: number): { level: string; badge: string; icon
   };
 }
 
-export const ScenarioExplorer = function ScenarioExplorer() {
-  const [region, setRegion] = useState<Region>("Global");
-  const [onFarmAdoption, setOnFarmAdoption] = useState(0);
-  const [elevatorAdoption, setElevatorAdoption] = useState(0);
-  const [regulatoryAdoption, setRegulatoryAdoption] = useState(0);
+export const ScenarioExplorer = function ScenarioExplorer({
+  initialRegion,
+  initialOnFarm,
+  initialElevator,
+  initialRegulatory,
+  onStateChange,
+}: ScenarioExplorerProps) {
+  const [region, setRegion] = useState<Region>(() =>
+    (initialRegion && regions.includes(initialRegion as Region)) ? initialRegion as Region : "Global"
+  );
+  const [onFarmAdoption, setOnFarmAdoption] = useState(() => initialOnFarm ?? 0);
+  const [elevatorAdoption, setElevatorAdoption] = useState(() => initialElevator ?? 0);
+  const [regulatoryAdoption, setRegulatoryAdoption] = useState(() => initialRegulatory ?? 0);
+  const [copied, setCopied] = useState(false);
 
   // Track baseline for comparison (starting at 0)
   const [baselineOnFarm] = useState(0);
   const [baselineElevator] = useState(0);
   const [baselineRegulatory] = useState(0);
+
+  // Sync state changes to parent for URL persistence (debounced)
+  useEffect(() => {
+    if (onStateChange) {
+      const timeoutId = setTimeout(() => {
+        onStateChange({
+          region,
+          onFarm: onFarmAdoption,
+          elevator: elevatorAdoption,
+          regulatory: regulatoryAdoption,
+        });
+      }, 300); // Debounce to avoid excessive URL updates
+      return () => clearTimeout(timeoutId);
+    }
+  }, [region, onFarmAdoption, elevatorAdoption, regulatoryAdoption, onStateChange]);
+
+  // Share scenario URL
+  const handleShareScenario = useCallback(async () => {
+    const params = new URLSearchParams(window.location.search);
+    params.set('tab', 'scenarios');
+    if (region !== 'Global') params.set('region', region);
+    if (onFarmAdoption > 0) params.set('onFarm', onFarmAdoption.toString());
+    if (elevatorAdoption > 0) params.set('elevator', elevatorAdoption.toString());
+    if (regulatoryAdoption > 0) params.set('regulatory', regulatoryAdoption.toString());
+
+    const shareUrl = `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback
+      const textArea = document.createElement('textarea');
+      textArea.value = shareUrl;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  }, [region, onFarmAdoption, elevatorAdoption, regulatoryAdoption]);
 
   const outputs = useMemo(
     () =>
@@ -190,11 +252,35 @@ export const ScenarioExplorer = function ScenarioExplorer() {
   return (
     <div className="space-y-6">
       <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
-        <div className="flex items-center gap-3 mb-2">
-          <SlidersHorizontal className="w-6 h-6 text-teal-600 dark:text-teal-400" />
-          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
-            Scenario Explorer
-          </h3>
+        <div className="flex items-center justify-between gap-3 mb-2">
+          <div className="flex items-center gap-3">
+            <SlidersHorizontal className="w-6 h-6 text-teal-600 dark:text-teal-400" />
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+              Scenario Explorer
+            </h3>
+          </div>
+          <button
+            onClick={handleShareScenario}
+            className={`flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-200
+              ${copied
+                ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-700'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 border-gray-200 dark:border-gray-600'
+              } border`}
+            title="Copy shareable link to this scenario"
+          >
+            {copied ? (
+              <>
+                <Check className="w-3.5 h-3.5" />
+                <span>Copied!</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Share Scenario</span>
+                <span className="sm:hidden">Share</span>
+              </>
+            )}
+          </button>
         </div>
 
         {/* Detailed Explanation Section */}
