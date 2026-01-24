@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { kv } from '@vercel/kv';
 
 export const config = {
     runtime: 'edge', // Use Edge runtime for better performance
@@ -7,30 +8,31 @@ export const config = {
 const API_KEY = process.env.GEMINI_API_KEY;
 
 // =============================================================================
-// SECURITY: Rate Limiting
+// SECURITY: Rate Limiting (Vercel KV - Persistent Redis)
 // =============================================================================
-// NOTICE: This in-memory map is reset on every Vercel cold boot. 
-// For production scale, migrate to Vercel KV (Redis) to share state across lambdas.
-// See: https://vercel.com/docs/storage/vercel-kv
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+// Uses Vercel KV for persistent, globally-shared rate limiting across all
+// Edge instances and cold boots. Requires KV_REST_API_URL and KV_REST_API_TOKEN
+// environment variables to be set in Vercel dashboard.
 const RATE_LIMIT = 20; // requests per window
-const RATE_WINDOW = 60 * 1000; // 1 minute in milliseconds
+const RATE_WINDOW_SECONDS = 60; // 1 minute
 
-function isRateLimited(ip: string): boolean {
-    const now = Date.now();
-    const record = rateLimitMap.get(ip);
+async function isRateLimited(ip: string): Promise<boolean> {
+    try {
+        const key = `ratelimit:chat:${ip}`;
+        const count = await kv.incr(key);
 
-    if (!record || now > record.resetTime) {
-        rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW });
+        // Set expiry on first request in window
+        if (count === 1) {
+            await kv.expire(key, RATE_WINDOW_SECONDS);
+        }
+
+        return count > RATE_LIMIT;
+    } catch (error) {
+        // If KV is unavailable, log and allow request (fail-open for availability)
+        // In production, you may want to fail-closed instead
+        console.error('Rate limit KV error:', error);
         return false;
     }
-
-    if (record.count >= RATE_LIMIT) {
-        return true;
-    }
-
-    record.count++;
-    return false;
 }
 
 // =============================================================================
@@ -76,7 +78,7 @@ export default async function handler(req: Request) {
 
     // Rate limiting
     const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
-    if (isRateLimited(ip)) {
+    if (await isRateLimited(ip)) {
         return new Response(JSON.stringify({ error: 'Too many requests. Please wait a moment.' }), {
             status: 429,
             headers: { ...CORS_HEADERS, 'Content-Type': 'application/json', 'Retry-After': '60' },

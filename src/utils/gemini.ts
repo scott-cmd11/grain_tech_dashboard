@@ -1,4 +1,4 @@
-import { getDashboardContext } from "./aiContext";
+// Client-side Gemini utility - routes all requests through secure server proxy
 
 export interface ChatMessage {
     role: "user" | "model";
@@ -10,11 +10,9 @@ export const sendMessageToGemini = async (
     newMessage: string
 ): Promise<string> => {
     try {
-        const context = getDashboardContext();
-
         // Always use the secure server proxy (no client-side API key exposure)
+        // Note: Server uses hardcoded system context to prevent prompt injection
         const response = await fetch('/api/chat', {
-
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,7 +20,6 @@ export const sendMessageToGemini = async (
             body: JSON.stringify({
                 history,
                 message: newMessage,
-                context
             }),
         });
 
