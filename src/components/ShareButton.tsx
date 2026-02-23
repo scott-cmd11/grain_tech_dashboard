@@ -6,7 +6,7 @@ interface ShareButtonProps {
   title?: string;
 }
 
-export const ShareButton = memo(function ShareButton({ url, title = 'GrainTech Dashboard' }: ShareButtonProps) {
+export const ShareButton = memo(function ShareButton({ url, title = 'GrainTech Dashboard', isDark = false }: ShareButtonProps & { isDark?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -64,13 +64,8 @@ export const ShareButton = memo(function ShareButton({ url, title = 'GrainTech D
     <div className="relative">
       <button
         onClick={() => 'share' in navigator ? handleNativeShare() : setIsOpen(!isOpen)}
-        className="flex items-center gap-2 p-3 sm:px-4 sm:py-3 text-sm font-medium rounded-xl text-white hover:scale-105 transition-all duration-300"
-        style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 4px 15px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.1)',
-          border: '1px solid rgba(255,255,255,0.15)',
-        }}
+        className={`flex items-center gap-2 p-3 sm:px-4 sm:py-3 text-sm font-medium rounded-xl hover:scale-105 glass-element ${isDark ? 'glass-element-dark' : 'glass-element-light'
+          }`}
         title="Share"
       >
         <Share2 className="w-5 h-5" />
