@@ -5,6 +5,8 @@ interface DashboardPreferences {
     defaultTab: TabId;
     sidebarOpen: boolean;
     lastVisitedTab: TabId;
+    lastVisitTimestamp: string;
+    previousVisitTimestamp: string;
 }
 
 const STORAGE_KEY = 'graintech-preferences';
@@ -13,6 +15,8 @@ const defaultPreferences: DashboardPreferences = {
     defaultTab: 'about',
     sidebarOpen: true,
     lastVisitedTab: 'about',
+    lastVisitTimestamp: new Date().toISOString(),
+    previousVisitTimestamp: '',
 };
 
 /**
@@ -28,7 +32,14 @@ export function usePreferences() {
             const stored = localStorage.getItem(STORAGE_KEY);
             if (stored) {
                 const parsed = JSON.parse(stored) as Partial<DashboardPreferences>;
-                setPreferences({ ...defaultPreferences, ...parsed });
+                // Roll the visit timestamps: previous = last, last = now
+                const loaded = {
+                    ...defaultPreferences,
+                    ...parsed,
+                    previousVisitTimestamp: parsed.lastVisitTimestamp || '',
+                    lastVisitTimestamp: new Date().toISOString(),
+                };
+                setPreferences(loaded);
             }
         } catch {
             // Invalid stored data, use defaults
@@ -79,6 +90,18 @@ export function usePreferences() {
         }
     }, []);
 
+    // Check if a date is 'new' since last visit
+    const isNewSinceLastVisit = useCallback((dateString: string): boolean => {
+        if (!preferences.previousVisitTimestamp) return false;
+        try {
+            const itemDate = new Date(dateString).getTime();
+            const lastVisit = new Date(preferences.previousVisitTimestamp).getTime();
+            return itemDate > lastVisit;
+        } catch {
+            return false;
+        }
+    }, [preferences.previousVisitTimestamp]);
+
     return {
         preferences,
         isLoaded,
@@ -87,6 +110,7 @@ export function usePreferences() {
         setDefaultTab,
         getInitialTab,
         resetPreferences,
+        isNewSinceLastVisit,
     };
 }
 

@@ -36,6 +36,25 @@ import { ChatWidget } from './components/Chat/ChatWidget';
 import { CommandPalette } from './components/CommandPalette';
 import { ShortcutsModal } from './components/ShortcutsModal';
 
+// Tab label lookup for ARIA announcements
+const TAB_LABELS: Record<TabId, string> = {
+  'about': 'About',
+  'glossary': 'Glossary',
+  'ai-landscape': 'AI Landscape',
+  'timeline': 'Timeline',
+  'scenarios': 'Scenarios',
+  'insights': 'Analytics',
+  'datasets': 'Datasets',
+  'research': 'AI Progress',
+  'deep-research': 'Deep Research',
+  'regulations': 'Regulations',
+  'history': 'History',
+  'trends': 'Trends',
+  'news': 'News',
+  'github-repos': 'GitHub Repos',
+  'research-papers': 'Research Papers',
+};
+
 // Main Dashboard Component
 function Dashboard() {
   const { getStateFromUrl, setUrlState } = useUrlState();
@@ -46,6 +65,9 @@ function Dashboard() {
 
   // State for shortcuts modal
   const [shortcutsOpen, setShortcutsOpen] = useState(false);
+
+  // ARIA live region text for tab announcements
+  const [liveAnnouncement, setLiveAnnouncement] = useState('');
 
   // Global State
   const [activeTab, setActiveTab] = useState<TabId>(() => {
@@ -58,6 +80,12 @@ function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 1024 : true);
   const [companiesOpen, setCompaniesOpen] = useState(() => urlState.companiesOpen !== false);
   const [expandedDataset, setExpandedDataset] = useState<number | null>(null);
+
+  // Announce tab changes to screen readers
+  const handleTabChange = useCallback((tab: TabId) => {
+    setActiveTab(tab);
+    setLiveAnnouncement(`Navigated to ${TAB_LABELS[tab]} section`);
+  }, []);
 
   // Track tab changes in preferences
   useEffect(() => {
@@ -115,6 +143,14 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen app-shell transition-colors duration-300 flex flex-col overflow-x-hidden">
+      {/* Skip Navigation */}
+      <a href="#main-content" className="skip-nav">Skip to content</a>
+
+      {/* ARIA Live Region for screen reader announcements */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {liveAnnouncement}
+      </div>
+
       <Header
         onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}
       />
@@ -122,15 +158,15 @@ function Dashboard() {
       <div className="flex flex-1 overflow-hidden">
         <Sidebar
           activeTab={activeTab}
-          onTabChange={setActiveTab}
+          onTabChange={handleTabChange}
           sidebarOpen={sidebarOpen}
           onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}
         />
 
         {/* Main Content Area */}
-        <main className="flex-1 overflow-y-auto px-4 sm:px-8 py-8 pb-24">
+        <main id="main-content" className="flex-1 overflow-y-auto px-4 sm:px-8 py-8 pb-24 lg:pb-8" role="main">
           <div className="max-w-6xl mx-auto animate-fade-up">
-            {activeTab === 'about' && <AboutTab onNavigate={setActiveTab} />}
+            {activeTab === 'about' && <AboutTab onNavigate={handleTabChange} />}
             {activeTab === 'glossary' && <GlossaryTab searchTerm={searchTerm} />}
             {activeTab === 'trends' && <TrendsPage />}
 
@@ -178,7 +214,7 @@ function Dashboard() {
       </div>
 
       <ChatWidget />
-      <CommandPalette onTabChange={setActiveTab} currentTab={activeTab} />
+      <CommandPalette onTabChange={handleTabChange} currentTab={activeTab} />
       <ShortcutsModal isOpen={shortcutsOpen} onClose={() => setShortcutsOpen(false)} />
       <ToastContainer />
     </div>

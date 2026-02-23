@@ -1,5 +1,7 @@
-import { useMemo, useState, useEffect } from "react";
-import { APIProvider, Map as GoogleMap, Marker, InfoWindow } from "@vis.gl/react-google-maps";
+import { useMemo, useState, useEffect, useRef } from "react";
+import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
+import type { Map as LeafletMap } from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { Globe, ExternalLink, ChevronDown, ChevronUp, Building2, Search, X, Download, Share2, Filter as FilterIcon } from "lucide-react";
 import type {
   GrainSolution,
@@ -62,11 +64,7 @@ function getDeploymentScore(solution: GrainSolution): number {
   return maturityScores[solution.maturityLevel] ?? 2;
 }
 
-const CIRCLE_PATH = "M 0, 0 m -1, 0 a 1,1 0 1,0 2,0 a 1,1 0 1,0 -2,0";
-
 import { getDenormalizedSolutions } from "../utils/dataNormalization";
-
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
 
 export const GrainLandscapeMap = function GrainLandscapeMap({
   grainSolutions: propSolutions,
@@ -111,8 +109,8 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
   const [localCompaniesOpen, setLocalCompaniesOpen] = useState(defaultCompaniesOpen);
   const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
 
-  // Google Maps State
-  const [selectedSolutionId, setSelectedSolutionId] = useState<string | null>(null);
+  // Map ref
+  const mapRef = useRef<LeafletMap | null>(null);
 
   // 3. Helper Functions
   const toggleFilterSection = (section: keyof typeof expandedFilterSections) => {
@@ -364,109 +362,91 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
 
   const totalPagesWithLocations = Math.ceil(visibleWithLocations.length / ITEMS_PER_PAGE);
 
-  // Identify selected solution for InfoWindow
-  const selectedSolution = useMemo(() =>
-    visibleWithLocations.find(s => s.id === selectedSolutionId),
-    [visibleWithLocations, selectedSolutionId]);
-
   return (
     <div className="space-y-6">
       {/* MAP HERO SECTION */}
-      <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-[360px] sm:h-[420px] bg-gray-100 flex items-center justify-center relative z-0">
-        {!GOOGLE_MAPS_API_KEY && (
-          <div className="absolute inset-x-0 top-0 z-50 bg-amber-500/90 text-white text-xs py-1 px-4 text-center font-bold">
-            Google Maps API Key missing. Map may not load correctly.
-          </div>
-        )}
-        <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
-          <GoogleMap
-            defaultCenter={{ lat: 15, lng: 0 }}
-            defaultZoom={2}
-            gestureHandling={'greedy'}
-            disableDefaultUI={false}
-            style={{ width: '100%', height: '100%' }}
-          // Reuse Map ID if available, otherwise it works in legacy/raster mode without Advanced Markers
-          // mapId="GRAIN_LANDSCAPE_MAP" 
-          >
-            {visibleWithLocations.map((solution) => {
-              if (typeof solution.primaryLat !== 'number' || typeof solution.primaryLng !== 'number') return null;
+      <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 h-[360px] sm:h-[420px] bg-gray-100 relative z-0">
+        <MapContainer
+          center={[15, 0]}
+          zoom={2}
+          scrollWheelZoom={true}
+          style={{ width: '100%', height: '100%' }}
+          ref={mapRef}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {visibleWithLocations.map((solution) => {
+            if (typeof solution.primaryLat !== 'number' || typeof solution.primaryLng !== 'number') return null;
 
-              const mainTech = solution.sensingTech?.[0] ?? "RGB";
-              const color = sensingColors[mainTech] || "#22c55e";
-              // Symbol scale (radius)
-              const scale = 5 + (getDeploymentScore(solution) * 1.5); // ranges ~6.5 to ~11
+            const mainTech = solution.sensingTech?.[0] ?? "RGB";
+            const color = sensingColors[mainTech] || "#22c55e";
+            const radius = 5 + (getDeploymentScore(solution) * 1.5);
 
-              return (
-                <Marker
-                  key={solution.id}
-                  position={{ lat: solution.primaryLat, lng: solution.primaryLng }}
-                  onClick={() => setSelectedSolutionId(solution.id)}
-                  icon={{
-                    path: CIRCLE_PATH,
-                    fillColor: color,
-                    fillOpacity: 0.9,
-                    strokeColor: '#ffffff',
-                    strokeWeight: 1.5,
-                    scale: scale,
-                  }}
-                />
-              );
-            })}
-
-            {selectedSolution && (
-              <InfoWindow
-                position={{ lat: selectedSolution.primaryLat!, lng: selectedSolution.primaryLng! }}
-                onCloseClick={() => setSelectedSolutionId(null)}
+            return (
+              <CircleMarker
+                key={solution.id}
+                center={[solution.primaryLat, solution.primaryLng]}
+                radius={radius}
+                pathOptions={{
+                  fillColor: color,
+                  fillOpacity: 0.9,
+                  color: '#ffffff',
+                  weight: 1.5,
+                }}
               >
-                <div className="text-sm min-w-[200px] max-w-[280px] p-1 font-sans">
-                  <div className="flex justify-between items-start gap-2 mb-2">
-                    <div className="font-bold text-gray-900 text-base">{selectedSolution.company}</div>
-                    {selectedSolution.status && (
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium uppercase ${selectedSolution.status === 'commercial' ? 'bg-green-100 text-green-800' :
-                        selectedSolution.status === 'pilot' ? 'bg-blue-100 text-blue-800' :
-                          'bg-gray-100 text-gray-800'
-                        }`}>
-                        {selectedSolution.status}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="text-xs text-gray-500 font-medium mb-2">{selectedSolution.productName}</div>
-
-                  <div className="space-y-1 mb-3">
-                    <div className="text-xs text-gray-700">
-                      <span className="font-semibold text-gray-500">Regions:</span> {formatEnumList(selectedSolution.regions || [])}
+                <Popup>
+                  <div className="text-sm min-w-[200px] max-w-[280px] p-1 font-sans">
+                    <div className="flex justify-between items-start gap-2 mb-2">
+                      <div className="font-bold text-gray-900 text-base">{solution.company}</div>
+                      {solution.status && (
+                        <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium uppercase ${solution.status === 'commercial' ? 'bg-green-100 text-green-800' :
+                          solution.status === 'pilot' ? 'bg-blue-100 text-blue-800' :
+                            'bg-gray-100 text-gray-800'
+                          }`}>
+                          {solution.status}
+                        </span>
+                      )}
                     </div>
-                    <div className="text-xs text-gray-700">
-                      <span className="font-semibold text-gray-500">Tech:</span> {formatEnumList(selectedSolution.sensingTech || [])}
-                    </div>
-                    {selectedSolution.maturityLevel && (
+
+                    <div className="text-xs text-gray-500 font-medium mb-2">{solution.productName}</div>
+
+                    <div className="space-y-1 mb-3">
                       <div className="text-xs text-gray-700">
-                        <span className="font-semibold text-gray-500">Maturity:</span> {selectedSolution.maturityLevel}
+                        <span className="font-semibold text-gray-500">Regions:</span> {formatEnumList(solution.regions || [])}
                       </div>
+                      <div className="text-xs text-gray-700">
+                        <span className="font-semibold text-gray-500">Tech:</span> {formatEnumList(solution.sensingTech || [])}
+                      </div>
+                      {solution.maturityLevel && (
+                        <div className="text-xs text-gray-700">
+                          <span className="font-semibold text-gray-500">Maturity:</span> {solution.maturityLevel}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Links */}
+                    {solution.linkStatus === "offline" ? (
+                      <div className="flex items-center gap-1 text-xs text-gray-400 italic">
+                        Website offline
+                      </div>
+                    ) : (solution.url || getCompanyUrl(solution.company)) && (
+                      <a
+                        href={formatCompanyUrl((solution.url || getCompanyUrl(solution.company)) as string)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-semibold"
+                      >
+                        Visit Website <ExternalLink className="w-3 h-3" />
+                      </a>
                     )}
                   </div>
-
-                  {/* Links */}
-                  {selectedSolution.linkStatus === "offline" ? (
-                    <div className="flex items-center gap-1 text-xs text-gray-400 italic">
-                      Website offline
-                    </div>
-                  ) : (selectedSolution.url || getCompanyUrl(selectedSolution.company)) && (
-                    <a
-                      href={formatCompanyUrl((selectedSolution.url || getCompanyUrl(selectedSolution.company)) as string)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-semibold"
-                    >
-                      Visit Website <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                </div>
-              </InfoWindow>
-            )}
-          </GoogleMap>
-        </APIProvider>
+                </Popup>
+              </CircleMarker>
+            );
+          })}
+        </MapContainer>
       </div>
 
       {/* MAP LEGEND */}

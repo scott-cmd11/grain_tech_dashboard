@@ -1,39 +1,14 @@
 import { Sun, Moon, Printer, Menu, Wheat, Sparkles } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { useUrlState } from '../../hooks/useUrlState';
+import { useAnimatedCounter } from '../../hooks/useAnimatedCounter';
 import { ShareButton } from '../ShareButton';
 import { getDenormalizedSolutions } from '../../utils/dataNormalization';
 import { datasetsData } from '../../data';
-import { useEffect, useState, useMemo } from 'react';
+import { useMemo } from 'react';
 
 interface HeaderProps {
   onSidebarToggle?: () => void;
-}
-
-// Animated counter hook
-function useAnimatedCounter(target: number, duration: number = 1500) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.floor(easeOut * target));
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [target, duration]);
-
-  return count;
 }
 
 // Floating particle component

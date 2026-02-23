@@ -34,10 +34,14 @@ export const SimpleBarChart = memo(function SimpleBarChart({
             </div>
             {/* Bar */}
             <div
-              className={`w-full rounded-t-sm transition-all duration-500 ${color}`}
+              className={`w-full rounded-t-md transition-all duration-500 ease-out ${color} group-hover:brightness-110`}
               style={{ height: `${Math.max((d.value / max) * barMaxHeight, 4)}px` }}
               aria-hidden="true"
             />
+            {/* Value label on hover */}
+            <span className="text-[9px] font-medium text-gray-500 dark:text-gray-400 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+              {d.value}
+            </span>
           </div>
         ))}
       </div>
@@ -78,14 +82,14 @@ export const SimpleHorizontalBarChart = memo(function SimpleHorizontalBarChart({
           <span className="text-xs font-medium text-gray-600 dark:text-gray-400 truncate">
             {item.label}
           </span>
-          <div className="h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-2.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
             <div
-              className={`h-full ${color}`}
+              className={`h-full rounded-full ${color} transition-all duration-700 ease-out`}
               style={{ width: `${Math.max((item.value / max) * 100, 4)}%` }}
               aria-hidden="true"
             />
           </div>
-          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 text-right">
+          <span className="text-xs font-semibold text-gray-700 dark:text-gray-300 text-right tabular-nums">
             {item.value}
           </span>
         </div>
@@ -149,7 +153,7 @@ export const SimpleDonutChart = memo(function SimpleDonutChart({
               key={i}
               d={path.d}
               fill={path.color}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
+              className="hover:opacity-80 hover:scale-[1.02] transition-all duration-200 cursor-pointer origin-center"
               aria-label={`${path.label}: ${path.percentage}%`}
             >
               <title>{`${path.label}: ${path.value} (${path.percentage}%)`}</title>
@@ -213,6 +217,14 @@ export const SimpleLineChart = memo(function SimpleLineChart({
         preserveAspectRatio="none"
         style={{ overflow: 'visible' }}
       >
+        {/* Gradient definition for fill-under-curve */}
+        <defs>
+          <linearGradient id="lineChartGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="currentColor" className={color} stopOpacity="0.3" />
+            <stop offset="100%" stopColor="currentColor" className={color} stopOpacity="0.02" />
+          </linearGradient>
+        </defs>
+
         {/* Grid lines */}
         {[0, 1, 2, 3, 4].map((i) => {
           const y = padding + (i / 4) * (height - padding * 2);
@@ -224,12 +236,19 @@ export const SimpleLineChart = memo(function SimpleLineChart({
               x2={width}
               y2={y}
               stroke="currentColor"
-              strokeWidth="0.5"
+              strokeWidth="0.3"
               className="text-gray-200 dark:text-gray-700"
-              opacity="0.5"
+              opacity="0.4"
             />
           );
         })}
+
+        {/* Gradient fill under curve */}
+        <path
+          d={`${pathD} L ${points[points.length - 1].x} ${height - padding} L ${points[0].x} ${height - padding} Z`}
+          fill="url(#lineChartGradient)"
+          className={color}
+        />
 
         {/* Line */}
         <path
@@ -240,22 +259,25 @@ export const SimpleLineChart = memo(function SimpleLineChart({
           strokeLinejoin="round"
         />
 
-        {/* Fill under line */}
-        <path
-          d={`${pathD} L ${points[points.length - 1].x} ${height} L ${points[0].x} ${height} Z`}
-          className={`${color} opacity-10`}
-          fill="currentColor"
-        />
-
         {/* Dots */}
+        {/* Data points with hover effect */}
         {points.map((p, i) => (
-          <circle
-            key={`dot-${i}`}
-            cx={p.x}
-            cy={p.y}
-            r="2.5"
-            className={`${color} fill-current`}
-          />
+          <g key={`dot-${i}`} className="group">
+            {/* Hover ring */}
+            <circle
+              cx={p.x}
+              cy={p.y}
+              r="6"
+              className={`${color} fill-current opacity-0 group-hover:opacity-20 transition-opacity`}
+            />
+            {/* Dot */}
+            <circle
+              cx={p.x}
+              cy={p.y}
+              r="2.5"
+              className={`${color} fill-current`}
+            />
+          </g>
         ))}
       </svg>
 

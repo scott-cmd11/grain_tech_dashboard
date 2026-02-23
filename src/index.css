@@ -55,6 +55,27 @@
     scroll-behavior: smooth;
   }
 
+  /* Skip Navigation - visually hidden until focused */
+  .skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 200;
+    padding: 12px 24px;
+    background: var(--accent-primary);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 0 0 12px 12px;
+    text-decoration: none;
+    transition: top 0.2s ease-out;
+  }
+
+  .skip-nav:focus {
+    top: 0;
+    outline: none;
+  }
+
   body {
     font-family: var(--font-body);
     font-size: 16px;
@@ -419,6 +440,19 @@
   border-radius: 4px;
 }
 
+/* Premium focus ring utility — matches design language */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--bg-primary),
+    0 0 0 4px var(--accent-primary);
+  border-radius: inherit;
+}
+
 ::selection {
   background-color: rgba(16, 185, 129, 0.3);
   color: inherit;
@@ -655,4 +689,92 @@ textarea {
 
 .print-only {
   display: none;
+}
+
+/* ========================================
+   ACCESSIBILITY — REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in,
+  .animate-fade-up,
+  .animate-scale-in,
+  .animate-slide-in-from-bottom,
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-shimmer,
+  .animate-gradient,
+  .animate-scale-up,
+  .animate-pulse-skeleton {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ========================================
+   CARD HOVER UTILITIES (Phase 2 token)
+   ======================================== */
+
+.card-hover-lift {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.card-hover-glow {
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-hover-glow:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Staggered entrance animation */
+@keyframes stagger-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-fade-up {
+  opacity: 0;
+  animation: stagger-fade-up 0.4s ease-out forwards;
+  animation-delay: calc(var(--stagger-index, 0) * 60ms);
+}
+
+/* ARIA live region — visually hidden but announced */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

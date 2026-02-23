@@ -1,5 +1,6 @@
 import { Building, Database, BrainCircuit, Scale, History, ArrowRight, Sparkles } from 'lucide-react';
 import type { TabId } from '../../types';
+import { Card } from '../Card';
 
 export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
   const exploreLinks = [
@@ -12,8 +13,8 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
 
   return (
     <div className="space-y-8 animate-fade-up">
-      {/* Hero Card - Massive Editorial Typography */}
-      <div className="card-editorial p-8 sm:p-10 lg:p-12">
+      {/* Hero Card */}
+      <Card variant="default" hover="none" className="p-8 sm:p-10 lg:p-12" animated staggerIndex={0}>
         <div className="flex items-start gap-4 mb-6">
           <div className="p-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lift">
             <Sparkles className="w-6 h-6 text-white" />
@@ -49,7 +50,7 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
             <span className="text-sm text-blue-700 dark:text-blue-300 ml-2">Powered Insights</span>
           </div>
         </div>
-      </div>
+      </Card>
 
       {/* Bento Grid - Explore Links */}
       <div>
@@ -57,11 +58,16 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
           Explore the <span className="text-gold-accent">Landscape</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {exploreLinks.map(({ id, icon: Icon, label, description, color }) => (
-            <button
+          {exploreLinks.map(({ id, icon: Icon, label, description, color }, index) => (
+            <Card
               key={id}
+              variant="default"
+              hover="lift"
+              as="button"
               onClick={() => onNavigate(id)}
-              className="group card-editorial p-6 text-left hover:scale-[1.02] transition-all duration-300"
+              className="p-6 text-left group"
+              animated
+              staggerIndex={index + 1}
             >
               <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${color} shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <Icon className="w-5 h-5 text-white" />
@@ -73,13 +79,13 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {description}
               </p>
-            </button>
+            </Card>
           ))}
         </div>
       </div>
 
-      {/* Built With - Compact Premium Card */}
-      <div className="card-editorial p-6 sm:p-8">
+      {/* Built With */}
+      <Card variant="default" hover="none" className="p-6 sm:p-8" animated staggerIndex={6}>
         <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
           <span className="text-gold-accent">◆</span> Built With
         </h3>
@@ -89,7 +95,7 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
             Crafted with AI assistance from Claude, Antigravity, and ChatGPT.
           </span>
         </p>
-      </div>
+      </Card>
     </div>
   );
 }
