@@ -1,4 +1,4 @@
-import { Building, Database, BrainCircuit, Scale, History, ArrowRight, Sparkles } from 'lucide-react';
+import { Building, Database, BrainCircuit, Scale, History, ArrowRight } from 'lucide-react';
 import type { TabId } from '../../types';
 import { Card } from '../Card';
 
@@ -13,45 +13,6 @@ export function AboutTab({ onNavigate }: { onNavigate: (tab: TabId) => void }) {
 
   return (
     <div className="space-y-8 animate-fade-up">
-      {/* Hero Card */}
-      <Card variant="default" hover="none" className="p-8 sm:p-10 lg:p-12" animated staggerIndex={0}>
-        <div className="flex items-start gap-4 mb-6">
-          <div className="p-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lift">
-            <Sparkles className="w-6 h-6 text-white" />
-          </div>
-          <div>
-            <p className="text-sm font-semibold text-grain-heritage-500 uppercase tracking-widest mb-2">
-              Welcome to
-            </p>
-            <h1 className="text-editorial-title text-gray-900 dark:text-white">
-              GrainTech <span className="text-gold-accent">Intelligence</span>
-            </h1>
-          </div>
-        </div>
-
-        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mb-8">
-          A personal project tracking the digital transformation of grain quality analysis.
-          Discover how <span className="text-emerald-600 dark:text-emerald-400 font-medium">AI and automation</span> are
-          revolutionizing an industry that feeds the world.
-        </p>
-
-        {/* Stat Pills */}
-        <div className="flex flex-wrap gap-4">
-          <div className="px-5 py-3 rounded-2xl bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800/30">
-            <span className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">100+</span>
-            <span className="text-sm text-emerald-700 dark:text-emerald-300 ml-2">Solutions Tracked</span>
-          </div>
-          <div className="px-5 py-3 rounded-2xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800/30">
-            <span className="text-2xl font-bold text-amber-600 dark:text-amber-400">Global</span>
-            <span className="text-sm text-amber-700 dark:text-amber-300 ml-2">Coverage</span>
-          </div>
-          <div className="px-5 py-3 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30">
-            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">AI</span>
-            <span className="text-sm text-blue-700 dark:text-blue-300 ml-2">Powered Insights</span>
-          </div>
-        </div>
-      </Card>
-
       {/* Bento Grid - Explore Links */}
       <div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

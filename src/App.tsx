@@ -32,7 +32,6 @@ import {
   GithubTab,
   ResearchPapersTab,
 } from './components/tabs';
-import { ChatWidget } from './components/Chat/ChatWidget';
 import { CommandPalette } from './components/CommandPalette';
 import { ShortcutsModal } from './components/ShortcutsModal';
 
@@ -213,7 +212,6 @@ function Dashboard() {
         </main>
       </div>
 
-      <ChatWidget />
       <CommandPalette onTabChange={handleTabChange} currentTab={activeTab} />
       <ShortcutsModal isOpen={shortcutsOpen} onClose={() => setShortcutsOpen(false)} />
       <ToastContainer />
