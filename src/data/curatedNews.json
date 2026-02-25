@@ -10,6 +10,33 @@
   },
   {
     "id": "2",
+    "title": "NSW Govt increases aid for drought-hit farmers",
+    "source": "Grain Central",
+    "date": "2026-02-25",
+    "summary": "The NSW Govt is expanding its drought plan to help farmers and communities as dry conditions continue across parts of NSW.",
+    "url": "https://www.graincentral.com/news/nsw-govt-increases-aid-for-drought-hit-farmers/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "3",
+    "title": "GRDC Update: Growth seen in Asian feedgrain demand",
+    "source": "Grain Central",
+    "date": "2026-02-24",
+    "summary": "Australian wheat for feed is finding some love in Asia as consumers look for animal rather than grain protein, and biofuel demand keeps more US corn at home.",
+    "url": "https://www.graincentral.com/markets/grdc-update-growth-seen-in-asian-feedgrain-demand/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "4",
+    "title": "Cropping sector leads on productivity, export growth: ABARES",
+    "source": "Grain Central",
+    "date": "2026-02-25",
+    "summary": "An ABARES paper shows cropping has outperformed other ag sectors on productivity growth, farm income, and export value growth.",
+    "url": "https://www.graincentral.com/news/cropping-sector-leads-on-productivity-export-growth-abares/",
+    "category": "grain_industry"
+  },
+  {
+    "id": "5",
     "title": "Bangladesh’s food grain imports surge",
     "source": "Grain Central",
     "date": "2026-02-24",
@@ -18,7 +45,7 @@
     "category": "grain_industry"
   },
   {
-    "id": "3",
+    "id": "6",
     "title": "Weekly rainfall update 23 February 2026 + outlook",
     "source": "Grain Central",
     "date": "2026-02-23",
@@ -27,7 +54,7 @@
     "category": "grain_industry"
   },
   {
-    "id": "4",
+    "id": "7",
     "title": "Qube grain trading revenue up, Macquarie sale update",
     "source": "Grain Central",
     "date": "2026-02-23",
@@ -36,39 +63,12 @@
     "category": "grain_industry"
   },
   {
-    "id": "5",
-    "title": "New owners for four WA farms in varying districts",
-    "source": "Grain Central",
-    "date": "2026-02-23",
-    "summary": "Locals in varying regions of WA have expanded their operations, showing confidence in cropping and mixed-farming country.",
-    "url": "https://www.graincentral.com/property/new-owners-for-four-wa-farms-in-varying-districts/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "6",
+    "id": "8",
     "title": "Inghams HY26 profits down 65pc to $18.1M",
     "source": "Grain Central",
     "date": "2026-02-23",
     "summary": "Inghams' results show times are tough for the listed poultry giant, despite relatively low costs for its key feed inputs of wheat and soymeal.",
     "url": "https://www.graincentral.com/news/inghams-hy26-profits-down-65pc-to-18-1m/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "7",
-    "title": "GPSA launches Sustainability Roadmap 2026-2030",
-    "source": "Grain Central",
-    "date": "2026-02-23",
-    "summary": "GPSA has launched its Sustainability Roadmap 2026–2030, providing a pathway to support a productive, adaptive and globally competitive SA grain sector.",
-    "url": "https://www.graincentral.com/news/gpsa-launches-sustainability-roadmap-2026-2030/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "8",
-    "title": "Daily Market Wire 24 February 2026",
-    "source": "Grain Central",
-    "date": "2026-02-24",
-    "summary": "Better weather forecast pressures wheat. Canola takes positive momentum. Australian forecast builds.",
-    "url": "https://www.graincentral.com/markets/daily-market-wire-24-february-2026/",
     "category": "grain_industry"
   },
   {
@@ -82,24 +82,51 @@
   },
   {
     "id": "10",
-    "title": "La Trobe University develops farm-sustainability metric",
+    "title": "Daily Market Wire 25 February 2026",
     "source": "Grain Central",
-    "date": "2026-02-23",
-    "summary": "La Trobe University researchers have developed a new way to measure and report the environmental performance of farms.",
-    "url": "https://www.graincentral.com/news/la-trobe-university-develops-farm-sustainability-metric/",
+    "date": "2026-02-25",
+    "summary": "Kansas leads small decline in wheat futures. Russian fob cash holds steady. Arable SA/Vic hangs out for end-of-week rain.",
+    "url": "https://www.graincentral.com/markets/daily-market-wire-25-february-2026/",
     "category": "grain_industry"
   },
   {
     "id": "11",
-    "title": "Daily Market Wire 23 February 2026",
+    "title": "New owners for four WA farms in varying districts",
     "source": "Grain Central",
     "date": "2026-02-23",
-    "summary": "Wheat futures short continues copybook exit; spurs 3-day rally. Weekend rain disappoints arable SA.",
-    "url": "https://www.graincentral.com/markets/daily-market-wire-23-february-2026/",
+    "summary": "Locals in varying regions of WA have expanded their operations, showing confidence in cropping and mixed-farming country.",
+    "url": "https://www.graincentral.com/property/new-owners-for-four-wa-farms-in-varying-districts/",
     "category": "grain_industry"
   },
   {
     "id": "12",
+    "title": "DJI appeal sets stage for legal showdown over future of US ag spray drone market",
+    "source": "Ag Funder News",
+    "date": "2026-02-24",
+    "summary": "<p>The FCC ruling—which has upended a sector dominated by overseas vendors—is “procedurally and substantively flawed,” argues DJI.</p>\n<p>The post <a href=\"https://agfundernews.com/dji-appeal-sets-sta",
+    "url": "https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market",
+    "category": "technology"
+  },
+  {
+    "id": "13",
+    "title": "How AI, automated labs and CDMOs are replacing agrifood’s 100-year-old R&D playbook",
+    "source": "Ag Funder News",
+    "date": "2026-02-24",
+    "summary": "<p>The world's most critical challenges are accelerating at a rapid pace. The R&#038;D methods tasked with solving them are not—until now.</p>\n<p>The post <a href=\"https://agfundernews.com/how-ai-auto",
+    "url": "https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook",
+    "category": "technology"
+  },
+  {
+    "id": "14",
+    "title": "Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market",
+    "source": "Ag Funder News",
+    "date": "2026-02-24",
+    "summary": "<p>BLG via precision fermentation allows brands to pack more protein into shots, yogurts, and drinks without the trade-offs that come with conventional whey, claims the firm.</p>\n<p>The post <a href=\"",
+    "url": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market",
+    "category": "technology"
+  },
+  {
+    "id": "15",
     "title": "Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model",
     "source": "Ag Funder News",
     "date": "2026-02-23",
@@ -108,7 +135,7 @@
     "category": "technology"
   },
   {
-    "id": "13",
+    "id": "16",
     "title": "Guest article: Antifragile agriculture. How to stop playing the old game",
     "source": "Ag Funder News",
     "date": "2026-02-20",
@@ -117,7 +144,7 @@
     "category": "technology"
   },
   {
-    "id": "14",
+    "id": "17",
     "title": "Resurrect Bio raises $8.1m to unlock plants’ innate disease resistance capabilities",
     "source": "Ag Funder News",
     "date": "2026-02-19",
@@ -126,7 +153,7 @@
     "category": "technology"
   },
   {
-    "id": "15",
+    "id": "18",
     "title": "AgriFood Signals: Egypt eGrocer Breadfast banks $50m, Kubota invests in spray ‘bot, Trump’s glyphosate order",
     "source": "Ag Funder News",
     "date": "2026-02-19",
@@ -135,7 +162,7 @@
     "category": "technology"
   },
   {
-    "id": "16",
+    "id": "19",
     "title": "Ruminant BioTech eyes Canada as launchpad for global expansion with $5.6m research program",
     "source": "Ag Funder News",
     "date": "2026-02-19",
@@ -144,39 +171,12 @@
     "category": "technology"
   },
   {
-    "id": "17",
+    "id": "20",
     "title": "Exclusive: From rocks to row crops, TerraClear broadens its capabilities with launch of fully autonomous robot",
     "source": "Ag Funder News",
     "date": "2026-02-19",
     "summary": "<p>TerraClear aims to make precision farming \"technically and economically feasible\" for growers with the launch of its TerraScout robot.</p>\n<p>The post <a href=\"https://agfundernews.com/from-rocks-t",
     "url": "https://agfundernews.com/from-rocks-to-row-crops-terraclear-broadens-its-capabilities-with-launch-of-fully-autonomous-robot",
-    "category": "technology"
-  },
-  {
-    "id": "18",
-    "title": "Hybrid meat for the win: JOYN Foods finds sweet spot in alt-protein market, expects to be EDITDA positive in early 2027",
-    "source": "Ag Funder News",
-    "date": "2026-02-19",
-    "summary": "<p>JOYN Foods expects to triple revenues in 2026 and then triple them again in 2027, driven by rapid growth in foodservice markets.</p>\n<p>The post <a href=\"https://agfundernews.com/hybrid-meat-for-th",
-    "url": "https://agfundernews.com/hybrid-meat-for-the-win-joyn-foods-finds-sweet-spot-in-alt-protein-market-expects-to-be-editda-positive-in-early-2027",
-    "category": "technology"
-  },
-  {
-    "id": "19",
-    "title": "US receiver to liquidate Believer Meats’ factory and assets as Israeli trustee ringfences IP",
-    "source": "Ag Funder News",
-    "date": "2026-02-18",
-    "summary": "<p>Creditors Gray Construction and Ameris Bank have positioned themselves to be first in line as Believer's US assets are sold.</p>\n<p>The post <a href=\"https://agfundernews.com/us-receiver-to-liquida",
-    "url": "https://agfundernews.com/us-receiver-to-liquidate-believer-meats-factory-and-assets-as-israeli-trustee-ringfences-ip",
-    "category": "technology"
-  },
-  {
-    "id": "20",
-    "title": "AI in India: The world’s ‘AI back office’ is betting on small language models to bring big impact to smallholder farming",
-    "source": "Ag Funder News",
-    "date": "2026-02-17",
-    "summary": "<p>The real victory won't be in the size of the model, but in the ability to finally make it work for the person in the field.</p>\n<p>The post <a href=\"https://agfundernews.com/ai-in-india-the-worlds-",
-    "url": "https://agfundernews.com/ai-in-india-the-worlds-ai-back-office-is-betting-on-small-language-models-to-bring-big-impact-to-smallholder-farming",
     "category": "technology"
   }
 ]
