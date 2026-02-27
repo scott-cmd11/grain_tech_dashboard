@@ -371,13 +371,59 @@ def run_scout() -> Dict[str, Any]:
         else:
             logger.warning("No queries found in CSV.")
             
-    # Process Legacy Google Alerts if enabled (Shelved)
+    # =========================================================================
+    # COMPANY FEEDS: Direct RSS from tracked grain-tech companies
+    # =========================================================================
+    company_feeds = config.get('company_feeds', [])
+    
+    if company_feeds:
+        logger.info("-" * 60)
+        logger.info("🏢 COMPANY FEEDS: Fetching from tracked companies")
+        logger.info("-" * 60)
+        category_counts['company_feeds'] = 0
+        
+        for feed in company_feeds:
+            feed_name = feed.get('name', 'Unknown Company')
+            feed_url = feed.get('url', '')
+            feed_category = feed.get('category', 'company')
+            
+            if feed_url:
+                articles = fetch_rss_feed(
+                    url=feed_url,
+                    source_name=feed_name,
+                    category=feed_category
+                )
+                all_articles.extend(articles)
+                category_counts['company_feeds'] += len(articles)
+        
+        logger.info(f"  -> Total from Company Feeds: {category_counts['company_feeds']} items")
+
+    # =========================================================================
+    # GOOGLE ALERTS: Grain-tech specific search alerts
+    # =========================================================================
     google_alerts = config.get('google_alerts', [])
+    
     if google_alerts:
-        logger.info("  -> (Legacy Google Alerts found but scraper is prioritized. Skipping or processing if uncommented.)")
-        # Logic kept for backward compatibility if user uncommented it, 
-        # but in this flow we focused on the CSV scraper.
-        # ... (Original code commented out or kept as fallback? User said 'shelve', so we skip if not empty but we commented it out in yaml)
+        logger.info("-" * 60)
+        logger.info("🔔 GOOGLE ALERTS: Fetching grain-tech alerts")
+        logger.info("-" * 60)
+        category_counts['google_alerts'] = 0
+        
+        for alert in google_alerts:
+            alert_name = alert.get('name', 'Unknown Alert')
+            alert_url = alert.get('url', '')
+            alert_category = alert.get('category', 'technology')
+            
+            if alert_url:
+                articles = fetch_rss_feed(
+                    url=alert_url,
+                    source_name=f"Google Alert: {alert_name}",
+                    category=alert_category
+                )
+                all_articles.extend(articles)
+                category_counts['google_alerts'] += len(articles)
+        
+        logger.info(f"  -> Total from Google Alerts: {category_counts['google_alerts']} items")
 
     # =========================================================================
     # ADDITIONAL RSS FEEDS: Load from sources.yaml config

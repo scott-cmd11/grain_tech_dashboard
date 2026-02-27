@@ -7,41 +7,56 @@ interface CategorizedRepos {
 }
 
 const SEARCH_QUERIES = [
-  { query: 'agricultural grain quality inspection', category: 'Agriculture' },
-  { query: 'grain quality assessment machine learning', category: 'AI/ML' },
-  { query: 'crop inspection computer vision', category: 'Computer Vision' },
-  { query: 'agricultural quality control AI', category: 'AI/ML' },
-  { query: 'grain classification agriculture', category: 'Computer Vision' },
-  { query: 'agricultural imaging detection', category: 'Computer Vision' },
-  { query: 'crop quality evaluation AI', category: 'AI/ML' },
-  { query: 'agricultural automation vision', category: 'Agriculture' },
+  // Cereals
+  { query: 'wheat grain quality classification', category: 'Cereals' },
+  { query: 'barley grain quality assessment', category: 'Cereals' },
+  { query: 'oat grain quality grading', category: 'Cereals' },
+  { query: 'rye triticale grain quality', category: 'Cereals' },
+  { query: 'corn maize grain quality inspection', category: 'Cereals' },
+  { query: 'rice grain quality classification', category: 'Cereals' },
+  // Oilseeds
+  { query: 'canola rapeseed quality analysis', category: 'Oilseeds' },
+  { query: 'flaxseed soybean seed quality', category: 'Oilseeds' },
+  { query: 'sunflower safflower mustard seed quality', category: 'Oilseeds' },
+  // Pulses
+  { query: 'lentil pea chickpea quality grading', category: 'Pulses' },
+  { query: 'bean faba bean pulse quality', category: 'Pulses' },
+  // Cross-cutting AI/ML
+  { query: 'grain classification deep learning', category: 'AI/ML' },
+  { query: 'seed quality computer vision machine learning', category: 'AI/ML' },
 ];
 
-// Keywords to filter out non-agricultural results
+// The 21 grains regulated by the Canadian Grain Commission + rice
+const GRAIN_KEYWORDS = [
+  'wheat', 'barley', 'oat', 'oats', 'rye', 'corn', 'maize',
+  'rice', 'triticale', 'buckwheat', 'canola', 'rapeseed',
+  'flaxseed', 'flax', 'soybean', 'soy', 'sunflower', 'safflower',
+  'mustard', 'canary seed', 'chickpea', 'lentil', 'pea', 'peas',
+  'bean', 'faba', 'grain', 'cereal', 'pulse', 'oilseed', 'seed',
+];
+
+// Keywords to filter out non-grain results
 const EXCLUDE_KEYWORDS = [
-  'audio',
-  'sound',
-  'music',
-  'texture filter',
-  'image enhancement',
-  'noise reduction',
-  'webpack',
-  'graphql',
-  'database',
-  'css',
-  'web framework',
+  'audio', 'sound', 'music', 'texture filter', 'image enhancement',
+  'noise reduction', 'webpack', 'graphql', 'database', 'css',
+  'web framework', 'minecraft', 'game', 'crypto', 'blockchain',
+  'film grain', 'wood grain',
 ];
 
-// Helper function to check if a repo should be excluded
-function shouldExcludeRepo(item: any): boolean {
+// Check if a repo is relevant to CGC-regulated grains or rice
+function isRelevantToGrains(item: any): boolean {
   const name = (item.name || '').toLowerCase();
   const description = (item.description || '').toLowerCase();
   const topics = (item.topics || []).map((t: string) => t.toLowerCase()).join(' ');
-  const language = (item.language || '').toLowerCase();
+  const fullContent = `${name} ${description} ${topics}`;
 
-  const fullContent = `${name} ${description} ${topics} ${language}`;
+  // Must match at least one grain keyword
+  const hasGrainKeyword = GRAIN_KEYWORDS.some(kw => fullContent.includes(kw));
 
-  return EXCLUDE_KEYWORDS.some(keyword => fullContent.includes(keyword));
+  // Must not match any excluded keyword
+  const hasExcluded = EXCLUDE_KEYWORDS.some(kw => fullContent.includes(kw));
+
+  return hasGrainKeyword && !hasExcluded;
 }
 
 export const GitHubReposExplorer = function GitHubReposExplorer() {
@@ -81,7 +96,7 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
 
           if (data.items) {
             data.items.forEach((item: any) => {
-              if (!allRepos.has(item.id) && !shouldExcludeRepo(item)) {
+              if (!allRepos.has(item.id) && isRelevantToGrains(item)) {
                 allRepos.set(item.id, {
                   id: item.id,
                   name: item.name,
@@ -116,56 +131,38 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
     fetchRepos();
   }, []);
 
-  // Categorize repos based on topics and language
+  // Categorize repos by grain domain
   const categorizedRepos = useMemo(() => {
+    const CEREAL_KW = ['wheat', 'barley', 'oat', 'oats', 'rye', 'corn', 'maize', 'rice', 'triticale', 'buckwheat'];
+    const OILSEED_KW = ['canola', 'rapeseed', 'flaxseed', 'flax', 'soybean', 'soy', 'sunflower', 'safflower', 'mustard'];
+    const PULSE_KW = ['lentil', 'pea', 'peas', 'chickpea', 'bean', 'faba'];
+
     const categorized: CategorizedRepos = {
+      'Cereals': [],
+      'Oilseeds': [],
+      'Pulses': [],
       'AI/ML': [],
-      'Computer Vision': [],
-      'Agriculture': [],
-      'Open Source Tools': [],
       'All': repos,
     };
+
+    const matchesAny = (text: string, keywords: string[]) =>
+      keywords.some(kw => text.includes(kw));
 
     repos.forEach((repo) => {
       const topics = repo.topics.map(t => t.toLowerCase());
       const description = (repo.description || '').toLowerCase();
+      const name = repo.name.toLowerCase();
+      const fullText = `${name} ${description} ${topics.join(' ')}`;
 
-      // Classify by topics and content
-      if (
-        topics.includes('machine-learning') ||
-        topics.includes('artificial-intelligence') ||
-        topics.includes('deep-learning') ||
-        topics.includes('neural-network') ||
-        description.includes('ai') ||
-        description.includes('machine learning') ||
-        description.includes('neural')
-      ) {
+      if (matchesAny(fullText, CEREAL_KW)) {
+        categorized['Cereals'].push(repo);
+      } else if (matchesAny(fullText, OILSEED_KW)) {
+        categorized['Oilseeds'].push(repo);
+      } else if (matchesAny(fullText, PULSE_KW)) {
+        categorized['Pulses'].push(repo);
+      } else {
+        // Fallback: anything with ML/AI/CV keywords
         categorized['AI/ML'].push(repo);
-      } else if (
-        topics.includes('computer-vision') ||
-        topics.includes('image-processing') ||
-        topics.includes('opencv') ||
-        description.includes('computer vision') ||
-        description.includes('image detection') ||
-        description.includes('object detection')
-      ) {
-        categorized['Computer Vision'].push(repo);
-      } else if (
-        topics.includes('agriculture') ||
-        topics.includes('crop') ||
-        topics.includes('farming') ||
-        description.includes('crop') ||
-        description.includes('farm') ||
-        description.includes('agriculture')
-      ) {
-        categorized['Agriculture'].push(repo);
-      } else if (
-        topics.includes('tool') ||
-        topics.includes('utility') ||
-        description.includes('tool') ||
-        description.includes('library')
-      ) {
-        categorized['Open Source Tools'].push(repo);
       }
     });
 
@@ -303,7 +300,7 @@ export const GitHubReposExplorer = function GitHubReposExplorer() {
           </h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-          Explore open source code repositories for grain quality, AI, and agricultural technology. Filter and search to find tools relevant to your needs.
+          Explore open source repositories related to the grains regulated by the Canadian Grain Commission plus rice — including cereals, oilseeds, and pulses.
         </p>
 
         {loading ? (

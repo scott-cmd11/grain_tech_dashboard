@@ -51,10 +51,8 @@ const groupedTabs: TabGroup[] = [
   {
     title: 'Reference & Data',
     tabs: [
-
       { id: 'datasets', label: 'Datasets', icon: <Database className="w-4 h-4" /> },
       { id: 'github-repos', label: 'Github Repos', icon: <Github className="w-4 h-4" /> },
-
       { id: 'research-papers', label: 'Research Papers', icon: <BookOpen className="w-4 h-4" /> },
     ],
   },
@@ -96,14 +94,14 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
       aria-label="Main navigation"
     >
       <div
-        className="flex flex-col gap-1 overflow-visible px-1"
+        className="flex flex-col gap-0.5 overflow-visible"
         role="tablist"
         aria-label="Dashboard sections"
       >
         {groupedTabs.map((group) => (
-          <div key={group.title} className="flex flex-col shrink-0 gap-1 mb-5 last:mb-0">
+          <div key={group.title} className="flex flex-col shrink-0 mb-4 last:mb-0">
             {/* Section Title */}
-            <h3 className="px-3 py-2 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest">
+            <h3 className="px-3 py-1.5 text-[10px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">
               {group.title}
             </h3>
 
@@ -122,27 +120,21 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
                   aria-controls={`${tab.id}-panel`}
                   tabIndex={isActive ? 0 : -1}
                   className={`
-                    group flex items-center gap-3 
-                    px-3 py-3 rounded-xl
+                    group flex items-center gap-2.5 
+                    px-3 py-2 rounded-md
                     font-medium text-sm
-                    transition-all duration-300 ease-out
+                    transition-colors duration-150
                     whitespace-nowrap
-                    focus:outline-none focus:ring-2 focus:ring-emerald-500/50
+                    focus-ring
                     justify-start w-full
-                    relative
                     ${isActive
-                      ? 'bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 shadow-sm'
-                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white hover:translate-x-0.5'
+                      ? 'bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white'
                     }
                   `}
                 >
-                  {/* Gold accent indicator for active state */}
-                  {isActive && (
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-amber-500 rounded-r-full" />
-                  )}
-
                   {/* Icon */}
-                  <span className={`transition-all duration-300 ${isActive ? 'text-emerald-600 dark:text-emerald-400 scale-110' : 'group-hover:scale-105'}`}>
+                  <span className={`${isActive ? 'text-accent-600 dark:text-accent-400' : ''}`}>
                     {tab.icon}
                   </span>
 
@@ -151,8 +143,6 @@ export const TabNav = memo(function TabNav({ activeTab, onTabChange }: TabNavPro
                 </button>
               );
             })}
-
-
           </div>
         ))}
       </div>

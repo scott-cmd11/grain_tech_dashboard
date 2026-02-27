@@ -22,6 +22,7 @@ interface NewsItem {
   imageUrl?: string;
   category?: string;
   score?: number;
+  companyTags?: string[];
 }
 
 type ViewMode = 'all' | 'saved';
@@ -41,11 +42,8 @@ export const NewsFeed = memo(function NewsFeed() {
     // Simulate async load slightly for UI smoothness, but load directly from JSON
     const timer = setTimeout(() => {
       try {
-        // Load curated news data - already has correct field names
-        const sortedArticles = (curatedNews as NewsItem[]).sort((a, b) =>
-          new Date(b.date).getTime() - new Date(a.date).getTime()
-        );
-        setNews(sortedArticles);
+        // Load curated news data - pre-sorted by relevance from transform
+        setNews(curatedNews as NewsItem[]);
         setLastUpdated(new Date().toISOString());
         setLoading(false);
       } catch (err) {
@@ -169,8 +167,8 @@ export const NewsFeed = memo(function NewsFeed() {
               <button
                 onClick={() => setSelectedCategory(null)}
                 className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${selectedCategory === null
-                    ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                  : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
               >
                 All Categories
@@ -180,8 +178,8 @@ export const NewsFeed = memo(function NewsFeed() {
                   key={cat}
                   onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
                   className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${selectedCategory === cat
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50'
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50'
                     }`}
                 >
                   {cat}
@@ -274,7 +272,7 @@ export const NewsFeed = memo(function NewsFeed() {
                   )}
                 </button>
 
-                <div className="p-5 flex flex-col h-full bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-800/50">
+                <div className="p-5 flex flex-col h-full">
                   <div className="mb-3">
                     <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-2">
                       <div className="flex items-center gap-2">

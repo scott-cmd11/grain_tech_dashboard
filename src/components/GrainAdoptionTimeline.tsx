@@ -160,14 +160,14 @@ export const GrainAdoptionTimeline = function GrainAdoptionTimeline({
       {/* Vertical Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-400 via-teal-400 to-emerald-400 dark:from-indigo-600 dark:via-teal-600 dark:to-emerald-600" />
+        <div className="absolute left-[19px] top-0 bottom-0 w-0.5 bg-zinc-200 dark:bg-zinc-700" />
 
         <div className="space-y-8">
           {grouped.map((group) => (
             <div key={group.year} className="relative">
               {/* Year Marker */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="relative z-10 w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-teal-500 flex items-center justify-center shadow-lg">
+                <div className="relative z-10 w-10 h-10 rounded-full bg-accent-600 flex items-center justify-center shadow-sm">
                   <span className="text-xs font-bold text-white">{group.year}</span>
                 </div>
                 <h4 className="text-2xl font-black text-gray-200 dark:text-gray-700 select-none">

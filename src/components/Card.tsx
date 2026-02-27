@@ -1,7 +1,7 @@
 import React from 'react';
 
-type CardVariant = 'default' | 'glass' | 'elevated';
-type CardHover = 'lift' | 'glow' | 'none';
+type CardVariant = 'default' | 'ghost';
+type CardHover = 'subtle' | 'none';
 
 interface CardProps {
     variant?: CardVariant;
@@ -15,22 +15,18 @@ interface CardProps {
 }
 
 const variantClasses: Record<CardVariant, string> = {
-    default: 'bg-white dark:bg-zinc-900 rounded-3xl border border-gray-100 dark:border-white/5',
-    glass: 'glass rounded-2xl',
-    elevated: 'bg-white dark:bg-zinc-900 rounded-3xl border border-gray-100 dark:border-white/5 shadow-xl shadow-gray-200/60 dark:shadow-black/30',
+    default: 'bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800',
+    ghost: 'rounded-lg',
 };
 
 const hoverClasses: Record<CardHover, string> = {
-    lift: 'card-hover-lift',
-    glow: 'card-hover-glow',
+    subtle: 'hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-sm transition-[border-color,box-shadow] duration-150',
     none: '',
 };
 
-const baseBoxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.15)';
-
 export function Card({
     variant = 'default',
-    hover = 'lift',
+    hover = 'subtle',
     className = '',
     children,
     onClick,
@@ -39,20 +35,19 @@ export function Card({
     animated = false,
 }: CardProps) {
     const staggerStyle = animated && staggerIndex !== undefined
-        ? { '--stagger-index': staggerIndex, boxShadow: baseBoxShadow } as React.CSSProperties
-        : { boxShadow: baseBoxShadow };
+        ? { '--stagger-index': staggerIndex } as React.CSSProperties
+        : {};
 
     return (
         <Component
             className={`
-        ${variantClasses[variant]}
-        ${hoverClasses[hover]}
-        ${animated ? 'stagger-fade-up' : ''}
-        ${onClick ? 'cursor-pointer' : ''}
-        transition-all duration-500 ease-out
-        focus-ring
-        ${className}
-      `.trim().replace(/\s+/g, ' ')}
+                ${variantClasses[variant]}
+                ${hoverClasses[hover]}
+                ${animated ? 'stagger-fade-up' : ''}
+                ${onClick ? 'cursor-pointer' : ''}
+                focus-ring
+                ${className}
+            `.trim().replace(/\s+/g, ' ')}
             style={staggerStyle}
             onClick={onClick}
             {...(Component === 'button' ? { type: 'button' as const } : {})}
@@ -69,7 +64,7 @@ interface CardSectionProps {
 
 export function CardHeader({ className = '', children }: CardSectionProps) {
     return (
-        <div className={`px-6 pt-6 pb-2 ${className}`}>
+        <div className={`px-5 pt-5 pb-2 ${className}`}>
             {children}
         </div>
     );
@@ -77,7 +72,7 @@ export function CardHeader({ className = '', children }: CardSectionProps) {
 
 export function CardBody({ className = '', children }: CardSectionProps) {
     return (
-        <div className={`px-6 py-4 ${className}`}>
+        <div className={`px-5 py-3 ${className}`}>
             {children}
         </div>
     );
@@ -85,7 +80,7 @@ export function CardBody({ className = '', children }: CardSectionProps) {
 
 export function CardFooter({ className = '', children }: CardSectionProps) {
     return (
-        <div className={`px-6 pb-6 pt-2 border-t border-gray-100 dark:border-white/5 ${className}`}>
+        <div className={`px-5 pb-5 pt-2 border-t border-zinc-100 dark:border-zinc-800 ${className}`}>
             {children}
         </div>
     );

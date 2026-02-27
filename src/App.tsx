@@ -141,7 +141,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen app-shell transition-colors duration-300 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 flex flex-col overflow-x-hidden">
       {/* Skip Navigation */}
       <a href="#main-content" className="skip-nav">Skip to content</a>
 
@@ -163,8 +163,8 @@ function Dashboard() {
         />
 
         {/* Main Content Area */}
-        <main id="main-content" className="flex-1 overflow-y-auto px-4 sm:px-8 py-8 pb-24 lg:pb-8" role="main">
-          <div className="max-w-6xl mx-auto animate-fade-up">
+        <main id="main-content" className="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 py-6 pb-24 lg:pb-8" role="main">
+          <div className="max-w-6xl mx-auto">
             {activeTab === 'about' && <AboutTab onNavigate={handleTabChange} />}
             {activeTab === 'glossary' && <GlossaryTab searchTerm={searchTerm} />}
             {activeTab === 'trends' && <TrendsPage />}
@@ -202,12 +202,6 @@ function Dashboard() {
             {activeTab === 'news' && <NewsTab />}
             {activeTab === 'github-repos' && <GithubTab />}
             {activeTab === 'research-papers' && <ResearchPapersTab />}
-            {/* AI Disclaimer */}
-            <div className="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700/50">
-              <p className="text-center text-xs text-gray-500 dark:text-gray-400 italic">
-                Disclaimer: This website and its content were generated with the assistance of AI. Information may contain errors.
-              </p>
-            </div>
           </div>
         </main>
       </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { GrainLandscapeMap, GrainComparisonMatrix, TechStackExplorer } from '../index';
 import { Skeleton } from '../Skeleton';
 import { grainSolutions } from '../../data';
+import { useCompanyMonitor } from '../../hooks/useCompanyMonitor';
 import type { Region, SensingTech, FormFactor, UseCase } from '../../data/grainTechEntities';
 
 interface LandscapeTabProps {
@@ -38,6 +39,7 @@ function ViewToggle({
 export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: LandscapeTabProps) {
     const [isLoading, setIsLoading] = useState(true);
     const [landscapeView, setLandscapeView] = useState<'map' | 'table' | 'stack'>('map');
+    const companyMonitor = useCompanyMonitor(!isLoading);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 800);
@@ -96,6 +98,7 @@ export function LandscapeTab({ companiesOpen, onCompaniesToggle, searchTerm }: L
                         companiesOpen={companiesOpen}
                         onCompaniesToggle={onCompaniesToggle}
                         externalSearchTerm={searchTerm}
+                        companyMonitor={companyMonitor}
                     />
                 </div>
             )}

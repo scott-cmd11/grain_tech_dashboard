@@ -63,12 +63,12 @@ export function TrendsPage() {
   };
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-500">
+    <div className="space-y-6">
       {/* Back to Top Button - Portaled to body to avoid transform issues */}
       {showBackToTop && createPortal(
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-emerald-500 text-white shadow-lg hover:bg-emerald-600 transition-all hover:scale-110 animate-in fade-in zoom-in duration-300 glow-emerald"
+          className="fixed bottom-6 right-6 z-50 p-3 rounded-lg bg-accent-600 text-white shadow-md hover:bg-accent-700 transition-colors duration-150"
           aria-label="Back to top"
         >
           <ArrowUp className="w-5 h-5" />
@@ -78,8 +78,8 @@ export function TrendsPage() {
 
       {/* Page Header */}
       <div>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
-          Market Trends & <span className="text-gold-accent">Outlook</span>
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-2">
+          Market Trends & Outlook
         </h2>
         <p className="text-gray-600 dark:text-gray-400 text-base max-w-2xl">
           Comprehensive analysis of grain quality technology adoption, market evolution, and future opportunities
@@ -90,7 +90,7 @@ export function TrendsPage() {
       </div>
 
       {/* Page Contents Navigation */}
-      <nav className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-4 border border-gray-100 dark:border-gray-700 shadow-sm sticky top-0 z-10">
+      <nav className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-zinc-200 dark:border-zinc-800 sticky top-0 z-10">
         <div className="flex items-center gap-2 mb-3">
           <ChevronRight className="w-4 h-4 text-emerald-500" />
           <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Page Contents</span>
@@ -594,7 +594,7 @@ export function TrendsPage() {
           ))}
         </div>
 
-        <div className="mt-6 p-4 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-lg border border-emerald-500/20">
+        <div className="mt-6 p-4 bg-zinc-50 dark:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700">
           <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-emerald-500" />
             Key Trend: Harvest-Time Grading

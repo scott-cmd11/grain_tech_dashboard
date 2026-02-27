@@ -26,27 +26,24 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen }: SidebarProps) {
             {/* ============= DESKTOP SIDEBAR ============= */}
             <aside
                 className={`
-                    ${sidebarOpen ? 'w-72' : 'w-0'} 
+                    ${sidebarOpen ? 'w-60' : 'w-0'} 
                     shrink-0 overflow-y-auto overflow-x-hidden
-                    bg-white/70 dark:bg-zinc-900/70 
-                    backdrop-blur-2xl
-                    border-r border-gray-200/60 dark:border-white/5
-                    shadow-[4px_0_24px_-12px_rgba(0,0,0,0.1)]
-                    dark:shadow-[4px_0_24px_-12px_rgba(0,0,0,0.3)]
-                    transition-all duration-300 ease-out-expo
+                    bg-white dark:bg-zinc-900
+                    border-r border-zinc-200 dark:border-zinc-800
+                    transition-[width] duration-200 ease-out
                     lg:flex flex-col hidden
                 `}
                 role="navigation"
                 aria-label="Main navigation"
             >
-                <div className="p-5 space-y-2">
+                <div className="p-4 space-y-1">
                     <TabNav activeTab={activeTab} onTabChange={onTabChange} />
                 </div>
             </aside>
 
             {/* ============= MOBILE BOTTOM TAB BAR ============= */}
             <nav
-                className="lg:hidden fixed bottom-0 left-0 right-0 z-[50] bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xl border-t border-gray-200/60 dark:border-white/10 pb-[env(safe-area-inset-bottom,0px)]"
+                className="lg:hidden fixed bottom-0 left-0 right-0 z-[50] bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 pb-[env(safe-area-inset-bottom,0px)]"
                 role="navigation"
                 aria-label="Mobile navigation"
             >
@@ -57,32 +54,27 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen }: SidebarProps) {
                             <button
                                 key={tab.id}
                                 onClick={() => onTabChange(tab.id)}
-                                className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl transition-all duration-200 min-w-[60px] focus-ring
+                                className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg transition-colors duration-150 min-w-[60px] focus-ring
                                     ${isActive
-                                        ? 'text-emerald-600 dark:text-emerald-400'
-                                        : 'text-gray-500 dark:text-gray-400'
+                                        ? 'text-accent-600 dark:text-accent-400'
+                                        : 'text-zinc-400 dark:text-zinc-500'
                                     }`}
                                 aria-current={isActive ? 'page' : undefined}
                             >
-                                <span className={`transition-transform duration-200 ${isActive ? 'scale-110' : ''}`}>
-                                    {tab.icon}
-                                </span>
-                                <span className={`text-[10px] font-medium ${isActive ? 'text-emerald-600 dark:text-emerald-400' : ''}`}>
+                                {tab.icon}
+                                <span className={`text-[10px] font-medium ${isActive ? 'text-accent-600 dark:text-accent-400' : ''}`}>
                                     {tab.label}
                                 </span>
-                                {isActive && (
-                                    <span className="absolute -top-0.5 w-6 h-0.5 rounded-full bg-emerald-500" />
-                                )}
                             </button>
                         );
                     })}
-                    {/* More button opens full navigation */}
+                    {/* More button */}
                     <button
                         onClick={() => setMoreOpen(true)}
-                        className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-xl transition-all duration-200 min-w-[60px] focus-ring
+                        className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg transition-colors duration-150 min-w-[60px] focus-ring
                             ${!BOTTOM_TABS.some(t => t.id === activeTab)
-                                ? 'text-emerald-600 dark:text-emerald-400'
-                                : 'text-gray-500 dark:text-gray-400'
+                                ? 'text-accent-600 dark:text-accent-400'
+                                : 'text-zinc-400 dark:text-zinc-500'
                             }`}
                     >
                         <MoreHorizontal className="w-5 h-5" />
@@ -91,49 +83,39 @@ export function Sidebar({ activeTab, onTabChange, sidebarOpen }: SidebarProps) {
                 </div>
             </nav>
 
-            {/* ============= MOBILE "MORE" FULL NAV OVERLAY ============= */}
+            {/* ============= MOBILE "MORE" OVERLAY ============= */}
             <div
-                className={`lg:hidden fixed inset-0 z-[60] transition-all duration-300 ${moreOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`lg:hidden fixed inset-0 z-[60] transition-opacity duration-200 ${moreOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
-                {/* Backdrop */}
                 <div
-                    className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+                    className="absolute inset-0 bg-black/40"
                     onClick={() => setMoreOpen(false)}
                 />
-
-                {/* Bottom sheet panel */}
                 <aside
                     className={`
                         absolute bottom-0 left-0 right-0 
-                        max-h-[80vh] rounded-t-3xl
-                        bg-white/95 dark:bg-zinc-900/95 
-                        backdrop-blur-2xl
-                        shadow-2xl shadow-black/20
-                        transition-transform duration-300 ease-out-expo
+                        max-h-[80vh] rounded-t-xl
+                        bg-white dark:bg-zinc-900
+                        border-t border-zinc-200 dark:border-zinc-800
+                        shadow-md
+                        transition-transform duration-200 ease-out
                         ${moreOpen ? 'translate-y-0' : 'translate-y-full'}
                     `}
                 >
-                    {/* Drag handle */}
                     <div className="flex justify-center pt-3 pb-1">
-                        <div className="w-10 h-1 rounded-full bg-gray-300 dark:bg-gray-600" />
+                        <div className="w-8 h-1 rounded-full bg-zinc-300 dark:bg-zinc-600" />
                     </div>
-
-                    <div className="p-6 space-y-4 flex flex-col overflow-y-auto max-h-[calc(80vh-40px)]">
-                        {/* Header */}
-                        <div className="flex items-center justify-between pb-4 border-b border-gray-200/50 dark:border-white/10">
-                            <h2 className="text-lg font-semibold text-gray-900 dark:text-white tracking-tight">
-                                All Sections
-                            </h2>
+                    <div className="p-5 space-y-4 flex flex-col overflow-y-auto max-h-[calc(80vh-40px)]">
+                        <div className="flex items-center justify-between pb-3 border-b border-zinc-200 dark:border-zinc-800">
+                            <h2 className="text-sm font-semibold text-zinc-900 dark:text-white">All Sections</h2>
                             <button
                                 onClick={() => setMoreOpen(false)}
-                                className="p-2 -mr-2 text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/10 rounded-xl transition-all duration-200 focus-ring"
+                                className="p-1.5 -mr-1.5 text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg focus-ring"
                             >
-                                <X className="w-5 h-5" />
+                                <X className="w-4 h-4" />
                             </button>
                         </div>
-
-                        {/* Full Navigation */}
-                        <div className="flex-1 overflow-y-auto -mx-2 px-2">
+                        <div className="flex-1 overflow-y-auto -mx-1 px-1">
                             <TabNav
                                 activeTab={activeTab}
                                 onTabChange={(tab) => {

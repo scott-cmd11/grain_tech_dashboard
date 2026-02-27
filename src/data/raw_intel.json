@@ -1,227 +1,213 @@
 {
-  "generated_at": "2026-02-20T06:00:19.826459",
-  "total_items": 55,
+  "generated_at": "2026-02-27T09:05:03.844636",
+  "total_items": 83,
   "category_counts": {
-    "grain_industry": 10,
-    "technology": 17,
+    "grain_industry": 11,
+    "technology": 14,
     "company": 1,
     "regulatory": 0,
-    "rss_feeds": 27
+    "company_feeds": 0,
+    "google_alerts": 32,
+    "rss_feeds": 25
   },
   "articles": [
     {
-      "title": "GRDC Update: Pulses a ‘slow burn’ as WA seeks wider rotation",
-      "link": "https://www.graincentral.com/cropping/grdc-update-pulses-a-slow-burn-as-wa-seeks-wider-rotation/",
-      "summary": "Despite their volatile markets and agronomic and harvesting challenges, pulses are piquing interest among WA growers, as evidenced in two GRDC Perth Update sessions this week.",
-      "published": "2026-02-19T02:10:43+00:00",
+      "title": "OUT OF CONTROL",
+      "link": "https://grainswest.com/2026/02/out-of-control/",
+      "summary": "In early February, the federal Pest Management Regulatory Agency (PMRA) rejected an emergency use application submitted by the Alberta and Saskatchewan governments to make strychnine available for use against gophers.",
+      "published": "2026-02-23T18:39:30+00:00",
+      "source": "GrainsWest Magazine",
+      "category": "grain_industry"
+    },
+    {
+      "title": "Feedgrain Focus: Markets lift despite patchy rain in south",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-markets-lift-despite-patchy-rain-in-south/",
+      "summary": "Wheat and barley prices have strengthened on limited offerings from growers and the trade, and sorghum has kicked in the midst of the Lunar New Year holiday.",
+      "published": "2026-02-26T04:07:23+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Wilga Farming expands Great Southern footprint",
-      "link": "https://www.graincentral.com/property/wilga-farming-expands-great-southern-footprint/",
-      "summary": "Investor Wilga Farming has expanded its holdings in WA's Great Southern region to take in Que Sera and part of the WALT Portfolio.",
-      "published": "2026-02-20T01:43:40+00:00",
+      "title": "Ridley HY26 profits up 137pc, fertilisers business update",
+      "link": "https://www.graincentral.com/news/ridley-hy26-profits-up-137pc-fertilisers-business-update/",
+      "summary": "Stockfeed manufacturer and fertiliser distributor Ridley has reported a statutory net profit after tax of $52.7M, up 137.4pc on the pcp, for 1H26.",
+      "published": "2026-02-26T06:09:34+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Large CQ area set to underpin national mungbean crop",
-      "link": "https://www.graincentral.com/cropping/large-cq-area-set-to-underpin-national-mungbean-crop/",
-      "summary": "Recent rain means CQ is on track to produce much of Australia's mungbean crop, and growers are advised to take extra care not to exceed MRLs.",
-      "published": "2026-02-20T02:02:29+00:00",
+      "title": "Low-rainfall cropping country lists in WA, Mallee",
+      "link": "https://www.graincentral.com/property/low-rainfall-cropping-country-lists-in-wa-mallee/",
+      "summary": "WA's North Bullfinch Aggregation and Galick Ridge in the Victorian Mallee are on the market, offering opportunities to buy into low-rainfall cropping country.",
+      "published": "2026-02-27T00:40:02+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "District farmers buy Boorala, Wilgaroi, Kookaburragong",
-      "link": "https://www.graincentral.com/property/district-farmers-buy-boorala-wilgaroi-kookaburragong/",
-      "summary": "Family farmers are showing an appetite for local expansion, as evidenced by the sales of Boorala in SA, and Wilgaroi and Kookaburragong in NSW.",
-      "published": "2026-02-20T02:43:56+00:00",
+      "title": "People on the Move in the grain industry",
+      "link": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-33/",
+      "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
+      "published": "2026-02-27T00:10:18+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "GrainCorp confident of global market rebalance",
-      "link": "https://www.graincentral.com/news/graincorp-confident-of-global-grain-market-rebalance/",
-      "summary": "GrainCorp executives say they expect a more balanced global market to emerge, as the company continues to contend with grain oversupply and sustained price pressures.",
-      "published": "2026-02-19T02:21:01+00:00",
+      "title": "Tasmania’s Logan sells to 40 South Dairies",
+      "link": "https://www.graincentral.com/property/tasmanias-logan-sells-to-40-south-dairies/",
+      "summary": "A dairy-farming joint venture has paid close to $35M for Logan, an irrigated and dryland property in Tasmania’s tightly held Northern Midlands.",
+      "published": "2026-02-26T06:24:25+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Feedgrain Focus: Qld rain brightens new-crop prospects",
-      "link": "https://www.graincentral.com/markets/feedgrain-focus-qld-rain-brightens-new-crop-prospects/",
-      "summary": "Substantial rain over parts of the Qld grainbelt has been welcomed, falling at the ideal time for recently planted sorghum in CQ, and topping up subsoil ahead of winter-crop planting.",
-      "published": "2026-02-18T10:07:48+00:00",
+      "title": "CSIRO launches FarmPrint to help growers quantify emissions",
+      "link": "https://www.graincentral.com/carbon/csiros-farmprint-helps-growers-quantify-emissions/",
+      "summary": "CSIRO has launched FarmPrint to help producers evaluate, benchmark and report on greenhouse gas emissions.",
+      "published": "2026-02-27T00:59:19+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Daily Market Wire 20 February 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-20-february-2026/",
-      "summary": "Wheat rallies 2 percent amid technical breakout; sentiment dominates price action.",
-      "published": "2026-02-20T00:56:56+00:00",
+      "title": "Daily Market Wire 27 February 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-27-february-2026/",
+      "summary": "US winter continues hotter than normal. Australian east coast barley wheat spread tightens.",
+      "published": "2026-02-26T23:39:31+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "GRDC Update: Satellites reveal crunch times for frost",
-      "link": "https://www.graincentral.com/research/grdc-update-satellites-reveal-crunch-times-for-frost/",
-      "summary": "A CSIRO project is using Himawari satellite imagery coupled with APSIM modelling to predict in-crop wheat, barley, canola, chickpea and lentil yield losses to frost.",
-      "published": "2026-02-17T21:11:08+00:00",
+      "title": "GRDC Update: Growth seen in Asian feedgrain demand",
+      "link": "https://www.graincentral.com/markets/grdc-update-growth-seen-in-asian-feedgrain-demand/",
+      "summary": "Australian wheat for feed is finding some love in Asia as consumers look for animal rather than grain protein, and biofuel demand keeps more US corn at home.",
+      "published": "2026-02-24T06:27:31+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Ag Minister rejects GPA levy proposal",
-      "link": "https://www.graincentral.com/news/ag-minister-rejects-gpa-levy-proposal-over-low-engagement/",
-      "summary": "Agriculture Minister Collins has knocked back changes to the levy system proposed by GPA, pointing to a lack of widespread support across the sector.",
-      "published": "2026-02-18T03:27:44+00:00",
+      "title": "Cropping sector leads on productivity, export growth: ABARES",
+      "link": "https://www.graincentral.com/news/cropping-sector-leads-on-productivity-export-growth-abares/",
+      "summary": "An ABARES paper shows cropping has outperformed other ag sectors on productivity growth, farm income, and export value growth.",
+      "published": "2026-02-25T02:13:31+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Spraying to control bacteria shows promise in curbing frost hits",
-      "link": "https://www.graincentral.com/research/spraying-to-control-bacteria-shows-promise-in-curbing-frost-hits/",
-      "summary": "WA DPIRD research shows frost impact can be mitigated by spraying oxide-based formulations on ice-nucleating bacteria found on senesced wheat and barley leaves.",
-      "published": "2026-02-16T23:42:04+00:00",
+      "title": "Grain Central Jan-Feb 2026 news quiz",
+      "link": "https://www.graincentral.com/news/grain-central-jan-feb-2026-news-quiz/",
+      "summary": "Keep up to date with developments in Grain Central’s first quiz for 2026…",
+      "published": "2026-02-25T04:30:02+00:00",
       "source": "Grain Central",
       "category": "grain_industry"
     },
     {
-      "title": "Resurrect Bio raises $8.1m to unlock plants’ innate disease resistance capabilities",
-      "link": "https://agfundernews.com/resurrect-bio-raises-8-1m-to-unlock-plants-innate-disease-resistance-capabilities",
-      "summary": "<p>Resurrect Bio helps plants unlock innate capabilities to fight disease without chemical inputs.</p>\n<p>The post <a href=\"https://agfundernews.com/resurrect-bio-raises-8-1m-to-unlock-plants-innate-disease-resistance-capabilities\">Resurrect Bio raises $8.1m to unlock plants&#8217; innate disease resistance capabilities</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T22:01:37+00:00",
+      "title": "AgriFood Signals: Pepper raises $50m, Mars’ new impact fund, Syngenta IPO hints",
+      "link": "https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints",
+      "summary": "<p>Plus: Crowdfunding for cow-free cheese.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints\">AgriFood Signals: Pepper raises $50m, Mars&#8217; new impact fund, Syngenta IPO hints</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-26T21:30:40+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AgriFood Signals: Egypt eGrocer Breadfast banks $50m, Kubota invests in spray ‘bot, Trump’s glyphosate order",
-      "link": "https://agfundernews.com/agrifood-signals-egypt-egrocer-breadfast-banks-50m-kubota-invests-in-spray-bot-trumps-glyphosate-order",
-      "summary": "<p>Plus: Cargill's latest alt-chocolate foray.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-egypt-egrocer-breadfast-banks-50m-kubota-invests-in-spray-bot-trumps-glyphosate-order\">AgriFood Signals: Egypt eGrocer Breadfast banks $50m, Kubota invests in spray &#8216;bot, Trump&#8217;s glyphosate order</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T21:45:19+00:00",
+      "title": "Latam sugar giant Magdalena plans 650,000-L precision fermentation facility in Guatemala",
+      "link": "https://agfundernews.com/latam-sugar-giant-magdalena-plans-650000-l-precision-fermentation-facility-in-guatemala",
+      "summary": "<p>Magdalena is \"reallocating capital, talent, and governance toward industrial biology,\" says biochem unit director Andrés Rodas.</p>\n<p>The post <a href=\"https://agfundernews.com/latam-sugar-giant-magdalena-plans-650000-l-precision-fermentation-facility-in-guatemala\">Latam sugar giant Magdalena plans 650,000-L precision fermentation facility in Guatemala</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-26T16:36:18+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Ruminant BioTech eyes Canada as launchpad for global expansion with $5.6m research program",
-      "link": "https://agfundernews.com/ruminant-biotech-eyes-canada-as-launchpad-for-global-expansion-with-5-6m-research-program",
-      "summary": "<p>Feed additives suit intensive farming systems, but a longer-lasting solution for methane reduction is needed for pasture-raised cattle, says Ruminant BioTech.</p>\n<p>The post <a href=\"https://agfundernews.com/ruminant-biotech-eyes-canada-as-launchpad-for-global-expansion-with-5-6m-research-program\">Ruminant BioTech eyes Canada as launchpad for global expansion with $5.6m research program</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T16:22:40+00:00",
+      "title": "Döhler brings Superbrewed’s postbiotic protein into commercial production",
+      "link": "https://agfundernews.com/dohler-brings-superbreweds-postbiotic-protein-into-commercial-production",
+      "summary": "<p>\"This is a truly novel ingredient that has crossed into industrial production through a partner-led, capital-efficient model,\" says CEO Dr. Bryan Tracy.</p>\n<p>The post <a href=\"https://agfundernews.com/dohler-brings-superbreweds-postbiotic-protein-into-commercial-production\">Döhler brings Superbrewed’s postbiotic protein into commercial production</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-25T13:00:51+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "From rocks to row crops, TerraClear broadens its capabilities with launch of fully autonomous robot",
-      "link": "https://agfundernews.com/from-rocks-to-row-crops-terraclear-broadens-its-capabilities-with-launch-of-fully-autonomous-robot",
-      "summary": "<p>TerraClear aims to make precision farming \"technically and economically feasible\" for growers with the launch of its TerraScout robot.</p>\n<p>The post <a href=\"https://agfundernews.com/from-rocks-to-row-crops-terraclear-broadens-its-capabilities-with-launch-of-fully-autonomous-robot\">From rocks to row crops, TerraClear broadens its capabilities with launch of fully autonomous robot</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T14:00:31+00:00",
+      "title": "ZhongGu Junchuang expands reach with new mycelium R&D and production hub in Western China",
+      "link": "https://agfundernews.com/zhonggu-junchuang-expands-reach-with-new-mycelium-rd-and-production-hub-in-western-china",
+      "summary": "<p>The new facility—backed by $22m in government support—will have 20x the production capacity of the firm’s site in Inner Mongolia.</p>\n<p>The post <a href=\"https://agfundernews.com/zhonggu-junchuang-expands-reach-with-new-mycelium-rd-and-production-hub-in-western-china\">ZhongGu Junchuang expands reach with new mycelium R&#038;D and production hub in Western China</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-25T00:07:12+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Hybrid meat for the win: JOYN Foods finds sweet spot in alt-protein market, expects to be EDITDA positive in early 2027",
-      "link": "https://agfundernews.com/hybrid-meat-for-the-win-joyn-foods-finds-sweet-spot-in-alt-protein-market-expects-to-be-editda-positive-in-early-2027",
-      "summary": "<p>JOYN Foods expects to triple revenues in 2026 and then triple them again in 2027, driven by rapid growth in foodservice markets.</p>\n<p>The post <a href=\"https://agfundernews.com/hybrid-meat-for-the-win-joyn-foods-finds-sweet-spot-in-alt-protein-market-expects-to-be-editda-positive-in-early-2027\">Hybrid meat for the win: JOYN Foods finds sweet spot in alt-protein market, expects to be EDITDA positive in early 2027</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T02:42:24+00:00",
+      "title": "DJI appeal sets stage for legal showdown over future of US ag spray drone market",
+      "link": "https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market",
+      "summary": "<p>The FCC ruling—which has upended a sector dominated by overseas vendors—is “procedurally and substantively flawed,” argues DJI.</p>\n<p>The post <a href=\"https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market\">DJI appeal sets stage for legal showdown over future of US ag spray drone market</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-24T19:59:17+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "US receiver to liquidate Believer Meats’ factory and assets as Israeli trustee ringfences IP",
-      "link": "https://agfundernews.com/us-receiver-to-liquidate-believer-meats-factory-and-assets-as-israeli-trustee-ringfences-ip",
-      "summary": "<p>Creditors Gray Construction and Ameris Bank have positioned themselves to be first in line as Believer's US assets are sold.</p>\n<p>The post <a href=\"https://agfundernews.com/us-receiver-to-liquidate-believer-meats-factory-and-assets-as-israeli-trustee-ringfences-ip\">US receiver to liquidate Believer Meats’ factory and assets as Israeli trustee ringfences IP</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-18T21:44:57+00:00",
+      "title": "How AI, automated labs and CDMOs are replacing agrifood’s 100-year-old R&D playbook",
+      "link": "https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook",
+      "summary": "<p>The world's most critical challenges are accelerating at a rapid pace. The R&#038;D methods tasked with solving them are not—until now.</p>\n<p>The post <a href=\"https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook\">How AI, automated labs and CDMOs are replacing agrifood&#8217;s 100-year-old R&#038;D playbook</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-24T11:44:52+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AI in India: The world’s ‘AI back office’ is betting on small language models to bring big impact to smallholder farming",
-      "link": "https://agfundernews.com/ai-in-india-the-worlds-ai-back-office-is-betting-on-small-language-models-to-bring-big-impact-to-smallholder-farming",
-      "summary": "<p>The real victory won't be in the size of the model, but in the ability to finally make it work for the person in the field.</p>\n<p>The post <a href=\"https://agfundernews.com/ai-in-india-the-worlds-ai-back-office-is-betting-on-small-language-models-to-bring-big-impact-to-smallholder-farming\">AI in India: The world&#8217;s &#8216;AI back office&#8217; is betting on small language models to bring big impact to smallholder farming</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderN",
-      "published": "2026-02-17T17:34:20+00:00",
+      "title": "Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market",
+      "link": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market",
+      "summary": "<p>BLG via precision fermentation allows brands to pack more protein into shots, yogurts, and drinks without the trade-offs that come with conventional whey, claims the firm.</p>\n<p>The post <a href=\"https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market\">Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNe",
+      "published": "2026-02-24T08:00:15+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Alt-coffee startup Koppie nets new funds to build 1,000-ton capacity for launch partners in 2026",
-      "link": "https://agfundernews.com/alt-coffee-startup-koppie-nets-new-funds-to-build-1000-ton-capacity-for-launch-partners-in-2026",
-      "summary": "<p>While several alt-coffee startups are now pitching to big coffee companies, the fact Koppie has a single ingredient and can slot into existing downstream coffee infrastructure can potentially give it an edge, claims the firm.</p>\n<p>The post <a href=\"https://agfundernews.com/alt-coffee-startup-koppie-nets-new-funds-to-build-1000-ton-capacity-for-launch-partners-in-2026\">Alt-coffee startup Koppie nets new funds to build 1,000-ton capacity for launch partners in 2026</a> appeared first on <a hr",
-      "published": "2026-02-17T07:11:41+00:00",
+      "title": "Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model",
+      "link": "https://agfundernews.com/atarraya-looks-to-bring-high-tech-shrimp-farming-to-uae-evolves-business-model",
+      "summary": "<p>The move reflects the evolution of its business model toward an asset-light approach, scaling through partnerships with “master franchisors.\"</p>\n<p>The post <a href=\"https://agfundernews.com/atarraya-looks-to-bring-high-tech-shrimp-farming-to-uae-evolves-business-model\">Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-23T16:25:22+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Guest article: Separating the wheat from the chaff in agtech",
-      "link": "https://agfundernews.com/guest-article-separating-the-wheat-from-the-chaff-in-agtech",
-      "summary": "<p>The next winners in agtech will \"solve real problems for real farmers,\" backed by patient, operationally savvy capital, says Rob Appleby.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-separating-the-wheat-from-the-chaff-in-agtech\">Guest article: Separating the wheat from the chaff in agtech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-17T07:00:03+00:00",
+      "title": "Guest article: How to stop playing the old game in ag innovation",
+      "link": "https://agfundernews.com/how-to-stop-playing-the-old-game-in-ag-innovation",
+      "summary": "<p>While other sectors build for uncertainty, agriculture keeps betting the old model will somehow hold, and innovators are paying the price.</p>\n<p>The post <a href=\"https://agfundernews.com/how-to-stop-playing-the-old-game-in-ag-innovation\">Guest article: How to stop playing the old game in ag innovation</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-20T17:00:20+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "India will see IPOs in agritech before America or Europe, says Omnivore’s Mark Kahn",
-      "link": "https://agfundernews.com/india-will-see-ipos-in-agritech-before-america-or-europe-says-omnivores-mark-kahn",
-      "summary": "<p>\"Even though India is a smallholder ecosystem, it is one of the largest agricultural economies in the world,\" says Omnivore's Mark Kahn.</p>\n<p>The post <a href=\"https://agfundernews.com/india-will-see-ipos-in-agritech-before-america-or-europe-says-omnivores-mark-kahn\">India will see IPOs in agritech before America or Europe, says Omnivore’s Mark Kahn</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-16T11:00:09+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "As climate shocks hit Kenya, GrowPact bets on seedlings, greenhouses, and tech",
-      "link": "https://agfundernews.com/as-climate-shocks-hit-kenya-growpact-bets-on-seedlings-greenhouses-and-tech",
-      "summary": "<p>Though its core mission remains seedling production, GrowPact has since expanded its scope of services by offering farmers inputs including fertilizer, chemicals, and drip lines.</p>\n<p>The post <a href=\"https://agfundernews.com/as-climate-shocks-hit-kenya-growpact-bets-on-seedlings-greenhouses-and-tech\">As climate shocks hit Kenya, GrowPact bets on seedlings, greenhouses, and tech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-13T11:00:33+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "New Adir Power platform for transport and applications in orchards and vineyards",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/ant-robotics-launches-adir-power-platform-for-transport-and-applications-in-orchards-and-vineyards/",
-      "summary": "Ant Robotics has launched the Adir Power, a new heavy-duty mobile robot platform aimed at transportation and maintenance tasks.",
-      "published": "2026-02-20T08:30:56+00:00",
+      "title": "New John Deere 8R series up to 634 hp, prepared for ‘Supervised Autonomy’",
+      "link": "https://www.futurefarming.com/tech-in-focus/new-john-deere-8r-series-up-to-634-hp-prepared-for-supervised-autonomy/",
+      "summary": "John Deere has introduced an expanded 8R and 8RX tractor range with power outputs up to 634 hp. The high-horsepower tractors are digitally prepared for what the company calls “Supervised Autonomy Features” — but they are not driverless machines.",
+      "published": "2026-02-26T13:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Kubota leads €6.5 million funding round in ultra-precise spot spraying robot developer Kilter",
-      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/kubota-leads-e6-5-million-funding-round-in-ultra-precise-spot-spraying-robot-developer-kilter/",
-      "summary": "Kubota Corporation has led a €6.5 million pre-Series B investment round in Norwegian AgTech start-up Kilter AS, developer of the autonomous AX-1 ultra-precise spot spraying robot for high-value crops. The funding round also included existing investors SBG Invest AS, Pymwymic and Nufarm. Alongside the investment, Kubota and Kilter announced a distribution partnership that will make the [&#8230;]",
-      "published": "2026-02-19T08:30:44+00:00",
+      "title": "10 years of autonomous ups and downs on a 16,000 hectares Australian farm",
+      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/10-years-of-autonomous-ups-and-downs-on-a-16000-hectares-australian-farm/",
+      "summary": "Beefwood Farms, north of Moree in New South Wales, Australia, has been betting on autonomous and unmanned machinery since 2015.",
+      "published": "2026-02-25T09:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Is an AI chatbot reliable as a workplace assistant?",
-      "link": "https://www.futurefarming.com/smart-farming/is-an-ai-chatbot-reliable-as-a-workplace-assistant/",
-      "summary": "AI, short for artificial intelligence, is now an integral part of agriculture—from crop recognition and the automatic adjustment of harvesters to sorting potatoes and tulips. AI is also increasingly being consulted in the workplace. A &#8220;smart&#8221; chatbot seems like an easy search engine, but is it actually reliable? The answer to whether an AI chatbot [&#8230;]",
-      "published": "2026-02-18T08:30:40+00:00",
+      "title": "Einböck supplies sideshift frame for 3-metre-wide hoes",
+      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/einbock-supplies-sideshift-frame-for-3-metre-wide-hoes/",
+      "summary": "The Austrian machinery manufacturer Einböck has developed a new Row-Guard sideshift with camera control for narrow hoes, particularly in vegetable cultivation. It operates with a camera mounted centrally behind the tractor.",
+      "published": "2026-02-25T08:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Ant Robotics introduces autonomous platform Valera Cube",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/ant-robotics-introduces-autonomous-platform-valera-cube/",
-      "summary": "Ant Robotics has introduced the Valera Cube, an autonomous tool carrier designed for operations in polytunnels, vineyards, tabletops, and field crops. The robot is positioned as a flexible plant protection and crop care solution for high-value horticultural crops such as strawberries, raspberries, grapes, and tomatoes but can also be used in field crops such as [&#8230;]",
-      "published": "2026-02-17T11:00:54+00:00",
+      "title": "Review: Robotic weed control in rice shifts toward AI, sensor fusion and amphibious platforms",
+      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/review-robotic-weed-control-in-rice-shifts-toward-ai-sensor-fusion-and-amphibious-platforms/",
+      "summary": "Robotic weed management in rice is advancing rapidly, but large-scale adoption will depend on performance in muddy, waterlogged conditions and more robust AI integration.",
+      "published": "2026-02-23T09:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Autonomy as a strategy – Why a Dutch bulb grower invested in a driverless tractor",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/seizing-the-optimal-moment-with-autonomous-tractors/",
-      "summary": "For Stef Ruiter, autonomy is not about replacing labour. It is about timing, soil health and long-term resilience. After testing a New Holland tractor equipped with the iQuus autonomous system under the Dutch NPPL programme, the tulip grower from Andijk, the Netherlands, decided to invest. Since 2019, Ruiter-Wever has been a participant in the NPPL [&#8230;]",
-      "published": "2026-02-17T08:57:33+00:00",
-      "source": "Future Farming",
-      "category": "technology"
-    },
-    {
-      "title": "Caterra launches fully autonomous laser weeding robot Honeybee",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/caterra-launches-fully-autonomous-laser-weeding-robot-honeybee/",
-      "summary": "Swiss company Caterra AG has recently launched the Honeybee, a fully autonomous electric weeding robot designed to replace labour-intensive hand weeding in organic and high-value vegetable crops. With laser-based weed control and 24-hour operation capability, the company positions Honeybee as a scalable alternative to manual labour and chemical inputs. The Honeybee removes weeds using high-precision [&#8230;]",
-      "published": "2026-02-16T10:15:25+00:00",
+      "title": "AgBot 5.115 completes first independent full-season field trial on commercial arable farm",
+      "link": "https://www.futurefarming.com/tech-in-focus/agbot-5-115-autonomous-tractor-shows-potential-on-dutch-arable-farms/",
+      "summary": "Under the banner of the National Proeftuin Precisielandbouw (NPPL), Vermuë Akkerbouw in Werkendam (N.-Br.) worked with such an AgBot in 2025.",
+      "published": "2026-02-23T08:30:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
@@ -229,223 +215,463 @@
       "title": "Need automated, accurate grain grading in minutes?",
       "link": "https://groundtruth.ag#benchtopmvnirs",
       "summary": "",
-      "published": "2026-02-20T06:00:11.073830",
+      "published": "2026-02-27T09:04:50.054553",
       "source": "Ground Truth Ag",
       "category": "vertical_grain"
     },
     {
-      "title": "GRDC Update: Pulses a ‘slow burn’ as WA seeks wider rotation",
-      "link": "https://www.graincentral.com/cropping/grdc-update-pulses-a-slow-burn-as-wa-seeks-wider-rotation/",
-      "summary": "Despite their volatile markets and agronomic and harvesting challenges, pulses are piquing interest among WA growers, as evidenced in two GRDC Perth Update sessions this week.",
-      "published": "2026-02-19T02:10:43+00:00",
+      "title": "How <b>artificial intelligence</b> can reduce selfish behavior and reshape society",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.thebrighterside.news/post/how-artificial-intelligence-can-reduce-selfish-behavior-and-reshape-society/&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw30hNj1bGCQviYDUzhggGpk",
+      "summary": "If AI always cooperates, maybe it will “<b>seed</b>” cooperation and nudge people toward helping too. The simulations did not support that hope&nbsp;...",
+      "published": "2026-02-27T03:17:57+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "<b>Artificial intelligence</b> is transitioning into a 'digital employee' | Arab News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.arabnews.com/node/2634606/business-economy&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw0wkxpEeluETxWUnmoa2I9_",
+      "summary": "... <b>seed</b> Auger-Aliassime in Friday's final-four. PreviousPauseNext. You are here. Home; <b>Artificial intelligence</b> is transitioning into a 'digital employee'.",
+      "published": "2026-02-27T01:01:19+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "TrillionAgent Launches AI Agents Marketplace to Support Business Adoption of <b>Artificial Intelligence</b>",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.barchart.com/story/news/456720/trillionagent-launches-ai-agents-marketplace-to-support-business-adoption-of-artificial-intelligence&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw02G0thFb1zDrax_4j6oac_",
+      "summary": "... <b>artificial intelligence</b> into organizational operations. Founded in ... <b>Grains</b> Energies Alerts Pre-Market Post-Market. Stocks Stocks. Market&nbsp;...",
+      "published": "2026-02-26T23:45:13+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "Harrisburg faculty awarded <b>seed</b> grants for international research collaboration - PSU",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.psu.edu/news/harrisburg/story/harrisburg-faculty-awarded-seed-grants-international-research-collaboration&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw1oDBqXFRaxgTNqYU2QhVyE",
+      "summary": "... <b>artificial intelligence</b> may be used in addressing lack of news trust. Zhezhen Fu, assistant professor of mechanical engineering, partnering with&nbsp;...",
+      "published": "2026-02-26T19:00:43+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "Tusculum University to host public summit about <b>artificial intelligence</b> | WJHL | Tri-Cities ...",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.wjhl.com/news/local/tusculum-university-to-host-public-summit-about-artificial-intelligence/&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw3o7Uwmki35bkfhBV95JClQ",
+      "summary": "Valk Talk: The basics of <b>seed</b> starting. 23 hours ago. Home runs power the Vols past Bellarmine, 8-3. 2 days ago. High school boys district tournament&nbsp;...",
+      "published": "2026-02-26T17:31:18+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "<b>Artificial intelligence's</b> hobby: trolling your feed; how to spot fake content | Local News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.ktvo.com/news/local/artificial-intelligences-hobby-trolling-your-feed-how-to-spot-fake-content/article_c09c2eb6-fc44-4498-b5bb-fa0d9a830605.html&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw3Ngc_0mNmdttJ9rvYBOrqM",
+      "summary": "<b>Artificial intelligence</b> is everywhere these days ... Experts are warning that with all of this information, you have to take the products with a <b>grain</b>&nbsp;...",
+      "published": "2026-02-26T15:24:05+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "Periodic Updates on the <b>Grains</b>, Livestock Futures Markets - DTN Progressive Farmer",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.dtnpf.com/agriculture/web/ag/news/article/2026/02/26/periodic-updates-grains-livestock&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw2o1VfTvH5YFP7XGHI23NZr",
+      "summary": "LONDON (AP) -- Wikipedia unveiled new business deals with a slew of <b>artificial intelligence</b> companies on... Ag Policy Blog. USMCA Review Takes&nbsp;...",
+      "published": "2026-02-26T14:52:18+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "SMBs' finance organizations are slow to adopt AI for accounting | CFO.com",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.cfo.com/news/smbs-finance-organizations-are-slow-to-adopt-ai-for-accounting-Accounting-Seed/813015/&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw2om3WNZgREhX1tgFQFhIi7",
+      "summary": "Both on the job and off, <b>artificial intelligence</b> seems to be driving most things these days. ... <b>Seed</b>, a Salesforce accounting app that uses AI agents&nbsp;...",
+      "published": "2026-02-26T14:49:57+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "JetScale AI Raises Oversubscribed $5.4M <b>Seed</b> Funding Round - Business Wire",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.businesswire.com/news/home/20260226123282/en/JetScale-AI-Raises-Oversubscribed-%25245.4M-Seed-Funding-Round&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw0fUrpW19vKTC4fuoxQe19I",
+      "summary": "The <b>Seed</b> Venture Fund of the Business Development Bank of Canada (BDC) ... <b>Artificial Intelligence</b> &middot; Environment &middot; JetScale AI Logo. JetScale AI&nbsp;...",
+      "published": "2026-02-26T14:28:27+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "General Magic Raises $7.2M <b>Seed</b> Round | The SaaS News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.thesaasnews.com/news/general-magic-raises-7-2m-seed-round&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw1ZMqZNc-hLsWTdnxm1U1ao",
+      "summary": "Radical Ventures is a venture capital firm investing in world-leading entrepreneurs who are applying <b>artificial intelligence</b> to transform massive&nbsp;...",
+      "published": "2026-02-26T12:55:46+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "RLWRLD Raises $26M <b>Seed</b> 2, Bringing Total Funding to $41M to Scale Industrial Robotics AI",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.bakersfield.com/ap/news/rlwrld-raises-26m-seed-2-bringing-total-funding-to-41m-to-scale-industrial-robotics-ai/article_de41f700-cb2c-5580-92ef-9821222dcff6.html&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw3vZ5eTBeY19TzEzRGrzetn",
+      "summary": "... intelligence trained directly in real industrial environments––has closed a <b>Seed</b> 2 funding. ... <b>Artificial Intelligence</b> &middot; Information Technology&nbsp;...",
+      "published": "2026-02-26T12:26:36+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "ElastixAI launches FPGA platform for GenAI inference - Engineering.com",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.engineering.com/elastixai-launches-fpga-platform-for-genai-inference/&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw2PyweQNSK-I0nutNFek6Zn",
+      "summary": "Founded by former Apple and Meta <b>machine learning</b> (ML) researchers, and backed by $18M in <b>seed</b> funding, the company is launching a novel software&nbsp;...",
+      "published": "2026-02-26T10:54:10+00:00",
+      "source": "Google Alert: AI grain grading",
+      "category": "technology"
+    },
+    {
+      "title": "India and Israel elevate ties to 'special strategic partnership' status during Modi visit - WFIN",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://wfin.com/fox-world-news/india-and-israel-elevate-ties-to-special-strategic-partnership-status-during-modi-visit/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2j2vGF6zOBRpR9MCBxKIPu",
+      "summary": "The two countries ultimately signed 16 agreements spanning a range of topics, including <b>artificial intelligence</b>, cultural exchange, <b>agriculture</b> and&nbsp;...",
+      "published": "2026-02-27T07:24:36+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "PM Modi In Israel: India, Israel Sign 16 Crucial MOUs On <b>Agriculture</b>, Tech At Jerusalem PC",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.youtube.com/watch%3Fv%3Dd8OVk3HM5lc&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2oPs7hhDVbmVNIPZucDK9-",
+      "summary": "<b>agriculture</b> and technology cooperation. The ... BREAKING: India-Israel Signs MoUs And Agreements in <b>Agriculture</b>, <b>Artificial Intelligence</b> and UPI.",
+      "published": "2026-02-27T00:31:29+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Ag Forecast 2026: Powerful Data-Driven <b>Farming</b> Insights - Farmonaut",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://farmonaut.com/precision-farming/ag-forecast-2026-powerful-data-driven-farming-insights&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw1DcaBr1-_OkyOC07LObzS7",
+      "summary": "... <b>agriculture</b>. The integration of <b>artificial intelligence</b> allows <b>agricultural</b> systems in 2025–2026 to: Analyze historical crop performance&nbsp;...",
+      "published": "2026-02-26T23:42:51+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Captiv8 Aquaculture: 7 Aquaculture Laboratories Innovations - Farmonaut",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://farmonaut.com/blogs/captiv8-aquaculture-7-aquaculture-laboratories-innovations&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2vildDMvRtNvCuPsYOrN-D",
+      "summary": "<b>Machine learning</b> analyzes sensor data to predict stress events, disease outbreaks, and climate impacts. 4. Genetic Enhancement via CRISPR and&nbsp;...",
+      "published": "2026-02-26T19:42:35+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "UPI-Israel Link, $1.5 Million Research Boost Announced - Big Breakthrough! - YouTube",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.youtube.com/watch%3Fv%3D-WO5SSQvKJw&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw1i9-bBVyVnb72AW2d_yf_c",
+      "summary": "... <b>artificial intelligence</b>, cybersecurity, <b>agriculture</b>, innovation funding, and digital payments. Both sides agreed to deepen frontier technology&nbsp;...",
+      "published": "2026-02-26T16:29:28+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "PM Modi inks 16 MoUs as India and Israel announce Special Strategic Partnership",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://ddnews.gov.in/en/pm-modi-inks-16-mous-as-india-and-israel-announce-special-strategic-partnership/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw26eA887GPEKuFV1hq2lLr2",
+      "summary": "... <b>Agriculture</b> (IINCA) | Indian Council of <b>Agricultural</b> Research (ICAR) ... <b>Artificial Intelligence</b> (AI) and critical minerals, defence a... Most&nbsp;...",
+      "published": "2026-02-26T16:18:44+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Das Choudhury Launches AI Course for <b>Agriculture</b> (Enroll for Fall 2026) | Announce - News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://newsroom.unl.edu/announce/snr/19911/106389&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2JPuwsjSv7_45duL6Ru-24",
+      "summary": "... <b>Artificial Intelligence</b>, Computer Vision, and Data Analytics for <b>Agriculture</b> and Natural Resources WHO: Students of all disciplines ready to&nbsp;...",
+      "published": "2026-02-26T16:15:06+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "India bets on Small Language Models to scale AI across smallholder <b>farming</b>",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://agroempresario.com/publicacion/116112/india-bets-on-small-language-models-to-scale-ai-across-smallholder-farming/%3Fcat%3D10006515&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw37l_A37PrpBVGq3b6zGura",
+      "summary": "India is accelerating the deployment of <b>artificial intelligence</b> in <b>agriculture</b> in 2026, combining government incentives, global tech investment&nbsp;...",
+      "published": "2026-02-26T15:24:50+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "India-Israel Sign 16 Pacts On AI, <b>Agriculture</b>, Defence; PM Modi Seeks West Asia Peace",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.youtube.com/watch%3Fv%3DIYVXlg6QoIA&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw3k5ykW4SvvFypPoM_MKTV_",
+      "summary": "agreements span multiple sectors including <b>agriculture</b>, <b>artificial intelligence</b>, defence, cybersecurity, and quantum computing. Modi called for a&nbsp;...",
+      "published": "2026-02-26T14:49:58+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "India-Israel Signs MoUs And Agreements in <b>Agriculture</b>, <b>Artificial Intelligence</b> and UPI",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.youtube.com/watch%3Fv%3D6VEdccsjz0c&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw0kZ2vegR-0uhsfnSFMNZ4W",
+      "summary": "BREAKING: India-Israel Signs MoUs And Agreements in <b>Agriculture</b>, <b>Artificial Intelligence</b> and UPI India and Israel exchanged agreements and signed&nbsp;...",
+      "published": "2026-02-26T14:42:27+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Jerusalem, New Delhi Deepen Ties With Series of Economic Agreements - Baltimore Jewish Times",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.jewishtimes.com/jerusalem-new-delhi-deepen-ties-with-series-of-economic-agreements/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2Y-KH-awgC9QN65dBBfK8Y",
+      "summary": "Memorandums of Understanding were announced on everything from <b>artificial intelligence</b> to <b>agricultural</b> innovation. ... <b>agriculture</b> and water&nbsp;...",
+      "published": "2026-02-26T14:30:37+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "From AI to labour mobility, India and Israel deepen integration with 17 agreements, upgrade ties",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://sundayguardianlive.com/world/from-ai-to-labour-mobility-india-and-israel-deepen-integration-with-17-agreements-upgrade-tie-172582/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw1DyfsZ53y8u7UFvC_slDOv",
+      "summary": "A broad based MoU on <b>artificial intelligence</b> committed both sides to ... In <b>agriculture</b>, the Indian Council of <b>Agricultural</b> Research and&nbsp;...",
+      "published": "2026-02-26T13:28:10+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Regenerative <b>farming</b> gets major boost from Michigan grants - Times Herald",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.thetimesherald.com/story/news/local/2026/02/26/michigan-regenerative-agriculture-grants-2026-education-outreach-blue-water-district/88863829007/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw19EuC1rTQZhi3WpXHswPF9",
+      "summary": "This story was co-authored by Dave DeMille, ddemille@gannett.com, with the assistance of <b>Artificial Intelligence</b> (AI). Journalists were involved&nbsp;...",
+      "published": "2026-02-26T13:14:49+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Jerusalem, New Delhi deepen ties with series of economic agreements - JNS.org",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.jns.org/jerusalem-new-delhi-deepen-ties-with-series-of-economic-agreements/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw1OncEgrN7w7OwarRFPZmmn",
+      "summary": "Memorandums of Understanding were announced on everything from <b>artificial intelligence</b> to <b>agricultural</b> innovation. “We are proud ancient&nbsp;...",
+      "published": "2026-02-26T13:08:37+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "India, Israel sign MoUs across AI, <b>agriculture</b> and cybersecurity; UPI linkage pact inked",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.newindianexpress.com/nation/2026/Feb/26/india-israel-sign-mous-across-ai-agriculture-and-cybersecurity-upi-linkage-pact-inked&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2ccPBbhMrzHrzZISh8Cjr0",
+      "summary": "The wide-ranging pacts cover innovation, <b>agriculture</b>, geophysical exploration, maritime heritage, fisheries and aquaculture, <b>artificial intelligence</b>,&nbsp;...",
+      "published": "2026-02-26T12:01:06+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "<b>Agricultural</b> Robots and Implementation of Weed Detection by <b>Machine Learning</b>",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.amrita.edu/publication/agricultural-robots-and-implementation-of-weed-detection-by-machine-learning/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw0LvMQQCksUVlnyaCGxc25L",
+      "summary": "Abstract : Weed management in <b>agricultural</b> farms is one of the most crucial activities that the farmers should do to get a good yield of crops. This&nbsp;...",
+      "published": "2026-02-26T11:30:18+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "House gives initial approval on bills to expand <b>agriculture</b> education - Ground News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://ground.news/article/house-gives-initial-approval-on-bills-to-expand-agriculture-education&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw3Rbl-WVNEMO-7xfEs9HhUI",
+      "summary": "House gives initial approval on bills to expand <b>agriculture</b> education ... State of the UnionSouth Korea EconomyBusiness &amp; Markets<b>Artificial Intelligence</b>&nbsp;...",
+      "published": "2026-02-26T08:15:06+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "AI4Agri Summit 2026: Investing in India's AI <b>Agriculture</b> Future | DD News",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://ddnews.gov.in/en/ai4agri-summit-2026-investing-in-indias-ai-agriculture-future/&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw2Z5kGufLesNIL6CApflWFY",
+      "summary": "As India works toward its 'Viksit Bharat 2047' goal, Maharashtra is leading a global change by connecting <b>Artificial Intelligence</b> with the needs of&nbsp;...",
+      "published": "2026-02-26T08:01:40+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Intelligent cloud-based RAS management: integration of DDPG reinforcement learning with ...",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=https://www.nature.com/articles/s41598-025-33736-7&ct=ga&cd=CAIyGWJiODEwODYyMGM0NTYyODA6Y2E6ZW46VVM&usg=AOvVaw0ApEkhre0RZF_mZiqo7ROZ",
+      "summary": "Responsible <b>artificial intelligence</b> in <b>agriculture</b> requires systemic Understanding of risks and externalities. Nat. Mach. Intell. 4, 104–109 (2022)&nbsp;...",
+      "published": "2026-02-26T03:47:56+00:00",
+      "source": "Google Alert: AI agriculture",
+      "category": "technology"
+    },
+    {
+      "title": "Global <b>Wheat</b> Supply Tightens as Winter <b>Wheat</b> Futures Hit Multi-Month Highs - Markets",
+      "link": "https://www.google.com/url?rct=j&sa=t&url=http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2026-2-26-global-wheat-supply-tightens-as-winter-wheat-futures-hit-multi-month-highs&ct=ga&cd=CAIyGWQ3YzYyNGMzNjI2Nzk0Mjc6Y2E6ZW46VVM&usg=AOvVaw3m8Efefz3esXj0Dzqc4vym",
+      "summary": "... <b>Artificial Intelligence</b>. Tickers TEM. News headline image. PayPal Stock Halted on Stripe Rumor: Why the Narrative Just Changed ↗. February 25, 2026.",
+      "published": "2026-02-26T15:07:20+00:00",
+      "source": "Google Alert: AI wheat quality",
+      "category": "technology"
+    },
+    {
+      "title": "OUT OF CONTROL",
+      "link": "https://grainswest.com/2026/02/out-of-control/",
+      "summary": "In early February, the federal Pest Management Regulatory Agency (PMRA) rejected an emergency use application submitted by the Alberta and Saskatchewan governments to make strychnine available for use against gophers.",
+      "published": "2026-02-23T18:39:30+00:00",
+      "source": "GrainsWest Magazine",
+      "category": "industry"
+    },
+    {
+      "title": "Feedgrain Focus: Markets lift despite patchy rain in south",
+      "link": "https://www.graincentral.com/markets/feedgrain-focus-markets-lift-despite-patchy-rain-in-south/",
+      "summary": "Wheat and barley prices have strengthened on limited offerings from growers and the trade, and sorghum has kicked in the midst of the Lunar New Year holiday.",
+      "published": "2026-02-26T04:07:23+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Wilga Farming expands Great Southern footprint",
-      "link": "https://www.graincentral.com/property/wilga-farming-expands-great-southern-footprint/",
-      "summary": "Investor Wilga Farming has expanded its holdings in WA's Great Southern region to take in Que Sera and part of the WALT Portfolio.",
-      "published": "2026-02-20T01:43:40+00:00",
+      "title": "Ridley HY26 profits up 137pc, fertilisers business update",
+      "link": "https://www.graincentral.com/news/ridley-hy26-profits-up-137pc-fertilisers-business-update/",
+      "summary": "Stockfeed manufacturer and fertiliser distributor Ridley has reported a statutory net profit after tax of $52.7M, up 137.4pc on the pcp, for 1H26.",
+      "published": "2026-02-26T06:09:34+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Large CQ area set to underpin national mungbean crop",
-      "link": "https://www.graincentral.com/cropping/large-cq-area-set-to-underpin-national-mungbean-crop/",
-      "summary": "Recent rain means CQ is on track to produce much of Australia's mungbean crop, and growers are advised to take extra care not to exceed MRLs.",
-      "published": "2026-02-20T02:02:29+00:00",
+      "title": "Low-rainfall cropping country lists in WA, Mallee",
+      "link": "https://www.graincentral.com/property/low-rainfall-cropping-country-lists-in-wa-mallee/",
+      "summary": "WA's North Bullfinch Aggregation and Galick Ridge in the Victorian Mallee are on the market, offering opportunities to buy into low-rainfall cropping country.",
+      "published": "2026-02-27T00:40:02+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "District farmers buy Boorala, Wilgaroi, Kookaburragong",
-      "link": "https://www.graincentral.com/property/district-farmers-buy-boorala-wilgaroi-kookaburragong/",
-      "summary": "Family farmers are showing an appetite for local expansion, as evidenced by the sales of Boorala in SA, and Wilgaroi and Kookaburragong in NSW.",
-      "published": "2026-02-20T02:43:56+00:00",
+      "title": "People on the Move in the grain industry",
+      "link": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-33/",
+      "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
+      "published": "2026-02-27T00:10:18+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "GrainCorp confident of global market rebalance",
-      "link": "https://www.graincentral.com/news/graincorp-confident-of-global-grain-market-rebalance/",
-      "summary": "GrainCorp executives say they expect a more balanced global market to emerge, as the company continues to contend with grain oversupply and sustained price pressures.",
-      "published": "2026-02-19T02:21:01+00:00",
+      "title": "Tasmania’s Logan sells to 40 South Dairies",
+      "link": "https://www.graincentral.com/property/tasmanias-logan-sells-to-40-south-dairies/",
+      "summary": "A dairy-farming joint venture has paid close to $35M for Logan, an irrigated and dryland property in Tasmania’s tightly held Northern Midlands.",
+      "published": "2026-02-26T06:24:25+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Feedgrain Focus: Qld rain brightens new-crop prospects",
-      "link": "https://www.graincentral.com/markets/feedgrain-focus-qld-rain-brightens-new-crop-prospects/",
-      "summary": "Substantial rain over parts of the Qld grainbelt has been welcomed, falling at the ideal time for recently planted sorghum in CQ, and topping up subsoil ahead of winter-crop planting.",
-      "published": "2026-02-18T10:07:48+00:00",
+      "title": "CSIRO launches FarmPrint to help growers quantify emissions",
+      "link": "https://www.graincentral.com/carbon/csiros-farmprint-helps-growers-quantify-emissions/",
+      "summary": "CSIRO has launched FarmPrint to help producers evaluate, benchmark and report on greenhouse gas emissions.",
+      "published": "2026-02-27T00:59:19+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Daily Market Wire 20 February 2026",
-      "link": "https://www.graincentral.com/markets/daily-market-wire-20-february-2026/",
-      "summary": "Wheat rallies 2 percent amid technical breakout; sentiment dominates price action.",
-      "published": "2026-02-20T00:56:56+00:00",
+      "title": "Daily Market Wire 27 February 2026",
+      "link": "https://www.graincentral.com/markets/daily-market-wire-27-february-2026/",
+      "summary": "US winter continues hotter than normal. Australian east coast barley wheat spread tightens.",
+      "published": "2026-02-26T23:39:31+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "GRDC Update: Satellites reveal crunch times for frost",
-      "link": "https://www.graincentral.com/research/grdc-update-satellites-reveal-crunch-times-for-frost/",
-      "summary": "A CSIRO project is using Himawari satellite imagery coupled with APSIM modelling to predict in-crop wheat, barley, canola, chickpea and lentil yield losses to frost.",
-      "published": "2026-02-17T21:11:08+00:00",
+      "title": "GRDC Update: Growth seen in Asian feedgrain demand",
+      "link": "https://www.graincentral.com/markets/grdc-update-growth-seen-in-asian-feedgrain-demand/",
+      "summary": "Australian wheat for feed is finding some love in Asia as consumers look for animal rather than grain protein, and biofuel demand keeps more US corn at home.",
+      "published": "2026-02-24T06:27:31+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Ag Minister rejects GPA levy proposal",
-      "link": "https://www.graincentral.com/news/ag-minister-rejects-gpa-levy-proposal-over-low-engagement/",
-      "summary": "Agriculture Minister Collins has knocked back changes to the levy system proposed by GPA, pointing to a lack of widespread support across the sector.",
-      "published": "2026-02-18T03:27:44+00:00",
+      "title": "Cropping sector leads on productivity, export growth: ABARES",
+      "link": "https://www.graincentral.com/news/cropping-sector-leads-on-productivity-export-growth-abares/",
+      "summary": "An ABARES paper shows cropping has outperformed other ag sectors on productivity growth, farm income, and export value growth.",
+      "published": "2026-02-25T02:13:31+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Spraying to control bacteria shows promise in curbing frost hits",
-      "link": "https://www.graincentral.com/research/spraying-to-control-bacteria-shows-promise-in-curbing-frost-hits/",
-      "summary": "WA DPIRD research shows frost impact can be mitigated by spraying oxide-based formulations on ice-nucleating bacteria found on senesced wheat and barley leaves.",
-      "published": "2026-02-16T23:42:04+00:00",
+      "title": "Grain Central Jan-Feb 2026 news quiz",
+      "link": "https://www.graincentral.com/news/grain-central-jan-feb-2026-news-quiz/",
+      "summary": "Keep up to date with developments in Grain Central’s first quiz for 2026…",
+      "published": "2026-02-25T04:30:02+00:00",
       "source": "Grain Central",
       "category": "industry"
     },
     {
-      "title": "Resurrect Bio raises $8.1m to unlock plants’ innate disease resistance capabilities",
-      "link": "https://agfundernews.com/resurrect-bio-raises-8-1m-to-unlock-plants-innate-disease-resistance-capabilities",
-      "summary": "<p>Resurrect Bio helps plants unlock innate capabilities to fight disease without chemical inputs.</p>\n<p>The post <a href=\"https://agfundernews.com/resurrect-bio-raises-8-1m-to-unlock-plants-innate-disease-resistance-capabilities\">Resurrect Bio raises $8.1m to unlock plants&#8217; innate disease resistance capabilities</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T22:01:37+00:00",
+      "title": "AgriFood Signals: Pepper raises $50m, Mars’ new impact fund, Syngenta IPO hints",
+      "link": "https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints",
+      "summary": "<p>Plus: Crowdfunding for cow-free cheese.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints\">AgriFood Signals: Pepper raises $50m, Mars&#8217; new impact fund, Syngenta IPO hints</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-26T21:30:40+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AgriFood Signals: Egypt eGrocer Breadfast banks $50m, Kubota invests in spray ‘bot, Trump’s glyphosate order",
-      "link": "https://agfundernews.com/agrifood-signals-egypt-egrocer-breadfast-banks-50m-kubota-invests-in-spray-bot-trumps-glyphosate-order",
-      "summary": "<p>Plus: Cargill's latest alt-chocolate foray.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-egypt-egrocer-breadfast-banks-50m-kubota-invests-in-spray-bot-trumps-glyphosate-order\">AgriFood Signals: Egypt eGrocer Breadfast banks $50m, Kubota invests in spray &#8216;bot, Trump&#8217;s glyphosate order</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T21:45:19+00:00",
+      "title": "Latam sugar giant Magdalena plans 650,000-L precision fermentation facility in Guatemala",
+      "link": "https://agfundernews.com/latam-sugar-giant-magdalena-plans-650000-l-precision-fermentation-facility-in-guatemala",
+      "summary": "<p>Magdalena is \"reallocating capital, talent, and governance toward industrial biology,\" says biochem unit director Andrés Rodas.</p>\n<p>The post <a href=\"https://agfundernews.com/latam-sugar-giant-magdalena-plans-650000-l-precision-fermentation-facility-in-guatemala\">Latam sugar giant Magdalena plans 650,000-L precision fermentation facility in Guatemala</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-26T16:36:18+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Ruminant BioTech eyes Canada as launchpad for global expansion with $5.6m research program",
-      "link": "https://agfundernews.com/ruminant-biotech-eyes-canada-as-launchpad-for-global-expansion-with-5-6m-research-program",
-      "summary": "<p>Feed additives suit intensive farming systems, but a longer-lasting solution for methane reduction is needed for pasture-raised cattle, says Ruminant BioTech.</p>\n<p>The post <a href=\"https://agfundernews.com/ruminant-biotech-eyes-canada-as-launchpad-for-global-expansion-with-5-6m-research-program\">Ruminant BioTech eyes Canada as launchpad for global expansion with $5.6m research program</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T16:22:40+00:00",
+      "title": "Döhler brings Superbrewed’s postbiotic protein into commercial production",
+      "link": "https://agfundernews.com/dohler-brings-superbreweds-postbiotic-protein-into-commercial-production",
+      "summary": "<p>\"This is a truly novel ingredient that has crossed into industrial production through a partner-led, capital-efficient model,\" says CEO Dr. Bryan Tracy.</p>\n<p>The post <a href=\"https://agfundernews.com/dohler-brings-superbreweds-postbiotic-protein-into-commercial-production\">Döhler brings Superbrewed’s postbiotic protein into commercial production</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-25T13:00:51+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "From rocks to row crops, TerraClear broadens its capabilities with launch of fully autonomous robot",
-      "link": "https://agfundernews.com/from-rocks-to-row-crops-terraclear-broadens-its-capabilities-with-launch-of-fully-autonomous-robot",
-      "summary": "<p>TerraClear aims to make precision farming \"technically and economically feasible\" for growers with the launch of its TerraScout robot.</p>\n<p>The post <a href=\"https://agfundernews.com/from-rocks-to-row-crops-terraclear-broadens-its-capabilities-with-launch-of-fully-autonomous-robot\">From rocks to row crops, TerraClear broadens its capabilities with launch of fully autonomous robot</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T14:00:31+00:00",
+      "title": "ZhongGu Junchuang expands reach with new mycelium R&D and production hub in Western China",
+      "link": "https://agfundernews.com/zhonggu-junchuang-expands-reach-with-new-mycelium-rd-and-production-hub-in-western-china",
+      "summary": "<p>The new facility—backed by $22m in government support—will have 20x the production capacity of the firm’s site in Inner Mongolia.</p>\n<p>The post <a href=\"https://agfundernews.com/zhonggu-junchuang-expands-reach-with-new-mycelium-rd-and-production-hub-in-western-china\">ZhongGu Junchuang expands reach with new mycelium R&#038;D and production hub in Western China</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-25T00:07:12+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Hybrid meat for the win: JOYN Foods finds sweet spot in alt-protein market, expects to be EDITDA positive in early 2027",
-      "link": "https://agfundernews.com/hybrid-meat-for-the-win-joyn-foods-finds-sweet-spot-in-alt-protein-market-expects-to-be-editda-positive-in-early-2027",
-      "summary": "<p>JOYN Foods expects to triple revenues in 2026 and then triple them again in 2027, driven by rapid growth in foodservice markets.</p>\n<p>The post <a href=\"https://agfundernews.com/hybrid-meat-for-the-win-joyn-foods-finds-sweet-spot-in-alt-protein-market-expects-to-be-editda-positive-in-early-2027\">Hybrid meat for the win: JOYN Foods finds sweet spot in alt-protein market, expects to be EDITDA positive in early 2027</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-19T02:42:24+00:00",
+      "title": "DJI appeal sets stage for legal showdown over future of US ag spray drone market",
+      "link": "https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market",
+      "summary": "<p>The FCC ruling—which has upended a sector dominated by overseas vendors—is “procedurally and substantively flawed,” argues DJI.</p>\n<p>The post <a href=\"https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market\">DJI appeal sets stage for legal showdown over future of US ag spray drone market</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-24T19:59:17+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "US receiver to liquidate Believer Meats’ factory and assets as Israeli trustee ringfences IP",
-      "link": "https://agfundernews.com/us-receiver-to-liquidate-believer-meats-factory-and-assets-as-israeli-trustee-ringfences-ip",
-      "summary": "<p>Creditors Gray Construction and Ameris Bank have positioned themselves to be first in line as Believer's US assets are sold.</p>\n<p>The post <a href=\"https://agfundernews.com/us-receiver-to-liquidate-believer-meats-factory-and-assets-as-israeli-trustee-ringfences-ip\">US receiver to liquidate Believer Meats’ factory and assets as Israeli trustee ringfences IP</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-18T21:44:57+00:00",
+      "title": "How AI, automated labs and CDMOs are replacing agrifood’s 100-year-old R&D playbook",
+      "link": "https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook",
+      "summary": "<p>The world's most critical challenges are accelerating at a rapid pace. The R&#038;D methods tasked with solving them are not—until now.</p>\n<p>The post <a href=\"https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook\">How AI, automated labs and CDMOs are replacing agrifood&#8217;s 100-year-old R&#038;D playbook</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-24T11:44:52+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "AI in India: The world’s ‘AI back office’ is betting on small language models to bring big impact to smallholder farming",
-      "link": "https://agfundernews.com/ai-in-india-the-worlds-ai-back-office-is-betting-on-small-language-models-to-bring-big-impact-to-smallholder-farming",
-      "summary": "<p>The real victory won't be in the size of the model, but in the ability to finally make it work for the person in the field.</p>\n<p>The post <a href=\"https://agfundernews.com/ai-in-india-the-worlds-ai-back-office-is-betting-on-small-language-models-to-bring-big-impact-to-smallholder-farming\">AI in India: The world&#8217;s &#8216;AI back office&#8217; is betting on small language models to bring big impact to smallholder farming</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderN",
-      "published": "2026-02-17T17:34:20+00:00",
+      "title": "Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market",
+      "link": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market",
+      "summary": "<p>BLG via precision fermentation allows brands to pack more protein into shots, yogurts, and drinks without the trade-offs that come with conventional whey, claims the firm.</p>\n<p>The post <a href=\"https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market\">Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNe",
+      "published": "2026-02-24T08:00:15+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Alt-coffee startup Koppie nets new funds to build 1,000-ton capacity for launch partners in 2026",
-      "link": "https://agfundernews.com/alt-coffee-startup-koppie-nets-new-funds-to-build-1000-ton-capacity-for-launch-partners-in-2026",
-      "summary": "<p>While several alt-coffee startups are now pitching to big coffee companies, the fact Koppie has a single ingredient and can slot into existing downstream coffee infrastructure can potentially give it an edge, claims the firm.</p>\n<p>The post <a href=\"https://agfundernews.com/alt-coffee-startup-koppie-nets-new-funds-to-build-1000-ton-capacity-for-launch-partners-in-2026\">Alt-coffee startup Koppie nets new funds to build 1,000-ton capacity for launch partners in 2026</a> appeared first on <a hr",
-      "published": "2026-02-17T07:11:41+00:00",
+      "title": "Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model",
+      "link": "https://agfundernews.com/atarraya-looks-to-bring-high-tech-shrimp-farming-to-uae-evolves-business-model",
+      "summary": "<p>The move reflects the evolution of its business model toward an asset-light approach, scaling through partnerships with “master franchisors.\"</p>\n<p>The post <a href=\"https://agfundernews.com/atarraya-looks-to-bring-high-tech-shrimp-farming-to-uae-evolves-business-model\">Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-23T16:25:22+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "Guest article: Separating the wheat from the chaff in agtech",
-      "link": "https://agfundernews.com/guest-article-separating-the-wheat-from-the-chaff-in-agtech",
-      "summary": "<p>The next winners in agtech will \"solve real problems for real farmers,\" backed by patient, operationally savvy capital, says Rob Appleby.</p>\n<p>The post <a href=\"https://agfundernews.com/guest-article-separating-the-wheat-from-the-chaff-in-agtech\">Guest article: Separating the wheat from the chaff in agtech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-17T07:00:03+00:00",
+      "title": "Guest article: How to stop playing the old game in ag innovation",
+      "link": "https://agfundernews.com/how-to-stop-playing-the-old-game-in-ag-innovation",
+      "summary": "<p>While other sectors build for uncertainty, agriculture keeps betting the old model will somehow hold, and innovators are paying the price.</p>\n<p>The post <a href=\"https://agfundernews.com/how-to-stop-playing-the-old-game-in-ag-innovation\">Guest article: How to stop playing the old game in ag innovation</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
+      "published": "2026-02-20T17:00:20+00:00",
       "source": "Ag Funder News",
       "category": "technology"
     },
     {
-      "title": "India will see IPOs in agritech before America or Europe, says Omnivore’s Mark Kahn",
-      "link": "https://agfundernews.com/india-will-see-ipos-in-agritech-before-america-or-europe-says-omnivores-mark-kahn",
-      "summary": "<p>\"Even though India is a smallholder ecosystem, it is one of the largest agricultural economies in the world,\" says Omnivore's Mark Kahn.</p>\n<p>The post <a href=\"https://agfundernews.com/india-will-see-ipos-in-agritech-before-america-or-europe-says-omnivores-mark-kahn\">India will see IPOs in agritech before America or Europe, says Omnivore’s Mark Kahn</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-16T11:00:09+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "As climate shocks hit Kenya, GrowPact bets on seedlings, greenhouses, and tech",
-      "link": "https://agfundernews.com/as-climate-shocks-hit-kenya-growpact-bets-on-seedlings-greenhouses-and-tech",
-      "summary": "<p>Though its core mission remains seedling production, GrowPact has since expanded its scope of services by offering farmers inputs including fertilizer, chemicals, and drip lines.</p>\n<p>The post <a href=\"https://agfundernews.com/as-climate-shocks-hit-kenya-growpact-bets-on-seedlings-greenhouses-and-tech\">As climate shocks hit Kenya, GrowPact bets on seedlings, greenhouses, and tech</a> appeared first on <a href=\"https://agfundernews.com\">AgFunderNews</a>.</p>",
-      "published": "2026-02-13T11:00:33+00:00",
-      "source": "Ag Funder News",
-      "category": "technology"
-    },
-    {
-      "title": "New Adir Power platform for transport and applications in orchards and vineyards",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/ant-robotics-launches-adir-power-platform-for-transport-and-applications-in-orchards-and-vineyards/",
-      "summary": "Ant Robotics has launched the Adir Power, a new heavy-duty mobile robot platform aimed at transportation and maintenance tasks.",
-      "published": "2026-02-20T08:30:56+00:00",
+      "title": "New John Deere 8R series up to 634 hp, prepared for ‘Supervised Autonomy’",
+      "link": "https://www.futurefarming.com/tech-in-focus/new-john-deere-8r-series-up-to-634-hp-prepared-for-supervised-autonomy/",
+      "summary": "John Deere has introduced an expanded 8R and 8RX tractor range with power outputs up to 634 hp. The high-horsepower tractors are digitally prepared for what the company calls “Supervised Autonomy Features” — but they are not driverless machines.",
+      "published": "2026-02-26T13:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Kubota leads €6.5 million funding round in ultra-precise spot spraying robot developer Kilter",
-      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/kubota-leads-e6-5-million-funding-round-in-ultra-precise-spot-spraying-robot-developer-kilter/",
-      "summary": "Kubota Corporation has led a €6.5 million pre-Series B investment round in Norwegian AgTech start-up Kilter AS, developer of the autonomous AX-1 ultra-precise spot spraying robot for high-value crops. The funding round also included existing investors SBG Invest AS, Pymwymic and Nufarm. Alongside the investment, Kubota and Kilter announced a distribution partnership that will make the [&#8230;]",
-      "published": "2026-02-19T08:30:44+00:00",
+      "title": "10 years of autonomous ups and downs on a 16,000 hectares Australian farm",
+      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/10-years-of-autonomous-ups-and-downs-on-a-16000-hectares-australian-farm/",
+      "summary": "Beefwood Farms, north of Moree in New South Wales, Australia, has been betting on autonomous and unmanned machinery since 2015.",
+      "published": "2026-02-25T09:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Is an AI chatbot reliable as a workplace assistant?",
-      "link": "https://www.futurefarming.com/smart-farming/is-an-ai-chatbot-reliable-as-a-workplace-assistant/",
-      "summary": "AI, short for artificial intelligence, is now an integral part of agriculture—from crop recognition and the automatic adjustment of harvesters to sorting potatoes and tulips. AI is also increasingly being consulted in the workplace. A &#8220;smart&#8221; chatbot seems like an easy search engine, but is it actually reliable? The answer to whether an AI chatbot [&#8230;]",
-      "published": "2026-02-18T08:30:40+00:00",
+      "title": "Einböck supplies sideshift frame for 3-metre-wide hoes",
+      "link": "https://www.futurefarming.com/crop-solutions/weed-pest-control/einbock-supplies-sideshift-frame-for-3-metre-wide-hoes/",
+      "summary": "The Austrian machinery manufacturer Einböck has developed a new Row-Guard sideshift with camera control for narrow hoes, particularly in vegetable cultivation. It operates with a camera mounted centrally behind the tractor.",
+      "published": "2026-02-25T08:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Ant Robotics introduces autonomous platform Valera Cube",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/ant-robotics-introduces-autonomous-platform-valera-cube/",
-      "summary": "Ant Robotics has introduced the Valera Cube, an autonomous tool carrier designed for operations in polytunnels, vineyards, tabletops, and field crops. The robot is positioned as a flexible plant protection and crop care solution for high-value horticultural crops such as strawberries, raspberries, grapes, and tomatoes but can also be used in field crops such as [&#8230;]",
-      "published": "2026-02-17T11:00:54+00:00",
+      "title": "Review: Robotic weed control in rice shifts toward AI, sensor fusion and amphibious platforms",
+      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/review-robotic-weed-control-in-rice-shifts-toward-ai-sensor-fusion-and-amphibious-platforms/",
+      "summary": "Robotic weed management in rice is advancing rapidly, but large-scale adoption will depend on performance in muddy, waterlogged conditions and more robust AI integration.",
+      "published": "2026-02-23T09:00:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     },
     {
-      "title": "Autonomy as a strategy – Why a Dutch bulb grower invested in a driverless tractor",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/seizing-the-optimal-moment-with-autonomous-tractors/",
-      "summary": "For Stef Ruiter, autonomy is not about replacing labour. It is about timing, soil health and long-term resilience. After testing a New Holland tractor equipped with the iQuus autonomous system under the Dutch NPPL programme, the tulip grower from Andijk, the Netherlands, decided to invest. Since 2019, Ruiter-Wever has been a participant in the NPPL [&#8230;]",
-      "published": "2026-02-17T08:57:33+00:00",
-      "source": "Future Farming",
-      "category": "technology"
-    },
-    {
-      "title": "Caterra launches fully autonomous laser weeding robot Honeybee",
-      "link": "https://www.futurefarming.com/tech-in-focus/autonomous-semiauto-steering/autonomous-vehicles/caterra-launches-fully-autonomous-laser-weeding-robot-honeybee/",
-      "summary": "Swiss company Caterra AG has recently launched the Honeybee, a fully autonomous electric weeding robot designed to replace labour-intensive hand weeding in organic and high-value vegetable crops. With laser-based weed control and 24-hour operation capability, the company positions Honeybee as a scalable alternative to manual labour and chemical inputs. The Honeybee removes weeds using high-precision [&#8230;]",
-      "published": "2026-02-16T10:15:25+00:00",
+      "title": "AgBot 5.115 completes first independent full-season field trial on commercial arable farm",
+      "link": "https://www.futurefarming.com/tech-in-focus/agbot-5-115-autonomous-tractor-shows-potential-on-dutch-arable-farms/",
+      "summary": "Under the banner of the National Proeftuin Precisielandbouw (NPPL), Vermuë Akkerbouw in Werkendam (N.-Br.) worked with such an AgBot in 2025.",
+      "published": "2026-02-23T08:30:00+00:00",
       "source": "Future Farming",
       "category": "technology"
     }

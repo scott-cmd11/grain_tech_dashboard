@@ -99,7 +99,7 @@ export function HistoryTab() {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl p-8 text-white mt-12 shadow-xl">
+            <div className="bg-zinc-50 dark:bg-zinc-800 rounded-lg p-8 mt-12 border border-zinc-200 dark:border-zinc-700">
                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                     <Globe className="w-6 h-6 text-blue-400" />
                     How grading works around the world
@@ -108,19 +108,19 @@ export function HistoryTab() {
                     {globalGradingPhilosophies.map((philosophy, i) => (
                         <div
                             key={i}
-                            className="bg-white/5 rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-colors"
+                            className="bg-white dark:bg-zinc-900 rounded-lg p-5 border border-zinc-200 dark:border-zinc-700 hover:shadow-sm transition-shadow"
                         >
-                            <h4 className="font-bold text-lg text-blue-400 mb-1">{philosophy.region}</h4>
-                            <p className="text-sm font-medium text-slate-200 mb-3">{philosophy.philosophy}</p>
-                            <div className="space-y-2 text-xs text-slate-300 border-t border-white/10 pt-3">
+                            <h4 className="font-bold text-lg text-zinc-900 dark:text-white mb-1">{philosophy.region}</h4>
+                            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-300 mb-3">{philosophy.philosophy}</p>
+                            <div className="space-y-2 text-xs text-zinc-600 dark:text-zinc-400 border-t border-zinc-200 dark:border-zinc-700 pt-3">
                                 <div>
-                                    <span className="block text-slate-500 uppercase tracking-wider font-bold mb-0.5">
+                                    <span className="block text-zinc-400 uppercase tracking-wider font-bold mb-0.5">
                                         Key measure
                                     </span>
                                     {philosophy.metric}
                                 </div>
                                 <div>
-                                    <span className="block text-slate-500 uppercase tracking-wider font-bold mb-0.5">
+                                    <span className="block text-zinc-400 uppercase tracking-wider font-bold mb-0.5">
                                         Authority
                                     </span>
                                     {philosophy.authority}

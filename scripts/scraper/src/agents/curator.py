@@ -15,9 +15,19 @@ logger = logging.getLogger(__name__)
 
 # Relevance keywords for scoring (fallback if Gemini unavailable)
 HIGH_VALUE_KEYWORDS = [
+    # Core grain-tech terms
     'grain grading', 'grain quality', 'grain inspection', 'wheat testing',
     'barley testing', 'NIR analysis', 'machine vision grain', 'kernel analysis',
-    'grain sorting', 'cereal inspection', 'grain analyzer', 'seed analysis'
+    'grain sorting', 'cereal inspection', 'grain analyzer', 'seed analysis',
+    # Tracked company names
+    'Cgrain', 'FOSS', 'GrainSense', 'Videometer', 'Zeutec', 'ZoomAgri',
+    'QualySense', 'GoMicro', 'AgSure', 'Nebulaa', 'SuperGeo', 'Inarix',
+    'Vibe Imaging', 'EasyODM', 'Cropify', 'Deimos Laboratory',
+    'Ground Truth Ag', 'Upjao', 'Grainkart', 'Keyetech',
+    'Grain Discovery', 'Platypus Vision', 'Shandong Hongsheng',
+    # Tracked product names
+    'EyeFoss', 'SeedLab', 'SeedSorter', 'SpectraAlyzer', 'MATT Grain',
+    'QSorter', 'GrainScope', 'Indyn', 'PocketLab', 'QM3i',
 ]
 
 MEDIUM_VALUE_KEYWORDS = [

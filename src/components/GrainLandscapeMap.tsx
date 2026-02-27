@@ -2,7 +2,8 @@ import { useMemo, useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { Globe, ExternalLink, ChevronDown, ChevronUp, Building2, Search, X, Download, Share2, Filter as FilterIcon } from "lucide-react";
+import { Globe, ExternalLink, ChevronDown, ChevronUp, Building2, Search, X, Download, Share2, Filter as FilterIcon, Newspaper, RefreshCw } from "lucide-react";
+import type { CompanyMonitorData, NewsArticle } from "../hooks/useCompanyMonitor";
 import type {
   GrainSolution,
   Region,
@@ -39,6 +40,13 @@ interface GrainLandscapeMapProps {
   onCompaniesToggle?: () => void;
   defaultCompaniesOpen?: boolean;
   externalSearchTerm?: string;
+  companyMonitor?: {
+    data: CompanyMonitorData | null;
+    isLoading: boolean;
+    error: string | null;
+    lastUpdated: string | null;
+    refetch: () => void;
+  };
 }
 
 // --- Constants & Helpers ---
@@ -66,6 +74,76 @@ function getDeploymentScore(solution: GrainSolution): number {
 
 import { getDenormalizedSolutions } from "../utils/dataNormalization";
 
+// ── Helpers for Monitor Data ──
+
+function getHealthDot(health: CompanyMonitorData['health'], companyName: string) {
+  const h = health[companyName];
+  if (!h) return null;
+  const color = h.online
+    ? 'bg-emerald-500'
+    : h.status !== null
+      ? 'bg-amber-500'
+      : 'bg-red-500';
+  const label = h.online
+    ? 'Online'
+    : h.status !== null
+      ? `HTTP ${h.status}`
+      : 'Offline';
+  return (
+    <span
+      title={`${label} (${h.responseMs}ms)`}
+      className={`inline-block w-2 h-2 rounded-full ${color} shrink-0`}
+    />
+  );
+}
+
+function CompanyNewsSection({ articles }: { articles: NewsArticle[] }) {
+  const [open, setOpen] = useState(false);
+  if (!articles || articles.length === 0) return null;
+  return (
+    <div className="mt-2">
+      <button
+        onClick={(e) => { e.stopPropagation(); setOpen(!open); }}
+        className="inline-flex items-center gap-1.5 text-[11px] font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+      >
+        <Newspaper className="w-3 h-3" />
+        <span>{articles.length} recent article{articles.length !== 1 ? 's' : ''}</span>
+        {open ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+      </button>
+      {open && (
+        <ul className="mt-1.5 space-y-1.5 border-l-2 border-blue-200 dark:border-blue-800 pl-2.5">
+          {articles.map((a, i) => (
+            <li key={i} className="text-[11px]">
+              <a
+                href={a.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="text-blue-600 dark:text-blue-400 hover:underline line-clamp-2"
+              >
+                {a.title}
+              </a>
+              {a.date && (
+                <span className="text-gray-400 dark:text-gray-500 ml-1">{a.date}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function formatTimeAgo(isoDate: string): string {
+  const diff = Date.now() - new Date(isoDate).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.floor(hours / 24)}d ago`;
+}
+
 export const GrainLandscapeMap = function GrainLandscapeMap({
   grainSolutions: propSolutions,
   filters,
@@ -75,6 +153,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
   onCompaniesToggle,
   defaultCompaniesOpen = true,
   externalSearchTerm = "",
+  companyMonitor,
 }: GrainLandscapeMapProps) {
   const { showToast } = useToast();
   // 1. Data Loading
@@ -399,7 +478,10 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                 <Popup>
                   <div className="text-sm min-w-[200px] max-w-[280px] p-1 font-sans">
                     <div className="flex justify-between items-start gap-2 mb-2">
-                      <div className="font-bold text-gray-900 text-base">{solution.company}</div>
+                      <div className="flex items-center gap-1.5">
+                        {companyMonitor?.data?.health && getHealthDot(companyMonitor.data.health, solution.company)}
+                        <span className="font-bold text-gray-900 text-base">{solution.company}</span>
+                      </div>
                       {solution.status && (
                         <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium uppercase ${solution.status === 'commercial' ? 'bg-green-100 text-green-800' :
                           solution.status === 'pilot' ? 'bg-blue-100 text-blue-800' :
@@ -441,6 +523,31 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                         Visit Website <ExternalLink className="w-3 h-3" />
                       </a>
                     )}
+
+                    {/* News in popup */}
+                    {(() => {
+                      const popupArticles = companyMonitor?.data?.news?.[solution.company]?.articles;
+                      if (!popupArticles || popupArticles.length === 0) return null;
+                      return (
+                        <div className="mt-2 pt-2 border-t border-gray-200">
+                          <div className="text-[10px] font-semibold text-gray-500 uppercase mb-1">Recent News</div>
+                          <ul className="space-y-1">
+                            {popupArticles.slice(0, 2).map((a, i) => (
+                              <li key={i}>
+                                <a
+                                  href={a.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[11px] text-blue-600 hover:underline line-clamp-1"
+                                >
+                                  {a.title}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })()}
                   </div>
                 </Popup>
               </CircleMarker>
@@ -464,7 +571,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
       </div>
 
       {/* GETTING STARTED HELP CARD */}
-      <div className="bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800">
+      <div className="bg-zinc-50 dark:bg-zinc-800 rounded-lg p-5 border border-zinc-200 dark:border-zinc-700">
         <div className="flex items-start gap-3">
           <div className="flex-shrink-0 mt-0.5">
             <span className="text-2xl">💡</span>
@@ -1001,6 +1108,48 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
         </>
       )}
 
+      {/* MONITOR STATUS BAR */}
+      {companyMonitor && (
+        <div className="flex items-center justify-between bg-white dark:bg-gray-800 rounded-xl px-5 py-3 border border-gray-100 dark:border-gray-700 shadow-sm text-xs text-gray-500 dark:text-gray-400">
+          <div className="flex items-center gap-3">
+            <span className="font-semibold text-gray-700 dark:text-gray-300">🔍 Company Monitor</span>
+            {companyMonitor.isLoading && (
+              <span className="inline-flex items-center gap-1 text-blue-500">
+                <RefreshCw className="w-3 h-3 animate-spin" />
+                Checking company websites & news…
+              </span>
+            )}
+            {companyMonitor.error && (
+              <span className="text-amber-500">Monitor unavailable</span>
+            )}
+            {companyMonitor.data && !companyMonitor.isLoading && (
+              <>
+                <span className="text-emerald-600 dark:text-emerald-400 font-medium">
+                  {Object.values(companyMonitor.data.health).filter(h => h.online).length} online
+                </span>
+                <span className="text-gray-400">•</span>
+                <span>
+                  {Object.values(companyMonitor.data.news).reduce((sum, n) => sum + n.articles.length, 0)} news articles found
+                </span>
+              </>
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            {companyMonitor.lastUpdated && (
+              <span>Checked {formatTimeAgo(companyMonitor.lastUpdated)}</span>
+            )}
+            <button
+              onClick={companyMonitor.refetch}
+              disabled={companyMonitor.isLoading}
+              className="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors disabled:opacity-50"
+              title="Refresh company data"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 ${companyMonitor.isLoading ? 'animate-spin' : ''}`} />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* COMPANIES SECTION */}
       <section className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm overflow-hidden">
         <button
@@ -1064,6 +1213,8 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {paginatedVisibleWithLocations.map((solution) => {
                     const companyUrl = solution.url || getCompanyUrl(solution.company);
+                    const healthData = companyMonitor?.data?.health;
+                    const newsData = companyMonitor?.data?.news?.[solution.company];
                     return (
                       <div
                         key={solution.id}
@@ -1071,7 +1222,10 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-gray-100">{solution.company}</h4>
+                            <div className="flex items-center gap-1.5">
+                              {healthData && getHealthDot(healthData, solution.company)}
+                              <h4 className="font-semibold text-gray-900 dark:text-gray-100">{solution.company}</h4>
+                            </div>
                             <p className="text-xs text-gray-500 dark:text-gray-400">{solution.productName}</p>
                             {companyUrl && (
                               <a
@@ -1116,6 +1270,11 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                             </span>
                           ))}
                         </div>
+
+                        {/* Company News */}
+                        {newsData?.articles && (
+                          <CompanyNewsSection articles={newsData.articles} />
+                        )}
                       </div>
                     );
                   })}

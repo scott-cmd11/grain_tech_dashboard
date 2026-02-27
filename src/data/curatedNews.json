@@ -1,182 +1,182 @@
 [
   {
     "id": "1",
-    "title": "OUT OF CONTROL",
-    "source": "GrainsWest Magazine",
-    "date": "2026-02-23",
-    "summary": "In early February, the federal Pest Management Regulatory Agency (PMRA) rejected an emergency use application submitted by the Alberta and Saskatchewan governments to make strychnine available for use",
-    "url": "https://grainswest.com/2026/02/out-of-control/",
-    "category": "grain_industry"
+    "title": "Need automated, accurate grain grading in minutes?",
+    "source": "Ground Truth Ag",
+    "date": "2026-02-27",
+    "summary": "",
+    "url": "https://groundtruth.ag#benchtopmvnirs",
+    "category": "vertical_grain",
+    "companyTags": []
   },
   {
     "id": "2",
-    "title": "Feedgrain Focus: Markets lift despite patchy rain in south",
-    "source": "Grain Central",
-    "date": "2026-02-26",
-    "summary": "Wheat and barley prices have strengthened on limited offerings from growers and the trade, and sorghum has kicked in the midst of the Lunar New Year holiday.",
-    "url": "https://www.graincentral.com/markets/feedgrain-focus-markets-lift-despite-patchy-rain-in-south/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "3",
-    "title": "Ridley HY26 profits up 137pc, fertilisers business update",
-    "source": "Grain Central",
-    "date": "2026-02-26",
-    "summary": "Stockfeed manufacturer and fertiliser distributor Ridley has reported a statutory net profit after tax of $52.7M, up 137.4pc on the pcp, for 1H26.",
-    "url": "https://www.graincentral.com/news/ridley-hy26-profits-up-137pc-fertilisers-business-update/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "4",
-    "title": "Low-rainfall cropping country lists in WA, Mallee",
-    "source": "Grain Central",
-    "date": "2026-02-27",
-    "summary": "WA's North Bullfinch Aggregation and Galick Ridge in the Victorian Mallee are on the market, offering opportunities to buy into low-rainfall cropping country.",
-    "url": "https://www.graincentral.com/property/low-rainfall-cropping-country-lists-in-wa-mallee/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "5",
-    "title": "People on the Move in the grain industry",
-    "source": "Grain Central",
-    "date": "2026-02-27",
-    "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
-    "url": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-33/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "6",
-    "title": "Tasmania’s Logan sells to 40 South Dairies",
-    "source": "Grain Central",
-    "date": "2026-02-26",
-    "summary": "A dairy-farming joint venture has paid close to $35M for Logan, an irrigated and dryland property in Tasmania’s tightly held Northern Midlands.",
-    "url": "https://www.graincentral.com/property/tasmanias-logan-sells-to-40-south-dairies/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "7",
-    "title": "CSIRO launches FarmPrint to help growers quantify emissions",
-    "source": "Grain Central",
-    "date": "2026-02-27",
-    "summary": "CSIRO has launched FarmPrint to help producers evaluate, benchmark and report on greenhouse gas emissions.",
-    "url": "https://www.graincentral.com/carbon/csiros-farmprint-helps-growers-quantify-emissions/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "8",
     "title": "Daily Market Wire 27 February 2026",
     "source": "Grain Central",
     "date": "2026-02-26",
     "summary": "US winter continues hotter than normal. Australian east coast barley wheat spread tightens.",
     "url": "https://www.graincentral.com/markets/daily-market-wire-27-february-2026/",
-    "category": "grain_industry"
+    "category": "grain_industry",
+    "companyTags": []
   },
   {
-    "id": "9",
+    "id": "3",
+    "title": "Feedgrain Focus: Markets lift despite patchy rain in south",
+    "source": "Grain Central",
+    "date": "2026-02-26",
+    "summary": "Wheat and barley prices have strengthened on limited offerings from growers and the trade, and sorghum has kicked in the midst of the Lunar New Year holiday.",
+    "url": "https://www.graincentral.com/markets/feedgrain-focus-markets-lift-despite-patchy-rain-in-south/",
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "4",
     "title": "GRDC Update: Growth seen in Asian feedgrain demand",
     "source": "Grain Central",
     "date": "2026-02-24",
     "summary": "Australian wheat for feed is finding some love in Asia as consumers look for animal rather than grain protein, and biofuel demand keeps more US corn at home.",
     "url": "https://www.graincentral.com/markets/grdc-update-growth-seen-in-asian-feedgrain-demand/",
-    "category": "grain_industry"
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "5",
+    "title": "Global Wheat Supply Tightens as Winter Wheat Futures Hit Multi-Month Highs - Markets",
+    "source": "Google Alert: AI wheat quality",
+    "date": "2026-02-26",
+    "summary": "... Artificial Intelligence. Tickers TEM. News headline image. PayPal Stock Halted on Stripe Rumor: Why the Narrative Just Changed ↗. February 25, 2026.",
+    "url": "https://www.google.com/url?rct=j&sa=t&url=http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2026-2-26-global-wheat-supply-tightens-as-winter-wheat-futures-hit-multi-month-highs&ct=ga&cd=CAIyGWQ3YzYyNGMzNjI2Nzk0Mjc6Y2E6ZW46VVM&usg=AOvVaw3m8Efefz3esXj0Dzqc4vym",
+    "category": "technology",
+    "companyTags": []
+  },
+  {
+    "id": "6",
+    "title": "CSIRO launches FarmPrint to help growers quantify emissions",
+    "source": "Grain Central",
+    "date": "2026-02-27",
+    "summary": "CSIRO has launched FarmPrint to help producers evaluate, benchmark and report on greenhouse gas emissions.",
+    "url": "https://www.graincentral.com/carbon/csiros-farmprint-helps-growers-quantify-emissions/",
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "7",
+    "title": "Low-rainfall cropping country lists in WA, Mallee",
+    "source": "Grain Central",
+    "date": "2026-02-27",
+    "summary": "WA's North Bullfinch Aggregation and Galick Ridge in the Victorian Mallee are on the market, offering opportunities to buy into low-rainfall cropping country.",
+    "url": "https://www.graincentral.com/property/low-rainfall-cropping-country-lists-in-wa-mallee/",
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "8",
+    "title": "People on the Move in the grain industry",
+    "source": "Grain Central",
+    "date": "2026-02-27",
+    "summary": "Who is on the move in the Australian grain industry? Catch up with our latest update on industry appointments, rewards and achievements…..",
+    "url": "https://www.graincentral.com/people-on-the-move/people-on-the-move-in-the-grain-industry-33/",
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "9",
+    "title": "New John Deere 8R series up to 634 hp, prepared for ‘Supervised Autonomy’",
+    "source": "Future Farming",
+    "date": "2026-02-26",
+    "summary": "John Deere has introduced an expanded 8R and 8RX tractor range with power outputs up to 634 hp. The high-horsepower tractors are digitally prepared for what the company calls “Supervised Autonomy Feat",
+    "url": "https://www.futurefarming.com/tech-in-focus/new-john-deere-8r-series-up-to-634-hp-prepared-for-supervised-autonomy/",
+    "category": "technology",
+    "companyTags": []
   },
   {
     "id": "10",
-    "title": "Cropping sector leads on productivity, export growth: ABARES",
+    "title": "Tasmania’s Logan sells to 40 South Dairies",
     "source": "Grain Central",
-    "date": "2026-02-25",
-    "summary": "An ABARES paper shows cropping has outperformed other ag sectors on productivity growth, farm income, and export value growth.",
-    "url": "https://www.graincentral.com/news/cropping-sector-leads-on-productivity-export-growth-abares/",
-    "category": "grain_industry"
+    "date": "2026-02-26",
+    "summary": "A dairy-farming joint venture has paid close to $35M for Logan, an irrigated and dryland property in Tasmania’s tightly held Northern Midlands.",
+    "url": "https://www.graincentral.com/property/tasmanias-logan-sells-to-40-south-dairies/",
+    "category": "grain_industry",
+    "companyTags": []
   },
   {
     "id": "11",
+    "title": "Ridley HY26 profits up 137pc, fertilisers business update",
+    "source": "Grain Central",
+    "date": "2026-02-26",
+    "summary": "Stockfeed manufacturer and fertiliser distributor Ridley has reported a statutory net profit after tax of $52.7M, up 137.4pc on the pcp, for 1H26.",
+    "url": "https://www.graincentral.com/news/ridley-hy26-profits-up-137pc-fertilisers-business-update/",
+    "category": "grain_industry",
+    "companyTags": []
+  },
+  {
+    "id": "12",
+    "title": "10 years of autonomous ups and downs on a 16,000 hectares Australian farm",
+    "source": "Future Farming",
+    "date": "2026-02-25",
+    "summary": "Beefwood Farms, north of Moree in New South Wales, Australia, has been betting on autonomous and unmanned machinery since 2015.",
+    "url": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/10-years-of-autonomous-ups-and-downs-on-a-16000-hectares-australian-farm/",
+    "category": "technology",
+    "companyTags": []
+  },
+  {
+    "id": "13",
+    "title": "Einböck supplies sideshift frame for 3-metre-wide hoes",
+    "source": "Future Farming",
+    "date": "2026-02-25",
+    "summary": "The Austrian machinery manufacturer Einböck has developed a new Row-Guard sideshift with camera control for narrow hoes, particularly in vegetable cultivation. It operates with a camera mounted centra",
+    "url": "https://www.futurefarming.com/crop-solutions/weed-pest-control/einbock-supplies-sideshift-frame-for-3-metre-wide-hoes/",
+    "category": "technology",
+    "companyTags": []
+  },
+  {
+    "id": "14",
     "title": "Grain Central Jan-Feb 2026 news quiz",
     "source": "Grain Central",
     "date": "2026-02-25",
     "summary": "Keep up to date with developments in Grain Central’s first quiz for 2026…",
     "url": "https://www.graincentral.com/news/grain-central-jan-feb-2026-news-quiz/",
-    "category": "grain_industry"
-  },
-  {
-    "id": "12",
-    "title": "AgriFood Signals: Pepper raises $50m, Mars’ new impact fund, Syngenta IPO hints",
-    "source": "Ag Funder News",
-    "date": "2026-02-26",
-    "summary": "<p>Plus: Crowdfunding for cow-free cheese.</p>\n<p>The post <a href=\"https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints\">AgriFood Signals: Pepper raises",
-    "url": "https://agfundernews.com/agrifood-signals-pepper-raises-50m-mars-new-impact-fund-syngenta-ipo-hints",
-    "category": "technology"
-  },
-  {
-    "id": "13",
-    "title": "Latam sugar giant Magdalena plans 650,000-L precision fermentation facility in Guatemala",
-    "source": "Ag Funder News",
-    "date": "2026-02-26",
-    "summary": "<p>Magdalena is \"reallocating capital, talent, and governance toward industrial biology,\" says biochem unit director Andrés Rodas.</p>\n<p>The post <a href=\"https://agfundernews.com/latam-sugar-giant-m",
-    "url": "https://agfundernews.com/latam-sugar-giant-magdalena-plans-650000-l-precision-fermentation-facility-in-guatemala",
-    "category": "technology"
-  },
-  {
-    "id": "14",
-    "title": "Döhler brings Superbrewed’s postbiotic protein into commercial production",
-    "source": "Ag Funder News",
-    "date": "2026-02-25",
-    "summary": "<p>\"This is a truly novel ingredient that has crossed into industrial production through a partner-led, capital-efficient model,\" says CEO Dr. Bryan Tracy.</p>\n<p>The post <a href=\"https://agfundernew",
-    "url": "https://agfundernews.com/dohler-brings-superbreweds-postbiotic-protein-into-commercial-production",
-    "category": "technology"
+    "category": "grain_industry",
+    "companyTags": []
   },
   {
     "id": "15",
-    "title": "ZhongGu Junchuang expands reach with new mycelium R&D and production hub in Western China",
-    "source": "Ag Funder News",
+    "title": "Cropping sector leads on productivity, export growth: ABARES",
+    "source": "Grain Central",
     "date": "2026-02-25",
-    "summary": "<p>The new facility—backed by $22m in government support—will have 20x the production capacity of the firm’s site in Inner Mongolia.</p>\n<p>The post <a href=\"https://agfundernews.com/zhonggu-junchuang",
-    "url": "https://agfundernews.com/zhonggu-junchuang-expands-reach-with-new-mycelium-rd-and-production-hub-in-western-china",
-    "category": "technology"
+    "summary": "An ABARES paper shows cropping has outperformed other ag sectors on productivity growth, farm income, and export value growth.",
+    "url": "https://www.graincentral.com/news/cropping-sector-leads-on-productivity-export-growth-abares/",
+    "category": "grain_industry",
+    "companyTags": []
   },
   {
     "id": "16",
-    "title": "DJI appeal sets stage for legal showdown over future of US ag spray drone market",
-    "source": "Ag Funder News",
-    "date": "2026-02-24",
-    "summary": "<p>The FCC ruling—which has upended a sector dominated by overseas vendors—is “procedurally and substantively flawed,” argues DJI.</p>\n<p>The post <a href=\"https://agfundernews.com/dji-appeal-sets-sta",
-    "url": "https://agfundernews.com/dji-appeal-sets-stage-for-legal-showdown-over-future-of-us-ag-spray-drone-market",
-    "category": "technology"
+    "title": "OUT OF CONTROL",
+    "source": "GrainsWest Magazine",
+    "date": "2026-02-23",
+    "summary": "In early February, the federal Pest Management Regulatory Agency (PMRA) rejected an emergency use application submitted by the Alberta and Saskatchewan governments to make strychnine available for use",
+    "url": "https://grainswest.com/2026/02/out-of-control/",
+    "category": "grain_industry",
+    "companyTags": []
   },
   {
     "id": "17",
-    "title": "How AI, automated labs and CDMOs are replacing agrifood’s 100-year-old R&D playbook",
-    "source": "Ag Funder News",
-    "date": "2026-02-24",
-    "summary": "<p>The world's most critical challenges are accelerating at a rapid pace. The R&#038;D methods tasked with solving them are not—until now.</p>\n<p>The post <a href=\"https://agfundernews.com/how-ai-auto",
-    "url": "https://agfundernews.com/how-ai-automated-labs-and-cdmos-are-replacing-agrifoods-100-year-old-rd-playbook",
-    "category": "technology"
+    "title": "Review: Robotic weed control in rice shifts toward AI, sensor fusion and amphibious platforms",
+    "source": "Future Farming",
+    "date": "2026-02-23",
+    "summary": "Robotic weed management in rice is advancing rapidly, but large-scale adoption will depend on performance in muddy, waterlogged conditions and more robust AI integration.",
+    "url": "https://www.futurefarming.com/tech-in-focus/autonomous-semi-autosteering-systems/review-robotic-weed-control-in-rice-shifts-toward-ai-sensor-fusion-and-amphibious-platforms/",
+    "category": "technology",
+    "companyTags": []
   },
   {
     "id": "18",
-    "title": "Precision fermentation startup Verley raises $38m Series A as BLG unlocks new segment of protein market",
-    "source": "Ag Funder News",
-    "date": "2026-02-24",
-    "summary": "<p>BLG via precision fermentation allows brands to pack more protein into shots, yogurts, and drinks without the trade-offs that come with conventional whey, claims the firm.</p>\n<p>The post <a href=\"",
-    "url": "https://agfundernews.com/precision-fermentation-startup-verley-raises-38m-series-a-as-blg-unlocks-new-segment-of-protein-market",
-    "category": "technology"
-  },
-  {
-    "id": "19",
-    "title": "Atarraya looks to bring high-tech shrimp farming to UAE, evolves business model",
-    "source": "Ag Funder News",
+    "title": "AgBot 5.115 completes first independent full-season field trial on commercial arable farm",
+    "source": "Future Farming",
     "date": "2026-02-23",
-    "summary": "<p>The move reflects the evolution of its business model toward an asset-light approach, scaling through partnerships with “master franchisors.\"</p>\n<p>The post <a href=\"https://agfundernews.com/atarr",
-    "url": "https://agfundernews.com/atarraya-looks-to-bring-high-tech-shrimp-farming-to-uae-evolves-business-model",
-    "category": "technology"
-  },
-  {
-    "id": "20",
-    "title": "Guest article: How to stop playing the old game in ag innovation",
-    "source": "Ag Funder News",
-    "date": "2026-02-20",
-    "summary": "<p>While other sectors build for uncertainty, agriculture keeps betting the old model will somehow hold, and innovators are paying the price.</p>\n<p>The post <a href=\"https://agfundernews.com/how-to-s",
-    "url": "https://agfundernews.com/how-to-stop-playing-the-old-game-in-ag-innovation",
-    "category": "technology"
+    "summary": "Under the banner of the National Proeftuin Precisielandbouw (NPPL), Vermuë Akkerbouw in Werkendam (N.-Br.) worked with such an AgBot in 2025.",
+    "url": "https://www.futurefarming.com/tech-in-focus/agbot-5-115-autonomous-tractor-shows-potential-on-dutch-arable-farms/",
+    "category": "technology",
+    "companyTags": []
   }
 ]
