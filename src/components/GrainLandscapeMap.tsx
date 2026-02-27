@@ -582,19 +582,19 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
             </h3>
             <ul className="space-y-1.5 text-xs text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-2">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold flex-shrink-0">•</span>
+                <span className="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">•</span>
                 <span><strong>Click map markers</strong> to see company details</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold flex-shrink-0">•</span>
+                <span className="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">•</span>
                 <span><strong>Use Quick Presets</strong> below to instantly filter by solution type (easiest way!)</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold flex-shrink-0">•</span>
+                <span className="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">•</span>
                 <span><strong>Color of marker</strong> shows sensing technology used (see legend above)</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold flex-shrink-0">•</span>
+                <span className="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">•</span>
                 <span><strong>Size of marker</strong> indicates deployment scale (experimental to commercial)</span>
               </li>
             </ul>
@@ -644,7 +644,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
                   <div className="flex items-center gap-3">
-                    <Globe className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                    <Globe className="w-6 h-6 text-amber-600 dark:text-amber-400" />
                     <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
                       Global AI Grain Landscape
                     </h3>
@@ -655,7 +655,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                     </div>
                     <div className="text-[10px] text-gray-500 dark:text-gray-400 space-y-0.5">
                       <div>
-                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">{maturityBreakdown.Commercial}</span> Commercial
+                        <span className="font-semibold text-amber-600 dark:text-amber-400">{maturityBreakdown.Commercial}</span> Commercial
                         {maturityBreakdown.Pilot > 0 && (
                           <>
                             {" • "}
@@ -665,7 +665,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                         {maturityBreakdown.Experimental > 0 && (
                           <>
                             {" • "}
-                            <span className="font-semibold text-teal-600 dark:text-teal-400">{maturityBreakdown.Experimental}</span> Experimental
+                            <span className="font-semibold text-amber-600 dark:text-amber-400">{maturityBreakdown.Experimental}</span> Experimental
                           </>
                         )}
                       </div>
@@ -695,7 +695,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                             useCases: activeFilters.useCases,
                           })
                         }
-                        className="px-3 py-1.5 text-xs rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors border border-emerald-200 dark:border-emerald-700 font-medium"
+                        className="px-3 py-1.5 text-xs rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors border border-amber-200 dark:border-amber-700 font-medium"
                         title="Field solutions like handheld sensors and on-combine systems"
                       >
                         🌾 Field Solutions
@@ -723,7 +723,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                             useCases: ["ElevatorGrading" as UseCase, "RegulatoryExport" as UseCase],
                           })
                         }
-                        className="px-3 py-1.5 text-xs rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-teal-200 dark:hover:bg-teal-900/50 transition-colors border border-teal-200 dark:border-teal-700 font-medium"
+                        className="px-3 py-1.5 text-xs rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors border border-amber-200 dark:border-amber-700 font-medium"
                         title="Solutions for commercial grading and export compliance"
                       >
                         📊 Grade & Export
@@ -737,7 +737,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                             useCases: ["OnFarmPreGrading" as UseCase, "WholesaleGrainTrading" as UseCase],
                           })
                         }
-                        className="px-3 py-1.5 text-xs rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-colors border border-emerald-200 dark:border-emerald-700 font-medium"
+                        className="px-3 py-1.5 text-xs rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors border border-amber-200 dark:border-amber-700 font-medium"
                         title="Tools for farmers and traders to grade grain before sale"
                       >
                         👨‍🌾 Farmer/Trader
@@ -748,9 +748,9 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                   {/* ADVANCED FILTERS TOGGLE */}
                   <button
                     onClick={() => setAdvancedFiltersOpen(!advancedFiltersOpen)}
-                    className="flex items-center gap-2 w-full text-left mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    className="flex items-center gap-2 w-full text-left mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 flex-1 hover:text-emerald-600 dark:hover:text-emerald-400">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 flex-1 hover:text-amber-600 dark:hover:text-amber-400">
                       Advanced Filters
                     </p>
                     <div className="flex items-center gap-2">
@@ -815,7 +815,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                               placeholder="Search companies or products... (e.g., BASF, RGB sensor)"
                               value={searchTerm}
                               onChange={(e) => setSearchTerm(e.target.value)}
-                              className="w-full pl-9 pr-8 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                              className="w-full pl-9 pr-8 py-2 text-sm rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
                             />
                             {searchTerm && (
                               <button
@@ -855,7 +855,7 @@ export const GrainLandscapeMap = function GrainLandscapeMap({
                                     }))
                                   }
                                   className={`${chipBase} ${selected
-                                    ? "bg-emerald-500 border-emerald-500 text-white"
+                                    ? "bg-amber-500 border-amber-500 text-white"
                                     : "bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300"
                                     }`}
                                 >

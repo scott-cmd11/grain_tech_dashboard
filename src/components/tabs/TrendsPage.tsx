@@ -14,8 +14,8 @@ import {
 } from '../../data/trends';
 
 export function TrendsPage() {
-  // Chart colors aligned with site branding (emerald/teal/indigo)
-  const colors = ['#10B981', '#14B8A6', '#06B6D4', '#6366F1', '#8B5CF6'];
+  // Chart colors aligned with wheat/amber branding
+  const colors = ['#D97706', '#F59E0B', '#B45309', '#92400E', '#78350F'];
 
   // Track scroll position for back-to-top button
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -92,7 +92,7 @@ export function TrendsPage() {
       {/* Page Contents Navigation */}
       <nav className="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-zinc-200 dark:border-zinc-800 sticky top-0 z-10">
         <div className="flex items-center gap-2 mb-3">
-          <ChevronRight className="w-4 h-4 text-emerald-500" />
+          <ChevronRight className="w-4 h-4 text-amber-500" />
           <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Page Contents</span>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -114,7 +114,7 @@ export function TrendsPage() {
                 e.preventDefault();
                 document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors border border-emerald-200 dark:border-emerald-800/50 whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/40 hover:text-amber-800 dark:hover:text-amber-300 transition-colors border border-amber-200 dark:border-amber-800/50 whitespace-nowrap"
             >
               <Icon className="w-3 h-3 flex-shrink-0" />
               {label}
@@ -126,7 +126,7 @@ export function TrendsPage() {
       {/* 1. Technology Adoption Trends */}
       <section id="adoption-trends" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <TrendingUp className="w-5 h-5 text-emerald-500" />
+          <TrendingUp className="w-5 h-5 text-amber-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">Technology Adoption Trends</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -214,7 +214,7 @@ export function TrendsPage() {
             >
               <div className="flex justify-between items-start mb-3">
                 <h4 className="font-semibold text-gray-900 dark:text-gray-100">{region.region}</h4>
-                <span className="text-xs font-bold px-2 py-1 rounded bg-emerald-500/10 text-emerald-500">
+                <span className="text-xs font-bold px-2 py-1 rounded bg-amber-500/10 text-amber-500">
                   +{region.growth}% YoY
                 </span>
               </div>
@@ -234,7 +234,7 @@ export function TrendsPage() {
                   </div>
                   <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
-                      className="bg-cyan-500 rounded-full h-2"
+                      className="bg-amber-500 rounded-full h-2"
                       style={{ width: `${region.adoption}%` }}
                     />
                   </div>
@@ -258,7 +258,7 @@ export function TrendsPage() {
       {/* 3. Sensing Technology Evolution */}
       <section id="sensing-tech" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <Zap className="w-5 h-5 text-emerald-500" />
+          <Zap className="w-5 h-5 text-amber-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">Sensing Technology Evolution</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -282,12 +282,12 @@ export function TrendsPage() {
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                   <div
                     className={`rounded-full h-3 transition-all ${tech.maturity === 'Mature'
-                      ? 'bg-emerald-500'
+                      ? 'bg-amber-600'
                       : tech.maturity === 'Commercial'
-                        ? 'bg-cyan-500'
+                        ? 'bg-amber-500'
                         : tech.maturity === 'Pilot'
-                          ? 'bg-emerald-400'
-                          : 'bg-indigo-500'
+                          ? 'bg-amber-400'
+                          : 'bg-amber-300'
                       }`}
                     style={{ width: `${tech.adoption}%` }}
                   />
@@ -351,15 +351,15 @@ export function TrendsPage() {
 
         <div className="mt-6 grid md:grid-cols-3 gap-4">
           <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="text-2xl font-bold text-emerald-500 mb-1">15-16%</div>
+            <div className="text-2xl font-bold text-amber-500 mb-1">15-16%</div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Annual Growth Rate</div>
           </div>
           <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="text-2xl font-bold text-cyan-500 mb-1">$415M</div>
+            <div className="text-2xl font-bold text-amber-600 mb-1">$415M</div>
             <div className="text-xs text-gray-600 dark:text-gray-400">2027 Projected Market</div>
           </div>
           <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-            <div className="text-2xl font-bold text-emerald-500 mb-1">2.8x</div>
+            <div className="text-2xl font-bold text-amber-500 mb-1">2.8x</div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Growth since 2020</div>
           </div>
         </div>
@@ -371,7 +371,7 @@ export function TrendsPage() {
       {/* 5. Company Growth Timeline */}
       <section id="company-timeline" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <Users className="w-5 h-5 text-emerald-500" />
+          <Users className="w-5 h-5 text-amber-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">Company Growth Timeline</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -384,7 +384,7 @@ export function TrendsPage() {
             .map((milestone, idx) => (
               <div key={idx} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <div className="w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-gray-800" />
+                  <div className="w-4 h-4 rounded-full bg-amber-500 border-2 border-white dark:border-gray-800" />
                   {idx < companyMilestones.length - 1 && (
                     <div className="w-0.5 h-12 bg-gray-300 dark:bg-gray-600" />
                   )}
@@ -429,13 +429,13 @@ export function TrendsPage() {
               <div key={useCase.useCase}>
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100">{useCase.useCase}</h4>
-                  <span className="text-xs text-emerald-500 font-bold">+{useCase.growth}%</span>
+                  <span className="text-xs text-amber-500 font-bold">+{useCase.growth}%</span>
                 </div>
                 <div className="flex gap-2">
                   <div className="flex-1">
                     <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-emerald-500 rounded-full h-2"
+                        className="bg-amber-500 rounded-full h-2"
                         style={{ width: `${useCase.adoption}%` }}
                       />
                     </div>
@@ -489,7 +489,7 @@ export function TrendsPage() {
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <div
-                    className="bg-cyan-500 rounded-full h-2"
+                    className="bg-amber-500 rounded-full h-2"
                     style={{ width: `${tech.readinessPercentage}%` }}
                   />
                 </div>
@@ -512,7 +512,7 @@ export function TrendsPage() {
               </div>
 
               {tech.expectedCommercialDate && (
-                <p className="text-xs text-emerald-500 font-semibold mt-3">
+                <p className="text-xs text-amber-500 font-semibold mt-3">
                   Expected commercial: {tech.expectedCommercialDate}
                 </p>
               )}
@@ -524,7 +524,7 @@ export function TrendsPage() {
       {/* 8. AI-Integrated Grain Sampling */}
       <section id="ai-grain-sampling" className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm scroll-mt-20">
         <div className="flex items-center gap-2 mb-4">
-          <Cpu className="w-5 h-5 text-emerald-500" />
+          <Cpu className="w-5 h-5 text-amber-500" />
           <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">AI-Integrated Grain Sampling</h3>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
@@ -537,7 +537,7 @@ export function TrendsPage() {
             const count = aiGrainGradingTechnologies.filter(t => t.integrationPoint === point || (point === 'On-Combine' && t.integrationPoint === 'On-Combine')).length;
             return (
               <div key={point} className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                <div className="text-lg font-bold text-emerald-500">{count}</div>
+                <div className="text-lg font-bold text-amber-500">{count}</div>
                 <div className="text-xs text-gray-600 dark:text-gray-400">{point}</div>
               </div>
             );
@@ -572,7 +572,7 @@ export function TrendsPage() {
               <p className="text-xs text-gray-600 dark:text-gray-400 mb-3">{tech.description}</p>
 
               <div className="flex flex-wrap gap-1 mb-3">
-                <span className="text-xs px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-600 font-medium">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-600 font-medium">
                   {tech.integrationPoint}
                 </span>
                 {tech.technology.slice(0, 2).map((t) => (
@@ -596,7 +596,7 @@ export function TrendsPage() {
 
         <div className="mt-6 p-4 bg-zinc-50 dark:bg-zinc-800 rounded-lg border border-zinc-200 dark:border-zinc-700">
           <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-emerald-500" />
+            <TrendingUp className="w-4 h-4 text-amber-500" />
             Key Trend: Harvest-Time Grading
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -623,7 +623,7 @@ export function TrendsPage() {
           <ul className="space-y-3">
             {futureOutlook.nextThreeYears.map((prediction, idx) => (
               <li key={idx} className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{prediction}</span>
               </li>
             ))}
@@ -638,7 +638,7 @@ export function TrendsPage() {
           <ul className="space-y-3">
             {futureOutlook.keyAreasToWatch.map((area, idx) => (
               <li key={idx} className="flex gap-3">
-                <TrendingUp className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
+                <TrendingUp className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-700 dark:text-gray-300">{area}</span>
               </li>
             ))}

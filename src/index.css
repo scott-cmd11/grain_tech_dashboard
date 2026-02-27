@@ -32,11 +32,11 @@
     --text-tertiary: #A1A1AA;
     /* zinc-400 */
 
-    /* Accent */
-    --accent: #0D9488;
-    /* teal-600 */
-    --accent-subtle: #F0FDFA;
-    /* teal-50 */
+    /* Accent — wheat / amber */
+    --accent: #B8860B;
+    /* dark goldenrod */
+    --accent-subtle: #FFFBEB;
+    /* amber-50 */
   }
 
   .dark {
@@ -59,10 +59,10 @@
     --text-tertiary: #71717A;
     /* zinc-500 */
 
-    --accent: #14B8A6;
-    /* teal-500 */
-    --accent-subtle: #042F2E;
-    /* teal-950 */
+    --accent: #DAA520;
+    /* goldenrod */
+    --accent-subtle: #451A03;
+    /* amber-950 */
   }
 
   html {
@@ -234,12 +234,12 @@
 }
 
 ::selection {
-  background-color: rgba(13, 148, 136, 0.2);
+  background-color: rgba(184, 134, 11, 0.2);
   color: inherit;
 }
 
 .dark ::selection {
-  background-color: rgba(20, 184, 166, 0.25);
+  background-color: rgba(218, 165, 32, 0.25);
 }
 
 /* ========================================

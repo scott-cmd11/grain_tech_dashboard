@@ -64,7 +64,7 @@ export function AnalyticsTab({ searchTerm = "" }: AnalyticsTabProps) {
                 counts[tech] = (counts[tech] || 0) + 1;
             });
         });
-        const colors = ['#0D9488', '#3b82f6', '#D97706', '#8b5cf6', '#ec4899', '#06b6d4'];
+        const colors = ['#D97706', '#3b82f6', '#B45309', '#8b5cf6', '#ec4899', '#06b6d4'];
         return Object.entries(counts)
             .sort(([, a], [, b]) => b - a)
             .map(([label, value], index) => ({
