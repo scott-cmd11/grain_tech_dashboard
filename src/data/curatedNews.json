@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Need automated, accurate grain grading in minutes?",
     "source": "Ground Truth Ag",
-    "date": "2026-02-27",
+    "date": "2026-02-28",
     "summary": "",
     "url": "https://groundtruth.ag#benchtopmvnirs",
     "category": "vertical_grain",
@@ -41,16 +41,36 @@
   },
   {
     "id": "5",
-    "title": "Global Wheat Supply Tightens as Winter Wheat Futures Hit Multi-Month Highs - Markets",
+    "title": "Is artificial intelligence use in fake news out of control? - High Plains Journal",
     "source": "Google Alert: AI wheat quality",
-    "date": "2026-02-26",
-    "summary": "... Artificial Intelligence. Tickers TEM. News headline image. PayPal Stock Halted on Stripe Rumor: Why the Narrative Just Changed ↗. February 25, 2026.",
-    "url": "https://www.google.com/url?rct=j&sa=t&url=http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2026-2-26-global-wheat-supply-tightens-as-winter-wheat-futures-hit-multi-month-highs&ct=ga&cd=CAIyGWQ3YzYyNGMzNjI2Nzk0Mjc6Y2E6ZW46VVM&usg=AOvVaw3m8Efefz3esXj0Dzqc4vym",
+    "date": "2026-02-28",
+    "summary": "Hard Red Winter Wheat &middot; KEH26, 572-6s, +21-2, +3.85%. Hard Red Winter Wheat &middot; KEK26, 580-4s, +18-2, +3.25%. Corn &middot; ZCH26, 438-6s, +5-4, +1.27%. Corn&nbsp;...",
+    "url": "https://www.google.com/url?rct=j&sa=t&url=https://hpj.com/2026/02/27/is-artificial-intelligence-use-in-fake-news-out-of-control/&ct=ga&cd=CAIyGWQ3YzYyNGMzNjI2Nzk0Mjc6Y2E6ZW46VVM&usg=AOvVaw1iPih8FU4ejlJPDGLfqGZE",
     "category": "technology",
     "companyTags": []
   },
   {
     "id": "6",
+    "title": "U.S. Department of Labor cites Illinois grain firm after worker hurt",
+    "source": "Google Alert: AI grain grading",
+    "date": "2026-02-27",
+    "summary": "OSHA's machine guarding, lockout/tagout and grain handling safety ... Artificial Intelligence (AI). Journalists were involved in every step&nbsp;...",
+    "url": "https://www.google.com/url?rct=j&sa=t&url=https://www.reviewatlas.com/story/news/local/2026/02/27/u-s-department-of-labor-says-grain-operator-put-workers-at-risk/88860842007/&ct=ga&cd=CAIyGWE0OWRlZGI3NjdhYTQ3MDE6Y2E6ZW46VVM&usg=AOvVaw0v6vWC-TW3-MhzZGz_Nyyv",
+    "category": "technology",
+    "companyTags": []
+  },
+  {
+    "id": "7",
+    "title": "Wheat Prices Soar as Great Plains Drought Collides with Landmark SCOTUS Tariff Ruling",
+    "source": "Google Alert: AI wheat quality",
+    "date": "2026-02-27",
+    "summary": "... Artificial Intelligence. Tickers APP DOCU HUBS INTU MSFT. News headline image. IonQ Just Delivered the Quarter That Changes the Quantum Narrative&nbsp;...",
+    "url": "https://www.google.com/url?rct=j&sa=t&url=http://markets.chroniclejournal.com/chroniclejournal/article/marketminute-2026-2-27-wheat-prices-soar-as-great-plains-drought-collides-with-landmark-scotus-tariff-ruling&ct=ga&cd=CAIyGWQ3YzYyNGMzNjI2Nzk0Mjc6Y2E6ZW46VVM&usg=AOvVaw3qu9Dq4Wa_ebeWxKo7oGt0",
+    "category": "technology",
+    "companyTags": []
+  },
+  {
+    "id": "8",
     "title": "CSIRO launches FarmPrint to help growers quantify emissions",
     "source": "Grain Central",
     "date": "2026-02-27",
@@ -60,7 +80,7 @@
     "companyTags": []
   },
   {
-    "id": "7",
+    "id": "9",
     "title": "Low-rainfall cropping country lists in WA, Mallee",
     "source": "Grain Central",
     "date": "2026-02-27",
@@ -70,7 +90,7 @@
     "companyTags": []
   },
   {
-    "id": "8",
+    "id": "10",
     "title": "People on the Move in the grain industry",
     "source": "Grain Central",
     "date": "2026-02-27",
@@ -80,7 +100,7 @@
     "companyTags": []
   },
   {
-    "id": "9",
+    "id": "11",
     "title": "New John Deere 8R series up to 634 hp, prepared for ‘Supervised Autonomy’",
     "source": "Future Farming",
     "date": "2026-02-26",
@@ -90,7 +110,7 @@
     "companyTags": []
   },
   {
-    "id": "10",
+    "id": "12",
     "title": "Tasmania’s Logan sells to 40 South Dairies",
     "source": "Grain Central",
     "date": "2026-02-26",
@@ -100,7 +120,7 @@
     "companyTags": []
   },
   {
-    "id": "11",
+    "id": "13",
     "title": "Ridley HY26 profits up 137pc, fertilisers business update",
     "source": "Grain Central",
     "date": "2026-02-26",
@@ -110,7 +130,7 @@
     "companyTags": []
   },
   {
-    "id": "12",
+    "id": "14",
     "title": "10 years of autonomous ups and downs on a 16,000 hectares Australian farm",
     "source": "Future Farming",
     "date": "2026-02-25",
@@ -120,7 +140,7 @@
     "companyTags": []
   },
   {
-    "id": "13",
+    "id": "15",
     "title": "Einböck supplies sideshift frame for 3-metre-wide hoes",
     "source": "Future Farming",
     "date": "2026-02-25",
@@ -130,7 +150,7 @@
     "companyTags": []
   },
   {
-    "id": "14",
+    "id": "16",
     "title": "Grain Central Jan-Feb 2026 news quiz",
     "source": "Grain Central",
     "date": "2026-02-25",
@@ -140,7 +160,7 @@
     "companyTags": []
   },
   {
-    "id": "15",
+    "id": "17",
     "title": "Cropping sector leads on productivity, export growth: ABARES",
     "source": "Grain Central",
     "date": "2026-02-25",
@@ -150,7 +170,7 @@
     "companyTags": []
   },
   {
-    "id": "16",
+    "id": "18",
     "title": "OUT OF CONTROL",
     "source": "GrainsWest Magazine",
     "date": "2026-02-23",
@@ -160,7 +180,7 @@
     "companyTags": []
   },
   {
-    "id": "17",
+    "id": "19",
     "title": "Review: Robotic weed control in rice shifts toward AI, sensor fusion and amphibious platforms",
     "source": "Future Farming",
     "date": "2026-02-23",
@@ -170,7 +190,7 @@
     "companyTags": []
   },
   {
-    "id": "18",
+    "id": "20",
     "title": "AgBot 5.115 completes first independent full-season field trial on commercial arable farm",
     "source": "Future Farming",
     "date": "2026-02-23",
